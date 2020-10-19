@@ -6,6 +6,10 @@
     "node": "12.18.4",
     "npm" : "6.14.6"
   },
+  "engine" : {
+    "node" : "12.18.4",
+    "npm"  : "6.14.6"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
