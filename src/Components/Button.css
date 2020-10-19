@@ -16,13 +16,13 @@
     border: 1px solid var(--primary);
   }
   .btn--GooglePlay{
-    background:  url("C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Googleplay.png");
+    background:  url("./Googleplay.png");
     background-size: contain ; 
     background-repeat: no-repeat;
    
   }
   .btn--Bazar{
-    background:  url("C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Bazar.png");
+    background:  url("./Bazar.png");
     background-size: contain ; 
     background-repeat: no-repeat;
     

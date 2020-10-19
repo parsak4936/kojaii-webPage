@@ -177,7 +177,7 @@ justify-content: center;
      height: 13%;
     font-size: 1.5rem;
     border: none;
-    background:url('C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Bazar.png');
+    background:url('./Bazar.png');
     background-size: contain ; 
     background-repeat: no-repeat;
     padding: 14px 20px;
@@ -201,7 +201,7 @@ justify-content: center;
      height: 12.8%;
     font-size: 1.5rem;
    
-    background:url('C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Bazar.png');
+    background:url('./Bazar.png');
     background-size: contain ; 
     background-repeat: no-repeat;
     padding: 14px 20px;
