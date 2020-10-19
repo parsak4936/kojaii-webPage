@@ -2,6 +2,9 @@
   "name": "kojaii",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -27,9 +30,7 @@
     "extends": "react-app"
   },
 
-  "engines": {
-    "node": "12.x"
-  },
+ 
   "browserslist": {
     "production": [
       ">0.2%",
