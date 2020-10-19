@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from 'react-avatar';
 
-import toturial_img_1 from 'C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Pages/1.jpg';
+import toturial_img_1 from './1.jpg';
 
 
 export default function Toturial() {

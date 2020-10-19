@@ -1,13 +1,13 @@
  
 import React, { useState, useEffect } from 'react';
-import { Button } from 'C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Button.js';
+import { Button } from './Button.js';
 import { Link } from 'react-router-dom';
  
 import Avatar from 'react-avatar';
-import BGimg from 'C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Pages/MP_Backgound.jpg';
+import BGimg from './MP_Backgound.jpg';
 import './MainPage.css';
 
-import join_Us_img from 'C:/Users/PK.LUBU/Desktop/Kojaii_web_APP/kojaii/src/Components/Pages/1.jpg';
+import join_Us_img from './1.jpg';
 
 
 function MainPage () {
