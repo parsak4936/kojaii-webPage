@@ -6,13 +6,14 @@
      display: grid;
     
      grid-template-columns: 1fr ;
-     grid-template-rows: 1fr 1fr 1fr  1fr ;
+     grid-template-rows: .5fr 1fr 1fr  1fr ;
      grid-template-areas: 
    
      "main_img"
      "interduce"
+     "Toturial"
      "join_us"
-     "AboutUs"
+    
       
      ;
      align-items: center;
@@ -20,8 +21,14 @@
 
 
  }
- 
- .image_and_download{
+ .toturial{
+     background-color: cyan;
+     grid-area: Toturial;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+ }
+ .image_and_download{    
 background-image: url('./MP_Backgound.jpg');  
  
 background-size: 100%;
@@ -35,9 +42,9 @@ grid-area: main_img;
  }
  .img_and_download-container{
     width: 100%;
-   padding: 50px;
+  
     display: grid;
-    padding-left: 180px;
+    
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr ;
     grid-template-areas: 
@@ -77,7 +84,7 @@ grid-area: main_img;
       
     
     grid-area:btn_bazar;
-    padding-right: 50px;
+    
     
     display: flex;
     align-items: center;
@@ -106,7 +113,7 @@ grid-area: main_img;
 
  /* Interduce section */ 
   .interduce{
-      padding-top: var( --main-radius);
+     background-color: blueviolet;
       grid-area: interduce;
   }
   .interduce-container{
@@ -231,12 +238,22 @@ justify-content: center;
 @media only screen and (max-width: 960px){
     .mainpage-container{
         grid-template-columns: 1fr;
-        grid-template-rows: .4fr .4fr .4fr 0.4fr;
+        grid-template-rows: .8fr .8fr .8fr 0.8fr;
         grid-template-areas: 
         "main_img"
         "interduce"
+        "Toturial"
         "join_us"
-        "AboutUs";
+        ;
+    }
+    .toturial{
+        
+grid-area: Toturial;
+width: "50%",;
+height: "400px";
+justify-content: center;
+align-items: center;
+
     }
 
     .info{

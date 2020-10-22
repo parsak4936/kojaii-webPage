@@ -61,15 +61,7 @@ function Navbar() {
 
 
           
-            <li className='nav-item'>
-              <Link
-                to='/toturial'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                آموزش برنامه 
-              </Link>
-            </li>
+           
 
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>

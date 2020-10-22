@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button.js';
 import { Link } from 'react-router-dom';
- 
+import Slide_v2 from './slideshow_v2'
 import Avatar from 'react-avatar';
 import BGimg from './MP_Backgound.jpg';
 import './MainPage.css';
@@ -94,7 +94,14 @@ function MainPage () {
 
 
 </section>
+ 
+ {/*-----------------Toturial ---------------*/}
+ <section className = 'toturial'>
+ <Slide_v2 />
 
+ </section>
+  
+ 
  {/*-----------------join us ---------------*/}
 <section className = 'join-us'>
 
@@ -122,10 +129,9 @@ function MainPage () {
 
 </section>
  
- 
-<section className='About-us'>
+ {/*-----------------<section className='About-us'>
 
-{/*-----------------team infoes ---------------*/}
+
 
 <h1 className='header-for-Aboutus'>Nigma</h1>
 
@@ -141,35 +147,21 @@ function MainPage () {
 </div>
 
 
-{/*-----------------profile pics (najafi) ---------------*/}
-<div  className='aboutus-txt' >
+ <div  className='aboutus-txt' >
 <h2 className='nafaji-header' >امیر حسین نجفی</h2>
 <p>Lorem ipsum dolor, ita, nam sit eius accusantium quaerat illo. Similique, ullam!</p>
 </div>
 
-{/*-----------------profile pics (parsa) ---------------*/}
-<div  className='aboutus-txt' >
+ <div  className='aboutus-txt' >
 
 <h2 className='parsa-header'>پارسا کاظمی</h2>
 <p>Lorem  quasi. Reprehenderit iusto impedit debitis eligendi officia? Et nisi dicta a quos eligendi!</p>
 </div>
 
-
-
 </section>
- 
-
-   
-    
-   
-
-   
-  
-
-
-
 </section>
 
+ ---------------*/}
 
 
 

@@ -88,7 +88,7 @@
     flex-direction: column-reverse;
      order: 2;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     position: absolute;
     top: 80px;
     left: -100%;
@@ -103,12 +103,12 @@
     transition: all 0.5s ease;
      
   }
-  .nav-menu :nth-child(2) { order: 1; }
+  .nav-menu :nth-child(2) { order: 2; }
   .nav-menu :nth-child(3) { order: 2; }
-  .nav-menu :nth-child(1) { order: 2; }
+ 
 
    
-  .nav-menu :nth-child(4) { order: 2; }
+  .nav-menu :nth-child(1) { order: 2; }
  
   .nav-links {
     text-align: center;

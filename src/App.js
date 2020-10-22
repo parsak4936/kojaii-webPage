@@ -4,7 +4,7 @@ import './App.css';
 import {BrowserRouter as Router , Switch ,Route} from 'react-router-dom'
 import Footer from './Components/Footer'
 import About from './Components/About';
-import Toturial from './Components/Toturial';
+ 
 import Download from './Components/Download';
 import MainPage from './Components/MainPage';
 
@@ -18,7 +18,7 @@ function App() {
     <Switch>
           <Route path='/' exact component=  {MainPage} />
           <Route path='/about' component=   {About}    />
-          <Route path='/toturial' component={Toturial} />
+         
           <Route path='/download' component={Download} />
     </Switch>
   <Footer />

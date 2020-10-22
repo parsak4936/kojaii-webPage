@@ -14,7 +14,7 @@ function Footer() {
 
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-             کجایی؟
+             تمام حقوق مالی و معنوی این سایت متعلق به جایی ؟ است
            
             </Link>
           </div>
@@ -33,7 +33,24 @@ function Footer() {
               <i class='fab fa-telegram' />
               
             </Link>
-
+            <Link
+              class='social-icon-link telegram'
+              to='/'
+              target='_blank'
+              aria-label='telegram'
+            >
+              <i class='fab fa-telegram' />
+              
+            </Link>
+            <Link
+              class='social-icon-link telegram'
+              to='/'
+              target='_blank'
+              aria-label='telegram'
+            >
+              <i class='fab fa-telegram' />
+              
+            </Link>
 
             <Link
               class='social-icon-link instagram'
@@ -43,6 +60,7 @@ function Footer() {
             >
               <i class='fab fa-instagram' />
             </Link>
+
 
            
           </div>

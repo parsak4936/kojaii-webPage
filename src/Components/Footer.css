@@ -1,11 +1,9 @@
 .footer-container {
     background-color: #3E6078;
-    margin-top: 1000px; 
+   
      padding-top: 4rem ;
      padding-bottom:  4rem ; 
     justify-content: center;
-  
-    
     
     align-items: flex-end;
   }
@@ -19,7 +17,7 @@
     justify-content: center;
   }
   .footer-logo{
-    grid-area: kojaii-text;
+    grid-area:text;
   }
    
    
@@ -27,6 +25,7 @@
   
   /* Social Icons */
   .social-icon-link {
+    
     justify-content: center;
     color: #fff;
     font-size: 24px;
@@ -34,16 +33,18 @@
   
   
   .social-media-wrap {
-    background-color: black;
+    
     display: grid;
   
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr   ;
+    grid-template-columns: .5fr  ;
+    grid-template-rows: 1fr 1fr 1fr  ;
      grid-template-areas: 
-     "kojaii-text right icons"
+     "text "
+     "rights"
+     "icons"
      
     ;
-    grid-gap: 25rem;
+    grid-gap: 8px;
     justify-content: center;
     align-items: center;
      
@@ -56,7 +57,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100px;
+    width: 500px;
      
    
   }
@@ -78,9 +79,8 @@
   
   .website-rights {
      
-   grid-area: right;
+   grid-area: rights;
  
-
    color: #fff;
    justify-self: start;
    justify-content: center;
@@ -89,7 +89,7 @@
    text-decoration: none;
    
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
 
 
     
@@ -102,8 +102,7 @@
     .website-rights {
      
    
-      padding-left: 19em;
-    } 
+     } 
     
     .footer-links {
       justify-content: center;

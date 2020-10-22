@@ -41,7 +41,12 @@ export default class Slideshow_v2 extends Component {
 
   render() {
     return (
-      <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
+      <div style={{
+          
+         width: "50%", 
+     
+         height: "400px", 
+         margin: "50px auto" }}>
         <Carousel
           slides={this.slides}
           goToSlide={this.state.goToSlide}
@@ -49,22 +54,7 @@ export default class Slideshow_v2 extends Component {
           showNavigation={this.state.showNavigation}
           animationConfig={this.state.config}
         />
-        <div
-          style={{
-            margin: "0 auto",
-            marginTop: "2rem",
-            width: "50%",
-            display: "flex",
-            justifyContent: "space-around"
-          }}
-        >
-         
-          
-         
-         
-          
-  
-        </div>
+   
       </div>
     );
   }
