@@ -11,19 +11,22 @@ import MainPage from './Components/MainPage';
 function App() {
   return (
    <>
-  <Router>
-  <NavBar/>
-<Switch>
-<Route path='/' exact component={MainPage} />
- 
-<Route path='/about' component={About} />
 
+  <Router>
+  
+  <NavBar/>
+    <Switch>
+          <Route path='/' exact component=  {MainPage} />
+          <Route path='/about' component=   {About}    />
           <Route path='/toturial' component={Toturial} />
           <Route path='/download' component={Download} />
-</Switch>
-<Footer />
+    </Switch>
+  <Footer />
    </Router>
   
+  
+
+
   
     </>
   );

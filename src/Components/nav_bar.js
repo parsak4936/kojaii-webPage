@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import LOGO from './LOGO.png'
 import './nav_bar.css';
 import Avatar from 'react-avatar';
 
@@ -29,7 +30,10 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-        {button && <Button buttonStyle='btn--outline'>   <i class='fa fa-download'/>   دانلود </Button>}
+          <div className= "btn">
+          {button && <Button buttonStyle='btn--outline'>   <i class='fa fa-download'/>   دانلود </Button>}
+          </div>
+       
          
 
           <div className='menu-icon' onClick={handleClick}>
@@ -37,6 +41,14 @@ function Navbar() {
 
 
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          
+
+
+<li className='nav-item'>
+  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+  پشتیبانی
+  </Link>
+</li>
 
           <li className='nav-item'>
               <Link
@@ -44,7 +56,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-درباره ما              </Link>
+ارتباط با ما             </Link>
             </li>
 
 
@@ -61,7 +73,7 @@ function Navbar() {
 
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-               صفحه ی اصلی
+              خانه
               </Link>
             </li>
 
@@ -85,16 +97,22 @@ function Navbar() {
 
 
           </ul>
-
-          <div className='navbar-logo-img' >
-          <Avatar name="LOGO" src='./logo192.png'    value="100%" size="70"  />
+ {/*-----------------
+ 
+ <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+           کجایی؟ </Link>
+ 
+ ---------------*/}
+        
+          
+      
+        </div>
+         <div className=' navbar-logo-img' >
+          <Avatar name="LOGO" src={LOGO}   round="100px" value="80%" size="100"  />
+         
          
           </div>
         
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-           کجایی؟ </Link>
-      
-        </div>
       </nav>
     </>
   );

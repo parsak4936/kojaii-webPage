@@ -1,68 +1,24 @@
-.images{
-  
-    display: grid;
-     
-    grid-template-columns: auto auto auto ;
-    grid-template-rows: auto auto auto ;
-    margin-left: 10%;
-    margin-right: 5%;
  
-    
-    
-       
-   
-
-}
 .info{
     margin-left : 20px;
     margin-top: 60px;
     margin-right : 20px;
 
 }
-.images-section{
-    justify-content: center;
-    margin: 50px;
-   
-
-}
+ 
 .header-for-images{
     display: flex;
    
-   margin-left: 43%;
-   margin-right: 43%;
+  
    margin-top: 30px;
 
 }
-.parsa-header{
-    margin-top: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 80px;
-
-   
-}
-
-.nafaji-header{
-    margin-top: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 58px;
-
-    
-}
-
-.masoud-header{
-    margin-top: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 58px;
  
-}
-@media only screen and (max-width: 960px){
-.images{
 
-    grid-template-columns: auto;
-}
+
+ 
+@media only screen and (max-width: 960px){
+ 
 
 
 }

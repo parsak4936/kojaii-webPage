@@ -6,6 +6,10 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/*-----------------< 
+    import Example from './Components/Loading'
+    <Example />---------------*/}
+
     <App />
   </React.StrictMode>,
   document.getElementById('root')
