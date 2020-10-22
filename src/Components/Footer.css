@@ -1,146 +1,128 @@
 .footer-container {
     background-color: #3E6078;
-   
-     padding-top: 4rem ;
-     padding-bottom:  4rem ; 
+    padding-top: 2rem;
+    padding-bottom: 0rem;
     justify-content: center;
-    
+
     align-items: flex-end;
-  }
-  
-   
-  
-  .footer-links {
-   
-    
+}
+
+
+.footer-links {
+
+
     display: flex;
     justify-content: center;
-  }
-  .footer-logo{
-    grid-area:text;
-  }
-   
-   
-  
-  
-  /* Social Icons */
-  .social-icon-link {
-    
+}
+
+.footer-logo {
+    text-align: center;
+    grid-area: text;
+}
+
+
+/* Social Icons */
+.social-icon-link {
+
     justify-content: center;
     color: #fff;
     font-size: 24px;
-  }
-  
-  
-  .social-media-wrap {
-    
+}
+
+
+.social-media-wrap {
+
     display: grid;
-  
-    grid-template-columns: .5fr  ;
-    grid-template-rows: 1fr 1fr 1fr  ;
-     grid-template-areas: 
-     "text "
-     "rights"
-     "icons"
-     
-    ;
+
+    grid-template-columns: .5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "text " "rights" "icons";
     grid-gap: 8px;
     justify-content: center;
     align-items: center;
-     
-   
-  }
-  
-  .social-icons {
+
+
+}
+
+.social-icons {
     justify-self: start;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
-     
-   
-  }
-  
-  .social-logo {
+    width: 150px;
+
+
+}
+
+.social-logo {
+    font-family: "Iranian Sans";
     color: #fff;
     justify-self: start;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
-     
-   
-    
-  }
-  
-  .website-rights {
-     
-   grid-area: rights;
- 
-   color: #fff;
-   justify-self: start;
-   justify-content: center;
-   align-items: center;
-   cursor: pointer;
-   text-decoration: none;
-   
-   display: flex;
-   flex-direction: row;
 
 
-    
-  }
-  
-  @media screen and (max-width: 820px) {
-    .footer-container{
-      
-    }
-    .website-rights {
-     
-   
-     } 
-    
-    .footer-links {
-      justify-content: center;
-      align-items: center;
-    }
-  
-   
-  
-    
-  
-    .footer-link-wrapper {
-      justify-content: center;
+}
+
+.website-rights {
+
+    grid-area: rights;
+
+    color: #fff;
+    justify-self: start;
+    justify-content: center;
     align-items: center;
-      flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+@media screen and (max-width: 820px) {
+    .footer-container {
+
     }
-  
+
+    .website-rights {
+
+
+    }
+
+    .footer-links {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .footer-link-wrapper {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .social-media-wrap {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: 
-      "kojaii-text "
-      " right"
-      "icons"
-      
-     ;
-     grid-gap: 2rem;
-      
-     justify-content: center;
-     align-items: center;
-       
+        grid-gap: 2rem;
+
+        justify-content: center;
+        align-items: center;
+
     }
-  }
- 
-  .social-icon-link:hover {
+}
+
+.social-icon-link:hover {
     transition: all 0.3s ease-out;
-    
-    color:#7AB1C5;
+
+    color: #7AB1C5;
     transition: 250ms;
-  }
+}
   
   
