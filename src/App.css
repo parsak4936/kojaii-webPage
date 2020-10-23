@@ -18,7 +18,9 @@
 }
 
 .item{
+    
     padding-left: 30px!important;
+   
 }
 
 .download{
@@ -30,7 +32,7 @@
 
 @media screen and (max-width: 1000px) {
     .nav_bar{
-        padding-right: 0px!important;
+        padding-right: 10px!important;
         padding-left: 20px!important;
     }
 }

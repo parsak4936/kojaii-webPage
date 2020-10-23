@@ -4,14 +4,9 @@ import './App.css';
 import {BrowserRouter as Router , Switch ,Route} from 'react-router-dom'
 import Footer from './Components/Footer'
 import About from './Components/About';
-
 import Download from './Components/Download';
 import MainPage from './Components/MainPage';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import LOGO from "./Components/LOGO.png";
-import Avatar from "react-avatar";
-
 import logo from './LOGO.png'
 
 function App() {
@@ -27,11 +22,11 @@ function App() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className="navbar-Item">
                         <Nav className="mr-auto">
-                            <Nav.Link className="item" href="#features">خانه</Nav.Link>
-                            <Nav.Link className="item" href="#pricing">پشتیبانی</Nav.Link>
+                            <Nav.Link className="item" href="/">خانه</Nav.Link>
+                            <Nav.Link className="item" href="/">پشتیبانی</Nav.Link>
 
-                            <Nav.Link className="item" href="#deets">ارتباط با ما</Nav.Link>
-                            <Nav.Link className="item" href="#deets">بلاگ</Nav.Link>
+                            <Nav.Link className="item" href="/about">ارتباط با ما</Nav.Link>
+                            <Nav.Link className="item" href="/blog">بلاگ</Nav.Link>
                         </Nav>
 
                         <Nav>

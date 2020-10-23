@@ -12,7 +12,7 @@
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr .5fr .5fr .5fr;
     grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr     1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "IAD_header  IAD_header" "IAD_txt   IAD_txt " "btn_bazar   btn_googleplay  ";
 }
@@ -224,7 +224,7 @@
 @media only screen and (max-width: 960px) {
     .mainpage-container {
         grid-template-columns: 1fr;
-        grid-template-rows: .8fr .8fr .8fr 0.8fr;
+        grid-template-rows: 0fr .8fr .8fr 0.8fr;
         grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     }
 
@@ -252,6 +252,16 @@
     }
 
     /* Image and download section */
+    .img_and_download-container {
+        width: 100%;
+    
+        display: grid;
+    
+        grid-template-columns: 1fr  1fr  ;
+        grid-template-rows: 1fr 1fr 1fr   ;
+        grid-template-areas: "IAD_header   " "    IAD_txt " "btn_bazar   btn_googleplay  ";
+    }
+    
     .where-are-u {
 
 
@@ -309,6 +319,12 @@
     }
 
     /* interduceing section*/
+    .interduce-container {
+        display: grid;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: .4fr .4fr .4fr;
+        grid-template-areas: " header" "  text" "img";
+    }
     .interduce-header {
 
     }
@@ -327,6 +343,12 @@
     }
 
     /* joing us section*/
+    .joingus-container {
+        display: grid;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: .4fr .4fr .4fr;
+        grid-template-areas: "joinus_header   " "joinus_txt    "   " joingus_img  ";
+    }
     .joinus-header {
 
     }
@@ -343,4 +365,3 @@
 
     }
 }
-
