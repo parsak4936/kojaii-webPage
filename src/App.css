@@ -20,4 +20,10 @@
 .item{
     padding-left: 30px!important;
 }
- 
+
+.download{
+    font-family: "Iranian Sans" !important;
+    font: 30px bold;
+    border: 1px solid !important;
+    border-radius: 5px !important;
+}

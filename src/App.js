@@ -37,7 +37,7 @@ function App() {
                         <Nav>
 
                             <Nav.Link href="#download">
-                                <Button variant="outline-light">دانلود <i className='fa fa-download'/></Button>{' '}
+                                <Button className="download" variant="outline-light">دانلود <i className='fa fa-download'/></Button>{' '}
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
