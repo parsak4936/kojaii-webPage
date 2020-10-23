@@ -38,6 +38,7 @@
     "uuid": "^8.3.1"
   },
   "scripts": {
+  
     "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
