@@ -6,7 +6,7 @@
   }
 
 .nav_bar{
-    font: 20px bold;
+    font: 15px bold;
     background-color: #7ab1ff;
     direction: rtl;
     padding-right: 70px!important;
@@ -23,7 +23,7 @@
 
 .download{
     font-family: "Iranian Sans" !important;
-    font: 30px bold;
+    font: 15px bold;
     border: 1px solid !important;
     border-radius: 5px !important;
 }
