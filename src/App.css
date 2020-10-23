@@ -1,10 +1,23 @@
 * {
- 
+    font-family: "Iranian Sans";
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
   }
-   
 
+.nav_bar{
+    font: 20px bold;
+    background-color: #7ab1ff;
+    direction: rtl;
+    padding-right: 70px!important;
+    padding-left: 70px!important;
+}
+
+.navbar-Item{
+    text-align: right;
+}
+
+.item{
+    padding-left: 30px!important;
+}
  
