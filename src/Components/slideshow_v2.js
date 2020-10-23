@@ -14,19 +14,19 @@ export default class Slideshow_v2 extends Component {
    
     {
       key: uuidv4(),
-      content: <img src="https://picsum.photos/800/804/?random" alt="5" />
+      content: <img src="https://picsum.photos/500/802/?random" alt="5" />
     },
     {
       key: uuidv4(),
-      content: <img src="https://picsum.photos/500/800/?random" alt="6" />
+      content: <img src="https://picsum.photos/500/801/?random" alt="6" />
     },
     {
       key: uuidv4(),
-      content: <img src="https://picsum.photos/800/600/?random" alt="7" />
+      content: <img src="https://picsum.photos/500/803/?random" alt="7" />
     },
     {
       key: uuidv4(),
-      content: <img src="https://picsum.photos/805/800/?random" alt="8" />
+      content: <img src="https://picsum.photos/500/800/?random" alt="8" />
     }
   ].map((slide, index) => {
     return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
@@ -45,12 +45,13 @@ export default class Slideshow_v2 extends Component {
           
          width: "50%", 
      
-         height: "400px", 
-         margin: "50px auto" }}>
+         height: "400px",
+          
+         margin: "50px  auto" }}>
         <Carousel
           slides={this.slides}
           goToSlide={this.state.goToSlide}
-          offsetRadius={this.state.offsetRadius}
+        
           showNavigation={this.state.showNavigation}
           animationConfig={this.state.config}
         />
