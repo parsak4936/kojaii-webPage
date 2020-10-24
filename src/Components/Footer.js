@@ -4,57 +4,57 @@ import './Footer.css';
 import {Link} from 'react-router-dom';
 
 function Footer() {
-    //   <i class='fab fa-typo3' />
+  
     return (
         <div className='footer-container'>
 
 
-            <div class='social-media-wrap'>
+            <div className='social-media-wrap'>
 
 
-                <div class='footer-logo'>
+                <div className='footer-logo'>
                     <p className='social-logo'>
                         تمام حقوق مالی و معنوی این سایت متعلق به کجایی است ©
 
                     </p>
                 </div>
                 <center>
-                    <div class='social-icons'>
+                    <div className='social-icons'>
                         <Link
-                            class='social-icon-link twitter'
+                            className='social-icon-link twitter'
                             to='/'
                             target='_blank'
                             aria-label='twitter'
                         >
-                            <i class='fab fa-twitter'/>
+                            <i className='fab fa-twitter'/>
 
                         </Link>
                         <Link
-                            class='social-icon-link facebook'
+                            className='social-icon-link facebook'
                             to='/'
                             target='_blank'
                             aria-label='facebook'
                         >
-                            <i class='fab fa-facebook'/>
+                            <i className='fab fa-facebook'/>
 
                         </Link>
                         <Link
-                            class='social-icon-link telegram'
+                            className='social-icon-link telegram'
                             to='/'
                             target='_blank'
                             aria-label='telegram'
                         >
-                            <i class='fab fa-telegram'/>
+                            <i className='fab fa-telegram'/>
 
                         </Link>
 
                         <Link
-                            class='social-icon-link instagram'
+                            className='social-icon-link instagram'
                             to='/'
                             target='_blank'
                             aria-label='Instagram'
                         >
-                            <i class='fab fa-instagram'/>
+                            <i className='fab fa-instagram'/>
                         </Link>
 
 

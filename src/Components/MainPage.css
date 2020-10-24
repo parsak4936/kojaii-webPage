@@ -1,7 +1,4 @@
-@font-face {
-    font-family: IranSans;
-    src: url("font/Iranian Sans.ttf");
-}
+
 
 :root {
     --main-radius: 5px;
@@ -30,11 +27,11 @@
 
 .image_and_download {
     background-image: url('./MP_Backgound.jpg');
-
-    background-size: 100%;
-    background-repeat: no-repeat;
+     background-repeat: no-repeat;
     grid-area: main_img;
-    display: flex;
+    background-position: center; 
+    background-size: cover;
+     display: flex;
     align-items: center;
     justify-content: center;
 
@@ -43,37 +40,36 @@
 
 .img_and_download-container {
     width: 100%;
-
+    height: 620px;
     display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr     1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+ 
+    grid-template-columns: .4fr .4fr .4fr       ;
+    grid-template-rows: .4fr 0.2fr .2fr;
     grid-template-areas: "IAD_header  IAD_header" "IAD_txt   IAD_txt " "btn_bazar   btn_googleplay  ";
 }
 
 
 .come-faster {
-
-    grid-area: IAD_txt;
-    font-size: 9vh;
+     grid-area: IAD_txt;
+     font: 35px bold;
     display: flex;
     align-items: center;
     justify-content: center;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
 }
 
 .where-are-u {
 
-
+     font: 45px bold;
     grid-area: IAD_header;
-    font-size: 9vh;
+     
 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
 }
 
 .downlload-btn-mainpage-1 {
@@ -221,7 +217,12 @@
     padding: 15px;
 }
 
-@media only screen and (max-width: 960px) {
+
+
+/*  Tablet */
+
+
+@media only screen and (max-width: 900px) {
     .mainpage-container {
         grid-template-columns: 1fr;
         grid-template-rows: 0fr .8fr .8fr 0.8fr;
@@ -253,65 +254,64 @@
 
     /* Image and download section */
     .img_and_download-container {
-        width: 100%;
-    
+        width: 40%;
+   
+    height: 510px;
         display: grid;
     
-        grid-template-columns: 1fr  1fr  ;
-        grid-template-rows: 1fr 1fr 1fr   ;
-        grid-template-areas: "IAD_header   " "    IAD_txt " "btn_bazar   btn_googleplay  ";
+        grid-template-columns: 1fr       ;
+        grid-template-rows: .2fr 0fr 0.1fr 0fr ;
+        grid-template-areas: "IAD_header   " "    IAD_txt " "btn_bazar"   "btn_googleplay  ";
     }
     
-    .where-are-u {
-
-
-    }
-
-    .come-faster {
-
-    }
-
-    .MP-image {
-        height: 435px;
-    }
+     
+  
 
     /* Set text color to red */
     .downlload-btn-mainpage-1-mobile {
-        position: absolute;
+       
         display: block;
         text-align: center;
-
+        align-items: center;
+        justify-content: center;
 
         border-radius: 4px;
-        width: 50%;
-        height: 13%;
-        font-size: 1.5rem;
+       
+        
+     
         border: none;
         background: url('./Bazar.png');
         background-size: contain;
         background-repeat: no-repeat;
-        padding: 14px 20px;
+       
 
         transition: all 0.3s ease-out;
 
 
     }
+.image_and_download {
+     
+      align-items: center;
+        justify-content: center;
+    background-size: cover;
+    
 
+
+}
     .downlload-btn-mainpage-2-mobile {
-        position: absolute;
+        align-items: center;
+        justify-content: center;
         display: block;
         text-align: center;
         border: none;
 
-
-        width: 49%;
-        height: 12.8%;
-        font-size: 1.5rem;
+         
+       
 
         background: url('./Bazar.png');
         background-size: contain;
         background-repeat: no-repeat;
-        padding: 14px 20px;
+       
 
         transition: all 0.3s ease-out;
 
@@ -325,9 +325,7 @@
         grid-template-rows: .4fr .4fr .4fr;
         grid-template-areas: " header" "  text" "img";
     }
-    .interduce-header {
-
-    }
+    
 
     .interduce-text {
         display: flex;
@@ -337,10 +335,7 @@
 
     }
 
-    .animation-container {
-
-
-    }
+    
 
     /* joing us section*/
     .joingus-container {
@@ -349,16 +344,136 @@
         grid-template-rows: .4fr .4fr .4fr;
         grid-template-areas: "joinus_header   " "joinus_txt    "   " joingus_img  ";
     }
-    .joinus-header {
+     
+}
+
+
+
+
+
+
+/*  Phone */
+@media only screen and (max-width: 460px) {
+    .mainpage-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr .8fr .8fr 0.8fr;
+        grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
+    }
+
+    .toturial {
+
+        grid-area: Toturial;
+        width: "50%",;
+        height: "400px";
+        justify-content: center;
+        align-items: center;
 
     }
 
-    .joinus-text {
+    .info {
+
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "text_  " "text_" "text_";
+        align-items: center;
+        justify-content: center;
 
 
     }
 
-    .join-us-img-container {
- 
+    /* Image and download section */
+    .img_and_download-container {
+        width: 70%;
+   
+    height: 480px;
+        display: grid;
+    
+        grid-template-columns: 1fr       ;
+        grid-template-rows: .2fr .1fr 0.1fr 0.2fr ;
+        grid-template-areas: "IAD_header   " "    IAD_txt " "btn_bazar"   "btn_googleplay  ";
     }
+   
+
+  
+
+    /* Set text color to red */
+    .downlload-btn-mainpage-1-mobile {
+       
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 4px;
+       
+        
+     
+        border: none;
+        background: url('./Bazar.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+
+        transition: all 0.3s ease-out;
+
+
+    }
+.image_and_download {
+     
+      align-items: center;
+        justify-content: center;
+    background-size: cover;
+    
+
+
+}
+    .downlload-btn-mainpage-2-mobile {
+        align-items: center;
+        justify-content: center;
+        display: block;
+        text-align: center;
+        border: none;
+
+         
+       
+
+        background: url('./Bazar.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+
+        transition: all 0.3s ease-out;
+
+
+    }
+
+    /* interduceing section*/
+    .interduce-container {
+        display: grid;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: .4fr .4fr .4fr;
+        grid-template-areas: " header" "  text" "img";
+    }
+     
+
+    .interduce-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+  
+
+    /* joing us section*/
+    .joingus-container {
+        display: grid;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: .4fr .4fr .4fr;
+        grid-template-areas: "joinus_header   " "joinus_txt    "   " joingus_img  ";
+    }
+    
 }

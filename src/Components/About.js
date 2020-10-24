@@ -1,9 +1,9 @@
 import React from 'react';
-import Avatar from 'react-avatar';
-import img1 from './1.jpg'
-import img2 from './2.jpg'
+ 
+ 
+ 
 import './About.css'
-import img3 from './3.jpg'
+ 
 
  function About() {
  

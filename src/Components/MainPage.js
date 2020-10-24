@@ -4,9 +4,8 @@ import { Button } from './Button.js';
 import { Link } from 'react-router-dom';
 import Slide_v2 from './slideshow_v2'
 import Avatar from 'react-avatar';
-import BGimg from './MP_Backgound.jpg';
-import './MainPage.css';
-
+ import './MainPage.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import join_Us_img from './1.jpg';
 
 
