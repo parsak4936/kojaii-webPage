@@ -62,10 +62,8 @@
 
 .where-are-u {
 
-     font: 45px bold;
+    font: 45px bold;
     grid-area: IAD_header;
-     
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,10 +72,7 @@
 
 .downlload-btn-mainpage-1 {
 
-
     grid-area: btn_bazar;
-
-
     display: flex;
     align-items: center;
     justify-content: center;
