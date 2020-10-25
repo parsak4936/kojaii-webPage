@@ -20,7 +20,7 @@ function App() {
                         <img src={logo} alt="Logo" width="160px"/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav" className="navbar-Item">
+                    <Navbar.Collapse id="responsive-navbar-nav" className="navbar-Item ">
                         <Nav className="mr-auto">
                             <Nav.Link className="item" href="/">خانه</Nav.Link>
                             <Nav.Link className="item" href="/">پشتیبانی</Nav.Link>
