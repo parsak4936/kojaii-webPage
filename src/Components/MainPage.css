@@ -351,7 +351,7 @@
 
 
 /*  Phone */
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 500px) {
     .mainpage-container {
         grid-template-columns: 1fr;
         grid-template-rows: 0fr .8fr .8fr 0.8fr;
@@ -394,6 +394,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         transition: all 0.3s ease-out;
+    }
+    .where-are-u{
+        font-size: 40px;
     }
  
 .come-faster{
@@ -461,4 +464,33 @@
         margin-right: 50px;
     }
     
+}
+
+
+@media only screen and (max-width: 300px) {
+.where-are-u{
+    font-size: 35px;
+}
+
+.downlload-btn-mainpage-2-mobile {
+    
+    
+   margin-left: 25px;
+ 
+}
+.downlload-btn-mainpage-1-mobile {
+    
+  
+   
+  margin-left: 25px;
+
+  
+
+
+}
+
+
+
+
+
 }
