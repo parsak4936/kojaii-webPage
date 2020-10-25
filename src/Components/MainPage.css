@@ -141,10 +141,8 @@
 
 /* join us section */
 .join-us {
-
     align-items: center;
     justify-content: center;
-    background-color: lightblue;
     grid-area: join_us;
 }
 
@@ -174,11 +172,31 @@
 }
 
 .join-us-img-container {
+    font-family: "Iranian Sans" !important;
     grid-area: joingus_img;
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.join-us-form{
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-us-btn{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+
+.join-us-param{
+    border: 1px solid #343a40;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 10px;
 }
 
 /*  About us section */
@@ -349,6 +367,21 @@
 
 /*  Phone */
 @media only screen and (max-width: 460px) {
+    .join-us-image{
+        width: 300px;
+    }
+    .joinus-text {
+        text-align: center !important;
+    }
+    .join-us-param{
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+
+
     .mainpage-container {
         grid-template-columns: 1fr;
         grid-template-rows: 0fr .8fr .8fr 0.8fr;
@@ -468,7 +501,7 @@
         display: grid;
         grid-template-columns: 1fr  ;
         grid-template-rows: .4fr .4fr .4fr;
-        grid-template-areas: "joinus_header   " "joinus_txt    "   " joingus_img  ";
+        grid-template-areas:    " joingus_img  "  "joinus_header   " "joinus_txt    ";
     }
     
 }
