@@ -1,134 +1,134 @@
- 
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button.js';
-import { Link } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Button} from './Button.js';
+import {Link} from 'react-router-dom';
 import Slide_v2 from './slideshow_v2'
 import Avatar from 'react-avatar';
- import './MainPage.css';
+import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import join_Us_img from './1.jpg';
+import join_Us_img from './join-us.png';
 
 
-
-
-function MainPage () {
+function MainPage() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
-  
-    
+
+
     const closeMobileMenu = () => setClick(false);
-  
+
     const showButton = () => {
-      if (window.innerWidth <= 960) {
-        setButton(false);
-      } else {
-        setButton(true);
-      }
+        if (window.innerWidth <= 960) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
     };
-  
+
     useEffect(() => {
-      showButton();
+        showButton();
     }, []);
     //<i class='fab fa-typo3' />
     window.addEventListener('resize', showButton);
- return(
-   <>
-<div className="mainpage-container">
-  
-    {/*-----------------image & download ---------------*/}
-<section className='image_and_download'> 
+    return (
+        <>
+            <div className="mainpage-container">
+
+                {/*-----------------image & download ---------------*/}
+                <section className='image_and_download'>
 
 
+                    <div className="img_and_download-container">
 
-<div className="img_and_download-container">
+                        <h2  className = 'where-are-u'> <span  className='blue-kojaii'> کجایی </span>   دانلود برنامه  </h2>
 
-<h2  className = 'where-are-u'> <span  className='blue-kojaii'> کجایی </span>   دانلود برنامه  </h2>
+                        <p className='come-faster'>جهت دانلود برنامه کلید کنید</p>
 
-<p className='come-faster'>جهت دانلود برنامه کلید کنید</p>
+                        <Link
+                            to='/download'
+                            className='downlload-btn-mainpage-1-mobile'
+                            onClick={closeMobileMenu}
+                        >
 
-<div className='downlload-btn-mainpage-1'>  {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large'> </Button>} </div>
+                        </Link>
 
-<div className='downlload-btn-mainpage-2'>  {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large'>    </Button>} </div>
+                        <Link
+                            to='/download'
+                            className='downlload-btn-mainpage-2-mobile'
+                            onClick={closeMobileMenu}
+                        >
 
-<Link
-            to='/download'
-            className='downlload-btn-mainpage-1-mobile' 
-            onClick={closeMobileMenu}
-          >
-
-          </Link>
-
-<Link
-           to='/download'
-           className='downlload-btn-mainpage-2-mobile'
-           onClick={closeMobileMenu}
-         >
-
-         </Link>
+                        </Link>
 
 
-         </div>
+                    </div>
 
 
+                </section>
 
 
-</section>
+                {/*----------------- intrduce part ---------------*/}
+                <section className='interduce'>
+                    <div className='interduce-container'>
+
+                        <h1 className='interduce-header'>معرفی برنامه</h1>
+                        <span className='interduce-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque asperiores exercitationem aliquid? Pariatur aliquid sed praesentium quod ex omnis quam laboriosam sint veritatis perferendis, amet, ullam, perspiciatis minima iure dignissimos!</span>
+
+                        <div className='animation-container'>
+                            <td><Avatar name="interduce-animation" src={join_Us_img} value="100%" size="200"/></td>
+
+                        </div>
+
+                    </div>
 
 
+                </section>
+
+                {/*-----------------Toturial ---------------*/}
+                <section className='toturial'>
+                    <Slide_v2/>
+
+                </section>
 
 
-   {/*----------------- intrduce part ---------------*/}
-<section className='interduce'>
-  <div className='interduce-container'>
+                {/*-----------------join us ---------------*/}
+                <section className='join-us'>
 
-  <h1 className='interduce-header'>معرفی برنامه</h1>
-<span className='interduce-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque asperiores exercitationem aliquid? Pariatur aliquid sed praesentium quod ex omnis quam laboriosam sint veritatis perferendis, amet, ullam, perspiciatis minima iure dignissimos!</span>
-   
-<div className='animation-container'> 
-<td><Avatar name="interduce-animation" src= {join_Us_img}   value="100%" size="200"  /></td>
-
-</div>
-
-  </div>
+                    <div className='joingus-container'>
 
 
-</section>
- 
- {/*-----------------Toturial ---------------*/}
- <section className = 'toturial'>
- <Slide_v2 />
-
- </section>
-  
- 
- {/*-----------------join us ---------------*/}
-<section className = 'join-us'>
-
-  <div className='joingus-container'>
+                        <h1 align="right" className='joinus-header'>به ما بپیوندید</h1>
+                        <p align="right" className='joinus-text'>
+                            کجایی همواره به دنبال جذب افراد مستعد و باانگیزه میباشد. اگر به کاری که می کنید علاقه و به مهارت های خود اطمینان دارید، جای شما در تیم ما خالی است.
+                        </p>
 
 
-  <h1 className='joinus-header'>به ما بپیوندید</h1>
- 
+                        <center>
+                            <div>
+                                <form className="join-us-form" action="#">
+                                    <input className="join-us-param" name="name" type="text" placeholder="نام خود را وادر کنید"/>
+                                    <input className="join-us-param" name="phone" type="text" placeholder="شماره خود را وادر کنید"/>
+                                    <br/>
+                                    <br/>
+                                    <Button className="join-us-btn" variant="primary" type="submit">ارسال درخواست</Button>
+                                    <br/>
+                                    <br/>
+                                </form>
+                            </div>
+                        </center>
 
 
+                        <div className='join-us-img-container'>
 
- <span className='joinus-text'>Lorem ipsum dolor sit  m, perspiciatis minima iure dignissimos!</span>
-  
- <div className='join-us-img-container'> 
- <Avatar name="joinus-img" src={join_Us_img}   value="100%" size="250"  />
- 
- </div>
- 
+                            <img className="join-us-image" name="joinus-img" src={join_Us_img}/>
 
-  </div>
+                        </div>
 
 
+                    </div>
 
- 
 
-</section>
- 
- {/*-----------------<section className='About-us'>
+                </section>
+
+                {/*-----------------<section className='About-us'>
 
 
 
@@ -163,18 +163,11 @@ function MainPage () {
  ---------------*/}
 
 
+            </div>
+        </>
+    );
 
 
-</div>
- </>
- );
+}
 
-  
-
-
-    
-   
-
-
-
-}export default MainPage;
+export default MainPage;
