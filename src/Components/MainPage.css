@@ -9,7 +9,7 @@
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 0  0  0  0 ;
+    grid-template-rows: 0fr 0fr 0fr 0fr;
     grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
 .toturial {
     background-color: cyan;
     grid-area: Toturial;
-  
+
     justify-content: center;
     display: flex;
 }
@@ -29,7 +29,7 @@
     background-image: url('./MP_Backgound.jpg');
      background-repeat: no-repeat;
     grid-area: main_img;
-    background-position: center; 
+    background-position: center;
     background-size: cover;
      display: flex;
     align-items: center;
@@ -59,9 +59,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
-   
+
+
+
     color: white;
 }
 
@@ -105,7 +105,7 @@
 
 /* Interduce section */
 .interduce {
-    background-color: whitesmoke;
+    background-color: darkgray;
     grid-area: interduce;
 }
 
@@ -183,7 +183,7 @@
 }
 
 .join-us-img-container {
-    font-family: "Iranian Sans", sans-serif !important;
+    font-family: "Iranian Sans" !important;
     grid-area: joingus_img;
     display: flex;
     align-items: center;
@@ -250,7 +250,7 @@
     .mainpage-container {
         justify-content: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 0  0  0  0 ;
+        grid-template-rows: 0fr 0fr 0fr 0fr;
         grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     }
 
@@ -264,27 +264,27 @@
 
     }
 
-    
+
 
     /* Image and download section */
     .img_and_download-container {
         width: 100%;
-  
+
       height: 590px;
         display: grid;
-       
+
         justify-content: center;
         grid-template-columns: .5fr      ;
-        grid-template-rows: .2fr 0.2fr 0.1fr 0  ;
+        grid-template-rows: .2fr 0.2fr 0.1fr 0fr ;
         grid-template-areas: "IAD_header    " "  IAD_txt    " "btn_bazar   "   "  btn_googleplay ";
     }
-    
-     
-  
+
+
+
 
     /* Set text color to red */
     .downlload-btn-mainpage-1-mobile {
-       
+
         display: block;
         text-align: center;
         align-items: center;
@@ -292,8 +292,9 @@
         border-radius: 4px;
         margin-bottom: 30px;
         border: none;
+        background: url('./Bazar.png');
         background-size: contain;
-        background: url('./Bazar.png') no-repeat;
+        background-repeat: no-repeat;
 
 
         transition: all 0.3s ease-out;
@@ -305,9 +306,9 @@
     }
     .come-faster{
         font-size: 30px;
-    
+
     }
- 
+
     .downlload-btn-mainpage-2-mobile {
         align-items: center;
         justify-content: center;
@@ -315,8 +316,9 @@
         text-align: center;
         margin-bottom: 30px;
         border: none;
+        background: url('./Bazar.png');
         background-size: contain;
-        background: url('./Bazar.png') no-repeat;
+        background-repeat: no-repeat;
         transition: all 0.3s ease-out;
 
     }
@@ -332,7 +334,7 @@
         grid-template-rows: 0.1fr .4fr .4fr;
         grid-template-areas: " header" "  text" "img";
     }
-    
+
 .interduce-header{
     margin-top: 60px;
 }
@@ -346,7 +348,7 @@
 
     }
 
-    
+
 
     /* joing us section*/
     .joingus-container {
@@ -358,7 +360,7 @@
         grid-template-rows: .4fr .4fr .4fr;
         grid-template-areas: "joinus_header   " "joinus_txt    "   " joingus_img  ";
     }
-     
+
 }
 
 
@@ -378,12 +380,12 @@
         padding: 10px;
         margin-top: 10px;
         margin-bottom: 20px;
-        margin-left: 0 ;
+        margin-left: 0px;
     }
 
     .mainpage-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 0  .8fr .8fr 0.8fr;
+        grid-template-rows: 0fr .8fr .8fr 0.8fr;
         grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     }
 
@@ -393,45 +395,46 @@
         width: 100%;
         height: 660px;
         justify-content: center;
-       
+
 
     }
 
-   
+
     /* Image and download section */
     .img_and_download-container {
-     width: 100%; 
+     width: 100%;
      height: 540px;
      display: grid;
-     justify-content: center; 
+     justify-content: center;
      grid-template-columns: 1fr       ;
-     grid-template-rows: .3fr 0.2fr 0.2fr 0  ;
+     grid-template-rows: .3fr 0.2fr 0.2fr 0fr ;
      grid-template-areas: "IAD_header " "    IAD_txt " "btn_bazar"   "btn_googleplay  ";
     }
-   
 
-  
+
+
 
     /* Set text color to red */
-    .downlload-btn-mainpage-1-mobile { 
+    .downlload-btn-mainpage-1-mobile {
         display: block;
-        border-radius: 4px;  
+        border-radius: 4px;
         margin-bottom: 40px;
         margin-left: 55px;
         border: none;
+        background: url('./Bazar.png');
         background-size: contain;
-        background: url('./Bazar.png') no-repeat;
+        background-repeat: no-repeat;
         transition: all 0.3s ease-out;
     }
     .where-are-u{
         font-size: 40px;
     }
- 
+
 .come-faster{
  font-size: 30px;
- margin-bottom: 0 ;
-     
-    
+ margin-bottom: 0px;
+
+
 }
     .downlload-btn-mainpage-2-mobile {
         align-items: center;
@@ -440,11 +443,12 @@
         text-align: center;
         border: none;
         margin-bottom: 40px;
-        
+
        margin-left: 55px;
 
+        background: url('./Bazar.png');
         background-size: contain;
-        background: url('./Bazar.png') no-repeat;
+        background-repeat: no-repeat;
 
 
         transition: all 0.3s ease-out;
