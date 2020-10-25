@@ -1,11 +1,13 @@
 * {
     font-family: "Iranian Sans";
     box-sizing: border-box;
+    
     margin: 0;
     padding: 0;
   }
 
 .nav_bar{
+  
     font: 15px bold;
     background-color: #7ab1ff;
     direction: rtl;
@@ -15,15 +17,19 @@
 
 .navbar-Item{
     text-align: right;
+   
 }
 
 .item{
     
     padding-left: 30px!important;
+    
+
    
 }
 
-.download{
+.download{     
+
     font-family: "Iranian Sans" !important;
     font: 15px bold;
     border: 1px solid !important;
@@ -32,6 +38,7 @@
 
 @media screen and (max-width: 1000px) {
     .nav_bar{
+ 
         padding-right: 10px!important;
         padding-left: 20px!important;
     }

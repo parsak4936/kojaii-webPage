@@ -42,9 +42,9 @@ function MainPage () {
 
 <div className="img_and_download-container">
 
-<h1  className = 'where-are-u'> کجایی؟</h1>
+<h2  className = 'where-are-u'> <span  className='blue-kojaii'> کجایی </span>   دانلود برنامه  </h2>
 
-<h2 className='come-faster'>بدو زود تر بیا !!</h2>
+<p className='come-faster'>جهت دانلود برنامه کلید کنید</p>
 
 <div className='downlload-btn-mainpage-1'>  {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large'> </Button>} </div>
 
