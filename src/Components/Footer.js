@@ -18,7 +18,7 @@ function Footer() {
 
                     </p>
                 </div>
-                <center>
+
                     <div className='social-icons'>
                         <Link
                             className='social-icon-link twitter'
@@ -59,7 +59,7 @@ function Footer() {
 
 
                     </div>
-                </center>
+
             </div>
 
         </div>
