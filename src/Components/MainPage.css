@@ -9,7 +9,7 @@
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 0fr 0fr 0fr 0fr;
+    grid-template-rows: 0  0  0  0 ;
     grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     align-items: center;
     justify-content: center;
@@ -183,7 +183,7 @@
 }
 
 .join-us-img-container {
-    font-family: "Iranian Sans" !important;
+    font-family: "Iranian Sans", sans-serif !important;
     grid-area: joingus_img;
     display: flex;
     align-items: center;
@@ -250,7 +250,7 @@
     .mainpage-container {
         justify-content: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 0fr 0fr 0fr 0fr;
+        grid-template-rows: 0  0  0  0 ;
         grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     }
 
@@ -275,7 +275,7 @@
        
         justify-content: center;
         grid-template-columns: .5fr      ;
-        grid-template-rows: .2fr 0.2fr 0.1fr 0fr ;
+        grid-template-rows: .2fr 0.2fr 0.1fr 0  ;
         grid-template-areas: "IAD_header    " "  IAD_txt    " "btn_bazar   "   "  btn_googleplay ";
     }
     
@@ -292,10 +292,9 @@
         border-radius: 4px;
         margin-bottom: 30px;
         border: none;
-        background: url('./Bazar.png');
         background-size: contain;
-        background-repeat: no-repeat;
-       
+        background: url('./Bazar.png') no-repeat;
+
 
         transition: all 0.3s ease-out;
 
@@ -316,9 +315,8 @@
         text-align: center;
         margin-bottom: 30px;
         border: none;
-        background: url('./Bazar.png');
         background-size: contain;
-        background-repeat: no-repeat;
+        background: url('./Bazar.png') no-repeat;
         transition: all 0.3s ease-out;
 
     }
@@ -380,12 +378,12 @@
         padding: 10px;
         margin-top: 10px;
         margin-bottom: 20px;
-        margin-left: 0px;
+        margin-left: 0 ;
     }
 
     .mainpage-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 0fr .8fr .8fr 0.8fr;
+        grid-template-rows: 0  .8fr .8fr 0.8fr;
         grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
     }
 
@@ -407,7 +405,7 @@
      display: grid;
      justify-content: center; 
      grid-template-columns: 1fr       ;
-     grid-template-rows: .3fr 0.2fr 0.2fr 0fr ;
+     grid-template-rows: .3fr 0.2fr 0.2fr 0  ;
      grid-template-areas: "IAD_header " "    IAD_txt " "btn_bazar"   "btn_googleplay  ";
     }
    
@@ -421,9 +419,8 @@
         margin-bottom: 40px;
         margin-left: 55px;
         border: none;
-        background: url('./Bazar.png');
         background-size: contain;
-        background-repeat: no-repeat;
+        background: url('./Bazar.png') no-repeat;
         transition: all 0.3s ease-out;
     }
     .where-are-u{
@@ -432,7 +429,7 @@
  
 .come-faster{
  font-size: 30px;
- margin-bottom: 0px;
+ margin-bottom: 0 ;
      
     
 }
@@ -446,10 +443,9 @@
         
        margin-left: 55px;
 
-        background: url('./Bazar.png');
         background-size: contain;
-        background-repeat: no-repeat;
-        
+        background: url('./Bazar.png') no-repeat;
+
 
         transition: all 0.3s ease-out;
 
