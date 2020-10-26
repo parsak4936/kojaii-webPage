@@ -51,6 +51,7 @@
     justify-content: space-between;
     align-items: center;
     width: 150px;
+   margin-left: 250px;
 
 
 }
@@ -87,7 +88,7 @@
 
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 890px) {
     
 
     .footer-links {
@@ -96,6 +97,12 @@
     }
 
 
+    .social-icons {
+
+        margin-left: 140px;
+
+
+    }
     .footer-link-wrapper {
         justify-content: center;
         align-items: center;
@@ -117,5 +124,14 @@
     color: #7AB1C5;
     transition: 250ms;
 }
-  
+
+@media screen and (max-width: 400px) {
+
+    .social-icons {
+
+        margin-left: 10px;
+
+
+    }
+}
   
