@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
  import { config } from "react-spring";
- import {v1 as uuidv4} from "uuid"; 
+ import {v1 as uuidv4} from "uuid";
+ import './SlideShow_v2.css'
 export default class Slideshow_v2 extends Component {
   state = {
     goToSlide: 0,
@@ -41,13 +42,7 @@ export default class Slideshow_v2 extends Component {
 
   render() {
     return (
-      <div style={{
-          
-         width: "50%", 
-     
-         height: "400px",
-          
-         margin: "50px  auto" }}>
+      <div className="slideshow-container" >
         <Carousel
           slides={this.slides}
           goToSlide={this.state.goToSlide}
