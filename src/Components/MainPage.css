@@ -18,7 +18,7 @@
 }
 
 .toturial {
-    background-color: cyan;
+    background-color: #add8e6;
     grid-area: Toturial;
 
     justify-content: center;
@@ -110,13 +110,14 @@
 }
 
 .interduce-container {
+    direction: rtl;
     width: 100%;
-    height: 620px;
-    display: grid;
+    height: 550px;
     justify-content: center;
-    grid-template-columns: .4fr .4fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "img header" "text text";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "joinus_header  joingus_img" "joinus_txt  joingus_img " "joingus_btn  joingus_img  ";
 }
 
 .interduce-header {
@@ -134,6 +135,10 @@
     align-items: center;
     justify-content: center;
 
+}
+.intro-image{
+    margin-bottom: 100px;
+    width: 390px;
 }
 
 
@@ -155,6 +160,7 @@
 }
 
 .joingus-container {
+    padding-left: 10px;
     width: 100%;
     height: 550px;
     justify-content: center;
@@ -174,13 +180,21 @@
 }
 
 .joinus-text {
+    padding-right: 20px;
     padding-left: 20px;
     grid-area: joinus_txt;
     display: flex;
     align-items: center;
     justify-content: center;
-
-
+}
+.intro-text {
+    margin-right: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    grid-area: joinus_txt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .join-us-img-container {
@@ -256,7 +270,7 @@
     }
 
     .toturial {
-
+        margin-top: 120px;
         grid-area: Toturial;
         width: 100%;
         height: 600px;
@@ -325,19 +339,18 @@
 
     /* interduceing section*/
     .interduce-container {
-        align-items: center;
-        justify-content: center;
         width: 100%;
         height: 660px;
         display: grid;
-        grid-template-columns: .8fr  ;
-        grid-template-rows: 0.1fr .4fr .4fr;
-        grid-template-areas: " header" "  text" "img";
+        justify-content: center;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: .4fr .4fr .4fr;
+        grid-template-areas: " joingus_img  "   "joinus_header   " "joinus_txt    ";
     }
 
-.interduce-header{
-    margin-top: 60px;
-}
+    .interduce-header{
+        margin-top: 60px;
+    }
     .interduce-text {
         margin-left: 80px;
         margin-right: 80px;
@@ -347,9 +360,6 @@
 
 
     }
-
-
-
     /* joing us section*/
     .joingus-container {
         width: 100%;
@@ -358,7 +368,7 @@
          justify-content: center;
         grid-template-columns: 1fr  ;
         grid-template-rows: .4fr .4fr .4fr;
-        grid-template-areas: "joinus_header   " "joinus_txt    "   " joingus_img  ";
+        grid-template-areas: " joingus_img  " "joinus_header   " "joinus_txt    "   ;
     }
 
 }
@@ -369,13 +379,23 @@
 
 
 /*  Phone */
+
 @media only screen and (max-width: 500px) {
     .join-us-image{
         width: 300px;
     }
+    .intro-image{
+        margin-bottom: 0px;
+        width: 300px;
+    }
     .joinus-text {
-        padding-left: 0px;
-
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center !important;
+    }
+    .intro-text {
+        padding-right: 20px;
+        padding-left: 20px;
         text-align: center !important;
     }
     .join-us-param{
@@ -432,12 +452,12 @@
         font-size: 40px;
     }
 
-.come-faster{
- font-size: 30px;
- margin-bottom: 0px;
+    .come-faster{
+     font-size: 30px;
+     margin-bottom: 0px;
 
 
-}
+    }
     .downlload-btn-mainpage-2-mobile {
         align-items: center;
         justify-content: center;
@@ -461,12 +481,12 @@
     /* interduceing section*/
     .interduce-container {
         width: 100%;
-        height: 660px;
+        height: 630px;
         display: grid;
-        justify-content: center;
         grid-template-columns: 1fr  ;
-        grid-template-rows: .2fr .3fr .4fr;
-        grid-template-areas: " header" "  text" "img";
+        justify-content: center;
+        grid-template-rows: .4fr .4fr .4fr;
+        grid-template-areas:    " joingus_img  "  "joinus_header   " "joinus_txt    ";
     }
      
 
@@ -496,31 +516,37 @@
         margin-left: 50px;
         margin-right: 50px;
     }
+    .intro-text{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
     
 }
 
 
 @media only screen and (max-width: 300px) {
-.where-are-u{
-    font-size: 35px;
-}
+    .joinus-text {
+        padding-left: 0px;
 
-.downlload-btn-mainpage-2-mobile {
-    
-    
-   margin-left: 25px;
- 
-}
-.downlload-btn-mainpage-1-mobile {
-    
-  
-   
-  margin-left: 25px;
+        text-align: center !important;
+    }
+    .intro-image{
+        margin-bottom: 0px;
+    }
+    .intro-text {
+        padding-left: 0px;
+        text-align: center !important;
+    }
+    .where-are-u{
+        font-size: 35px;
+    }
 
-  
-
-
-}
+    .downlload-btn-mainpage-2-mobile {
+       margin-left: 25px;
+    }
+    .downlload-btn-mainpage-1-mobile {
+      margin-left: 25px;
+    }
 
 
 

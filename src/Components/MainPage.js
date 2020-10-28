@@ -6,6 +6,7 @@ import Avatar from 'react-avatar';
 import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import join_Us_img from './join-us.png';
+import intro_img from './intro.gif';
 
 
 function MainPage() {
@@ -69,14 +70,17 @@ function MainPage() {
                 <section className='interduce'>
                     <div className='interduce-container'>
 
-                        <h1 className='interduce-header'>معرفی برنامه</h1>
-                        <span className='interduce-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque asperiores exercitationem aliquid? Pariatur aliquid sed praesentium quod ex omnis quam laboriosam sint veritatis perferendis, amet, ullam, perspiciatis minima iure dignissimos!</span>
+                        <h1 align="right" className='joinus-header'>کجایی</h1>
+                        <p align="right" className='intro-text'>
+                            برای همه ممکن است پیش امده باشد که زمان زیادی را صرف منتظر ماندن برای دوستانشان باشند که با
+                            آنها قرار مالقات دارند ؛ در پروژه کجایی ، روندی به منظور بهبود کنترل قرار مالقات های جمعی یا دو نفره در
+                            نظر گرفته شده است تا کاربرانی که می خواهند هم دیگر را مالقات کنند ، دیگر درگیر مسئله انتظار نباشند و
+                            در طی راه ، بتوانند موقعیت همدیگر را ببینند                        </p>
 
-                        <div className='animation-container'>
-                            <td><Avatar name="interduce-animation" src={join_Us_img} value="100%" size="200"/></td>
 
+                        <div className='join-us-img-container'>
+                            <img className="intro-image" name="joinus-img" src={intro_img}/>
                         </div>
-
                     </div>
 
 
