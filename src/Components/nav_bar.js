@@ -1,113 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Navbar,Nav,NavDropdown,Button} from 'react-bootstrap'
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import LOGO from './LOGO.png'
 import './nav_bar.css';
-import Avatar from 'react-avatar';
+import logo from "../LOGO.png";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+function Nav_bar() {
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+    const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
+    const closeMobileMenu = () => setClick(false);
+    const showButton = () => {
+        if (window.innerWidth <= 960) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
+    };
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
+    useEffect(() => {
+        showButton();
+    }, []);
+    //<i class='fab fa-typo3' />
+    window.addEventListener('resize', showButton);
 
-  useEffect(() => {
-    showButton();
-  }, []);
-  //<i class='fab fa-typo3' />
-  window.addEventListener('resize', showButton);
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <div className= "btn">
-          {button && <Button buttonStyle='btn--outline'>   <i class='fa fa-download'/>   دانلود </Button>}
-          </div>
-       
-         
+        <Navbar className="nav_bar" collapseOnSelect expand="lg">
+            <Navbar.Brand href="#home">
+                <img src={logo} alt="Logo" width="160px"/>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav" className="navbar-Item ">
+                <Nav className="mr-auto">
+                    <Nav.Link className="item" href="/">خانه</Nav.Link>
+                    <Nav.Link className="item" href="/">پشتیبانی</Nav.Link>
 
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} /> </div>
+                    <Nav.Link className="item" href="/about">ارتباط با ما</Nav.Link>
+                    <Nav.Link className="item" href="/blog">بلاگ</Nav.Link>
+                </Nav>
 
+                <Nav>
 
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          
-
-
-<li className='nav-item'>
-  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-  پشتیبانی
-  </Link>
-</li>
-
-          <li className='nav-item'>
-              <Link
-                to='/about'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-ارتباط با ما             </Link>
-            </li>
+                    <Nav.Link href="#download">
+                        <Button className="download" variant="outline-light">دانلود <i className='fa fa-download'/></Button>{' '}
+                    </Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
 
 
-          
-           
-
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              خانه
-              </Link>
-            </li>
-
-
-           
-
-
-            <li>
-              <Link
-                to='/download'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                   <i class='fa fa-download'/>
-                   <span>  </span>
-               دانلود
-              
-              </Link>
-            </li>
-
-
-
-          </ul>
- {/*-----------------
- 
- <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-           کجایی؟ </Link>
- 
- ---------------*/}
-        
-          
-      
-        </div>
-         <div className=' navbar-logo-img' >
-          <Avatar name="LOGO" src={LOGO}   round="100px" value="80%" size="100"  />
-         
-         
-          </div>
-        
-      </nav>
     </>
   );
 }
 
-export default Navbar;
+export default Nav_bar;

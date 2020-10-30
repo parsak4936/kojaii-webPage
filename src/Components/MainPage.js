@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Button} from './Button.js';
 import {Link} from 'react-router-dom';
 import Slide_v2 from './slideshow_v2'
-import Avatar from 'react-avatar';
+
 import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import join_Us_img from './join-us.png';
@@ -10,6 +10,7 @@ import intro_img from './intro.gif';
 
 
 function MainPage() {
+
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -64,6 +65,7 @@ function MainPage() {
 
 
                 </section>
+
 
 
                 {/*----------------- intrduce part ---------------*/}
