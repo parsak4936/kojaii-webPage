@@ -26,9 +26,10 @@
 }
 
 .image_and_download {
-    background-image: url('./MP_Backgound.jpg');
-     background-repeat: no-repeat;
+     background-image: url('./MP_Backgound.png');
+
     grid-area: main_img;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
      display: flex;
@@ -105,7 +106,7 @@
 
 /* Interduce section */
 .interduce {
-    background-color: white;
+    background-color: #DBF1F7;
     grid-area: interduce;
 }
 
@@ -116,8 +117,8 @@
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "joinus_header  joingus_img" "joinus_txt  joingus_img " "joingus_btn  joingus_img  ";
+    grid-template-rows: 1fr 1fr 1fr .4fr;
+    grid-template-areas: "joinus_header  joingus_img" "joinus_txt  joingus_img " "joingus_btn  joingus_img  "  "unknown_rec joingus_img";
 }
 
 .interduce-header {
@@ -131,8 +132,7 @@
 .interduce-text {
     grid-area: text;
     display: flex;
-
-    align-items: center;
+     align-items: center;
     justify-content: center;
 
 }
@@ -141,7 +141,9 @@
     width: 390px;
 }
 
-
+unknown_rec{
+    grid-area:unknown_rec ;
+}
 .animation-container {
     grid-area: img;
     align-items: center;
@@ -154,6 +156,7 @@
 
 /* join us section */
 .join-us {
+   background-color:  #DBF1F7;
     align-items: center;
     justify-content: center;
     grid-area: join_us;
@@ -166,13 +169,14 @@
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "joinus_header  joingus_img" "joinus_txt  joingus_img " "joingus_btn  joingus_img  ";
+    grid-template-rows: 1fr 1fr 1fr  ;
+    grid-template-areas: "joinus_header  joingus_img" "joinus_txt  joingus_img " "joingus_btn  joingus_img  "   ;
 }
-
+.
 .joinus-header {
     grid-area: joinus_header;
     display: flex;
+    color: #68BBD5;
     align-items: center;
     justify-content: center;
 
@@ -180,6 +184,7 @@
 }
 
 .joinus-text {
+    color: #0463B9;
     padding-right: 20px;
     padding-left: 20px;
     grid-area: joinus_txt;
@@ -193,6 +198,7 @@
     padding-left: 20px;
     grid-area: joinus_txt;
     display: flex;
+    color: #1784CD;
     align-items: center;
     justify-content: center;
 }
@@ -213,12 +219,14 @@
 }
 
 .join-us-btn{
+    background-color:  #DBF1F7;
     margin-top: 20px !important;
     margin-bottom: 20px !important;
 }
 
 
 .join-us-param{
+
     border: 1px solid #343a40;
     border-radius: 5px;
     margin-left: 20px;
@@ -367,14 +375,11 @@
         display: grid;
          justify-content: center;
         grid-template-columns: 1fr  ;
-        grid-template-rows: .4fr .4fr .4fr;
-        grid-template-areas: " joingus_img  " "joinus_header   " "joinus_txt    "   ;
+        grid-template-rows: .4fr .4fr .4fr .4fr ;
+        grid-template-areas: " joingus_img  " "joinus_header   " "joinus_txt    "  "unknown_rec" ;
     }
 
 }
-
-
-
 
 
 
@@ -509,8 +514,8 @@
         display: grid;
         grid-template-columns: 1fr  ;
         justify-content: center;
-        grid-template-rows: .4fr .4fr .4fr;
-        grid-template-areas:    " joingus_img  "  "joinus_header   " "joinus_txt    ";
+        grid-template-rows: .4fr .4fr .4fr .4fr ;
+        grid-template-areas:    " joingus_img  "  "joinus_header   " "joinus_txt    " "unknown_rec";
     }
     .joinus-text{
         margin-left: 50px;

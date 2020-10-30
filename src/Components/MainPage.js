@@ -77,7 +77,16 @@ function MainPage() {
                             نظر گرفته شده است تا کاربرانی که می خواهند هم دیگر را مالقات کنند ، دیگر درگیر مسئله انتظار نباشند و
                             در طی راه ، بتوانند موقعیت همدیگر را ببینند                        </p>
 
+                        <div className='unknown_rec'>
+                            <svg id="unknown_rec" xmlns="http://www.w3.org/2000/svg" width="575" height="30" viewBox="0 0 775 30">
+                                <rect id="Rectangle_22" data-name="Rectangle 22" width="85" height="30" rx="15" fill="#8fe1eb"/>
+                                <rect id="Rectangle_23" data-name="Rectangle 23" width="85" height="30" rx="15" transform="translate(160)" fill="#68bbd5"/>
+                                <rect id="Rectangle_24" data-name="Rectangle 24" width="85" height="30" rx="15" transform="translate(320)" fill="#90dee9"/>
+                                <rect id="Rectangle_25" data-name="Rectangle 25" width="85" height="30" rx="15" transform="translate(480)" fill="#68bbd5"/>
+                                <rect id="Rectangle_26" data-name="Rectangle 26" width="85" height="30" rx="15" transform="translate(640)" fill="#92e0ed"/>
+                            </svg>
 
+                        </div>
                         <div className='join-us-img-container'>
                             <img className="intro-image" name="joinus-img" src={intro_img}/>
                         </div>
@@ -132,39 +141,6 @@ function MainPage() {
 
                 </section>
 
-                {/*-----------------<section className='About-us'>
-
-
-
-<h1 className='header-for-Aboutus'>Nigma</h1>
-
-<p >Lorem ipsum dolor sit a uidem? Optio quae sed voluptatem veritatis at?</p>
-
-<section className='info'>
-
- 
-
-<div className='aboutus-txt'>
- <h2 className='masoud-header'>مسعود حاجی زاده</h2>
-<p>Lorem ipsum dolor sit amet consectetur  ue eum doloremque consectetur, eveniet nostrum laudantium. Repellat optio obcaecati ab aliquid corrupti non?</p>
-</div>
-
-
- <div  className='aboutus-txt' >
-<h2 className='nafaji-header' >امیر حسین نجفی</h2>
-<p>Lorem ipsum dolor, ita, nam sit eius accusantium quaerat illo. Similique, ullam!</p>
-</div>
-
- <div  className='aboutus-txt' >
-
-<h2 className='parsa-header'>پارسا کاظمی</h2>
-<p>Lorem  quasi. Reprehenderit iusto impedit debitis eligendi officia? Et nisi dicta a quos eligendi!</p>
-</div>
-
-</section>
-</section>
-
- ---------------*/}
 
 
             </div>
