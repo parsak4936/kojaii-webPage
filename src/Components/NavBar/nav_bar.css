@@ -10,12 +10,18 @@
   font-weight: 400;
   letter-spacing: 3px;
 }
+.kojaii{
+  color: blue;
+}
 
 .nav-menu {
+
+
   background: transparent;
   padding: 30px;
   position: fixed;
   width: 100%;
+
   z-index: 9999;
 
   transition: all .4s;
@@ -28,15 +34,19 @@
 }
 
 .nav-item {
+
   padding: 0 10px;
 }
 
 .menu-item {
+
+
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 11px;
-  letter-spacing: 2px;
+  font-size: 16px;
+  letter-spacing: 1px;
   color: white;
-  text-transform: uppercase;
+  padding-top: 30px;
+
 }
 
 @media (max-width: 34em) {
@@ -72,7 +82,7 @@
 }
 
 .menu-item:hover {
-  color: yellow;
+ color: #DBF1F9;
 }
 
 .nav-active {
@@ -89,7 +99,7 @@
 .costum-navbar {
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #000 !important;
+  background-color: #68BBD5 !important;
   position: fixed;
 }
 
@@ -99,7 +109,7 @@
 /* ===== HERO SECTION ===== */
 
 .hero-section {
-  background-image: url("./MP_Backgound.png");
+  background-image: url("../Images/MP_Backgound.png");
 
   height: 100vh;
   background-size: cover;
@@ -113,15 +123,14 @@
 
 .text-hero {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 .sub-text-hero {
   font-family: 'Dosis', sans-serif;
-  letter-spacing: 9px;
-  color: orange;
+
 }
 
 .nav-bottom {

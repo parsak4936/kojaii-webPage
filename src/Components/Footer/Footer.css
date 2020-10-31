@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: #3E6078;
+    background-color: #2AB1D6;
     padding-top: 2rem;
     padding-bottom: 0rem;
     justify-content: center;
@@ -58,13 +58,13 @@
 
 .social-logo {
     font-family: "Iranian Sans";
-    color: #fff;
+    color: #FFFFFF;
     justify-self: start;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
     display: flex;
     flex-direction: column;
 

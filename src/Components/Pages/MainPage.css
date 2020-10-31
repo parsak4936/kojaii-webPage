@@ -1,0 +1,292 @@
+
+
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+/*  Desktop */
+.mainpage-container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows:   0fr 0fr 0fr;
+    grid-template-areas:   "interduce" "Toturial" "join_us";
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.toturial {
+    background-color: #add8e6;
+    grid-area: Toturial;
+
+    justify-content: center;
+    display: flex;
+}
+
+
+/* intro section */
+.interduce {
+    background-color: #DBF1F7;
+    grid-area: interduce;
+}
+
+.interduce-container {
+    direction: rtl;
+    width: 100%;
+    height: 550px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr .4fr;
+    grid-template-areas: "intro_header  ." "info_txt intro-image " "info_txt  intro-image  "  "unknown_rec intro-image";
+}
+
+.intro-header {
+    grid-area: intro_header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.intro-gif-container{
+    grid-area: intro-image;
+
+}
+.intro-image{
+
+    width: 590px;
+}
+.intro-text {
+    margin-right: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    grid-area: info_txt;
+    display: flex;
+    color: #1784CD;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.unknown_rec{
+    margin-bottom: 90px;
+    grid-area:unknown_rec ;
+}
+
+/* join us section */
+.join-us {
+   background-color:  #DBF1F7;
+    align-items: center;
+    justify-content: center;
+    grid-area: join_us;
+}
+
+.joingus-container {
+margin-top: 50px;
+    width: 100%;
+    height: 480px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr .2fr 1fr;
+    grid-template-rows: 0fr 1fr 1fr 1fr ;
+    grid-template-areas: "joinus_header  joinus_header  joingus_img"
+                         "joinus_txt joinus_txt  joingus_img "
+                         "joinus_phone  joinus_name  joingus_img "
+                         "joinus_btn  joinus_btn  joingus_img "
+;
+}
+
+
+.joinus-header {
+
+    grid-area: joinus_header;
+    display: flex;
+    color: #68BBD5;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.joinus-text {
+    margin-top: 18px;
+
+    color: #0463B9;
+    padding-right: 20px;
+    padding-left: 20px;
+    grid-area: joinus_txt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-us-img-container {
+    font-family: "Iranian Sans" !important;
+    grid-area: joingus_img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.join-us-form{
+
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #0463B1;
+    text-align: center;
+    opacity: 1; /* Firefox */
+}
+
+
+:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.35s ease-in-out;
+
+    opacity: 0.5;
+
+}
+
+.join-us-btn{
+    grid-area: joinus_btn;
+    background-color:  #DBF1F7;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+
+.join-us-param-name{
+    grid-area: joinus_name;
+    margin-top: 18px;
+    border: 1px solid #68BBD5;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 10px;
+}
+.join-us-param-name:hover {
+    transition: all 0.3s ease-out;
+    background: #92D1E7;
+    color: #1C2E3A;
+    transition: 250ms;
+}
+
+
+.join-us-param-phone{
+    grid-area: joinus_phone;
+    margin-top: 18px;
+    border: 1px solid #68BBD5;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 10px;
+}
+.join-us-param-phone:hover {
+    transition: all 0.3s ease-out;
+    background: #92D1E7;
+    color: #1C2E3A;
+    transition: 250ms;
+}
+/*  Phone */
+
+@media only screen and (max-width: 500px) {
+    .join-us-image{
+        width: 300px;
+    }
+    .intro-image{
+        margin-bottom: 0px;
+        width: 300px;
+    }
+    .joinus-text {
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center !important;
+    }
+    .intro-text {
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center !important;
+    }
+    .join-us-param{
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+    .mainpage-container {
+        grid-template-columns: 1fr;
+        grid-template-rows:   .8fr .8fr 0.8fr;
+        grid-template-areas:   "interduce" "Toturial" "join_us";
+    }
+
+    .toturial {
+
+        grid-area: Toturial;
+        width: 100%;
+        height: 660px;
+        justify-content: center;
+
+
+    }
+
+    /*  .downlload-btn-mainpage-1-mobile {
+        display: block;
+        border-radius: 4px;
+        margin-bottom: 40px;
+        margin-left: 55px;
+        border: none;
+        background: url('../Bazar.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease-out;
+    }*/
+
+    /* interduceing section*/
+    .interduce-container {
+        width: 100%;
+        height: 630px;
+        display: grid;
+        grid-template-columns: 1fr  ;
+
+        justify-content: center;
+        grid-template-rows: .4fr .4fr .4fr;
+        grid-template-areas:   "intro_header  " "  intro-image " "info_txt    "  "unknown_rec  ";
+    }
+
+    .interduce-text {
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* joing us section*/
+    .joingus-container {
+        width: 100%;
+        height: 630px;
+        display: grid;
+         justify-content: center;
+        grid-template-columns: .8fr  ;
+        grid-template-rows: 0fr .4fr 1fr 1fr 1fr   ;
+        grid-template-areas: " joingus_img "
+                              "joinus_header"
+                              "joinus_txt"
+                              "joinus_phone"
+                              " joinus_name"
+                              "joinus_btn " ;
+      }
+    .joinus-text{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .intro-text{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+}

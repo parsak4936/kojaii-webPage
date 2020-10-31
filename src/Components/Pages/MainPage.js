@@ -1,78 +1,24 @@
-import React, {useState, useEffect} from 'react';
-import {Button} from './Button.js';
-import {Link} from 'react-router-dom';
-import Slide_v2 from './slideshow_v2'
-
+import React from 'react';
+import {Button} from '../Button.js';
+ import Slide_v2 from '../SlideSow/slideshow_v2'
 import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import join_Us_img from './join-us.png';
-import intro_img from './intro.gif';
+import join_Us_img from '../Images/join-us.png';
+import intro_img from '../Images/intro.gif';
 
 
 function MainPage() {
+//TODO : 1) width of animation / 2) color of animation / 3)unknown rec edit
+    //TODO 4) slideshow ? (should check later)
 
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-
-
-    const closeMobileMenu = () => setClick(false);
-
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
-
-    useEffect(() => {
-        showButton();
-    }, []);
-    //<i class='fab fa-typo3' />
-    window.addEventListener('resize', showButton);
     return (
         <>
             <div className="mainpage-container">
-
-                {/*-----------------image & download ---------------*/}
-                <section className='image_and_download'>
-
-
-                    <div className="img_and_download-container">
-
-                        <h2  className = 'where-are-u'> <span  className='blue-kojaii'> کجایی </span>   دانلود برنامه  </h2>
-
-                        <p className='come-faster'>جهت دانلود برنامه کلید کنید</p>
-
-                        <Link
-                            to='/download'
-                            className='downlload-btn-mainpage-1-mobile'
-                            onClick={closeMobileMenu}
-                        >
-
-                        </Link>
-
-                        <Link
-                            to='/download'
-                            className='downlload-btn-mainpage-2-mobile'
-                            onClick={closeMobileMenu}
-                        >
-
-                        </Link>
-
-
-                    </div>
-
-
-                </section>
-
-
-
                 {/*----------------- intrduce part ---------------*/}
                 <section className='interduce'>
                     <div className='interduce-container'>
 
-                        <h1 align="right" className='joinus-header'>کجایی</h1>
+                        <h1 align="right" className='intro-header'>کجایی</h1>
                         <p align="right" className='intro-text'>
                             برای همه ممکن است پیش امده باشد که زمان زیادی را صرف منتظر ماندن برای دوستانشان باشند که با
                             آنها قرار مالقات دارند ؛ در پروژه کجایی ، روندی به منظور بهبود کنترل قرار مالقات های جمعی یا دو نفره در
@@ -89,7 +35,7 @@ function MainPage() {
                             </svg>
 
                         </div>
-                        <div className='join-us-img-container'>
+                        <div className='intro-gif-container'>
                             <img className="intro-image" name="joinus-img" src={intro_img}/>
                         </div>
                     </div>
@@ -110,7 +56,7 @@ function MainPage() {
                     <div className='joingus-container'>
 
 
-                        <h1 align="right" className='joinus-header'>به ما بپیوندید</h1>
+                        <h1  align="center" className='joinus-header'>به ما بپیوندید</h1>
                         <p align="right" className='joinus-text'>
                             کجایی همواره به دنبال جذب افراد مستعد و باانگیزه میباشد. اگر به کاری که می کنید علاقه و به مهارت های خود اطمینان دارید، جای شما در تیم ما خالی است.
                         </p>
@@ -119,8 +65,8 @@ function MainPage() {
                         <center>
                             <div>
                                 <form className="join-us-form" action="#">
-                                    <input className="join-us-param" name="name" type="text" placeholder="نام خود را وادر کنید"/>
-                                    <input className="join-us-param" name="phone" type="text" placeholder="شماره خود را وادر کنید"/>
+                                    <input className="join-us-param-name" name="name" type="text" placeholder="نام خود را وادر کنید" />
+                                    <input className="join-us-param-phone" name="phone" type="text" placeholder="شماره خود را وادر کنید"/>
                                     <br/>
                                     <br/>
                                     <Button className="join-us-btn" variant="primary" type="submit">ارسال درخواست</Button>

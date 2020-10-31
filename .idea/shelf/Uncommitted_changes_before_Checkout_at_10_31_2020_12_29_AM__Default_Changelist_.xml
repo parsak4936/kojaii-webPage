@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_10_31_2020_12_29_AM_[Default_Changelist]" date="1604129390649" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_31_2020_12_29_AM_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 10/31/2020 12:29 AM [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="src/Components/join-us.png" />
+    <option name="AFTER_PATH" value="src/Components/Pages/join-us.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_31_2020_12_29_AM_[Default_Changelist]/join-us.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/Components/intro.gif" />
+    <option name="AFTER_PATH" value="src/Components/Pages/intro.gif" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_31_2020_12_29_AM_[Default_Changelist]/intro.gif" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/Components/LOGO.png" />
+    <option name="AFTER_PATH" value="src/Components/LOGO.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_31_2020_12_29_AM_[Default_Changelist]/LOGO.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/Components/MP_Backgound.png" />
+    <option name="AFTER_PATH" value="src/Components/Pages/MP_Backgound.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_31_2020_12_29_AM_[Default_Changelist]/MP_Backgound.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/Components/join-us.jpg" />
+    <option name="AFTER_PATH" value="src/Components/Pages/join-us.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_31_2020_12_29_AM_[Default_Changelist]/join-us.jpg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/LOGO.png" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>

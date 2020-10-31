@@ -1,0 +1,955 @@
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"kojaii\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"engines\": {\r\n    \"node\": \"12.18.4\",\r\n    \"npm\": \"6.14.6\"\r\n  },\r\n  \"engine\": {\r\n    \"node\": \"12.18.4\",\r\n    \"npm\": \"6.14.6\"\r\n  },\r\n  \"dependencies\": {\r\n    \"@fortawesome/fontawesome-svg-core\": \"^1.2.32\",\r\n    \"@fortawesome/free-solid-svg-icons\": \"^5.15.1\",\r\n    \"@fortawesome/react-fontawesome\": \"^0.1.11\",\r\n    \"@material-ui/core\": \"^4.11.0\",\r\n    \"@material/image-list\": \"^7.0.0\",\r\n    \"@testing-library/jest-dom\": \"^4.2.4\",\r\n    \"@testing-library/react\": \"^9.5.0\",\r\n    \"@testing-library/user-event\": \"^7.2.1\",\r\n    \"bootstrap\": \"^4.5.3\",\r\n    \"node-sass\": \"^4.14.1\",\r\n    \"prop-types\": \"^15.7.2\",\r\n    \"react\": \"^16.13.1\",\r\n    \"react-avatar\": \"^3.9.7\",\r\n    \"react-bootstrap\": \"^1.4.0\",\r\n    \"react-dom\": \"^16.13.1\",\r\n    \"react-loading\": \"^2.0.3\",\r\n    \"react-loadingg\": \"^1.7.2\",\r\n    \"react-router-dom\": \"^5.2.0\",\r\n    \"react-scripts\": \"3.4.3\",\r\n    \"react-slideshow-image\": \"^3.3.0\",\r\n    \"react-spring\": \"^8.0.27\",\r\n    \"react-spring-3d-carousel\": \"^1.2.0\",\r\n    \"serve\": \"^11.3.2\",\r\n    \"tachyons-components\": \"^1.0.1\",\r\n    \"uuid\": \"^8.3.1\"\r\n  },\r\n  \"scripts\": {\r\n    \"dev\": \"react-scripts start\",\r\n    \"start\": \"serve -s build\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test --env=jsdom\",\r\n    \"eject\": \"react-scripts eject\",\r\n    \"heroku-postbuild\": \"npm run build\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": \"react-app\"\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  },\r\n  \"description\": \"This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\",\r\n  \"main\": \"index.js\",\r\n  \"devDependencies\": {},\r\n  \"author\": \"\",\r\n  \"license\": \"ISC\"\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package.json	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ package.json	(date 1604128933301)
+@@ -38,12 +38,11 @@
+     "uuid": "^8.3.1"
+   },
+   "scripts": {
+-    "dev": "react-scripts start",
+-    "start": "serve -s build",
++
++    "start": "react-scripts start",
+     "build": "react-scripts build",
+-    "test": "react-scripts test --env=jsdom",
+-    "eject": "react-scripts eject",
+-    "heroku-postbuild": "npm run build"
++    "test": "react-scripts test",
++    "eject": "react-scripts eject"
+   },
+   "eslintConfig": {
+     "extends": "react-app"
+Index: src/Components/MainPage.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, {useState, useEffect} from 'react';\r\nimport {Button} from './Button.js';\r\nimport {Link} from 'react-router-dom';\r\nimport Slide_v2 from './slideshow_v2'\r\n\r\nimport './MainPage.css';\r\nimport 'bootstrap/dist/css/bootstrap.min.css';\r\nimport join_Us_img from './join-us.png';\r\nimport intro_img from './intro.gif';\r\n\r\n\r\nfunction MainPage() {\r\n\r\n    const [click, setClick] = useState(false);\r\n    const [button, setButton] = useState(true);\r\n\r\n\r\n    const closeMobileMenu = () => setClick(false);\r\n\r\n    const showButton = () => {\r\n        if (window.innerWidth <= 960) {\r\n            setButton(false);\r\n        } else {\r\n            setButton(true);\r\n        }\r\n    };\r\n\r\n    useEffect(() => {\r\n        showButton();\r\n    }, []);\r\n    //<i class='fab fa-typo3' />\r\n    window.addEventListener('resize', showButton);\r\n    return (\r\n        <>\r\n            <div className=\"mainpage-container\">\r\n\r\n                {/*-----------------image & download ---------------*/}\r\n                <section className='image_and_download'>\r\n\r\n\r\n                    <div className=\"img_and_download-container\">\r\n\r\n                        <h2  className = 'where-are-u'> <span  className='blue-kojaii'> کجایی </span>   دانلود برنامه  </h2>\r\n\r\n                        <p className='come-faster'>جهت دانلود برنامه کلید کنید</p>\r\n\r\n                        <Link\r\n                            to='/download'\r\n                            className='downlload-btn-mainpage-1-mobile'\r\n                            onClick={closeMobileMenu}\r\n                        >\r\n\r\n                        </Link>\r\n\r\n                        <Link\r\n                            to='/download'\r\n                            className='downlload-btn-mainpage-2-mobile'\r\n                            onClick={closeMobileMenu}\r\n                        >\r\n\r\n                        </Link>\r\n\r\n\r\n                    </div>\r\n\r\n\r\n                </section>\r\n\r\n\r\n\r\n                {/*----------------- intrduce part ---------------*/}\r\n                <section className='interduce'>\r\n                    <div className='interduce-container'>\r\n\r\n                        <h1 align=\"right\" className='joinus-header'>کجایی</h1>\r\n                        <p align=\"right\" className='intro-text'>\r\n                            برای همه ممکن است پیش امده باشد که زمان زیادی را صرف منتظر ماندن برای دوستانشان باشند که با\r\n                            آنها قرار مالقات دارند ؛ در پروژه کجایی ، روندی به منظور بهبود کنترل قرار مالقات های جمعی یا دو نفره در\r\n                            نظر گرفته شده است تا کاربرانی که می خواهند هم دیگر را مالقات کنند ، دیگر درگیر مسئله انتظار نباشند و\r\n                            در طی راه ، بتوانند موقعیت همدیگر را ببینند                        </p>\r\n\r\n                        <div className='unknown_rec'>\r\n                            <svg id=\"unknown_rec\" xmlns=\"http://www.w3.org/2000/svg\" width=\"575\" height=\"30\" viewBox=\"0 0 775 30\">\r\n                                <rect id=\"Rectangle_22\" data-name=\"Rectangle 22\" width=\"85\" height=\"30\" rx=\"15\" fill=\"#8fe1eb\"/>\r\n                                <rect id=\"Rectangle_23\" data-name=\"Rectangle 23\" width=\"85\" height=\"30\" rx=\"15\" transform=\"translate(160)\" fill=\"#68bbd5\"/>\r\n                                <rect id=\"Rectangle_24\" data-name=\"Rectangle 24\" width=\"85\" height=\"30\" rx=\"15\" transform=\"translate(320)\" fill=\"#90dee9\"/>\r\n                                <rect id=\"Rectangle_25\" data-name=\"Rectangle 25\" width=\"85\" height=\"30\" rx=\"15\" transform=\"translate(480)\" fill=\"#68bbd5\"/>\r\n                                <rect id=\"Rectangle_26\" data-name=\"Rectangle 26\" width=\"85\" height=\"30\" rx=\"15\" transform=\"translate(640)\" fill=\"#92e0ed\"/>\r\n                            </svg>\r\n\r\n                        </div>\r\n                        <div className='join-us-img-container'>\r\n                            <img className=\"intro-image\" name=\"joinus-img\" src={intro_img}/>\r\n                        </div>\r\n                    </div>\r\n\r\n\r\n                </section>\r\n\r\n                {/*-----------------Toturial ---------------*/}\r\n                <section className='toturial'>\r\n                    <Slide_v2/>\r\n\r\n                </section>\r\n\r\n\r\n                {/*-----------------join us ---------------*/}\r\n                <section className='join-us'>\r\n\r\n                    <div className='joingus-container'>\r\n\r\n\r\n                        <h1 align=\"right\" className='joinus-header'>به ما بپیوندید</h1>\r\n                        <p align=\"right\" className='joinus-text'>\r\n                            کجایی همواره به دنبال جذب افراد مستعد و باانگیزه میباشد. اگر به کاری که می کنید علاقه و به مهارت های خود اطمینان دارید، جای شما در تیم ما خالی است.\r\n                        </p>\r\n\r\n\r\n                        <center>\r\n                            <div>\r\n                                <form className=\"join-us-form\" action=\"#\">\r\n                                    <input className=\"join-us-param\" name=\"name\" type=\"text\" placeholder=\"نام خود را وادر کنید\"/>\r\n                                    <input className=\"join-us-param\" name=\"phone\" type=\"text\" placeholder=\"شماره خود را وادر کنید\"/>\r\n                                    <br/>\r\n                                    <br/>\r\n                                    <Button className=\"join-us-btn\" variant=\"primary\" type=\"submit\">ارسال درخواست</Button>\r\n                                    <br/>\r\n                                    <br/>\r\n                                </form>\r\n                            </div>\r\n                        </center>\r\n\r\n\r\n                        <div className='join-us-img-container'>\r\n\r\n                            <img className=\"join-us-image\" name=\"joinus-img\" src={join_Us_img}/>\r\n\r\n                        </div>\r\n\r\n\r\n                    </div>\r\n\r\n\r\n                </section>\r\n\r\n\r\n\r\n            </div>\r\n        </>\r\n    );\r\n\r\n\r\n}\r\n\r\nexport default MainPage;
+===================================================================
+--- src/Components/MainPage.js	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ src/Components/Pages/MainPage.js	(date 1604128889883)
+@@ -1,7 +1,7 @@
+ import React, {useState, useEffect} from 'react';
+-import {Button} from './Button.js';
++import {Button} from '../Button.js';
+ import {Link} from 'react-router-dom';
+-import Slide_v2 from './slideshow_v2'
++import Slide_v2 from '../slideshow_v2'
+ 
+ import './MainPage.css';
+ import 'bootstrap/dist/css/bootstrap.min.css';
+@@ -38,32 +38,38 @@
+                 <section className='image_and_download'>
+ 
+ 
+-                    <div className="img_and_download-container">
++                    <div class="view" style="background-image: url('./MP_Background.jpg'); background-repeat: no-repeat; background-size: cover;">
++
+ 
+-                        <h2  className = 'where-are-u'> <span  className='blue-kojaii'> کجایی </span>   دانلود برنامه  </h2>
++                        <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+ 
+-                        <p className='come-faster'>جهت دانلود برنامه کلید کنید</p>
++                            <div class="text-center white-text mx-5 wow fadeIn">
++                                <h1 class="mb-4">
++                                    <strong>Learn Bootstrap 5 with MDB</strong>
++                                </h1>
+ 
+-                        <Link
+-                            to='/download'
+-                            className='downlload-btn-mainpage-1-mobile'
+-                            onClick={closeMobileMenu}
+-                        >
++                                <p>
++                                    <strong>Best & free guide of responsive web design</strong>
++                                </p>
+ 
+-                        </Link>
++                                <p class="mb-4 d-none d-md-block">
++                                    <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and written versions available.
++                                        Create your own, stunning website.</strong>
++                                </p>
+ 
+-                        <Link
+-                            to='/download'
+-                            className='downlload-btn-mainpage-2-mobile'
+-                            onClick={closeMobileMenu}
+-                        >
++                                <a target="_blank" href="https://www.youtube.com/watch?v=c9B4TPnak1A" class="btn btn-outline-white btn-lg">Start free tutorial
++                                    <i class="fas fa-graduation-cap ml-2"></i>
++                                </a>
++                            </div>
+ 
+-                        </Link>
++
++                        </div>
+ 
+ 
+                     </div>
+ 
+ 
++
+                 </section>
+ 
+ 
+Index: src/Components/MainPage.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n\r\n:root {\r\n    --main-radius: 5px;\r\n    --main-padding: 5px;\r\n}\r\n/*  Desktop */\r\n.mainpage-container {\r\n    display: grid;\r\n\r\n    grid-template-columns: 1fr;\r\n    grid-template-rows: 0fr 0fr 0fr 0fr;\r\n    grid-template-areas: \"main_img\" \"interduce\" \"Toturial\" \"join_us\";\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n\r\n}\r\n\r\n.toturial {\r\n    background-color: #add8e6;\r\n    grid-area: Toturial;\r\n\r\n    justify-content: center;\r\n    display: flex;\r\n}\r\n\r\n.image_and_download {\r\n    background-image: url('./MP_Backgound.png');\r\n\r\n    grid-area: main_img;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: cover;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n\r\n}\r\n\r\n.img_and_download-container {\r\n    width: 100%;\r\n    height: 620px;\r\n    display: grid;\r\n    justify-content: center;\r\n    grid-template-columns:  1fr    1fr     ;\r\n    grid-template-rows: .3fr 0.2fr .2fr;\r\n    grid-template-areas: \"IAD_header  IAD_header\" \"IAD_txt   IAD_txt \" \"btn_bazar   btn_googleplay  \";\r\n}\r\n.blue-kojaii{\r\n    grid-area: IAD_kojaii;\r\n    color: #7ab1ff;\r\n    padding-right: 10px;\r\n}\r\n\r\n.come-faster {\r\n    grid-area: IAD_txt;\r\n    font: 35px bold;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n\r\n\r\n    color: white;\r\n}\r\n\r\n.where-are-u {\r\n\r\n    font: 45px bold;\r\n    grid-area: IAD_header;\r\n    display: flex;\r\n    margin-top: 50px;\r\n    justify-content: center;\r\n    color: white;\r\n}\r\n\r\n.downlload-btn-mainpage-1 {\r\n\r\n    grid-area: btn_bazar;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n\r\n.downlload-btn-mainpage-2 {\r\n\r\n\r\n    grid-area: btn_googleplay;\r\n\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.downlload-btn-mainpage-1-mobile {\r\n    display: none;\r\n}\r\n\r\n.downlload-btn-mainpage-2-mobile {\r\n    display: none;\r\n}\r\n\r\n\r\n/* Interduce section */\r\n.interduce {\r\n    background-color: #DBF1F7;\r\n    grid-area: interduce;\r\n}\r\n\r\n.interduce-container {\r\n    direction: rtl;\r\n    width: 100%;\r\n    height: 550px;\r\n    justify-content: center;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr 1fr .4fr;\r\n    grid-template-areas: \"joinus_header  joingus_img\" \"joinus_txt  joingus_img \" \"joingus_btn  joingus_img  \"  \"unknown_rec joingus_img\";\r\n}\r\n\r\n.interduce-header {\r\n    grid-area: header;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n}\r\n\r\n.interduce-text {\r\n    grid-area: text;\r\n    display: flex;\r\n     align-items: center;\r\n    justify-content: center;\r\n\r\n}\r\n.intro-image{\r\n    margin-bottom: 100px;\r\n    width: 390px;\r\n}\r\n\r\nunknown_rec{\r\n    grid-area:unknown_rec ;\r\n}\r\n.animation-container {\r\n    grid-area: img;\r\n    align-items: center;\r\n    justify-content: center;\r\n    display: flex;\r\n\r\n\r\n}\r\n\r\n\r\n/* join us section */\r\n.join-us {\r\n   background-color:  #DBF1F7;\r\n    align-items: center;\r\n    justify-content: center;\r\n    grid-area: join_us;\r\n}\r\n\r\n.joingus-container {\r\n    padding-left: 10px;\r\n    width: 100%;\r\n    height: 550px;\r\n    justify-content: center;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr 1fr  ;\r\n    grid-template-areas: \"joinus_header  joingus_img\" \"joinus_txt  joingus_img \" \"joingus_btn  joingus_img  \"   ;\r\n}\r\n.\r\n.joinus-header {\r\n    grid-area: joinus_header;\r\n    display: flex;\r\n    color: #68BBD5;\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n\r\n}\r\n\r\n.joinus-text {\r\n    color: #0463B9;\r\n    padding-right: 20px;\r\n    padding-left: 20px;\r\n    grid-area: joinus_txt;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.intro-text {\r\n    margin-right: 100px;\r\n    padding-right: 20px;\r\n    padding-left: 20px;\r\n    grid-area: joinus_txt;\r\n    display: flex;\r\n    color: #1784CD;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.join-us-img-container {\r\n    font-family: \"Iranian Sans\" !important;\r\n    grid-area: joingus_img;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n}\r\n\r\n.join-us-form{\r\n    direction: rtl;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.join-us-btn{\r\n    background-color:  #DBF1F7;\r\n    margin-top: 20px !important;\r\n    margin-bottom: 20px !important;\r\n}\r\n\r\n\r\n.join-us-param{\r\n\r\n    border: 1px solid #343a40;\r\n    border-radius: 5px;\r\n    margin-left: 20px;\r\n    padding: 10px;\r\n}\r\n\r\n/*  About us section */\r\n.About-us {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n    grid-area: AboutUs;\r\n    background-color: coral;\r\n}\r\n\r\n.info {\r\n\r\n\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr;\r\n    grid-template-areas: \"text_ text_ text_\";\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n\r\n}\r\n\r\n.aboutus-txt {\r\n    flex-direction: column;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    padding: 15px;\r\n}\r\n\r\n\r\n\r\n/*  Tablet */\r\n\r\n\r\n@media only screen and (max-width: 900px) {\r\n    .mainpage-container {\r\n        justify-content: center;\r\n        grid-template-columns: 1fr;\r\n        grid-template-rows: 0fr 0fr 0fr 0fr;\r\n        grid-template-areas: \"main_img\" \"interduce\" \"Toturial\" \"join_us\";\r\n    }\r\n\r\n    .toturial {\r\n        margin-top: 120px;\r\n        grid-area: Toturial;\r\n        width: 100%;\r\n        height: 600px;\r\n        justify-content: center;\r\n        align-items: center;\r\n\r\n    }\r\n\r\n\r\n\r\n    /* Image and download section */\r\n    .img_and_download-container {\r\n        width: 100%;\r\n\r\n      height: 590px;\r\n        display: grid;\r\n\r\n        justify-content: center;\r\n        grid-template-columns: .5fr      ;\r\n        grid-template-rows: .2fr 0.2fr 0.1fr 0fr ;\r\n        grid-template-areas: \"IAD_header    \" \"  IAD_txt    \" \"btn_bazar   \"   \"  btn_googleplay \";\r\n    }\r\n\r\n\r\n\r\n\r\n    /* Set text color to red */\r\n    .downlload-btn-mainpage-1-mobile {\r\n         display: block;\r\n        text-align: center;\r\n        align-items: center;\r\n        justify-content: center;\r\n        border-radius: 4px;\r\n        margin-bottom: 30px;\r\n        border: none;\r\n        background: url('./Bazar.png');\r\n        background-size: contain;\r\n        background-repeat: no-repeat;\r\n\r\n\r\n        transition: all 0.3s ease-out;\r\n\r\n\r\n    }\r\n    .where-are-u{\r\n        font-size: 50px;\r\n    }\r\n    .come-faster{\r\n        font-size: 30px;\r\n\r\n    }\r\n\r\n    .downlload-btn-mainpage-2-mobile {\r\n        align-items: center;\r\n        justify-content: center;\r\n        display: block;\r\n        text-align: center;\r\n        margin-bottom: 30px;\r\n        border: none;\r\n        background: url('./Bazar.png');\r\n        background-size: contain;\r\n        background-repeat: no-repeat;\r\n        transition: all 0.3s ease-out;\r\n\r\n    }\r\n\r\n    /* interduceing section*/\r\n    .interduce-container {\r\n        width: 100%;\r\n        height: 660px;\r\n        display: grid;\r\n        justify-content: center;\r\n        grid-template-columns: 1fr  ;\r\n        grid-template-rows: .4fr .4fr .4fr;\r\n        grid-template-areas: \" joingus_img  \"   \"joinus_header   \" \"joinus_txt    \";\r\n    }\r\n\r\n    .interduce-header{\r\n        margin-top: 60px;\r\n    }\r\n    .interduce-text {\r\n        margin-left: 80px;\r\n        margin-right: 80px;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n\r\n\r\n    }\r\n    /* joing us section*/\r\n    .joingus-container {\r\n        width: 100%;\r\n        height: 660px;\r\n        display: grid;\r\n         justify-content: center;\r\n        grid-template-columns: 1fr  ;\r\n        grid-template-rows: .4fr .4fr .4fr .4fr ;\r\n        grid-template-areas: \" joingus_img  \" \"joinus_header   \" \"joinus_txt    \"  \"unknown_rec\" ;\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\n/*  Phone */\r\n\r\n@media only screen and (max-width: 500px) {\r\n    .join-us-image{\r\n        width: 300px;\r\n    }\r\n    .intro-image{\r\n        margin-bottom: 0px;\r\n        width: 300px;\r\n    }\r\n    .joinus-text {\r\n        padding-right: 20px;\r\n        padding-left: 20px;\r\n        text-align: center !important;\r\n    }\r\n    .intro-text {\r\n        padding-right: 20px;\r\n        padding-left: 20px;\r\n        text-align: center !important;\r\n    }\r\n    .join-us-param{\r\n        padding: 10px;\r\n        margin-top: 10px;\r\n        margin-bottom: 20px;\r\n        margin-left: 0px;\r\n    }\r\n\r\n    .mainpage-container {\r\n        grid-template-columns: 1fr;\r\n        grid-template-rows: 0fr .8fr .8fr 0.8fr;\r\n        grid-template-areas: \"main_img\" \"interduce\" \"Toturial\" \"join_us\";\r\n    }\r\n\r\n    .toturial {\r\n\r\n        grid-area: Toturial;\r\n        width: 100%;\r\n        height: 660px;\r\n        justify-content: center;\r\n\r\n\r\n    }\r\n\r\n\r\n    /* Image and download section */\r\n    .img_and_download-container {\r\n     width: 100%;\r\n     height: 540px;\r\n     display: grid;\r\n     justify-content: center;\r\n     grid-template-columns: 1fr       ;\r\n     grid-template-rows: .3fr 0.2fr 0.2fr 0fr ;\r\n     grid-template-areas: \"IAD_header \" \"    IAD_txt \" \"btn_bazar\"   \"btn_googleplay  \";\r\n    }\r\n\r\n\r\n\r\n\r\n    /* Set text color to red */\r\n    .downlload-btn-mainpage-1-mobile {\r\n        display: block;\r\n        border-radius: 4px;\r\n        margin-bottom: 40px;\r\n        margin-left: 55px;\r\n        border: none;\r\n        background: url('./Bazar.png');\r\n        background-size: contain;\r\n        background-repeat: no-repeat;\r\n        transition: all 0.3s ease-out;\r\n    }\r\n    .where-are-u{\r\n        font-size: 40px;\r\n    }\r\n\r\n    .come-faster{\r\n     font-size: 30px;\r\n     margin-bottom: 0px;\r\n\r\n\r\n    }\r\n    .downlload-btn-mainpage-2-mobile {\r\n        align-items: center;\r\n        justify-content: center;\r\n        display: block;\r\n        text-align: center;\r\n        border: none;\r\n        margin-bottom: 40px;\r\n\r\n       margin-left: 55px;\r\n\r\n        background: url('./Bazar.png');\r\n        background-size: contain;\r\n        background-repeat: no-repeat;\r\n\r\n\r\n        transition: all 0.3s ease-out;\r\n\r\n\r\n    }\r\n\r\n    /* interduceing section*/\r\n    .interduce-container {\r\n        width: 100%;\r\n        height: 630px;\r\n        display: grid;\r\n        grid-template-columns: 1fr  ;\r\n        justify-content: center;\r\n        grid-template-rows: .4fr .4fr .4fr;\r\n        grid-template-areas:    \" joingus_img  \"  \"joinus_header   \" \"joinus_txt    \";\r\n    }\r\n     \r\n\r\n    .interduce-text {\r\n        margin-left: 50px;\r\n        margin-right: 50px;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n\r\n\r\n    }\r\n\r\n  \r\n\r\n    /* joing us section*/\r\n    .joingus-container {\r\n        width: 100%;\r\n        height: 630px;\r\n        display: grid;\r\n        grid-template-columns: 1fr  ;\r\n        justify-content: center;\r\n        grid-template-rows: .4fr .4fr .4fr .4fr ;\r\n        grid-template-areas:    \" joingus_img  \"  \"joinus_header   \" \"joinus_txt    \" \"unknown_rec\";\r\n    }\r\n    .joinus-text{\r\n        margin-left: 50px;\r\n        margin-right: 50px;\r\n    }\r\n    .intro-text{\r\n        margin-left: 50px;\r\n        margin-right: 50px;\r\n    }\r\n    \r\n}\r\n\r\n\r\n@media only screen and (max-width: 300px) {\r\n    .joinus-text {\r\n        padding-left: 0px;\r\n\r\n        text-align: center !important;\r\n    }\r\n    .intro-image{\r\n        margin-bottom: 0px;\r\n    }\r\n    .intro-text {\r\n        padding-left: 0px;\r\n        text-align: center !important;\r\n    }\r\n    .where-are-u{\r\n        font-size: 35px;\r\n    }\r\n\r\n    .downlload-btn-mainpage-2-mobile {\r\n       margin-left: 25px;\r\n    }\r\n    .downlload-btn-mainpage-1-mobile {\r\n      margin-left: 25px;\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n}\r\n
+===================================================================
+--- src/Components/MainPage.css	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ src/Components/Pages/MainPage.css	(date 1604125521149)
+@@ -1,560 +1,0 @@
+-
+-
+-:root {
+-    --main-radius: 5px;
+-    --main-padding: 5px;
+-}
+-/*  Desktop */
+-.mainpage-container {
+-    display: grid;
+-
+-    grid-template-columns: 1fr;
+-    grid-template-rows: 0fr 0fr 0fr 0fr;
+-    grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
+-    align-items: center;
+-    justify-content: center;
+-
+-
+-}
+-
+-.toturial {
+-    background-color: #add8e6;
+-    grid-area: Toturial;
+-
+-    justify-content: center;
+-    display: flex;
+-}
+-
+-.image_and_download {
+-    background-image: url('./MP_Backgound.png');
+-
+-    grid-area: main_img;
+-    background-repeat: no-repeat;
+-    background-position: center;
+-    background-size: cover;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-
+-
+-}
+-
+-.img_and_download-container {
+-    width: 100%;
+-    height: 620px;
+-    display: grid;
+-    justify-content: center;
+-    grid-template-columns:  1fr    1fr     ;
+-    grid-template-rows: .3fr 0.2fr .2fr;
+-    grid-template-areas: "IAD_header  IAD_header" "IAD_txt   IAD_txt " "btn_bazar   btn_googleplay  ";
+-}
+-.blue-kojaii{
+-    grid-area: IAD_kojaii;
+-    color: #7ab1ff;
+-    padding-right: 10px;
+-}
+-
+-.come-faster {
+-    grid-area: IAD_txt;
+-    font: 35px bold;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-
+-
+-
+-    color: white;
+-}
+-
+-.where-are-u {
+-
+-    font: 45px bold;
+-    grid-area: IAD_header;
+-    display: flex;
+-    margin-top: 50px;
+-    justify-content: center;
+-    color: white;
+-}
+-
+-.downlload-btn-mainpage-1 {
+-
+-    grid-area: btn_bazar;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-}
+-
+-
+-.downlload-btn-mainpage-2 {
+-
+-
+-    grid-area: btn_googleplay;
+-
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-}
+-
+-.downlload-btn-mainpage-1-mobile {
+-    display: none;
+-}
+-
+-.downlload-btn-mainpage-2-mobile {
+-    display: none;
+-}
+-
+-
+-/* Interduce section */
+-.interduce {
+-    background-color: #DBF1F7;
+-    grid-area: interduce;
+-}
+-
+-.interduce-container {
+-    direction: rtl;
+-    width: 100%;
+-    height: 550px;
+-    justify-content: center;
+-    display: grid;
+-    grid-template-columns: 1fr 1fr;
+-    grid-template-rows: 1fr 1fr 1fr .4fr;
+-    grid-template-areas: "joinus_header  joingus_img" "joinus_txt  joingus_img " "joingus_btn  joingus_img  "  "unknown_rec joingus_img";
+-}
+-
+-.interduce-header {
+-    grid-area: header;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-
+-}
+-
+-.interduce-text {
+-    grid-area: text;
+-    display: flex;
+-     align-items: center;
+-    justify-content: center;
+-
+-}
+-.intro-image{
+-    margin-bottom: 100px;
+-    width: 390px;
+-}
+-
+-unknown_rec{
+-    grid-area:unknown_rec ;
+-}
+-.animation-container {
+-    grid-area: img;
+-    align-items: center;
+-    justify-content: center;
+-    display: flex;
+-
+-
+-}
+-
+-
+-/* join us section */
+-.join-us {
+-   background-color:  #DBF1F7;
+-    align-items: center;
+-    justify-content: center;
+-    grid-area: join_us;
+-}
+-
+-.joingus-container {
+-    padding-left: 10px;
+-    width: 100%;
+-    height: 550px;
+-    justify-content: center;
+-    display: grid;
+-    grid-template-columns: 1fr 1fr;
+-    grid-template-rows: 1fr 1fr 1fr  ;
+-    grid-template-areas: "joinus_header  joingus_img" "joinus_txt  joingus_img " "joingus_btn  joingus_img  "   ;
+-}
+-.
+-.joinus-header {
+-    grid-area: joinus_header;
+-    display: flex;
+-    color: #68BBD5;
+-    align-items: center;
+-    justify-content: center;
+-
+-
+-}
+-
+-.joinus-text {
+-    color: #0463B9;
+-    padding-right: 20px;
+-    padding-left: 20px;
+-    grid-area: joinus_txt;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-}
+-.intro-text {
+-    margin-right: 100px;
+-    padding-right: 20px;
+-    padding-left: 20px;
+-    grid-area: joinus_txt;
+-    display: flex;
+-    color: #1784CD;
+-    align-items: center;
+-    justify-content: center;
+-}
+-
+-.join-us-img-container {
+-    font-family: "Iranian Sans" !important;
+-    grid-area: joingus_img;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-
+-}
+-
+-.join-us-form{
+-    direction: rtl;
+-    align-items: center;
+-    justify-content: center;
+-}
+-
+-.join-us-btn{
+-    background-color:  #DBF1F7;
+-    margin-top: 20px !important;
+-    margin-bottom: 20px !important;
+-}
+-
+-
+-.join-us-param{
+-
+-    border: 1px solid #343a40;
+-    border-radius: 5px;
+-    margin-left: 20px;
+-    padding: 10px;
+-}
+-
+-/*  About us section */
+-.About-us {
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    flex-direction: column;
+-    grid-area: AboutUs;
+-    background-color: coral;
+-}
+-
+-.info {
+-
+-
+-    display: grid;
+-    grid-template-columns: 1fr 1fr 1fr;
+-    grid-template-rows: 1fr 1fr;
+-    grid-template-areas: "text_ text_ text_";
+-    align-items: center;
+-    justify-content: center;
+-
+-
+-}
+-
+-.aboutus-txt {
+-    flex-direction: column;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    padding: 15px;
+-}
+-
+-
+-
+-/*  Tablet */
+-
+-
+-@media only screen and (max-width: 900px) {
+-    .mainpage-container {
+-        justify-content: center;
+-        grid-template-columns: 1fr;
+-        grid-template-rows: 0fr 0fr 0fr 0fr;
+-        grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
+-    }
+-
+-    .toturial {
+-        margin-top: 120px;
+-        grid-area: Toturial;
+-        width: 100%;
+-        height: 600px;
+-        justify-content: center;
+-        align-items: center;
+-
+-    }
+-
+-
+-
+-    /* Image and download section */
+-    .img_and_download-container {
+-        width: 100%;
+-
+-      height: 590px;
+-        display: grid;
+-
+-        justify-content: center;
+-        grid-template-columns: .5fr      ;
+-        grid-template-rows: .2fr 0.2fr 0.1fr 0fr ;
+-        grid-template-areas: "IAD_header    " "  IAD_txt    " "btn_bazar   "   "  btn_googleplay ";
+-    }
+-
+-
+-
+-
+-    /* Set text color to red */
+-    .downlload-btn-mainpage-1-mobile {
+-         display: block;
+-        text-align: center;
+-        align-items: center;
+-        justify-content: center;
+-        border-radius: 4px;
+-        margin-bottom: 30px;
+-        border: none;
+-        background: url('./Bazar.png');
+-        background-size: contain;
+-        background-repeat: no-repeat;
+-
+-
+-        transition: all 0.3s ease-out;
+-
+-
+-    }
+-    .where-are-u{
+-        font-size: 50px;
+-    }
+-    .come-faster{
+-        font-size: 30px;
+-
+-    }
+-
+-    .downlload-btn-mainpage-2-mobile {
+-        align-items: center;
+-        justify-content: center;
+-        display: block;
+-        text-align: center;
+-        margin-bottom: 30px;
+-        border: none;
+-        background: url('./Bazar.png');
+-        background-size: contain;
+-        background-repeat: no-repeat;
+-        transition: all 0.3s ease-out;
+-
+-    }
+-
+-    /* interduceing section*/
+-    .interduce-container {
+-        width: 100%;
+-        height: 660px;
+-        display: grid;
+-        justify-content: center;
+-        grid-template-columns: 1fr  ;
+-        grid-template-rows: .4fr .4fr .4fr;
+-        grid-template-areas: " joingus_img  "   "joinus_header   " "joinus_txt    ";
+-    }
+-
+-    .interduce-header{
+-        margin-top: 60px;
+-    }
+-    .interduce-text {
+-        margin-left: 80px;
+-        margin-right: 80px;
+-        display: flex;
+-        justify-content: center;
+-        align-items: center;
+-
+-
+-    }
+-    /* joing us section*/
+-    .joingus-container {
+-        width: 100%;
+-        height: 660px;
+-        display: grid;
+-         justify-content: center;
+-        grid-template-columns: 1fr  ;
+-        grid-template-rows: .4fr .4fr .4fr .4fr ;
+-        grid-template-areas: " joingus_img  " "joinus_header   " "joinus_txt    "  "unknown_rec" ;
+-    }
+-
+-}
+-
+-
+-
+-/*  Phone */
+-
+-@media only screen and (max-width: 500px) {
+-    .join-us-image{
+-        width: 300px;
+-    }
+-    .intro-image{
+-        margin-bottom: 0px;
+-        width: 300px;
+-    }
+-    .joinus-text {
+-        padding-right: 20px;
+-        padding-left: 20px;
+-        text-align: center !important;
+-    }
+-    .intro-text {
+-        padding-right: 20px;
+-        padding-left: 20px;
+-        text-align: center !important;
+-    }
+-    .join-us-param{
+-        padding: 10px;
+-        margin-top: 10px;
+-        margin-bottom: 20px;
+-        margin-left: 0px;
+-    }
+-
+-    .mainpage-container {
+-        grid-template-columns: 1fr;
+-        grid-template-rows: 0fr .8fr .8fr 0.8fr;
+-        grid-template-areas: "main_img" "interduce" "Toturial" "join_us";
+-    }
+-
+-    .toturial {
+-
+-        grid-area: Toturial;
+-        width: 100%;
+-        height: 660px;
+-        justify-content: center;
+-
+-
+-    }
+-
+-
+-    /* Image and download section */
+-    .img_and_download-container {
+-     width: 100%;
+-     height: 540px;
+-     display: grid;
+-     justify-content: center;
+-     grid-template-columns: 1fr       ;
+-     grid-template-rows: .3fr 0.2fr 0.2fr 0fr ;
+-     grid-template-areas: "IAD_header " "    IAD_txt " "btn_bazar"   "btn_googleplay  ";
+-    }
+-
+-
+-
+-
+-    /* Set text color to red */
+-    .downlload-btn-mainpage-1-mobile {
+-        display: block;
+-        border-radius: 4px;
+-        margin-bottom: 40px;
+-        margin-left: 55px;
+-        border: none;
+-        background: url('./Bazar.png');
+-        background-size: contain;
+-        background-repeat: no-repeat;
+-        transition: all 0.3s ease-out;
+-    }
+-    .where-are-u{
+-        font-size: 40px;
+-    }
+-
+-    .come-faster{
+-     font-size: 30px;
+-     margin-bottom: 0px;
+-
+-
+-    }
+-    .downlload-btn-mainpage-2-mobile {
+-        align-items: center;
+-        justify-content: center;
+-        display: block;
+-        text-align: center;
+-        border: none;
+-        margin-bottom: 40px;
+-
+-       margin-left: 55px;
+-
+-        background: url('./Bazar.png');
+-        background-size: contain;
+-        background-repeat: no-repeat;
+-
+-
+-        transition: all 0.3s ease-out;
+-
+-
+-    }
+-
+-    /* interduceing section*/
+-    .interduce-container {
+-        width: 100%;
+-        height: 630px;
+-        display: grid;
+-        grid-template-columns: 1fr  ;
+-        justify-content: center;
+-        grid-template-rows: .4fr .4fr .4fr;
+-        grid-template-areas:    " joingus_img  "  "joinus_header   " "joinus_txt    ";
+-    }
+-     
+-
+-    .interduce-text {
+-        margin-left: 50px;
+-        margin-right: 50px;
+-        display: flex;
+-        justify-content: center;
+-        align-items: center;
+-
+-
+-    }
+-
+-  
+-
+-    /* joing us section*/
+-    .joingus-container {
+-        width: 100%;
+-        height: 630px;
+-        display: grid;
+-        grid-template-columns: 1fr  ;
+-        justify-content: center;
+-        grid-template-rows: .4fr .4fr .4fr .4fr ;
+-        grid-template-areas:    " joingus_img  "  "joinus_header   " "joinus_txt    " "unknown_rec";
+-    }
+-    .joinus-text{
+-        margin-left: 50px;
+-        margin-right: 50px;
+-    }
+-    .intro-text{
+-        margin-left: 50px;
+-        margin-right: 50px;
+-    }
+-    
+-}
+-
+-
+-@media only screen and (max-width: 300px) {
+-    .joinus-text {
+-        padding-left: 0px;
+-
+-        text-align: center !important;
+-    }
+-    .intro-image{
+-        margin-bottom: 0px;
+-    }
+-    .intro-text {
+-        padding-left: 0px;
+-        text-align: center !important;
+-    }
+-    .where-are-u{
+-        font-size: 35px;
+-    }
+-
+-    .downlload-btn-mainpage-2-mobile {
+-       margin-left: 25px;
+-    }
+-    .downlload-btn-mainpage-1-mobile {
+-      margin-left: 25px;
+-    }
+-
+-
+-
+-
+-
+-}
+Index: src/App.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\r\n    font-family: \"Iranian Sans\";\r\n    box-sizing: border-box;\r\n\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/App.css	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ src/App.css	(date 1604124895786)
+@@ -4,4 +4,5 @@
+ 
+     margin: 0;
+     padding: 0;
++
+   }
+Index: public/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    \r\n    <link href=\"font.css\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.15.1/css/all.css\" integrity=\"sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp\" crossorigin=\"anonymous\">\r\n    \r\n    <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n    <meta name=\"theme-color\" content=\"#000000\" />\r\n    <meta\r\n      name=\"description\"\r\n      content=\"Web site created using create-react-app\"\r\n    />\r\n    <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo192.png\" />\r\n    <!--\r\n      manifest.json provides metadata used when your web app is installed on a\r\n      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/\r\n    -->\r\n    <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\r\n    <!--\r\n      Notice the use of %PUBLIC_URL% in the tags above.\r\n      It will be replaced with the URL of the `public` folder during the build.\r\n      Only files inside the `public` folder can be referenced from the HTML.\r\n\r\n      Unlike \"/favicon.ico\" or \"favicon.ico\", \"%PUBLIC_URL%/favicon.ico\" will\r\n      work correctly both with client-side routing and a non-root public URL.\r\n      Learn how to configure a non-root public URL by running `npm run build`.\r\n    -->\r\n    <title>کجایی ؟ </title>\r\n  </head>\r\n  <body>\r\n    <noscript>You need to enable JavaScript to run this app.</noscript>\r\n    <div id=\"root\"></div>\r\n    <!--\r\n      This HTML file is a template.\r\n      If you open it directly in the browser, you will see an empty page.\r\n\r\n      You can add webfonts, meta tags, or analytics to this file.\r\n      The build step will place the bundled scripts into the <body> tag.\r\n\r\n      To begin the development, run `npm start` or `yarn start`.\r\n      To create a production bundle, use `npm run build` or `yarn build`.\r\n    -->\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- public/index.html	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ public/index.html	(date 1604128529737)
+@@ -5,7 +5,18 @@
+     
+     <link href="font.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+-    
++    <link rel="stylesheet" href="css/animate.css">
++
++    <link rel="stylesheet" href="css/owl.carousel.min.css">
++    <link rel="stylesheet" href="css/owl.theme.default.min.css">
++    <link rel="stylesheet" href="css/magnific-popup.css">
++
++    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
++    <link rel="stylesheet" href="css/jquery.timepicker.css">
++
++
++    <link rel="stylesheet" href="css/flaticon.css">
++    <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <meta name="theme-color" content="#000000" />
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, {Component} from 'react';\r\nimport './App.css';\r\nimport {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'\r\nimport Footer from './Components/Footer'\r\nimport About from './Components/About';\r\nimport Download from './Components/Download';\r\nimport MainPage from './Components/MainPage';\r\n\r\n\r\nimport Navbar from './Components/nav_bar'\r\n\r\nfunction App   () {\r\n\r\n\r\n\r\n        return (\r\n\r\n<>\r\n                <Router>\r\n                    <Navbar />\r\n\r\n\r\n                        <Route path='/' exact component=  {MainPage} />\r\n                        <Route path='/about' component=   {About}    />\r\n                        <Route path='/download' component={Download} />\r\n\r\n\r\n                    <Footer />\r\n                </Router>\r\n            </>\r\n        );\r\n\r\n}\r\n\r\nexport default App;\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/App.js	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ src/App.js	(date 1604124864766)
+@@ -1,35 +1,30 @@
+-import React, {Component} from 'react';
++import React from 'react';
+ import './App.css';
+-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
++import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+ import Footer from './Components/Footer'
+-import About from './Components/About';
+-import Download from './Components/Download';
+-import MainPage from './Components/MainPage';
++import About from './Components/Pages/About';
++import Download from './Components/Pages/Download';
++import MainPage from './Components/Pages/MainPage';
+ 
+ 
+ import Navbar from './Components/nav_bar'
+ 
+ function App   () {
+-
+-
+-
+         return (
+-
+-<>
++            <>
+                 <Router>
+                     <Navbar />
+-
+-
++                    <Switch>
+                         <Route path='/' exact component=  {MainPage} />
+                         <Route path='/about' component=   {About}    />
+                         <Route path='/download' component={Download} />
+ 
++                    </Switch>
+ 
+                     <Footer />
+                 </Router>
+             </>
+         );
+-
+ }
+ 
+ export default App;
+Index: src/Components/nav_bar.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\r\n  font-family: \"Iranian Sans\";\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n\r\n}\r\n.nav_bar{\r\n  background: url(\"./MP_Backgound.png\");\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  display: flex;\r\n\r\n  height: 100vh;\r\n  font: 15px bold;\r\n  direction: rtl;\r\n  padding-right: 70px!important;\r\n  padding-left: 70px!important;\r\n}\r\n\r\n.navbar-Item{\r\n\r\n  text-align: right;\r\n\r\n}\r\n\r\n.item{\r\n\r\n  padding-left: 30px !important;\r\n\r\n\r\n\r\n}\r\n\r\n.download{\r\n\r\n  font-family: \"Iranian Sans\" !important ;\r\n  font: 15px bold;\r\n  border: 1px solid !important;\r\n  border-radius: 5px !important;\r\n}\r\n\r\n@media screen and (max-width: 1000px) {\r\n  .nav_bar{\r\n\r\n    padding-right: 10px!important;\r\n    padding-left: 20px!important;\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Components/nav_bar.css	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ src/Components/nav_bar.css	(date 1604125252466)
+@@ -5,46 +5,9 @@
+   padding: 0;
+ 
+ }
+-.nav_bar{
+-  background: url("./MP_Backgound.png");
+-  background-repeat: no-repeat;
+-  background-position: center;
+-  background-size: cover;
+-  display: flex;
+-
+-  height: 100vh;
+-  font: 15px bold;
+-  direction: rtl;
+-  padding-right: 70px!important;
+-  padding-left: 70px!important;
+-}
+-
+-.navbar-Item{
+-
+-  text-align: right;
+-
++@media (min-width: 800px) and (max-width: 850px) {
++  .navbar:not(.top-nav-collapse) {
++    background: #1C2331!important;
++  }
+ }
+-
+-.item{
+-
+-  padding-left: 30px !important;
+-
+-
+-
+-}
+-
+-.download{
+-
+-  font-family: "Iranian Sans" !important ;
+-  font: 15px bold;
+-  border: 1px solid !important;
+-  border-radius: 5px !important;
+-}
+-
+-@media screen and (max-width: 1000px) {
+-  .nav_bar{
+-
+-    padding-right: 10px!important;
+-    padding-left: 20px!important;
+-  }
+-}
+\ No newline at end of file
++.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+\ No newline at end of file
+Index: src/Components/nav_bar.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, {useEffect, useState} from 'react';\r\nimport 'bootstrap/dist/css/bootstrap.min.css';\r\nimport {Navbar,Nav,NavDropdown,Button} from 'react-bootstrap'\r\nimport {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'\r\nimport LOGO from './LOGO.png'\r\nimport './nav_bar.css';\r\nimport logo from \"../LOGO.png\";\r\n\r\nfunction Nav_bar() {\r\n\r\n    const [click, setClick] = useState(false);\r\n    const [button, setButton] = useState(true);\r\n    const closeMobileMenu = () => setClick(false);\r\n    const showButton = () => {\r\n        if (window.innerWidth <= 960) {\r\n            setButton(false);\r\n        } else {\r\n            setButton(true);\r\n        }\r\n    };\r\n\r\n    useEffect(() => {\r\n        showButton();\r\n    }, []);\r\n    //<i class='fab fa-typo3' />\r\n    window.addEventListener('resize', showButton);\r\n\r\n\r\n  return (\r\n    <>\r\n        <Navbar className=\"nav_bar\" collapseOnSelect expand=\"lg\">\r\n            <Navbar.Brand href=\"#home\">\r\n                <img src={logo} alt=\"Logo\" width=\"160px\"/>\r\n            </Navbar.Brand>\r\n            <Navbar.Toggle aria-controls=\"responsive-navbar-nav\" />\r\n            <Navbar.Collapse id=\"responsive-navbar-nav\" className=\"navbar-Item \">\r\n                <Nav className=\"mr-auto\">\r\n                    <Nav.Link className=\"item\" href=\"/\">خانه</Nav.Link>\r\n                    <Nav.Link className=\"item\" href=\"/\">پشتیبانی</Nav.Link>\r\n\r\n                    <Nav.Link className=\"item\" href=\"/about\">ارتباط با ما</Nav.Link>\r\n                    <Nav.Link className=\"item\" href=\"/blog\">بلاگ</Nav.Link>\r\n                </Nav>\r\n\r\n                <Nav>\r\n\r\n                    <Nav.Link href=\"#download\">\r\n                        <Button className=\"download\" variant=\"outline-light\">دانلود <i className='fa fa-download'/></Button>{' '}\r\n                    </Nav.Link>\r\n                </Nav>\r\n            </Navbar.Collapse>\r\n        </Navbar>\r\n\r\n\r\n    </>\r\n  );\r\n}\r\n\r\nexport default Nav_bar;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Components/nav_bar.js	(revision 3e7193d66f92ef4563573ce11e0192164fca693f)
++++ src/Components/nav_bar.js	(date 1604125300322)
+@@ -1,56 +1,60 @@
+-import React, {useEffect, useState} from 'react';
+-import 'bootstrap/dist/css/bootstrap.min.css';
+-import {Navbar,Nav,NavDropdown,Button} from 'react-bootstrap'
+-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+-import LOGO from './LOGO.png'
+-import './nav_bar.css';
+-import logo from "../LOGO.png";
++import React from 'react';
++
++
+ 
+ function Nav_bar() {
+ 
+-    const [click, setClick] = useState(false);
+-    const [button, setButton] = useState(true);
+-    const closeMobileMenu = () => setClick(false);
+-    const showButton = () => {
+-        if (window.innerWidth <= 960) {
+-            setButton(false);
+-        } else {
+-            setButton(true);
+-        }
+-    };
+-
+-    useEffect(() => {
+-        showButton();
+-    }, []);
+-    //<i class='fab fa-typo3' />
+-    window.addEventListener('resize', showButton);
+ 
+ 
+   return (
+     <>
+-        <Navbar className="nav_bar" collapseOnSelect expand="lg">
+-            <Navbar.Brand href="#home">
+-                <img src={logo} alt="Logo" width="160px"/>
+-            </Navbar.Brand>
+-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+-            <Navbar.Collapse id="responsive-navbar-nav" className="navbar-Item ">
+-                <Nav className="mr-auto">
+-                    <Nav.Link className="item" href="/">خانه</Nav.Link>
+-                    <Nav.Link className="item" href="/">پشتیبانی</Nav.Link>
++
++        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
++            <div class="container">
++
++                <a class="navbar-brand" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
++                    <strong>MDB</strong>
++                </a>
++
++                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
++                        aria-expanded="false" aria-label="Toggle navigation">
++                    <span class="navbar-toggler-icon"></span>
++                </button>
+ 
+-                    <Nav.Link className="item" href="/about">ارتباط با ما</Nav.Link>
+-                    <Nav.Link className="item" href="/blog">بلاگ</Nav.Link>
+-                </Nav>
+ 
+-                <Nav>
++                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ 
+-                    <Nav.Link href="#download">
+-                        <Button className="download" variant="outline-light">دانلود <i className='fa fa-download'/></Button>{' '}
+-                    </Nav.Link>
+-                </Nav>
+-            </Navbar.Collapse>
+-        </Navbar>
+ 
++                    <ul class="navbar-nav mr-auto">
++                        <li class="nav-item active">
++                            <a class="nav-link" href="#">Home
++                                <span class="sr-only">(current)</span>
++                            </a>
++                        </li>
++                        <li class="nav-item">
++                            <a class="nav-link" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">About MDB</a>
++                        </li>
++                        <li class="nav-item">
++                            <a class="nav-link" href="https://mdbootstrap.com/getting-started/" target="_blank">Free download</a>
++                        </li>
++                        <li class="nav-item">
++                            <a class="nav-link" href="https://mdbootstrap.com/bootstrap-tutorial/" target="_blank">Free tutorials</a>
++                        </li>
++                    </ul>
++
++
++                    <ul class="navbar-nav nav-flex-icons">
++                        <li class="nav-item">
++                            <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded"
++                               target="_blank">
++                            </a>
++                        </li>
++                    </ul>
++
++                </div>
++
++            </div>
++        </nav>
+ 
+     </>
+   );
+diff --git src/Components/Download.js src/Components/Pages/Download.js
+rename from src/Components/Download.js
+rename to src/Components/Pages/Download.js
+diff --git src/Components/About.css src/Components/Pages/About.css
+rename from src/Components/About.css
+rename to src/Components/Pages/About.css
+diff --git src/Components/About.js src/Components/Pages/About.js
+rename from src/Components/About.js
+rename to src/Components/Pages/About.js
+diff --git src/Components/Loading.js src/Components/Loading/Loading.js
+rename from src/Components/Loading.js
+rename to src/Components/Loading/Loading.js
+diff --git src/Components/generic.js src/Components/Loading/generic.js
+rename from src/Components/generic.js
+rename to src/Components/Loading/generic.js
+diff --git src/Components/Loading.css src/Components/Loading/Loading.css
+rename from src/Components/Loading.css
+rename to src/Components/Loading/Loading.css
