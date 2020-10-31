@@ -1,50 +1,147 @@
-* {
-  font-family: "Iranian Sans";
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ===== NAVBAR SECTION ===== */
 
-}
-.nav_bar{
-  background: url("./MP_Backgound.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-
-  height: 100vh;
-  font: 15px bold;
-  direction: rtl;
-  padding-right: 70px!important;
-  padding-left: 70px!important;
+.navbar-brand {
+  color: white;
+  padding: 0 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
-.navbar-Item{
+.nav-menu {
+  background: transparent;
+  padding: 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 
-  text-align: right;
-
+  transition: all .4s;
 }
 
-.item{
-
-  padding-left: 30px !important;
-
-
-
-}
-
-.download{
-
-  font-family: "Iranian Sans" !important ;
-  font: 15px bold;
-  border: 1px solid !important;
-  border-radius: 5px !important;
-}
-
-@media screen and (max-width: 1000px) {
-  .nav_bar{
-
-    padding-right: 10px!important;
-    padding-left: 20px!important;
+@media (max-width:34em) {
+  .nav-menu {
+    background: #000 !important;
   }
 }
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.menu-item {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media (max-width: 34em) {
+  .menu-item {
+    padding: 10px 10px 10px;
+  }
+}
+
+.navbar-toggler {
+  cursor: pointer;
+  outline: 0;
+}
+
+.ham {
+  transition: width 0.3s;
+  background: #F9F8F7;
+}
+
+.line1, .line3  {
+  width: 28px;
+  height: 2px;
+  margin: 6px;
+  transition:  0.4s;
+
+}
+
+.change .line1 {
+  transform: rotate(-45deg) translate(-3px, 2px);
+}
+
+.change .line3 {
+  transform: rotate(45deg) translate(-3px, -2px);
+}
+
+.menu-item:hover {
+  color: yellow;
+}
+
+.nav-active {
+  color: yellow;
+}
+
+.dropdown-item {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.costum-navbar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #000 !important;
+  position: fixed;
+}
+
+/* ===== END OF NAVBAR SECTION ===== */
+
+
+/* ===== HERO SECTION ===== */
+
+.hero-section {
+  background-image: url("./MP_Backgound.png");
+
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-hero {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sub-text-hero {
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 9px;
+  color: orange;
+}
+
+.nav-bottom {
+  background: transparent !important;
+  padding: 30px;
+  position: absolute;
+  width: 100%;
+
+  bottom: 10px;
+}
+
+.item-bottom {
+  padding: 0 20px;
+  transition: .2s;
+  font-size: 20px;
+}
+
+.item-bottom:hover {
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+/* ===== END OF HERO SECTION ===== */
