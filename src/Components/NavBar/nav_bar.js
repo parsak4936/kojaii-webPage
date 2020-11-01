@@ -4,6 +4,7 @@ import LOGO from '../Images/LOGO.png'
 import './nav_bar.css';
 import $ from "jquery";
 import {Button} from "../Button";
+import ScrollAnimation from "react-animate-on-scroll";
 
 
 //-----------------------------------------------//
@@ -66,7 +67,7 @@ function Nav_bar() {
 
     return (
     <>
-        <nav className="navbar navbar-default navbar-expand-lg nav-menu" id="nav-menu">
+        <nav className="navbar navbar-default navbar-expand-lg nav-menu show-on-scroll" id="nav-menu">
 
             <div className="container-fluid">
 
@@ -120,14 +121,23 @@ function Nav_bar() {
                 <div className="row justify-content-center">
 
                     <div className="col-12">
-                        <h1 className="text-hero text-center text-white text-uppercase"> جهت دانلود برنامه <span className="kojaii" >کجایی</span> کلیک کنید </h1>
+                        <ScrollAnimation animateIn='animate__bounceInRight'
+                                         animateOut='animate__bounceInLeft'>
+                            <h1 className="text-hero text-center text-white text-uppercase"> جهت دانلود برنامه <span className="kojaii" >کجایی</span> کلیک کنید </h1>
+
+                        </ScrollAnimation>
                     </div>
 
                     <div className="col-12">
 
                         <div className="lead text-center   ">
-                            {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}
-                            {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large'> </Button>}
+                            <ScrollAnimation animateIn='animate__bounceInLeft'
+                                             animateOut='animate__bounceInRight'>
+                                {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}
+                                {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large'> </Button>}
+                            </ScrollAnimation>
+
+
 
                         </div>
 

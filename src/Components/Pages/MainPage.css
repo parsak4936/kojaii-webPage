@@ -40,13 +40,17 @@
     grid-template-areas: "intro_header . " "info_txt intro-image " "info_txt  intro-image  "  ;
 }
 
+
+
+
+
 .intro-header {
+    margin-top: 80px;
     color: #3B6F80;
     grid-area: intro_header;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .intro-gif-container{
@@ -160,8 +164,8 @@ margin-top: 50px;
 
 .join-us-param-name:hover {
     transition: all 0.3s ease-out;
-    background: #92D1E7;
-    color: #1C2E3A;
+    background: #3B6F80;
+    color: white;
     transition: 250ms;
 }
 
@@ -176,8 +180,8 @@ margin-top: 50px;
 
 .join-us-param-phone:hover {
     transition: all 0.3s ease-out;
-    background: #92D1E7;
-    color: #1C2E3A;
+    background: #3B6F80;
+    color: white;
     transition: 250ms;
 }
 
