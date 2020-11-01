@@ -80,24 +80,29 @@ function Nav_bar() {
                 </button>
 
                 <div className='collapse navbar-collapse justify-content-end'  id="myNavbar">
+
                     <ul className="navbar-nav ml-aulo" >
 
                         <li className="nav-item">
-                            <img src={LOGO} width = "120px "/>
+                            <a className="nav-link m-2 menu-item"  href = "/ContactUs"> بلاگ </a>
+                        </li>
+
+                        <li className="nav-item">
+                            <a className="nav-link m-2 menu-item" href="/home"> پشتیبانی </a>
+                        </li>
+
+                        <li className="nav-item">
+                            <a className="nav-link m-2 menu-item" href="/ContactUs"> ارتباط با ما </a>
                         </li>
 
                         <li className="nav-item">
                             <a className="nav-link m-2 menu-item nav-active active" href="/home"> خانه </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link m-2 menu-item" href="/ContactUs"> ارتباط با ما </a>
+
+                        <li className="nav-item" id="logo-in-navbar">
+                            <img src={LOGO} width = "120px "/>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link m-2 menu-item" href="/home"> پشتیبانی </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link m-2 menu-item"  href = "/ContactUs"> بلاگ </a>
-                        </li>
+
 
                     </ul>
 

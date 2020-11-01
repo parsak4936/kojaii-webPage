@@ -1,6 +1,7 @@
 /* ===== NAVBAR SECTION ===== */
 
 .navbar-brand {
+
   color: white;
   padding: 0 15px;
   padding-top: 10px;
@@ -11,19 +12,16 @@
   letter-spacing: 3px;
 }
 .kojaii{
-  color: blue;
+  color: #2095F3;
 }
 
 .nav-menu {
 
-
   background: transparent;
-  padding: 30px;
+  padding-top: 0px;
   position: fixed;
   width: 100%;
-
   z-index: 9999;
-
   transition: all .4s;
 }
 
@@ -32,27 +30,30 @@
     background: #000 !important;
   }
 }
+#logo-in-navbar{
+  margin-right: 110px;
+margin-bottom: 20px;
+}
 
 .nav-item {
-
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .menu-item {
-
-
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
+   font-family: 'Josefin Sans', sans-serif;
+  font-size: 17px;
   letter-spacing: 1px;
   color: white;
-  padding-top: 30px;
+  padding-top: 28px;
 
 }
 
 @media (max-width: 34em) {
   .menu-item {
     padding: 10px 10px 10px;
+
   }
+
 }
 
 .navbar-toggler {
@@ -86,7 +87,7 @@
 }
 
 .nav-active {
-  color: yellow;
+  color: white;
 }
 
 .dropdown-item {
@@ -99,7 +100,7 @@
 .costum-navbar {
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #68BBD5 !important;
+  background-color: #3E6078 !important;
   position: fixed;
 }
 
@@ -110,22 +111,21 @@
 
 .hero-section {
   background-image: url("../Images/MP_Backgound.png");
-
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .text-hero {
+
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .sub-text-hero {

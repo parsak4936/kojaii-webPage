@@ -25,7 +25,7 @@ function MainPage() {
                             نظر گرفته شده است تا کاربرانی که می خواهند هم دیگر را مالقات کنند ، دیگر درگیر مسئله انتظار نباشند و
                             در طی راه ، بتوانند موقعیت همدیگر را ببینند                        </p>
 
-                        <div className='unknown_rec'>
+                        {/*-----------------  <div className='unknown_rec'>
                             <svg id="unknown_rec" xmlns="http://www.w3.org/2000/svg" width="575" height="30" viewBox="0 0 775 30">
                                 <rect id="Rectangle_22" data-name="Rectangle 22" width="85" height="30" rx="15" fill="#8fe1eb"/>
                                 <rect id="Rectangle_23" data-name="Rectangle 23" width="85" height="30" rx="15" transform="translate(160)" fill="#68bbd5"/>
@@ -34,7 +34,8 @@ function MainPage() {
                                 <rect id="Rectangle_26" data-name="Rectangle 26" width="85" height="30" rx="15" transform="translate(640)" fill="#92e0ed"/>
                             </svg>
 
-                        </div>
+                        </div> ---------------*/}
+
                         <div className='intro-gif-container'>
                             <img className="intro-image" name="joinus-img" src={intro_img}/>
                         </div>

@@ -1,5 +1,5 @@
 :root {
-    --primary: #FFFAFA;
+    --primary: #fff;
   }
   
   .btn {
@@ -28,28 +28,28 @@
     
   }
   .btn--outline {
-    background-color: #DBF1F7;
+    background-color: #7CBFF6;
     color:white;
     padding: 8px 20px;
-    border: 1px solid var(--primary);
+    border: 1px solid #004D9F;
     transition: all 0.3s ease-out;
   }
   
   .btn--medium {
     padding: 12px 30px;
-    font-size: 18px;
+
   }
   
   .btn--large {
-    padding: 52px 200px;
-    font-size: 20px;
+    padding: 32px 80px;
+
   }
   
   
   .btn--medium:hover {
     transition: all 0.3s ease-out;
-    background: #92D1E7;
-    color: #1C2E3A;
+    background: #7CBFF6;
+    color: white;
     transition: 250ms;
   }
   @media only screen and (max-width: 960px){

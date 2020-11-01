@@ -1,5 +1,4 @@
 
-
 :root {
     --main-radius: 5px;
     --main-padding: 5px;
@@ -18,17 +17,15 @@
 }
 
 .toturial {
-    background-color: #add8e6;
+    background-color: #3E6078 ;
     grid-area: Toturial;
-
     justify-content: center;
     display: flex;
 }
 
-
 /* intro section */
 .interduce {
-    background-color: #DBF1F7;
+    background-color:  #E9F9FE;
     grid-area: interduce;
 }
 
@@ -39,11 +36,12 @@
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr .4fr;
-    grid-template-areas: "intro_header  ." "info_txt intro-image " "info_txt  intro-image  "  "unknown_rec intro-image";
+    grid-template-rows: 1fr 2fr 1fr  ;
+    grid-template-areas: "intro_header . " "info_txt intro-image " "info_txt  intro-image  "  ;
 }
 
 .intro-header {
+    color: #3B6F80;
     grid-area: intro_header;
     display: flex;
     align-items: center;
@@ -55,12 +53,14 @@
     grid-area: intro-image;
 
 }
+
 .intro-image{
 
     width: 590px;
 }
+
 .intro-text {
-    margin-right: 100px;
+
     padding-right: 20px;
     padding-left: 20px;
     grid-area: info_txt;
@@ -70,15 +70,9 @@
     justify-content: center;
 }
 
-
-.unknown_rec{
-    margin-bottom: 90px;
-    grid-area:unknown_rec ;
-}
-
 /* join us section */
 .join-us {
-   background-color:  #DBF1F7;
+   background-color:  #E9F9FE;
     align-items: center;
     justify-content: center;
     grid-area: join_us;
@@ -100,12 +94,11 @@ margin-top: 50px;
 ;
 }
 
-
 .joinus-header {
 
     grid-area: joinus_header;
     display: flex;
-    color: #68BBD5;
+    color: #3B6F80;
     align-items: center;
     justify-content: center;
 
@@ -113,7 +106,6 @@ margin-top: 50px;
 
 .joinus-text {
     margin-top: 18px;
-
     color: #0463B9;
     padding-right: 20px;
     padding-left: 20px;
@@ -138,18 +130,16 @@ margin-top: 50px;
     align-items: center;
     justify-content: center;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #0463B1;
+
+::placeholder {
+
     text-align: center;
     opacity: 1; /* Firefox */
 }
 
-
 :focus::-webkit-input-placeholder {
     -webkit-transition: opacity 0.35s ease-in-out;
-
     opacity: 0.5;
-
 }
 
 .join-us-btn{
@@ -159,7 +149,6 @@ margin-top: 50px;
     margin-bottom: 20px !important;
 }
 
-
 .join-us-param-name{
     grid-area: joinus_name;
     margin-top: 18px;
@@ -168,13 +157,13 @@ margin-top: 50px;
     margin-left: 20px;
     padding: 10px;
 }
+
 .join-us-param-name:hover {
     transition: all 0.3s ease-out;
     background: #92D1E7;
     color: #1C2E3A;
     transition: 250ms;
 }
-
 
 .join-us-param-phone{
     grid-area: joinus_phone;
@@ -184,39 +173,16 @@ margin-top: 50px;
     margin-left: 20px;
     padding: 10px;
 }
+
 .join-us-param-phone:hover {
     transition: all 0.3s ease-out;
     background: #92D1E7;
     color: #1C2E3A;
     transition: 250ms;
 }
+
 /*  Phone */
-
-@media only screen and (max-width: 500px) {
-    .join-us-image{
-        width: 300px;
-    }
-    .intro-image{
-        margin-bottom: 0px;
-        width: 300px;
-    }
-    .joinus-text {
-        padding-right: 20px;
-        padding-left: 20px;
-        text-align: center !important;
-    }
-    .intro-text {
-        padding-right: 20px;
-        padding-left: 20px;
-        text-align: center !important;
-    }
-    .join-us-param{
-        padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        margin-left: 0px;
-    }
-
+@media only screen and (max-width:940px) {
     .mainpage-container {
         grid-template-columns: 1fr;
         grid-template-rows:   .8fr .8fr 0.8fr;
@@ -233,36 +199,29 @@ margin-top: 50px;
 
     }
 
-    /*  .downlload-btn-mainpage-1-mobile {
-        display: block;
-        border-radius: 4px;
-        margin-bottom: 40px;
-        margin-left: 55px;
-        border: none;
-        background: url('../Bazar.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        transition: all 0.3s ease-out;
-    }*/
-
     /* interduceing section*/
+    .intro-image{
+
+        width: 400px;
+    }
+
+    .intro-text {
+        padding-right: 70px;
+        padding-left: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
+
+    }
+
     .interduce-container {
+        overflow: hidden;
         width: 100%;
         height: 630px;
         display: grid;
-        grid-template-columns: 1fr  ;
-
+        grid-template-columns: .8fr  ;
         justify-content: center;
-        grid-template-rows: .4fr .4fr .4fr;
-        grid-template-areas:   "intro_header  " "  intro-image " "info_txt    "  "unknown_rec  ";
-    }
-
-    .interduce-text {
-        margin-left: 50px;
-        margin-right: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        grid-template-rows: 0fr 1fr 1fr ;
+        grid-template-areas:   "intro_header  " "  intro-image " "info_txt "  ;
     }
 
     /* joing us section*/
@@ -280,13 +239,22 @@ margin-top: 50px;
                               " joinus_name"
                               "joinus_btn " ;
       }
+
     .joinus-text{
         margin-left: 50px;
         margin-right: 50px;
+        text-align: center !important;
     }
-    .intro-text{
-        margin-left: 50px;
-        margin-right: 50px;
+
+    .join-us-image{
+        width: 220px;
+    }
+
+    .join-us-param{
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 0px;
     }
 
 }
