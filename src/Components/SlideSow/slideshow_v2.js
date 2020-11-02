@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
 import {v1 as uuidv4} from "uuid";
+import Flickity from 'react-flickity-component'
 import './SlideShow_v2.css'
+
 export default class Slideshow_v2 extends Component {
+
+
   state = {
     goToSlide: 0,
 
@@ -11,11 +15,13 @@ export default class Slideshow_v2 extends Component {
     config: config.gentle
   };
 
+
   slides = [
 
     {
       key: uuidv4(),
-      content: <img src="https://picsum.photos/500/802/?random" alt="5" />
+      content:
+          <img src="https://picsum.photos/500/802/?random" alt="5" />
     },
     {
       key: uuidv4(),
@@ -52,6 +58,8 @@ export default class Slideshow_v2 extends Component {
           />
 
         </div>
+
+
     );
   }
 }

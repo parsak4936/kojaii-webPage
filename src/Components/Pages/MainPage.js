@@ -27,7 +27,7 @@ function MainPage() {
                         </div>
 
                         <div  align="right" className='intro-text'>
-                            <ScrollAnimation animateIn='animate__flipInY'  animateOut='animate__fadeOutTopLeft'>
+                            <ScrollAnimation animateIn='animate__flipInX'  animateOut='animate__flipInX'>
                                 <p>
                                     برای همه ممکن است پیش امده باشد که زمان زیادی را صرف منتظر ماندن برای دوستانشان باشند که با
                                     آنها قرار مالقات دارند ؛ در پروژه کجایی ، روندی به منظور بهبود کنترل قرار مالقات های جمعی یا دو نفره در

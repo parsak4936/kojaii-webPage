@@ -1,20 +1,23 @@
 /* ===== NAVBAR SECTION ===== */
-
 .navbar-brand {
-
-
   padding-top: 10px;
   padding-bottom: 5px;
-
-
-
+}
+.logo-nav-mobile{
+  display: none;
 }
 .kojaii{
   color: #2095F3;
 }
+.nav-menu-black{
+  background-color: black;
 
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  transition: all .4s;
+}
 .nav-menu {
-
   background: transparent;
   padding-top: 0px;
   position: fixed;
@@ -23,14 +26,21 @@
   transition: all .4s;
 }
 
-@media (max-width:34em) {
+@media (max-width:64em) {
   .nav-menu {
-    background: #000 !important;
+    background: #3E6078 !important;
+  }
+.navbar-btn-download{
+  display: none;
+}
+
+  .logo-nav-desktop{
+    display: none;
   }
 }
 #logo-in-navbar{
-  margin-right: 110px;
-  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 .nav-item {
@@ -47,7 +57,7 @@
 
 }
 
-@media (max-width: 54em) {
+@media (max-width: 64em) {
   .menu-item {
     padding: 10px 10px 10px;
 
@@ -90,7 +100,7 @@
 }
 
 .nav-active {
-  color: white;
+  color: yellow;
 
 }
 
@@ -112,7 +122,10 @@
 
 
 /* ===== HERO SECTION ===== */
+.hero-section-blank{
+  display: none;
 
+}
 .hero-section {
   background-image: url("../Images/MP_Backgound.png");
   height: 100vh;
@@ -124,8 +137,20 @@
   align-items: center;
 }
 
+
+.btn--Bazar{
+  margin-left: 10px;
+}
+
+.btn-hero{
+  float: right;
+  margin-right: 50px;
+  padding-right: 114px;
+  margin-bottom: 150px;
+}
 .text-hero {
 
+  float: right;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 40px;
   font-weight: 500;
@@ -142,7 +167,6 @@
   padding: 30px;
   position: absolute;
   width: 100%;
-
   bottom: 10px;
 }
 

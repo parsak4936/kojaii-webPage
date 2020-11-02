@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LOGO from '../Images/LOGO.png'
 import './nav_bar.css';
 import $ from "jquery";
 import {Button} from "../Button";
 import ScrollAnimation from "react-animate-on-scroll";
-import {Link} from "react-router-dom";
+import {Link,useLocation } from "react-router-dom";
 
 
 //-----------------------------------------------//
@@ -13,6 +13,7 @@ import {Link} from "react-router-dom";
 //TODO : 1) direction must be rtl / 2) href in line 87 change into 'to' / 3) navbar changer in other pages
 //TODO : 4)change txt and bottons right as doc / 5) download color to white
 function Nav_bar() {
+    let location = useLocation();
 
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -69,11 +70,18 @@ function Nav_bar() {
     return (
     <>
 
-        <nav className="navbar navbar-default navbar-expand-lg nav-menu show-on-scroll" id="nav-menu">
+        <nav
+            className=  { location.pathname === "/home" | location.pathname === "/"
+                ? "navbar navbar-default navbar-expand-lg nav-menu show-on-scroll"  :
+                "navbar navbar-default navbar-expand-lg nav-menu-black show-on-scroll"}
+
+             id="nav-menu">
 
             <div className="container-fluid">
+<div className="navbar-btn-download">
+    {button && <Button buttonStyle='btn--outline'  >   <i class='fa fa-download'/>   دانلود </Button>}
 
-                {button && <Button buttonStyle='btn--outline'  >   <i class='fa fa-download'/>   دانلود </Button>}
+</div>
 
                 <button onClick={classChange}  id="toggle" class="navbar-toggler" type="button" data-toggle="collapse"
                                               data-target="#myNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,6 +89,9 @@ function Nav_bar() {
                     <div className="line2 ham"></div>
                     <div className="line3 ham"></div>
                 </button>
+                <div  className="nav-bar-logo"  id="logo-in-navbar" >
+                    <img className="logo-nav-mobile" src={LOGO} width = "120px "/>
+                </div>
 
                 <div className='collapse navbar-collapse justify-content-end'  id="myNavbar">
 
@@ -111,10 +122,12 @@ function Nav_bar() {
                             </Link>
 
                         </li>
+<li className="nav-item" >
 
-                        <li className="nav-item" id="logo-in-navbar">
-                            <img src={LOGO} width = "120px "/>
-                        </li>
+
+    <img className="logo-nav-desktop" src={LOGO} width = "120px "/>
+</li>
+
 
 
                     </ul>
@@ -126,7 +139,8 @@ function Nav_bar() {
 
         </nav>
 
-        <section className="hero-section">
+
+        <section className=  { location.pathname === "/home" | location.pathname === "/" ? "hero-section" : "  hero-section-blank" }>
 
             <div className="container-fluid">
 
@@ -141,11 +155,19 @@ function Nav_bar() {
 
                     <div className="col-12">
 
-                        <div className="lead text-center">
+                        <div className="  text-hero btn-hero lead text-center">
                             <ScrollAnimation animateIn='animate__bounceInLeft'
                                              animateOut='animate__bounceInRight'>
-                                {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}
-                                {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large'> </Button>}
+
+                        <div className="btn-desktop">
+
+    {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}
+    {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}
+</div>
+
+
+
+
                             </ScrollAnimation>
 
 
