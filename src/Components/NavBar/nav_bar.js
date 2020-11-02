@@ -73,7 +73,7 @@ function Nav_bar() {
         <nav
             className=  { location.pathname === "/home" | location.pathname === "/"
                 ? "navbar navbar-default navbar-expand-lg nav-menu show-on-scroll"  :
-                "navbar navbar-default navbar-expand-lg nav-menu-black show-on-scroll"}
+                "navbar   navbar-expand-lg nav-menu-black show-on-scroll"}
 
              id="nav-menu">
 
@@ -95,7 +95,7 @@ function Nav_bar() {
 
                 <div className='collapse navbar-collapse justify-content-end'  id="myNavbar">
 
-                    <ul className="navbar-nav ml-aulo" >
+                    <ul className="navbar-nav ml-aulo navba-ul" >
 
                         <li className="nav-item">
                             <Link className="nav-link m-2 menu-item" to="/home">
@@ -122,9 +122,7 @@ function Nav_bar() {
                             </Link>
 
                         </li>
-<li className="nav-item" >
-
-
+    <li className="nav-item" >
     <img className="logo-nav-desktop" src={LOGO} width = "120px "/>
 </li>
 

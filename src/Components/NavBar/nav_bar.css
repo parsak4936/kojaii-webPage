@@ -10,14 +10,17 @@
   color: #2095F3;
 }
 .nav-menu-black{
-  background-color: black;
 
+  background-color: black;
+  top: 0;
+  padding-top: 0;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+
   transition: all .4s;
 }
 .nav-menu {
+
   background: transparent;
   padding-top: 0px;
   position: fixed;
@@ -33,10 +36,18 @@
 .navbar-btn-download{
   display: none;
 }
-
+  .logo-nav-mobile{
+    display: flex;
+  }
   .logo-nav-desktop{
     display: none;
   }
+.navba-ul{
+  display: flex;
+  direction: rtl;
+  flex-direction: column-reverse;
+}
+
 }
 #logo-in-navbar{
   margin-right: 10px;
@@ -44,15 +55,18 @@
 }
 
 .nav-item {
+display: flex;
+  flex-direction: row;
   padding: 0 8px;
 }
 
 .menu-item {
+ float: right;
    font-family: 'Josefin Sans', sans-serif;
   font-size: 17px;
   letter-spacing: 1px;
-  color: white;
-
+color: white;
+ display: flex;
   padding-top: 28px;
 
 }
@@ -70,7 +84,6 @@
   margin-top: 15px;
   margin-bottom: 15px;
   cursor: pointer;
-
   outline: 0;
 }
 
@@ -144,7 +157,7 @@
 
 .btn-hero{
   float: right;
-  margin-right: 50px;
+
   padding-right: 114px;
   margin-bottom: 150px;
 }
