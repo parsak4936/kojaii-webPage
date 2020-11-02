@@ -2,15 +2,15 @@
 .slideshow-container{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     height: 400px;
-    margin: 50px
+
 }
 
 .css-1qzevvg{
-    background-color: white;
+
 }
 @media only screen and (max-width: 300px) {
 

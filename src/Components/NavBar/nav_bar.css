@@ -2,14 +2,12 @@
 
 .navbar-brand {
 
-  color: white;
-  padding: 0 15px;
+
   padding-top: 10px;
   padding-bottom: 5px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  letter-spacing: 3px;
+
+
+
 }
 .kojaii{
   color: #2095F3;
@@ -32,7 +30,7 @@
 }
 #logo-in-navbar{
   margin-right: 110px;
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .nav-item {
@@ -44,11 +42,12 @@ margin-bottom: 20px;
   font-size: 17px;
   letter-spacing: 1px;
   color: white;
+
   padding-top: 28px;
 
 }
 
-@media (max-width: 34em) {
+@media (max-width: 54em) {
   .menu-item {
     padding: 10px 10px 10px;
 
@@ -57,13 +56,17 @@ margin-bottom: 20px;
 }
 
 .navbar-toggler {
+
+  margin-top: 15px;
+  margin-bottom: 15px;
   cursor: pointer;
+
   outline: 0;
 }
 
 .ham {
   transition: width 0.3s;
-  background: #F9F8F7;
+  background: white;
 }
 
 .line1, .line3  {
@@ -88,6 +91,7 @@ margin-bottom: 20px;
 
 .nav-active {
   color: white;
+
 }
 
 .dropdown-item {
@@ -98,8 +102,8 @@ margin-bottom: 20px;
 }
 
 .costum-navbar {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #3E6078 !important;
   position: fixed;
 }

@@ -15,12 +15,54 @@
 
 
 }
+.T_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: .4fr 1fr;
+    grid-template-areas: " .  T_Header  ."  " .  slide_show   .";
+    height: 550px;
+    width: 100%;
 
-.toturial {
-    background-color: #3E6078 ;
-    grid-area: Toturial;
     justify-content: center;
+    align-items: center;
+
+}
+.toturial {
+    grid-area: Toturial;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: .4fr .4fr;
+    grid-template-areas: " .  T_Header  ."  " .  slide_show   .";
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+
+
+    background-image: url("../Images/appdemo_background.svg") ;
+
+
+    justify-content: center;
+    align-items: center;
+
+
+
+
+}
+.T-Header{
+    padding-top: 15px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: T_Header;
+    color: #DBF1F7;
+
+}
+.slide-show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: slide_show;
 }
 
 /* intro section */
@@ -41,9 +83,6 @@
 }
 
 
-
-
-
 .intro-header {
     margin-top: 80px;
     color: #3B6F80;
@@ -54,13 +93,17 @@
 }
 
 .intro-gif-container{
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
     grid-area: intro-image;
+
 
 }
 
 .intro-image{
-
-    width: 590px;
+ width: 100%;
 }
 
 .intro-text {
@@ -76,6 +119,7 @@
 
 /* join us section */
 .join-us {
+
    background-color:  #E9F9FE;
     align-items: center;
     justify-content: center;
@@ -149,7 +193,7 @@ margin-top: 50px;
 .join-us-btn{
     grid-area: joinus_btn;
     background-color:  #DBF1F7;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     margin-bottom: 20px !important;
 }
 
@@ -164,7 +208,6 @@ margin-top: 50px;
 
 .join-us-param-name:hover {
     transition: all 0.3s ease-out;
-    background: #3B6F80;
     color: white;
     transition: 250ms;
 }
@@ -180,51 +223,30 @@ margin-top: 50px;
 
 .join-us-param-phone:hover {
     transition: all 0.3s ease-out;
-    background: #3B6F80;
     color: white;
     transition: 250ms;
 }
 
 /*  Phone */
-@media only screen and (max-width:940px) {
+@media only screen and (max-width:940px)
+{
     .mainpage-container {
+
         grid-template-columns: 1fr;
         grid-template-rows:   .8fr .8fr 0.8fr;
         grid-template-areas:   "interduce" "Toturial" "join_us";
     }
 
-    .toturial {
-
-        grid-area: Toturial;
-        width: 100%;
-        height: 660px;
-        justify-content: center;
-
-
-    }
-
     /* interduceing section*/
-    .intro-image{
-
-        width: 400px;
-    }
-
-    .intro-text {
-        padding-right: 70px;
-        padding-left: 40px;
-        margin-left: 50px;
-        margin-right: 50px;
-
-    }
 
     .interduce-container {
-        overflow: hidden;
+
         width: 100%;
-        height: 630px;
+        height: 600px;
         display: grid;
-        grid-template-columns: .8fr  ;
+        grid-template-columns: 1fr  ;
         justify-content: center;
-        grid-template-rows: 0fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr ;
         grid-template-areas:   "intro_header  " "  intro-image " "info_txt "  ;
     }
 
@@ -234,7 +256,7 @@ margin-top: 50px;
         height: 630px;
         display: grid;
          justify-content: center;
-        grid-template-columns: .8fr  ;
+        grid-template-columns: 1fr  ;
         grid-template-rows: 0fr .4fr 1fr 1fr 1fr   ;
         grid-template-areas: " joingus_img "
                               "joinus_header"
@@ -260,5 +282,23 @@ margin-top: 50px;
         margin-bottom: 20px;
         margin-left: 0px;
     }
+
+    .toturial {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr  ;
+        grid-template-rows: .4fr .4fr;
+        grid-template-areas: " .  T_Header  ."  " .  slide_show   .";
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 550px;
+
+
+
+
+    }
+
+
 
 }

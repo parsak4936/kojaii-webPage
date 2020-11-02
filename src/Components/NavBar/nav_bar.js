@@ -5,6 +5,7 @@ import './nav_bar.css';
 import $ from "jquery";
 import {Button} from "../Button";
 import ScrollAnimation from "react-animate-on-scroll";
+import {Link} from "react-router-dom";
 
 
 //-----------------------------------------------//
@@ -67,6 +68,7 @@ function Nav_bar() {
 
     return (
     <>
+
         <nav className="navbar navbar-default navbar-expand-lg nav-menu show-on-scroll" id="nav-menu">
 
             <div className="container-fluid">
@@ -85,19 +87,29 @@ function Nav_bar() {
                     <ul className="navbar-nav ml-aulo" >
 
                         <li className="nav-item">
-                            <a className="nav-link m-2 menu-item"  href = "/ContactUs"> بلاگ </a>
+                            <Link className="nav-link m-2 menu-item" to="/home">
+                                بلاگ
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link m-2 menu-item" href="/home"> پشتیبانی </a>
+                            <Link className="nav-link m-2 menu-item" to="/home">
+                                پشتیبانی
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link m-2 menu-item" href="/ContactUs"> ارتباط با ما </a>
+                            <Link className="nav-link m-2 menu-item" to="/ContactUs">
+                                ارتباط با ما
+                            </Link>
+
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link m-2 menu-item nav-active active" href="/home"> خانه </a>
+                            <Link className="nav-link m-2 menu-item nav-active active" to="/home">
+                                خانه
+                            </Link>
+
                         </li>
 
                         <li className="nav-item" id="logo-in-navbar">
@@ -121,8 +133,7 @@ function Nav_bar() {
                 <div className="row justify-content-center">
 
                     <div className="col-12">
-                        <ScrollAnimation animateIn='animate__bounceInRight'
-                                         animateOut='animate__bounceInLeft'>
+                        <ScrollAnimation animateIn='animate__bounceInRight'>
                             <h1 className="text-hero text-center text-white text-uppercase"> جهت دانلود برنامه <span className="kojaii" >کجایی</span> کلیک کنید </h1>
 
                         </ScrollAnimation>
@@ -130,7 +141,7 @@ function Nav_bar() {
 
                     <div className="col-12">
 
-                        <div className="lead text-center   ">
+                        <div className="lead text-center">
                             <ScrollAnimation animateIn='animate__bounceInLeft'
                                              animateOut='animate__bounceInRight'>
                                 {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}

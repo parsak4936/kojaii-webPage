@@ -10,7 +10,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 
 function MainPage() {
-//TODO : 1) width of animation / 2) color of animation / 3)unknown rec edit
+//TODO : 1) width of animation / 2) color of animation
     //TODO 4) slideshow ? (should check later)
 
     return (
@@ -48,7 +48,13 @@ function MainPage() {
 
                 {/*-----------------Toturial ---------------*/}
                 <section className='toturial'>
-                    <Slide_v2/>
+                         <div className="T-Header">
+                            <h2>محیط برنامه</h2>
+                        </div>
+                        <div className="slide-show">
+                            <Slide_v2/>
+                        </div>
+
 
                 </section>
 
@@ -57,11 +63,11 @@ function MainPage() {
 
                     <div className='joingus-container'>
 
-    < div align="center" className='joinus-header'>
+            < div align="center" className='joinus-header'>
               <ScrollAnimation animateIn='animate__fadeIn'  animateOut='animate__fadeOut'>
                       <h1  >به ما بپیوندید</h1>
               </ScrollAnimation>
-    </div>
+               </div>
 
 
                         <div align="right" className='joinus-text'>
@@ -69,14 +75,9 @@ function MainPage() {
                                 <p >
                                     کجایی همواره به دنبال جذب افراد مستعد و باانگیزه میباشد. اگر به کاری که می کنید علاقه و به مهارت های خود اطمینان دارید، جای شما در تیم ما خالی است.
                                 </p>
-
-
                             </ScrollAnimation>
 
                         </div>
-
-
-
 
 
                         <center>
