@@ -286,9 +286,9 @@ margin-top: 50px;
     .toturial {
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr  ;
+        grid-template-columns: 1fr 1fr   ;
         grid-template-rows: .4fr .4fr;
-        grid-template-areas: " .  T_Header  ."  " .  slide_show   .";
+        grid-template-areas: " T_Header  T_Header "  " slide_show  slide_show   ";
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
