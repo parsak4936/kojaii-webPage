@@ -122,10 +122,10 @@ function Nav_bar() {
                             </Link>
 
                         </li>
-    <li className="nav-item" >
-    <img className="logo-nav-desktop" src={LOGO} width = "120px "/>
-</li>
 
+                        <li className="nav-item" >
+                               <img className="logo-nav-desktop" src={LOGO} width = "120px "/>
+                         </li>
 
 
                     </ul>
@@ -157,17 +157,50 @@ function Nav_bar() {
                             <ScrollAnimation animateIn='animate__bounceInLeft'
                                              animateOut='animate__bounceInRight'>
 
-                        <div className="btn-desktop">
+                        <div className="download-btns">
 
-    {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}
-    {button && <Button buttonStyle='btn--Bazar' buttonSize='btn--large' > </Button>}
+    <Link
+        to='/download'
+        className="btn-desktop-bazar"
+        onClick={closeMobileMenu}
+    >
+        <Button>  </Button>
+    </Link>
+
+    <Link
+        to='/download'
+        className="btn-desktop-google"
+
+        onClick={closeMobileMenu}
+    >
+        <Button> </Button>
+    </Link>
+
+
+                            <div >
+
+                                <Link
+                                    to='/download'
+                                    className="btn-mobile-navbar-bazar"
+                                    onClick={closeMobileMenu}
+                                >
+                                    <Button> </Button>
+                                </Link>
+
+                                <Link
+                                    to='/download'
+                                    className="btn-mobile-navbar-google"
+                                    onClick={closeMobileMenu}
+                                >
+                                    <Button> </Button>
+                                </Link>
+
+
+                            </div>
+
 </div>
 
-
-
-
                             </ScrollAnimation>
-
 
 
                         </div>
