@@ -164,7 +164,7 @@ function Nav_bar() {
         className="btn-desktop-bazar"
         onClick={closeMobileMenu}
     >
-        <Button>  </Button>
+
     </Link>
 
     <Link
@@ -173,7 +173,7 @@ function Nav_bar() {
 
         onClick={closeMobileMenu}
     >
-        <Button> </Button>
+
     </Link>
 
 
@@ -184,7 +184,7 @@ function Nav_bar() {
                                     className="btn-mobile-navbar-bazar"
                                     onClick={closeMobileMenu}
                                 >
-                                    <Button> </Button>
+
                                 </Link>
 
                                 <Link
@@ -192,7 +192,7 @@ function Nav_bar() {
                                     className="btn-mobile-navbar-google"
                                     onClick={closeMobileMenu}
                                 >
-                                    <Button> </Button>
+
                                 </Link>
 
 
