@@ -5,7 +5,7 @@ import "./Loading.css";
 
 const Loading = () => (
   <Section>
-    <Title>React Loading</Title>
+    <Title>این صفحه در دست ساخت میباشد ، پس از اتمام پروژه به آن دسترسی خئاهید داشت</Title>
     {list.map(l => (
       <Article key={l.prop}>
         <ReactLoading type={l.prop} color="#fff" />

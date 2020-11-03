@@ -98,13 +98,13 @@ function Nav_bar() {
                     <ul className="navbar-nav ml-aulo navba-ul" >
 
                         <li className="nav-item">
-                            <Link className="nav-link m-2 menu-item" to="/home">
+                            <Link className="nav-link m-2 menu-item" to="/blog">
                                 بلاگ
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link m-2 menu-item" to="/home">
+                            <Link className="nav-link m-2 menu-item" to="/support">
                                 پشتیبانی
                             </Link>
                         </li>
@@ -161,7 +161,7 @@ function Nav_bar() {
 
     <Link
         to='/download'
-        className="btn-desktop-bazar"
+        className="btn-desktop"
         onClick={closeMobileMenu}
     >
         <Button>  </Button>
@@ -169,7 +169,7 @@ function Nav_bar() {
 
     <Link
         to='/download'
-        className="btn-desktop-google"
+        className="btn-desktop"
 
         onClick={closeMobileMenu}
     >

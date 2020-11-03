@@ -6,7 +6,8 @@ import ContactUs from './Components/Pages/About';
 import Download from './Components/Pages/Download';
 import HomePage from './Components/Pages/MainPage';
 import Navbar from './Components/NavBar/nav_bar'
-
+import sup from './Components/Pages/Support'
+import  blog from './Components/Pages/Blog'
 function App   () {
 
         return (
@@ -19,6 +20,11 @@ function App   () {
                     <Route path='/' exact component=  {HomePage} />
                     <Route path='/ContactUs' component=   {ContactUs} />
                     <Route path='/download' component={Download} />
+                    <Route path='/blog' component={blog} />
+                    <Route path='/support' component={sup} />
+
+
+
                     <Footer />
                 </Router>
             </>

@@ -15,18 +15,7 @@
 
 
 }
-.T_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr  ;
-    grid-template-rows: .4fr 1fr;
-    grid-template-areas: " .  T_Header  ."  " .  slide_show   .";
-    height: 550px;
-    width: 100%;
 
-    justify-content: center;
-    align-items: center;
-
-}
 .toturial {
     grid-area: Toturial;
     display: grid;
@@ -37,16 +26,9 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 550px;
-
-
     background-image: url("../Images/appdemo_background.svg") ;
-
-
     justify-content: center;
     align-items: center;
-
-
-
 
 }
 .T-Header{

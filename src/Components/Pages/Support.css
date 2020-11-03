@@ -1,0 +1,31 @@
+.support-container{
+background-color:  #E9F9FE;
+display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "loadingheader  loadingheader  loadingheader"
+                            " . loadericon . ";
+
+    height: 600px;
+}
+.sup-icon{
+    grid-area:loadericon ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loader-Heade{
+    grid-area:loadingheader ;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+ @media   (max-width: 500px) {
+
+
+
+ }
