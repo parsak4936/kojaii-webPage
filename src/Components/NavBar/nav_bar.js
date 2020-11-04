@@ -161,7 +161,7 @@ function Nav_bar() {
 
     <Link
         to='/download'
-        className="btn-desktop"
+        className="btn-desktop-Bazar"
         onClick={closeMobileMenu}
     >
         <Button>  </Button>
@@ -169,7 +169,7 @@ function Nav_bar() {
 
     <Link
         to='/download'
-        className="btn-desktop"
+        className="btn-desktop-google"
 
         onClick={closeMobileMenu}
     >
@@ -181,7 +181,7 @@ function Nav_bar() {
 
                                 <Link
                                     to='/download'
-                                    className="btn-mobile-navbar-bazar"
+                                    className="btn-mobile-navbar-Bazar"
                                     onClick={closeMobileMenu}
                                 >
                                     <Button> </Button>

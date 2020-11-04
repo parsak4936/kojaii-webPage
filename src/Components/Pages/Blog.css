@@ -1,27 +1,21 @@
 .blog-container{
     background-color:  #E9F9FE;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr  ;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "blogheader  blogheader  blogheader"
-                            " . blogicon . ";
-
+    display: flex;
+   align-items: center;
+    justify-content: center;
     height: 600px;
 }
 .blog-icon{
-
-    grid-area:blogicon ;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.blog-Header{
 
-.blog-Heade{
-    margin-bottom: 50px;
-    padding-bottom: 50px;
-    grid-area:blogheader ;
     display: flex;
     margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
     margin-right: 50px;
     margin-top: 30px;
     align-items: center;
@@ -31,10 +25,6 @@
 @media   (max-width: 500px) {
     .blog-container{
 
-        grid-template-columns: 1fr    ;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "blogheader      "
-                            "  blogicon  ";
 
 
     }

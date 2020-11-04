@@ -7,6 +7,9 @@ import join_Us_img from '../Images/join-us.png';
 import intro_img from '../Images/intro.gif';
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
+import Announcement from "react-announcement";
+import Logo from "../Images/LOGO.png";
+
 
 
 function MainPage() {
@@ -16,6 +19,19 @@ function MainPage() {
     return (
         <>
             <div className="mainpage-container">
+                <Announcement
+                    title="به کجایی خوش آمدید"
+                    subtitle="نظرات و پیشنهادات خود را با ما در میان بگذارید"
+
+                    link="https://github.com/kristofferandreasen/react-announcement"
+                    imageSource={Logo}
+                    daysToLive={3}
+                    secondsBeforeBannerShows={20}
+                    closeIconSize={30}
+                    animateInDuration={2000}
+                    animateOutDuration={500}
+                />
+
                 {/*----------------- intrduce part ---------------*/}
                 <section className='interduce'>
                     <div className='interduce-container'>

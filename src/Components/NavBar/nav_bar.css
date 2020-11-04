@@ -18,7 +18,7 @@
   position: relative;
   transition: all .4s;
 }
-.btn-desktop-bazar{
+.btn-desktop-Bazar{
   display: inline-block;
   margin-left: 10px;
   background: url('../Images/Bazar.png');
@@ -42,10 +42,10 @@
   transition: all .4s;
 }
 
-.btn-mobile-navbar-bazar{
+.btn-mobile-navbar-Bazar{
   display: none;
 }
-.btn-mobile-navbar-bazar{
+.btn-mobile-navbar-google{
   display: none;
 }
 
@@ -59,7 +59,7 @@
   }
 
 
-  .btn-desktop-bazar{
+  .btn-desktop-Bazar{
     display: none;
   }
   .btn-desktop-google{
@@ -68,7 +68,7 @@
   .download-btns{
 
   }
-  .btn-mobile-navbar-bazar{
+  .btn-mobile-navbar-Bazar{
 
     display: flex;
     background: url('../Images/Bazar.png');

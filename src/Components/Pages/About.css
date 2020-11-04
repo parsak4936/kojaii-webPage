@@ -2,8 +2,9 @@
      height: 600px;
  }
 .info{
+    position: relative;
     text-align: center;
-margin-left: 150px;
+    margin-left: 150px;
     margin-right: 150px;
     display: flex;
     align-items: center;
@@ -24,7 +25,15 @@ margin-left: 150px;
 
  
 @media only screen and (max-width: 960px){
- 
 
+    .info{
+margin-bottom: 90px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+
+
+
+    }
 
 }
