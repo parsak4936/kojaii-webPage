@@ -98,8 +98,8 @@
 
 
     .social-icons {
+ margin-right: 245px;
 
-        margin-left: 140px;
 
 
     }
@@ -130,7 +130,7 @@
     .social-icons {
 
         margin-left: 10px;
-
+margin-right: 10px;
 
     }
 }

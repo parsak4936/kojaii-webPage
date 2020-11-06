@@ -13,10 +13,18 @@ import  blog from './Components/Pages/Blog'
 
 function App   () {
 
+
+
+
+
+
+
+
         return (
 
             <>
                 <Router>
+
 
                     <Navbar />
                     <Route path='/home' exact component=  {HomePage} />

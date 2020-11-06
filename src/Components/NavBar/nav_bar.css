@@ -54,7 +54,7 @@
   .text-hero {
 
     margin-top: 90px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
   }
 
@@ -65,16 +65,13 @@
   .btn-desktop-google{
     display: none;
   }
-  .download-btns{
-
-  }
   .btn-mobile-navbar-Bazar{
 
     display: flex;
     background: url('../Images/Bazar.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 58px;
+
 
   }
   .btn-mobile-navbar-google{
@@ -82,7 +79,7 @@
     background: url('../Images/Googleplay.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 58px;
+
   }
 }
 #logo-in-navbar{
@@ -94,6 +91,24 @@
   display: flex;
   flex-direction: row;
   padding: 0 8px;
+}
+
+@media (max-width : 300px) {
+  .btn-mobile-navbar-Bazar{
+ margin-left: 190px;
+
+
+  }
+  .download-btns{
+
+    width: 280px;
+
+
+  }
+  .btn-mobile-navbar-google{
+    margin-left: 190px;
+margin-top: 10px;
+  }
 }
 
 .menu-item {
@@ -112,6 +127,10 @@
     padding: 10px 10px 10px;
 
   }
+  .kojaii{
+    color: yellow;
+  }
+
   .nav-menu {
     background: #037AAE!important;
   }
@@ -216,18 +235,15 @@
 }
 
 .text-hero {
+
   float: right;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 40px;
   font-weight: 500;
-
-  letter-spacing: 1px;
+   letter-spacing: 1px;
 }
 
-.sub-text-hero {
-  font-family: 'Dosis', sans-serif;
 
-}
 
 .nav-bottom {
   background: transparent !important;

@@ -1,6 +1,6 @@
 import React from 'react';
- import {Button} from '../Button.js';
- import Slide_v2 from '../SlideSow/slideshow_v2'
+ //import {Button} from '../Button.js';
+ import SLIDE_V2 from '../SlideSow/slideshow_v2'
 import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import join_Us_img from '../Images/join-us.png';
@@ -12,9 +12,45 @@ import Logo from "../Images/LOGO.png";
 
 
 
-function MainPage() {
-//TODO : 1) width of animation / 2) color of animation
-    //TODO 4) slideshow ? (should check later)
+
+  export default  class MainPage extends React.Component {
+      constructor(props) {
+          super(props);
+          this.state = {phone:'' , name :''
+          };
+          this.handleChange = this.handleChange.bind(this);
+          this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+
+
+//TODO 4) slideshow ? (should check later)
+
+      handleChange = (event) => {
+          this.setState({[event.target.name]: event.target.value , [event.target.phone] : event.target.value }
+
+          );
+      }
+
+      handleSubmit = (event) => {
+          alert('A form was submitted: ' + this.state.name +' and phone is :  ' +  this.state.phone);
+
+          fetch('https://kojaii.herokuapp.com/api/join-us', {
+              method: 'POST',
+              body: JSON.stringify(this.state.name ,this.state.phone )
+          }).then(function(response) {
+              console.log("GG mate ")
+              console.log(response)
+              return response.json();
+          });
+
+          event.preventDefault();
+      }
+
+
+
+render(){
+
 
     return (
         <>
@@ -23,7 +59,7 @@ function MainPage() {
                     title="به کجایی خوش آمدید"
                     subtitle="نظرات و پیشنهادات خود را با ما در میان بگذارید"
 
-                    link="https://github.com/kristofferandreasen/react-announcement"
+                    link=""
                     imageSource={Logo}
                     daysToLive={3}
                     secondsBeforeBannerShows={20}
@@ -55,7 +91,7 @@ function MainPage() {
                         </div>
 
                         <div className='intro-gif-container'>
-                            <img className="intro-image" name="joinus-img" src={intro_img}/>
+                            <img className="intro-image" name="joinus-img" src={intro_img} alt="animation"/>
                         </div>
                     </div>
 
@@ -68,7 +104,7 @@ function MainPage() {
                             <h2>محیط برنامه</h2>
                         </div>
                         <div className="slide-show">
-                            <Slide_v2/>
+                            <SLIDE_V2/>
                         </div>
 
 
@@ -98,16 +134,16 @@ function MainPage() {
 
                         <center>
 
-                            <div className="join-us-form" action="#">
+                            <div className="join-us-form"  >
                                 <ScrollAnimation animateIn='animate__bounceInLeft'
                                                  animateOut='animate__bounceOutLeft'>
-                                    <form >
+                                    <form onSubmit={this.handleSubmit}>
 
-                                        <input className="join-us-param-name" name="name" type="text" placeholder="نام خود را وادر کنید" />
-                                        <input className="join-us-param-phone" name="phone" type="text" placeholder="شماره خود را وادر کنید"/>
+                                        <input className="join-us-param-name" name="name" value={this.state.name}   onChange={this.handleChange} type="text" placeholder="نام خود را وادر کنید" />
+                                        <input className="join-us-param-phone" name="phone" value={this.state.phone} onChange={this.handleChange} type="text" placeholder="شماره خود را وادر کنید"/>
                                         <br/>
                                         <br/>
-                                        <Button className="join-us-btn" variant="primary" type="submit">ارسال درخواست</Button>
+                                        <button className="join-us-btn" type="submit">ارسال درخواست</button>
                                         <br/>
                                         <br/>
                                     </form>
@@ -119,7 +155,7 @@ function MainPage() {
 
                         <div className='join-us-img-container'>
 
-                            <img className="join-us-image" name="joinus-img" src={join_Us_img}/>
+                            <img className="join-us-image" name="joinus-img" src={join_Us_img} alt=" "/>
 
                         </div>
 
@@ -135,7 +171,7 @@ function MainPage() {
         </>
     );
 
-
+}
 }
 
-export default MainPage;
+

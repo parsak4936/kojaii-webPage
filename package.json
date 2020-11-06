@@ -22,6 +22,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "animate.css": "^4.1.1",
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "flickity": "^2.2.1",
     "jquery": "^3.5.1",
@@ -54,7 +55,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
-
   },
   "eslintConfig": {
     "extends": "react-app"

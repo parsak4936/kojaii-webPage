@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
 import {v1 as uuidv4} from "uuid";
-import Flickity from 'react-flickity-component'
 import './SlideShow_v2.css'
+
+
 
 export default class Slideshow_v2 extends Component {
 
 
   state = {
     goToSlide: 0,
-
     showNavigation: true,
     config: config.gentle
   };
@@ -39,7 +39,6 @@ export default class Slideshow_v2 extends Component {
     return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
   });
 
-
   onChangeInput = e => {
     this.setState({
       [e.target.name]: parseInt(e.target.value, 10) || 0
@@ -48,7 +47,7 @@ export default class Slideshow_v2 extends Component {
 
   render() {
     return (
-        <div className="slideshow-container" >
+        <div className="slideshow-container"  data-flickity-options='{ "cellAlign": "left", "contain": true }' >
           <Carousel
               slides={this.slides}
               goToSlide={this.state.goToSlide}
@@ -56,10 +55,7 @@ export default class Slideshow_v2 extends Component {
               showNavigation={this.state.showNavigation}
               animationConfig={this.state.config}
           />
-
         </div>
-
-
     );
   }
 }

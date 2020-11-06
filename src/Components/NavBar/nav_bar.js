@@ -10,12 +10,11 @@ import {Link,useLocation } from "react-router-dom";
 
 //-----------------------------------------------//
 
-//TODO : 1) direction must be rtl / 2) href in line 87 change into 'to' / 3) navbar changer in other pages
-//TODO : 4)change txt and bottons right as doc / 5) download color to white
+
 function Nav_bar() {
     let location = useLocation();
 
-    const [click, setClick] = useState(false);
+    const [ setClick] = useState(false);
     const [button, setButton] = useState(true);
     const closeMobileMenu = () => setClick(false);
     const showButton = () => {
@@ -79,18 +78,18 @@ function Nav_bar() {
 
             <div className="container-fluid">
 <div className="navbar-btn-download">
-    {button && <Button buttonStyle='btn--outline'  >   <i class='fa fa-download'/>   دانلود </Button>}
+    {button && <Button buttonStyle='btn--outline'  >   <i className='fa fa-download'/>   دانلود </Button>}
 
 </div>
 
-                <button onClick={classChange}  id="toggle" class="navbar-toggler" type="button" data-toggle="collapse"
+                <button onClick={classChange}  id="toggle" className="navbar-toggler" type="button" data-toggle="collapse"
                                               data-target="#myNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <div className="line1 ham"></div>
-                    <div className="line2 ham"></div>
-                    <div className="line3 ham"></div>
+                    <div className="line1 ham"> </div>
+                    <div className="line2 ham"> </div>
+                    <div className="line3 ham"> </div>
                 </button>
                 <div  className="nav-bar-logo"  id="logo-in-navbar" >
-                    <img className="logo-nav-mobile" src={LOGO} width = "120px "/>
+                    <img className="logo-nav-mobile" src={LOGO} width = "120px " alt = " "/>
                 </div>
 
                 <div className='collapse navbar-collapse justify-content-end'  id="myNavbar">
@@ -145,62 +144,71 @@ function Nav_bar() {
                 <div className="row justify-content-center">
 
                     <div className="col-12">
-                        <ScrollAnimation animateIn='animate__bounceInRight'>
-                            <h1 className="text-hero text-center text-white text-uppercase"> جهت دانلود برنامه <span className="kojaii" >کجایی</span> کلیک کنید </h1>
+                        <ScrollAnimation className="text-hero text-center text-white text-uppercase" animateIn='animate__fadeIn' animateOut=' '>
+                            <h1 > جهت دانلود برنامه <span className="kojaii" >کجایی</span> کلیک کنید </h1>
 
                         </ScrollAnimation>
                     </div>
 
                     <div className="col-12">
 
-                        <div className="  text-hero btn-hero lead text-center">
-                            <ScrollAnimation animateIn='animate__bounceInLeft'
-                                             animateOut='animate__bounceInRight'>
+                        <div className="  btn-hero lead text-center">
+
 
                         <div className="download-btns">
+                            <ScrollAnimation    className="btn-desktop-Bazar" animateIn='animate__bounceInRight'  animateOut='animate__bounceInLeft'>
+                                <Link
+                                    to='/download'
+                                    onClick={closeMobileMenu}
+                                >
+                                    <Button>  </Button>
+                                </Link>
+                            </ScrollAnimation>
+                            <ScrollAnimation     className="btn-desktop-google" animateIn='animate__bounceInLeft'  animateOut='animate__bounceInRight'>
 
-    <Link
-        to='/download'
-        className="btn-desktop-Bazar"
-        onClick={closeMobileMenu}
-    >
-        <Button>  </Button>
-    </Link>
 
-    <Link
-        to='/download'
-        className="btn-desktop-google"
+                                <Link
+                                    to='/download'
+                                    onClick={closeMobileMenu}
+                                >
+                                    <Button> </Button>
+                                </Link>
+                            </ScrollAnimation>
 
-        onClick={closeMobileMenu}
-    >
-        <Button> </Button>
-    </Link>
+
 
 
                             <div >
+                                <ScrollAnimation  className="btn-mobile-navbar-Bazar" animateIn='animate__bounceInRight'  animateOut='animate__bounceInLeft'>
+                                    <Link
+                                        to='/download'
 
-                                <Link
-                                    to='/download'
-                                    className="btn-mobile-navbar-Bazar"
-                                    onClick={closeMobileMenu}
-                                >
-                                    <Button> </Button>
-                                </Link>
+                                        onClick={closeMobileMenu}
+                                    >
+                                        <Button> </Button>
+                                    </Link>
+                                </ScrollAnimation>
 
-                                <Link
-                                    to='/download'
-                                    className="btn-mobile-navbar-google"
-                                    onClick={closeMobileMenu}
-                                >
-                                    <Button> </Button>
-                                </Link>
+
+                                    <ScrollAnimation    className="btn-mobile-navbar-google"  animateIn='animate__bounceInLeft'  animateOut='animate__bounceInRight'>
+
+                                        <Link
+                                            to='/download'
+
+                                            onClick={closeMobileMenu}
+                                        >
+                                            <Button> </Button>
+                                        </Link>
+                                    </ScrollAnimation>
+
+
 
 
                             </div>
 
 </div>
 
-                            </ScrollAnimation>
+
 
 
                         </div>
