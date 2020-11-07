@@ -185,7 +185,6 @@ margin-top: 50px;
     margin-top: 18px;
     border: 1px solid #68BBD5;
     border-radius: 5px;
-    /*margin-left: 20px;*/
     padding: 10px;
 }
 
@@ -200,7 +199,6 @@ margin-top: 50px;
     margin-top: 18px;
     border: 1px solid #68BBD5;
     border-radius: 5px;
-    /*margin-left: 20px;*/
     padding: 10px;
 }
 
@@ -211,6 +209,20 @@ margin-top: 50px;
 }
 
 /*  Phone */
+@media only screen and (max-width:600px)
+{
+    .intro-text{
+        text-align: center!important;
+    }
+}
+
+@media only screen and (min-width:900px)
+{
+    #join-us-text{
+        width: 600px;
+    }
+}
+
 @media only screen and (max-width:940px)
 {
     .mainpage-container {

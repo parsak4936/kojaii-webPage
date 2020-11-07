@@ -86,14 +86,16 @@ render(){
                             </ScrollAnimation>
                         </div>
 
-                        <div  align="right" className='intro-text'>
+                        <div align="right" className='intro-text'>
                             <ScrollAnimation animateIn='animate__flipInX'  animateOut='animate__flipInX'>
                                 <p>
                                     برای همه ممکن است پیش امده باشد که زمان زیادی را صرف منتظر ماندن برای دوستانشان باشند که با
                                     آنها قرار مالقات دارند ؛ در پروژه کجایی ، روندی به منظور بهبود کنترل قرار مالقات های جمعی یا دو نفره در
                                     نظر گرفته شده است تا کاربرانی که می خواهند هم دیگر را مالقات کنند ، دیگر درگیر مسئله انتظار نباشند و
                                     در طی راه ، بتوانند موقعیت همدیگر را ببینند                        </p>
-
+                                <p>
+                                    کجایی برنامه ای است که به شما کمک میکند تا با مدریت زمان و همچنین مشاهده موقعیت بقیه افراد گروه و فاصله و زمان تقریبی اعضا برای رسیدن به مقصد بتوانید سفری لذت بخش تر و مدریت شده تری داشته باشید.
+                                </p>
                             </ScrollAnimation>
 
                         </div>
@@ -132,7 +134,7 @@ render(){
 
                         <div align="right" className='joinus-text'>
                             <ScrollAnimation animateIn='animate__flipInY'  animateOut='animate__fadeOutTopLeft'>
-                                <p >
+                                <p id="join-us-text">
                                     کجایی همواره به دنبال جذب افراد مستعد و باانگیزه میباشد. اگر به کاری که می کنید علاقه و به مهارت های خود اطمینان دارید، جای شما در تیم ما خالی است.
                                 </p>
                             </ScrollAnimation>
