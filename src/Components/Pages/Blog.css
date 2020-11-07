@@ -1,6 +1,7 @@
 .blog-container{
     background-color:  #E9F9FE;
     display: flex;
+    flex-direction: column;
    align-items: center;
     justify-content: center;
     height: 600px;
@@ -9,15 +10,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 90px;
 }
 .blog-Header{
-
     display: flex;
+
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 30px;
-    margin-right: 50px;
-    margin-top: 30px;
+    margin-top: 15px;
     align-items: center;
     justify-content: center;
 
