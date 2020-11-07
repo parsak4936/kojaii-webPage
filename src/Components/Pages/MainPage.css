@@ -3,13 +3,14 @@
     --main-radius: 5px;
     --main-padding: 5px;
 }
+
 /*  Desktop */
 .mainpage-container {
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows:   0fr 0fr 0fr;
-    grid-template-areas:   "interduce" "Toturial" "join_us";
+    grid-template-rows: 0fr 0fr 0fr;
+    grid-template-areas: "interduce" "Toturial" "join_us";
     align-items: center;
     justify-content: center;
 
@@ -19,20 +20,21 @@
 .toturial {
     grid-area: Toturial;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .4fr .4fr;
-    grid-template-areas: " .  T_Header  ."  " .  slide_show   .";
+    grid-template-areas: " .  T_Header  ." " .  slide_show   .";
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 550px;
-    background-image: url("../Images/appdemo_background.svg") ;
+    background-image: url("../Images/appdemo_background.svg");
     justify-content: center;
     overflow: visible;
     align-items: center;
 
 }
-.T-Header{
+
+.T-Header {
     padding-top: 15px;
     display: flex;
     align-items: center;
@@ -41,7 +43,8 @@
     color: #DBF1F7;
 
 }
-.slide-show{
+
+.slide-show {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +53,7 @@
 
 /* intro section */
 .interduce {
-    background-color:  #E9F9FE;
+    background-color: #E9F9FE;
     grid-area: interduce;
 }
 
@@ -61,8 +64,8 @@
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr  ;
-    grid-template-areas: "intro_header . " "info_txt intro-image " "info_txt  intro-image  "  ;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "intro_header . " "info_txt intro-image " "info_txt  intro-image  ";
 }
 
 
@@ -75,7 +78,7 @@
     justify-content: center;
 }
 
-.intro-gif-container{
+.intro-gif-container {
 
     justify-content: center;
     display: flex;
@@ -85,8 +88,9 @@
 
 }
 
-.intro-image{
- width: 100%;
+.intro-image {
+    width: 100%;
+    margin-bottom: 200px;
 }
 
 .intro-text {
@@ -94,35 +98,31 @@
     padding-right: 20px;
     padding-left: 20px;
     grid-area: info_txt;
-    display: flex;
     color: #1784CD;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 }
 
 /* join us section */
 .join-us {
 
-   background-color:  #E9F9FE;
+    background-color: #E9F9FE;
     align-items: center;
     justify-content: center;
     grid-area: join_us;
 }
 
 .joingus-container {
-margin-top: 50px;
+    margin-top: 50px;
     width: 100%;
     height: 480px;
     align-items: center;
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr .2fr 1fr;
-    grid-template-rows: 0fr 1fr 1fr 1fr ;
-    grid-template-areas: "joinus_header  joinus_header  joingus_img"
-                         "joinus_txt joinus_txt  joingus_img "
-                         "joinus_phone  joinus_name  joingus_img "
-                         "joinus_btn  joinus_btn  joingus_img "
-;
+    grid-template-rows: 0fr 1fr 1fr 1fr;
+    grid-template-areas: "joinus_header  joinus_header  joingus_img" "joinus_txt joinus_txt  joingus_img " "joinus_phone  joinus_name  joingus_img " "joinus_btn  joinus_btn  joingus_img ";
 }
 
 .joinus-header {
@@ -155,7 +155,7 @@ margin-top: 50px;
 
 }
 
-.join-us-form{
+.join-us-form {
 
     direction: rtl;
     align-items: center;
@@ -173,14 +173,14 @@ margin-top: 50px;
     opacity: 0.5;
 }
 
-.join-us-btn{
+.join-us-btn {
     grid-area: joinus_btn;
-    background-color:  #DBF1F7;
+    background-color: #DBF1F7;
     margin-top: 10px !important;
     margin-bottom: 20px !important;
 }
 
-.join-us-param-name{
+.join-us-param-name {
     grid-area: joinus_name;
     margin-top: 18px;
     border: 1px solid #68BBD5;
@@ -194,7 +194,7 @@ margin-top: 50px;
     transition: 250ms;
 }
 
-.join-us-param-phone{
+.join-us-param-phone {
     grid-area: joinus_phone;
     margin-top: 18px;
     border: 1px solid #68BBD5;
@@ -209,40 +209,36 @@ margin-top: 50px;
 }
 
 /*  Phone */
-@media only screen and (max-width:600px)
-{
-    .intro-text{
-        text-align: center!important;
+@media only screen and (max-width: 600px) {
+    .intro-text {
+        text-align: center !important;
     }
 }
 
-@media only screen and (min-width:900px)
-{
-    #join-us-text{
+@media only screen and (min-width: 900px) {
+    #join-us-text {
         width: 600px;
     }
 }
 
-@media only screen and (max-width:940px)
-{
+@media only screen and (max-width: 940px) {
     .mainpage-container {
 
         grid-template-columns: 1fr;
-        grid-template-rows:   .8fr .8fr 0.8fr;
-        grid-template-areas:   "interduce" "Toturial" "join_us";
+        grid-template-rows: .8fr .8fr 0.8fr;
+        grid-template-areas: "interduce" "Toturial" "join_us";
     }
 
     /* interduceing section*/
-
     .interduce-container {
 
         width: 100%;
         height: 600px;
         display: grid;
-        grid-template-columns: 1fr  ;
+        grid-template-columns: 1fr;
         justify-content: center;
-        grid-template-rows: 1fr 1fr 1fr ;
-        grid-template-areas:   "intro_header  " "  intro-image " "info_txt "  ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "intro_header  " "  intro-image " "info_txt ";
     }
 
     /* joing us section*/
@@ -250,28 +246,23 @@ margin-top: 50px;
         width: 100%;
         height: 630px;
         display: grid;
-         justify-content: center;
-        grid-template-columns: 1fr  ;
-        grid-template-rows: 0fr .4fr 1fr 1fr 1fr   ;
-        grid-template-areas: " joingus_img "
-                              "joinus_header"
-                              "joinus_txt"
-                              "joinus_phone"
-                              " joinus_name"
-                              "joinus_btn " ;
-      }
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr .4fr 1fr 1fr 1fr;
+        grid-template-areas: " joingus_img " "joinus_header" "joinus_txt" "joinus_phone" " joinus_name" "joinus_btn ";
+    }
 
-    .joinus-text{
+    .joinus-text {
         margin-left: 50px;
         margin-right: 50px;
         text-align: center !important;
     }
 
-    .join-us-image{
+    .join-us-image {
         width: 220px;
     }
 
-    .join-us-param{
+    .join-us-param {
         padding: 10px;
         margin-top: 10px;
         margin-bottom: 20px;
@@ -281,19 +272,16 @@ margin-top: 50px;
     .toturial {
 
         display: grid;
-        grid-template-columns: 1fr 1fr   ;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: .4fr .4fr;
-        grid-template-areas: " T_Header  T_Header "  " slide_show  slide_show   ";
+        grid-template-areas: " T_Header  T_Header " " slide_show  slide_show   ";
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 550px;
 
 
-
-
     }
-
 
 
 }
