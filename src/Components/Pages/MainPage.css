@@ -225,6 +225,12 @@
         margin-bottom: 100px;
         margin-right: 90px;
     }
+    .join-us-form{
+        margin-left: 110px;
+    }
+    .join-us-form input{
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (max-width: 940px) {
