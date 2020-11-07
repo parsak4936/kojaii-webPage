@@ -212,6 +212,12 @@
 
 /*  Phone */
 @media only screen and (max-width: 600px) {
+    #moreDes{
+        display: none;
+    }
+    .intro-image {
+        margin-bottom: 0px !important;
+    }
     .intro-text {
         text-align: center !important;
     }

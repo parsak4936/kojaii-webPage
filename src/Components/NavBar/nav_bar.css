@@ -68,9 +68,6 @@
 }
 
 @media (max-width : 300px) {
-  .download-text{
-
-  }
   .btn-mobile-navbar-Bazar{
  margin-left: 190px;
 
@@ -95,6 +92,7 @@
 }
 
 @media (max-width: 64em) {
+
   .download-text{
     font-size: 1.9em !important;
   }
