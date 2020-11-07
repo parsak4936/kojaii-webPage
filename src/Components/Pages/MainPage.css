@@ -219,6 +219,10 @@
     #join-us-text {
         width: 600px;
     }
+    .join-us-image{
+        margin-bottom: 100px;
+        margin-right: 90px;
+    }
 }
 
 @media only screen and (max-width: 940px) {
