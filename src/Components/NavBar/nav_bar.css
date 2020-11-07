@@ -26,8 +26,12 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.btn-desktop-google{
 
+.download-btns{
+  display: flex;
+  flex-direction: row;
+}
+.btn-desktop-google{
 
   margin-left: 10px;
   background: url('../Images/Googleplay.png');
@@ -67,17 +71,9 @@
   padding: 0 8px;
 }
 
-@media (max-width : 300px) {
-  .btn-mobile-navbar-Bazar{
- margin-left: 190px;
+@media (max-width : 400px) {
 
 
-  }
-
-  .btn-mobile-navbar-google{
-    margin-left: 190px;
-    margin-top: 10px;
-  }
 }
 
 .menu-item {
@@ -96,6 +92,12 @@
   .download-text{
     font-size: 1.9em !important;
   }
+
+  .download-btns{
+    display: flex;
+    flex-direction: column;
+  }
+
   .menu-item {
     padding: 10px 10px 10px;
 
