@@ -3,6 +3,7 @@
   padding-top: 10px;
   padding-bottom: 5px;
 }
+
 .logo-nav-mobile{
   display: none;
 }
@@ -19,14 +20,15 @@
   transition: all .4s;
 }
 .btn-desktop-Bazar{
-  display: inline-block;
+
   margin-left: 10px;
   background: url('../Images/Bazar.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
 .btn-desktop-google{
-  display: inline-block;
+
+
   margin-left: 10px;
   background: url('../Images/Googleplay.png');
   background-size: contain;
@@ -42,12 +44,6 @@
   transition: all .4s;
 }
 
-.btn-mobile-navbar-Bazar{
-  display: none;
-}
-.btn-mobile-navbar-google{
-  display: none;
-}
 
 @media (max-width:64em) {
 
@@ -59,28 +55,6 @@
   }
 
 
-  .btn-desktop-Bazar{
-    display: none;
-  }
-  .btn-desktop-google{
-    display: none;
-  }
-  .btn-mobile-navbar-Bazar{
-
-    display: flex;
-    background: url('../Images/Bazar.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-
-
-  }
-  .btn-mobile-navbar-google{
-    display: flex;
-    background: url('../Images/Googleplay.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-
-  }
 }
 #logo-in-navbar{
   margin-right: 10px;
@@ -99,12 +73,7 @@
 
 
   }
-  .download-btns{
 
-    width: 280px;
-
-
-  }
   .btn-mobile-navbar-google{
     margin-left: 190px;
 margin-top: 10px;

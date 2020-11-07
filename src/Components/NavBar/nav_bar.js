@@ -14,7 +14,7 @@ import {Link,useLocation } from "react-router-dom";
 function Nav_bar() {
     let location = useLocation();
 
-    const [ setClick] = useState(false);
+    const [ click,setClick] = useState(false);
     const [button, setButton] = useState(true);
     const closeMobileMenu = () => setClick(false);
     const showButton = () => {
@@ -156,55 +156,28 @@ function Nav_bar() {
 
 
                         <div className="download-btns">
-                            <ScrollAnimation    className="btn-desktop-Bazar" animateIn='animate__bounceInRight'  animateOut='animate__bounceInLeft'>
+"
+                            <ScrollAnimation   animateIn='animate__bounceInRight'  animateOut='animate__bounceInLeft'>
                                 <Link
                                     to='/download'
+
                                     onClick={closeMobileMenu}
                                 >
-                                    <Button>  </Button>
-                                </Link>
-                            </ScrollAnimation>
-                            <ScrollAnimation     className="btn-desktop-google" animateIn='animate__bounceInLeft'  animateOut='animate__bounceInRight'>
-
-
-                                <Link
-                                    to='/download'
-                                    onClick={closeMobileMenu}
-                                >
-                                    <Button> </Button>
+                                    <button type="submit" className="btn btn btn-lg btn-desktop-Bazar  btn-primary"> </button>
                                 </Link>
                             </ScrollAnimation>
 
 
+                            <ScrollAnimation      animateIn='animate__bounceInLeft'  animateOut='animate__bounceInRight'>
+                                <Link
+                                    to='/download'
+                                    onClick={closeMobileMenu}
+                                >
+                                    <button type="button" className="btn btn  btn-desktop-google   btn-primary"> </button>
+                                </Link>
+                            </ScrollAnimation>
 
 
-                            <div >
-                                <ScrollAnimation  className="btn-mobile-navbar-Bazar" animateIn='animate__bounceInRight'  animateOut='animate__bounceInLeft'>
-                                    <Link
-                                        to='/download'
-
-                                        onClick={closeMobileMenu}
-                                    >
-                                        <Button> </Button>
-                                    </Link>
-                                </ScrollAnimation>
-
-
-                                    <ScrollAnimation    className="btn-mobile-navbar-google"  animateIn='animate__bounceInLeft'  animateOut='animate__bounceInRight'>
-
-                                        <Link
-                                            to='/download'
-
-                                            onClick={closeMobileMenu}
-                                        >
-                                            <Button> </Button>
-                                        </Link>
-                                    </ScrollAnimation>
-
-
-
-
-                            </div>
 
 </div>
 
