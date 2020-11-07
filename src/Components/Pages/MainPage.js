@@ -1,5 +1,4 @@
 import React from 'react';
- //import {Button} from '../Button.js';
  import SLIDE_V2 from '../SlideSow/slideshow_v2'
 import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -112,9 +111,11 @@ render(){
                 <section className='toturial'>
                          <div className="T-Header">
                             <h2>محیط برنامه</h2>
+
                         </div>
                         <div className="slide-show">
-                            <SLIDE_V2/>
+                            {/*-----------------   <SLIDE_V2/> ---------------*/}
+                         <SLIDE_V2/>
                         </div>
 
 

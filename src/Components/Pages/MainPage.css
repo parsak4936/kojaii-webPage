@@ -49,9 +49,10 @@
 }
 
 .slide-show {
-    display: flex;
-    align-items: center;
+
+align-items: center;
     justify-content: center;
+
     grid-area: slide_show;
 }
 

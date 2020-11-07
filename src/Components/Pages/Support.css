@@ -1,20 +1,15 @@
 .sup-container{
-    background-color: #E9F9FE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.tabs{
+    height: 550px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-
-
-    margin: 80px 0;
+display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.tab-list{
+.parag{
+    border: 1px solid blue;
     display: flex;
-    padding-bottom: 24px;
-}
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 
+}
