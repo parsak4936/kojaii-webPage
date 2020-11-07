@@ -153,7 +153,7 @@ render(){
                                         <input className="join-us-param-phone" name="phone" id="phone" onChange={this.handleChange} type="text" placeholder="شماره خود را وارد کنید"/>
                                         <br/>
                                         <br/>
-                                        <button className="join-us-btn" type="submit">ارسال درخواست</button>
+                                        <button className="btn join-us-btn btn-outline-info" type="submit">ارسال درخواست</button>
                                         <br/>
                                         <br/>
                                     </form>
