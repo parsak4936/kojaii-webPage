@@ -66,6 +66,7 @@ render(){
                 <Announcement
                     title="به کجایی خوش آمدید"
                     subtitle="نظرات و پیشنهادات خود را با ما در میان بگذارید"
+
                     link=""
                     imageSource={Logo}
                     daysToLive={3}
@@ -150,8 +151,7 @@ render(){
                                         <input className="join-us-param-phone" name="phone" id="phone" onChange={this.handleChange} type="text" placeholder="شماره خود را وارد کنید"/>
                                         <br/>
                                         <br/>
-                                        <button type="submit" className="btn btn btn-outline-info">ارسال درخواست</button>
-
+                                        <button className="join-us-btn" type="submit">ارسال درخواست</button>
                                         <br/>
                                         <br/>
                                     </form>

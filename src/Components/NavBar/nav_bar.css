@@ -23,7 +23,7 @@
 
   margin-left: 10px;
   background: url('../Images/Bazar.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .btn-desktop-google{
