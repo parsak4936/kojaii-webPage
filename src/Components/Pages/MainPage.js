@@ -9,6 +9,7 @@ import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Announcement from "react-announcement";
 import Logo from "../Images/LOGO.png";
+import $ from "jquery";
 
 
 
@@ -33,16 +34,23 @@ import Logo from "../Images/LOGO.png";
       }
 
       handleSubmit = (event) => {
-          alert('A form was submitted: ' + this.state.name +' and phone is :  ' +  this.state.phone);
 
-          fetch('https://kojaii.herokuapp.com/api/join-us', {
-              method: 'POST',
-              body: JSON.stringify(this.state.name ,this.state.phone )
-          }).then(function(response) {
-              console.log("GG mate ")
-              console.log(response)
-              return response.json();
+
+
+          var name =  $( "#name" ).val();
+          var phone =  $( "#phone" ).val();
+
+          $.ajax({
+              url: 'https://kojaii.herokuapp.com/api/join-us',
+              type: 'POST',
+              dataType: 'json',
+              data: {
+                  phone: phone,
+                  name: name
+              },
           });
+
+          alert(name + ' درخواست شما با موفقیت ثبت شد');
 
           event.preventDefault();
       }
@@ -139,8 +147,8 @@ render(){
                                                  animateOut='animate__bounceOutLeft'>
                                     <form onSubmit={this.handleSubmit}>
 
-                                        <input className="join-us-param-name" name="name" value={this.state.name}   onChange={this.handleChange} type="text" placeholder="نام خود را وادر کنید" />
-                                        <input className="join-us-param-phone" name="phone" value={this.state.phone} onChange={this.handleChange} type="text" placeholder="شماره خود را وادر کنید"/>
+                                        <input className="join-us-param-name" name="name" id="name"  onChange={this.handleChange} type="text" placeholder="نام خود را وارد کنید" />
+                                        <input className="join-us-param-phone" name="phone" id="phone" onChange={this.handleChange} type="text" placeholder="شماره خود را وارد کنید"/>
                                         <br/>
                                         <br/>
                                         <button className="join-us-btn" type="submit">ارسال درخواست</button>
