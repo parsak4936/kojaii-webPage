@@ -68,7 +68,7 @@
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "intro_header . " "info_txt intro-image " "info_txt  intro-image  ";
 }
 
@@ -239,7 +239,7 @@
     }
 }
 
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 740px) {
     .mainpage-container {
 
         grid-template-columns: 1fr;

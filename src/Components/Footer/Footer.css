@@ -74,22 +74,6 @@
 
 }
 
-.website-rights {
-
-    grid-area: rights;
-
-    color: #fff;
-    justify-self: start;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-
-    display: flex;
-    flex-direction: row;
-
-
-}
 
 @media screen and (max-width: 890px) {
 
