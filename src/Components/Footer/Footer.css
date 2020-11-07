@@ -45,15 +45,13 @@
 }
 
 .social-icons {
-    justify-self: start;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
     align-items: center;
-    width: 150px;
-   margin-left: 250px;
 
 
+}
+.social-icons a{
+    padding-right: 25px;
 }
 
 .social-logo {
@@ -98,7 +96,6 @@
 
 
     .social-icons {
- margin-right: 245px;
 
 
 
