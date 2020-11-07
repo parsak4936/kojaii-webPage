@@ -107,7 +107,7 @@
   }
 
   .nav-menu {
-    /*background: #037AAE!important;*/
+
   }
   .navbar-btn-download{
     display: none;
@@ -171,11 +171,11 @@
   font-size: 13px;
   letter-spacing: 1px;
 }
-
+/* ===== NavBar background in scroll down===== */
 .costum-navbar {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #AED6F1 !important;
+  background-color: #037AAE !important;
   position: fixed;
 }
 
