@@ -31,9 +31,11 @@ function Nav_bar() {
         if (!state){
             $('#myNavbar').addClass('collapse');
             $('#toggle').removeClass('change');
+            $(".nav-menu").css("background-color", "");
         }else{
             $('#myNavbar').removeClass('collapse');
             $('#toggle').addClass('change');
+            $(".nav-menu").css("background-color", "#AED6F1");
         }
     }
 
@@ -143,9 +145,9 @@ function Nav_bar() {
 
                 <div className="row justify-content-center">
 
-                    <div className="col-12">
+                    <div className="col-12 download-text">
                         <ScrollAnimation className="text-hero text-center text-white text-uppercase" animateIn='animate__fadeIn' animateOut=' '>
-                            <h1 > جهت دانلود برنامه <span className="kojaii" >کجایی</span> کلیک کنید </h1>
+                            <h1 > جهت دانلود <span className="kojaii" >کجایی</span> کلیک کنید </h1>
 
                         </ScrollAnimation>
                     </div>

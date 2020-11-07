@@ -68,6 +68,9 @@
 }
 
 @media (max-width : 300px) {
+  .download-text{
+
+  }
   .btn-mobile-navbar-Bazar{
  margin-left: 190px;
 
@@ -76,7 +79,7 @@
 
   .btn-mobile-navbar-google{
     margin-left: 190px;
-margin-top: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -92,16 +95,19 @@ margin-top: 10px;
 }
 
 @media (max-width: 64em) {
+  .download-text{
+    font-size: 1.9em !important;
+  }
   .menu-item {
     padding: 10px 10px 10px;
 
   }
   .kojaii{
-    color: yellow;
+    color: #2095F3;
   }
 
   .nav-menu {
-    background: #037AAE!important;
+    /*background: #037AAE!important;*/
   }
   .navbar-btn-download{
     display: none;
@@ -169,7 +175,7 @@ margin-top: 10px;
 .costum-navbar {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #037AAE !important;
+  background-color: #AED6F1 !important;
   position: fixed;
 }
 
@@ -230,6 +236,10 @@ margin-top: 10px;
 .item-bottom:hover {
   background: transparent;
   transform: translateY(-2px);
+}
+
+.download-text{
+  font-size: 1.9em;
 }
 
 /* ===== END OF HERO SECTION ===== */
