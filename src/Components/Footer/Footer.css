@@ -1,9 +1,10 @@
 .footer-container {
     background-color: #3E6078;
     padding-top: 2rem;
-    padding-bottom: 0rem;
-    justify-content: center;
 
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 90px;
     align-items: flex-end;
 }
 
@@ -34,10 +35,10 @@
 
     display: grid;
 
-    grid-template-columns: .5fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "text " "rights" "icons";
-    grid-gap: 8px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "text "   "icons";
+    grid-gap: 5px;
     justify-content: center;
     align-items: center;
 
@@ -49,9 +50,11 @@
     align-items: center;
 
 
+
 }
 .social-icons a{
     padding-right: 15px;
+
 }
 
 .social-logo {
@@ -61,6 +64,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
     text-decoration: none;
     font-size: 17px;
     display: flex;
@@ -87,7 +92,7 @@
 }
 
 @media screen and (max-width: 890px) {
-    
+
 
     .footer-links {
         justify-content: center;
@@ -127,7 +132,7 @@
     .social-icons {
 
         margin-left: 10px;
-margin-right: 10px;
+        margin-right: 10px;
 
     }
 }
