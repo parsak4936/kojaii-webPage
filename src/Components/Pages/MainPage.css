@@ -17,20 +17,24 @@
 
 }
 
+.btn-outline-info{
+    color: white !important;
+    background-color: #7AB1C5 !important;
+}
+
+.btn-outline-info:hover{
+    color: white !important;
+    background-color: #3E6078 !important;
+}
+
 .toturial {
     grid-area: Toturial;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .4fr .4fr;
     grid-template-areas: " .  T_Header  ." " .  slide_show   .";
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 550px;
-    background-image: url("../Images/appdemo_background.svg");
-    justify-content: center;
-    overflow: visible;
-    align-items: center;
+    background-color: #0463B9;
 
 }
 
@@ -190,7 +194,6 @@
 
 .join-us-param-name:hover {
     transition: all 0.3s ease-out;
-    color: white;
     transition: 250ms;
 }
 
@@ -204,7 +207,6 @@
 
 .join-us-param-phone:hover {
     transition: all 0.3s ease-out;
-    color: white;
     transition: 250ms;
 }
 
