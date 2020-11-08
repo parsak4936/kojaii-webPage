@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './Support.css'
-import { Tabs, Tab, Row, Col, Nav } from 'react-bootstrap';
+import {Tabs, Tab, Row, Col, Nav, Form} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from "react-bootstrap/Button";
 
 
 //import CoolTabs from 'react-cool-tabs';
@@ -56,18 +57,111 @@ function Support() {
                                 <Tab.Content>
 
                                     <Tab.Pane className="parag" eventKey="home">
-                                        <h5>Home Dashbord</h5>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                        <Form>
+                                            <Form.Row>
+                                                <Form.Group as={Col} controlId="formGridEmail">
+                                                    <Form.Label>Email</Form.Label>
+                                                    <Form.Control type="email" placeholder="Enter email" />
+                                                </Form.Group>
+
+
+                                            </Form.Row>
+
+                                            <Form.Group controlId="formGridAddress1">
+                                                <Form.Label>Address</Form.Label>
+                                                <Form.Control placeholder="1234 Main St" />
+                                            </Form.Group>
+
+                                            <Form.Group controlId="formGridAddress2">
+                                                <Form.Label>Address 2</Form.Label>
+                                                <Form.Control placeholder="Apartment, studio, or floor" />
+                                            </Form.Group>
+
+                                            <Form.Row>
+                                                <Form.Group as={Col} controlId="formGridCity">
+                                                    <Form.Label>City</Form.Label>
+                                                    <Form.Control />
+                                                </Form.Group>
+
+                                                <Form.Group as={Col} controlId="formGridState">
+                                                    <Form.Label>State</Form.Label>
+                                                    <Form.Control as="select" defaultValue="Choose...">
+                                                        <option>Choose...</option>
+                                                        <option>...</option>
+                                                    </Form.Control>
+                                                </Form.Group>
+
+                                                <Form.Group as={Col} controlId="formGridZip">
+                                                    <Form.Label>Zip</Form.Label>
+                                                    <Form.Control />
+                                                </Form.Group>
+                                            </Form.Row>
+
+                                            <Form.Group id="formGridCheckbox">
+                                                <Form.Check type="checkbox" label="Check me out" />
+                                            </Form.Group>
+
+                                            <Button variant="primary" type="submit">
+                                                Submit
+                                            </Button>
+                                        </Form>
+
                                     </Tab.Pane>
 
                                     <Tab.Pane className="parag" eventKey="profile">
-                                        <h5>Profile Details</h5>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                        <Form>
+                                            <Form.Row>
+                                                <Form.Group as={Col} controlId="formGridEmail">
+                                                    <Form.Label>Email</Form.Label>
+                                                    <Form.Control type="email" placeholder="Enter email" />
+                                                </Form.Group>
+
+
+                                            </Form.Row>
+
+                                            <Form.Group controlId="formGridAddress1">
+                                                <Form.Label>Address</Form.Label>
+                                                <Form.Control placeholder="1234 Main St" />
+                                            </Form.Group>
+
+                                            <Form.Group controlId="formGridAddress2">
+                                                <Form.Label>Address 2</Form.Label>
+                                                <Form.Control placeholder="Apartment, studio, or floor" />
+                                            </Form.Group>
+
+                                            <Form.Row>
+                                                <Form.Group as={Col} controlId="formGridCity">
+                                                    <Form.Label>City</Form.Label>
+                                                    <Form.Control />
+                                                </Form.Group>
+
+                                                <Form.Group as={Col} controlId="formGridState">
+                                                    <Form.Label>State</Form.Label>
+                                                    <Form.Control as="select" defaultValue="Choose...">
+                                                        <option>Choose...</option>
+                                                        <option>...</option>
+                                                    </Form.Control>
+                                                </Form.Group>
+
+                                                <Form.Group as={Col} controlId="formGridZip">
+                                                    <Form.Label>Zip</Form.Label>
+                                                    <Form.Control />
+                                                </Form.Group>
+                                            </Form.Row>
+
+                                            <Form.Group id="formGridCheckbox">
+                                                <Form.Check type="checkbox" label="Check me out" />
+                                            </Form.Group>
+
+                                            <Button variant="primary" type="submit">
+                                                Submit
+                                            </Button>
+                                        </Form>
+
                                     </Tab.Pane>
 
                                     <Tab.Pane eventKey="contact">
-                                        <h5>Contact Info</h5>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+
                                     </Tab.Pane>
 
                                 </Tab.Content>

@@ -17,13 +17,22 @@
   padding-top: 0;
   width: 100%;
   position: relative;
+
   transition: all .4s;
 }
-.btn-desktop-Bazar{
+.btn-desktop-Bazar:hover{
 
+  background-color: rgba(0,0,0,0.0) !important;
+}
+.btn-desktop-Bazar{
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+ display: flex;
+  height: 50px;
   margin-left: 10px;
   background: url('../Images/Bazar.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -31,10 +40,15 @@
   display: flex;
   flex-direction: row;
 }
+.btn-desktop-google:hover{
+  background-color: rgba(0,0,0,0.0) !important;
+}
 .btn-desktop-google{
+  width: 120px;
+  height: 50px;
 
   margin-left: 10px;
-  background: url('../Images/Googleplay.png');
+  background: url('../Images/Bazar.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -71,10 +85,7 @@
   padding: 0 8px;
 }
 
-@media (max-width : 400px) {
 
-
-}
 
 .menu-item {
   float: right;
@@ -96,6 +107,8 @@
   .download-btns{
     display: flex;
     flex-direction: column;
+
+
   }
 
   .menu-item {
@@ -205,10 +218,13 @@
 
 .btn-hero{
   float: right;
-  padding-right: 114px;
-  margin-bottom: 150px;
+  padding-right: 115px;
+  margin-top: 20px;
+  margin-bottom: 170px;
 }
-
+.txt-and-btn{
+  float: right;
+}
 .text-hero {
 
   float: right;

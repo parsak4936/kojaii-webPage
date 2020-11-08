@@ -6,6 +6,7 @@ import $ from "jquery";
 import {Button} from "../Button";
 import ScrollAnimation from "react-animate-on-scroll";
 import {Link,useLocation } from "react-router-dom";
+import {TransverseLoading} from "react-loadingg";
 
 
 //-----------------------------------------------//
@@ -35,7 +36,7 @@ function Nav_bar() {
         }else{
             $('#myNavbar').removeClass('collapse');
             $('#toggle').addClass('change');
-            $(".nav-menu").css("background-color", "#AED6F1");
+            $(".nav-menu").css("background-color", "#037AAE");
         }
     }
 
@@ -76,7 +77,7 @@ function Nav_bar() {
                 ? "navbar navbar-default navbar-expand-lg nav-menu show-on-scroll"  :
                 "navbar   navbar-expand-lg nav-menu-black show-on-scroll"}
 
-             id="nav-menu">
+             id="nav-menu"   >
 
             <div className="container-fluid">
 <div className="navbar-btn-download">
@@ -156,13 +157,11 @@ function Nav_bar() {
 
                         <div className="  btn-hero lead text-center">
 
-
                         <div className="download-btns">
-"
+
                             <ScrollAnimation   animateIn='animate__bounceInRight'  animateOut='animate__bounceInLeft'>
                                 <Link
                                     to='/download'
-
                                     onClick={closeMobileMenu}
                                 >
                                     <button type="submit" className="btn btn btn-lg btn-desktop-Bazar  btn-primary"> </button>
@@ -170,7 +169,7 @@ function Nav_bar() {
                             </ScrollAnimation>
 
 
-                            <ScrollAnimation      animateIn='animate__bounceInLeft'  animateOut='animate__bounceInRight'>
+                            <ScrollAnimation  animateIn='animate__bounceInLeft'  animateOut='animate__bounceInRight'>
                                 <Link
                                     to='/download'
                                     onClick={closeMobileMenu}
@@ -181,9 +180,7 @@ function Nav_bar() {
 
 
 
-</div>
-
-
+                               </div>
 
 
                         </div>

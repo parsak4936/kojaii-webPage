@@ -34,8 +34,6 @@ import $ from "jquery";
 
       handleSubmit = (event) => {
 
-
-
           var name =  $( "#name" ).val();
           var phone =  $( "#phone" ).val();
 
@@ -65,13 +63,12 @@ render(){
                 <Announcement
                     title="به کجایی خوش آمدید"
                     subtitle="نظرات و پیشنهادات خود را با ما در میان بگذارید"
-
                     link=""
                     imageSource={Logo}
                     daysToLive={3}
-                    secondsBeforeBannerShows={20}
+                    secondsBeforeBannerShows={5}
                     closeIconSize={30}
-                    animateInDuration={2000}
+                    animateInDuration={1000}
                     animateOutDuration={500}
                 />
 
