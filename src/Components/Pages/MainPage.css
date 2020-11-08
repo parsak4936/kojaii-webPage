@@ -28,6 +28,7 @@
 }
 
 .toturial {
+    direction: rtl;
     grid-area: Toturial;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -49,9 +50,6 @@
 }
 
 .slide-show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-area: slide_show;
 }
 
@@ -102,7 +100,7 @@
     padding-right: 20px;
     padding-left: 20px;
     grid-area: info_txt;
-    color: #1784CD;
+    color: #033665;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
@@ -209,7 +207,12 @@
     transition: all 0.3s ease-out;
     transition: 250ms;
 }
-
+#moreDes{
+    text-align: justify;
+}
+#Des{
+    text-align: justify;
+}
 /*  Phone */
 @media only screen and (max-width: 600px) {
     #moreDes{
@@ -223,7 +226,8 @@
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 600px) {
+
     #join-us-text {
         width: 600px;
     }
@@ -236,6 +240,10 @@
     }
     .join-us-form input{
         margin-left: 10px;
+    }
+    .slide-show{
+        margin-top: 70px !important;
+        margin-right: 110px !important;
     }
 }
 

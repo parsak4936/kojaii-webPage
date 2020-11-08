@@ -33,6 +33,7 @@ function Nav_bar() {
             $('#myNavbar').addClass('collapse');
             $('#toggle').removeClass('change');
             $(".nav-menu").css("background-color", "");
+
         }else{
             $('#myNavbar').removeClass('collapse');
             $('#toggle').addClass('change');
@@ -52,9 +53,13 @@ function Nav_bar() {
         let position    =   $(this).scrollTop();
         if (position >= 100) {
             $('.nav-menu').addClass('costum-navbar');
+            $(".navbar-btn-download").css("display", "block");
+
 
         } else {
             $('.nav-menu').removeClass('costum-navbar');
+            $(".navbar-btn-download").css("display", "none");
+
         }
 
     });

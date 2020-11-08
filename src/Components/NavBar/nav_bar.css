@@ -3,7 +3,9 @@
   padding-top: 10px;
   padding-bottom: 5px;
 }
-
+.navbar-btn-download{
+  display: none;
+}
 .logo-nav-mobile{
   display: none;
 }
@@ -123,7 +125,7 @@
 
   }
   .navbar-btn-download{
-    display: none;
+    display: none !important;
   }
   .logo-nav-mobile{
     display: flex;

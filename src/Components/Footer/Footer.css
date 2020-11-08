@@ -1,9 +1,8 @@
 .footer-container {
     background-color: #3E6078;
     padding-top: 2rem;
-
+    height: 130px;
     justify-content: center;
-    height: 100%;
     padding-bottom: 90px;
     align-items: flex-end;
 }
