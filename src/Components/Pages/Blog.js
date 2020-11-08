@@ -1,6 +1,6 @@
 import React from 'react';
 import './Blog.css'
-
+import AbsoluteWrapper from "../AbsoluteWrapper";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 import { TransverseLoading } from 'react-loadingg';
@@ -24,6 +24,7 @@ function Blog() {
 
     return(
         <>
+        <AbsoluteWrapper>
             <div className="blog-container">
                 <h3 className='blog-Header'>تیم نیگما در حال اماده سازی این صفحه یباشد ، از شکیبای شما سپاس گذاریم</h3>
                 <section className='blog-icon'>
@@ -39,7 +40,7 @@ function Blog() {
 
 
             </div>
-
+        </AbsoluteWrapper>
 
 
         </>

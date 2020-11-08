@@ -10,6 +10,7 @@ import Announcement from "react-announcement";
 import Logo from "../Images/LOGO.png";
 import $ from "jquery";
 import {Link} from "react-router-dom";
+import AbsoluteWrapper from "../AbsoluteWrapper";
 
 
 export default class MainPage extends React.Component {
@@ -56,6 +57,7 @@ export default class MainPage extends React.Component {
 
         return (
             <>
+            <AbsoluteWrapper>
                 <div className="mainpage-container">
                     <Announcement
                         title="به کجایی خوش آمدید"
@@ -209,6 +211,7 @@ export default class MainPage extends React.Component {
 
 
                 </div>
+            </AbsoluteWrapper>
             </>
         );
 

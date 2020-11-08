@@ -1,0 +1,236 @@
+Index: src/Components/Pages/Blog.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport './Blog.css'\r\n\r\nimport { CountdownCircleTimer } from \"react-countdown-circle-timer\";\r\n\r\nimport { TransverseLoading } from 'react-loadingg';\r\n\r\n\r\nconst renderTime = ({ remainingTime }) => {\r\n    if (remainingTime === 0) {\r\n        return <div className=\"timer\">Too lale...</div>;\r\n    }\r\n\r\n    return (\r\n        <div className=\"timer\">\r\n            <div className=\"text\">Remaining</div>\r\n            <div className=\"value\">{remainingTime}</div>\r\n            <div className=\"text\">seconds</div>\r\n        </div>\r\n    );\r\n};\r\n\r\nfunction Blog() {\r\n\r\n    return(\r\n        <>\r\n            <div className=\"blog-container\">\r\n                <h3 className='blog-Header'>تیم نیگما در حال اماده سازی این صفحه یباشد ، از شکیبای شما سپاس گذاریم</h3>\r\n                <section className='blog-icon'>\r\n                     <CountdownCircleTimer\r\n                        isPlaying\r\n                        duration={10}\r\n                        colors={[[\"#004777\", 0.33], [\"#F7B801\", 0.33], [\"#A30000\"]]}\r\n                        onComplete={() => [true, 1000]}\r\n                    >\r\n                        {renderTime}\r\n                    </CountdownCircleTimer>\r\n                </section>\r\n\r\n\r\n            </div>\r\n\r\n\r\n\r\n        </>\r\n    )\r\n\r\n}\r\nexport default Blog;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Components/Pages/Blog.js	(revision 26649601c6921d5f0e6b166e95fdd7d7ed918fa6)
++++ src/Components/Pages/Blog.js	(date 1604863877324)
+@@ -1,9 +1,10 @@
+ import React from 'react';
+ import './Blog.css'
++import AbsoluteWrapper from "../AbsoluteWrapper";
+ 
+ import { CountdownCircleTimer } from "react-countdown-circle-timer";
+ 
+-import { TransverseLoading } from 'react-loadingg';
++
+ 
+ 
+ const renderTime = ({ remainingTime }) => {
+@@ -24,6 +25,7 @@
+ 
+     return(
+         <>
++            <AbsoluteWrapper>
+             <div className="blog-container">
+                 <h3 className='blog-Header'>تیم نیگما در حال اماده سازی این صفحه یباشد ، از شکیبای شما سپاس گذاریم</h3>
+                 <section className='blog-icon'>
+@@ -41,7 +43,7 @@
+             </div>
+ 
+ 
+-
++    </AbsoluteWrapper>
+         </>
+     )
+ 
+Index: src/Components/Pages/Support.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, {Component} from 'react';\r\nimport './Support.css'\r\nimport {Tabs, Tab, Row, Col, Nav, Form} from 'react-bootstrap';\r\nimport 'bootstrap/dist/css/bootstrap.min.css';\r\nimport Button from \"react-bootstrap/Button\";\r\n\r\n\r\n//import CoolTabs from 'react-cool-tabs';\r\n\r\n//class Content1 extends Component {\r\n   // render() {\r\n      //  return <div  >\r\n        //    this is Content1\r\n     //   </div>\r\n   // }\r\n//}\r\n//class Content2 extends Component {\r\n   // render() {\r\n     //   return <div  >\r\n      //      this is Content2\r\n     //   </div>\r\n //   }\r\n//}\r\n\r\nfunction Support() {\r\n\r\n    return(\r\n        <>\r\n<div className=\"sup-container\">\r\n    <div className=\"tab-wrapper\">\r\n        <div className='container-fluid' >\r\n            <div className=\"row\">\r\n                <div className=\"col-sm-12\">\r\n\r\n                    <Tab.Container defaultActiveKey=\"profile\">\r\n                        <Row>\r\n                            <Col sm={3}>\r\n\r\n                                <Nav variant=\"pills\" className=\"flex-column\">\r\n\r\n                                    <Nav.Item>\r\n                                        <Nav.Link eventKey=\"home\">گزارش خطا در برنامه </Nav.Link>\r\n                                    </Nav.Item>\r\n\r\n                                    <Nav.Item>\r\n                                        <Nav.Link eventKey=\"profile\">پیشنهادات و انتقادات</Nav.Link>\r\n                                    </Nav.Item>\r\n\r\n                                    <Nav.Item>\r\n                                        <Nav.Link eventKey=\"contact\"> </Nav.Link>\r\n                                    </Nav.Item>\r\n\r\n                                </Nav>\r\n\r\n                            </Col>\r\n                            <Col sm={9}>\r\n                                <Tab.Content>\r\n\r\n                                    <Tab.Pane className=\"parag\" eventKey=\"home\">\r\n                                        <Form>\r\n                                            <Form.Row>\r\n                                                <Form.Group as={Col} controlId=\"formGridEmail\">\r\n                                                    <Form.Label>Email</Form.Label>\r\n                                                    <Form.Control type=\"email\" placeholder=\"Enter email\" />\r\n                                                </Form.Group>\r\n\r\n\r\n                                            </Form.Row>\r\n\r\n                                            <Form.Group controlId=\"formGridAddress1\">\r\n                                                <Form.Label>Address</Form.Label>\r\n                                                <Form.Control placeholder=\"1234 Main St\" />\r\n                                            </Form.Group>\r\n\r\n                                            <Form.Group controlId=\"formGridAddress2\">\r\n                                                <Form.Label>Address 2</Form.Label>\r\n                                                <Form.Control placeholder=\"Apartment, studio, or floor\" />\r\n                                            </Form.Group>\r\n\r\n                                            <Form.Row>\r\n                                                <Form.Group as={Col} controlId=\"formGridCity\">\r\n                                                    <Form.Label>City</Form.Label>\r\n                                                    <Form.Control />\r\n                                                </Form.Group>\r\n\r\n                                                <Form.Group as={Col} controlId=\"formGridState\">\r\n                                                    <Form.Label>State</Form.Label>\r\n                                                    <Form.Control as=\"select\" defaultValue=\"Choose...\">\r\n                                                        <option>Choose...</option>\r\n                                                        <option>...</option>\r\n                                                    </Form.Control>\r\n                                                </Form.Group>\r\n\r\n                                                <Form.Group as={Col} controlId=\"formGridZip\">\r\n                                                    <Form.Label>Zip</Form.Label>\r\n                                                    <Form.Control />\r\n                                                </Form.Group>\r\n                                            </Form.Row>\r\n\r\n                                            <Form.Group id=\"formGridCheckbox\">\r\n                                                <Form.Check type=\"checkbox\" label=\"Check me out\" />\r\n                                            </Form.Group>\r\n\r\n                                            <Button variant=\"primary\" type=\"submit\">\r\n                                                Submit\r\n                                            </Button>\r\n                                        </Form>\r\n\r\n                                    </Tab.Pane>\r\n\r\n                                    <Tab.Pane className=\"parag\" eventKey=\"profile\">\r\n                                        <Form>\r\n                                            <Form.Row>\r\n                                                <Form.Group as={Col} controlId=\"formGridEmail\">\r\n                                                    <Form.Label>Email</Form.Label>\r\n                                                    <Form.Control type=\"email\" placeholder=\"Enter email\" />\r\n                                                </Form.Group>\r\n\r\n\r\n                                            </Form.Row>\r\n\r\n                                            <Form.Group controlId=\"formGridAddress1\">\r\n                                                <Form.Label>Address</Form.Label>\r\n                                                <Form.Control placeholder=\"1234 Main St\" />\r\n                                            </Form.Group>\r\n\r\n                                            <Form.Group controlId=\"formGridAddress2\">\r\n                                                <Form.Label>Address 2</Form.Label>\r\n                                                <Form.Control placeholder=\"Apartment, studio, or floor\" />\r\n                                            </Form.Group>\r\n\r\n                                            <Form.Row>\r\n                                                <Form.Group as={Col} controlId=\"formGridCity\">\r\n                                                    <Form.Label>City</Form.Label>\r\n                                                    <Form.Control />\r\n                                                </Form.Group>\r\n\r\n                                                <Form.Group as={Col} controlId=\"formGridState\">\r\n                                                    <Form.Label>State</Form.Label>\r\n                                                    <Form.Control as=\"select\" defaultValue=\"Choose...\">\r\n                                                        <option>Choose...</option>\r\n                                                        <option>...</option>\r\n                                                    </Form.Control>\r\n                                                </Form.Group>\r\n\r\n                                                <Form.Group as={Col} controlId=\"formGridZip\">\r\n                                                    <Form.Label>Zip</Form.Label>\r\n                                                    <Form.Control />\r\n                                                </Form.Group>\r\n                                            </Form.Row>\r\n\r\n                                            <Form.Group id=\"formGridCheckbox\">\r\n                                                <Form.Check type=\"checkbox\" label=\"Check me out\" />\r\n                                            </Form.Group>\r\n\r\n                                            <Button variant=\"primary\" type=\"submit\">\r\n                                                Submit\r\n                                            </Button>\r\n                                        </Form>\r\n\r\n                                    </Tab.Pane>\r\n\r\n                                    <Tab.Pane eventKey=\"contact\">\r\n\r\n                                    </Tab.Pane>\r\n\r\n                                </Tab.Content>\r\n                            </Col>\r\n                        </Row>\r\n                    </Tab.Container>\r\n\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n            {/*-----------------\r\n<div className=\"sup-container\">\r\n    <div className=\"tabs\">\r\n        <div className=\"tab-lists\">\r\n            <div className= \"tab-list\" >\r\n                <CoolTabs\r\n                    tabKey={'1'}\r\n                    style={{ width:  500, height:  500, background:  '#E9F9FE' }}\r\n                    activeTabStyle={{ background:  'red', color:  'white' , borderRadius:'10px'}}\r\n                    unActiveTabStyle={{  background:  'green', color:  'black', borderRadius:'10px' }}\r\n                    activeLeftTabBorderBottomStyle={{ background:  'blue', height:  4 , width:4}}\r\n                    activeRightTabBorderBottomStyle={{ background:  'yellow', height:  4 }}\r\n                    tabsBorderBottomStyle={{ background:  'orange', height:  4, borderRadius:'10px' }}\r\n                    leftContentStyle={{ background:  'lightgreen', borderRadius:'10px' }}\r\n                    rightContentStyle={{ background:  'lightblue' , borderRadius:'10px'}}\r\n                    leftTabTitle={'گزارش خطا در برنامه '}\r\n                    rightTabTitle={'پیشنهادات و انتقادات'}\r\n                    leftContent={<Content1/>}\r\n                    rightContent={<Content2/>}\r\n                    contentTransitionStyle={'transform 0.6s ease-in'}\r\n                    borderTransitionStyle={'all 0.6s ease-in'}/>\r\n\r\n            </div>\r\n\r\n        </div>\r\n\r\n    </div>\r\n\r\n</div>\r\n\r\n                  ---------------*/}\r\n\r\n\r\n\r\n        </>\r\n    )\r\n\r\n}\r\nexport default Support;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Components/Pages/Support.js	(revision 26649601c6921d5f0e6b166e95fdd7d7ed918fa6)
++++ src/Components/Pages/Support.js	(date 1604863876858)
+@@ -3,6 +3,7 @@
+ import {Tabs, Tab, Row, Col, Nav, Form} from 'react-bootstrap';
+ import 'bootstrap/dist/css/bootstrap.min.css';
+ import Button from "react-bootstrap/Button";
++import AbsoluteWrapper from "../AbsoluteWrapper";
+ 
+ 
+ //import CoolTabs from 'react-cool-tabs';
+@@ -26,6 +27,7 @@
+ 
+     return(
+         <>
++            <AbsoluteWrapper>
+ <div className="sup-container">
+     <div className="tab-wrapper">
+         <div className='container-fluid' >
+@@ -208,7 +210,7 @@
+ 
+                   ---------------*/}
+ 
+-
++            </AbsoluteWrapper>
+ 
+         </>
+     )
+Index: src/App.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\r\n    font-family: \"Iranian Sans\";\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\nbody::-webkit-scrollbar {\r\n    width: 12px;\r\n    border-radius: 15px;  /* width of the entire scrollbar */\r\n}\r\nbody::-webkit-scrollbar-track {\r\n    background:  #E9F9FE;\r\n    border-radius: 15px;\r\n    /* color of the tracking area */\r\n}\r\nbody::-webkit-scrollbar-thumb {\r\n    background-color: #3B6F80;    /* color of the scroll thumb */\r\n    border-radius: 15px;       /* roundness of the scroll thumb */\r\n    border: 3px solid #3B6F80;  /* creates padding around scroll thumb */\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/App.css	(revision 26649601c6921d5f0e6b166e95fdd7d7ed918fa6)
++++ src/App.css	(date 1604863876915)
+@@ -3,6 +3,7 @@
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
++
+   }
+ body::-webkit-scrollbar {
+     width: 12px;
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport './App.css';\r\nimport {BrowserRouter as Router, Route} from 'react-router-dom'\r\nimport Footer from './Components/Footer/Footer'\r\nimport ContactUs from './Components/Pages/About';\r\nimport Download from './Components/Pages/Download';\r\nimport HomePage from './Components/Pages/MainPage';\r\nimport Navbar from './Components/NavBar/nav_bar'\r\nimport sup from './Components/Pages/Support'\r\nimport  blog from './Components/Pages/Blog'\r\n\r\n\r\n\r\nfunction App   () {\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        return (\r\n\r\n            <>\r\n                <Router>\r\n\r\n\r\n                    <Navbar />\r\n                    <Route path='/home' exact component=  {HomePage} />\r\n                    <Route path='/' exact component=  {HomePage} />\r\n                    <Route path='/ContactUs' component=   {ContactUs} />\r\n                    <Route path='/download' component={Download} />\r\n                    <Route path='/blog' component={blog} />\r\n                    <Route path='/support' component={sup} />\r\n\r\n                    <Footer />\r\n                </Router>\r\n            </>\r\n        );\r\n\r\n}\r\n\r\nexport default App;\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/App.js	(revision 26649601c6921d5f0e6b166e95fdd7d7ed918fa6)
++++ src/App.js	(date 1604863877011)
+@@ -1,6 +1,8 @@
+-import React from 'react';
++import React,  { useContext } from 'react';
+ import './App.css';
+-import {BrowserRouter as Router, Route} from 'react-router-dom'
++import { useTransition, animated } from "react-spring";
++import {BrowserRouter as Router, Route,Switch} from 'react-router-dom'
++
+ import Footer from './Components/Footer/Footer'
+ import ContactUs from './Components/Pages/About';
+ import Download from './Components/Pages/Download';
+@@ -8,40 +10,45 @@
+ import Navbar from './Components/NavBar/nav_bar'
+ import sup from './Components/Pages/Support'
+ import  blog from './Components/Pages/Blog'
+-
+-
+-
+-function App   () {
++import {useLocation} from "react-use";
+ 
+ 
+-
++const App = () => {
++    const location = useLocation()
++    const transitions = useTransition(location, location => location.pathname, {
++        from: { opacity: 0, transform: "translate(100%, 0)" },
++        enter: { opacity: 1, transform: "translate(0%, 0)" },
++        leave: { opacity: 0, transform: "translate(-50%, 0)" }
++    });
+ 
+ 
+ 
+ 
+ 
+-        return (
+-
+-            <>
+-                <Router>
++    return (
++        <>
++            <Router>
+ 
+-
+-                    <Navbar />
+-                    <Route path='/home' exact component=  {HomePage} />
+-                    <Route path='/' exact component=  {HomePage} />
+-                    <Route path='/ContactUs' component=   {ContactUs} />
+-                    <Route path='/download' component={Download} />
+-                    <Route path='/blog' component={blog} />
+-                    <Route path='/support' component={sup} />
+-
+-                    <Footer />
+-                </Router>
+-            </>
+-        );
+-
+-}
++            <Navbar />
++            <main  >
++                {transitions.map(({ item, props, key }) => (
++                    <animated.div key={key} style={props}>
++                        <Switch location={item}>
++                            <Route path='/home' exact component=  {HomePage} />
++                            <Route path='/' exact component=  {HomePage} />
++                            <Route path='/ContactUs' component=   {ContactUs} />
++                            <Route path='/download' component={Download} />
++                            <Route path='/blog' component={blog} />
++                            <Route path='/support' component={sup} />
++                        </Switch>
++                    </animated.div>
++                ))}
++            </main>
++            <Footer />
++
++            </Router>
++        </>
++    );
++};
+ 
+ export default App;
+-
+-
+-
+Index: src/Components/Pages/About.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\n \r\n \r\n \r\nimport './About.css'\r\n \r\n\r\n function About() {\r\n \r\n  return(\r\n<>\r\n\r\n\r\n <div className=\"aboutus-container\">\r\n\r\n     <h1 className='header-for-images'>Nigma</h1>\r\n     <section className='info'>\r\n\r\n         <p className=''>Lorem ipsum dolor lorem sit ame us   qui em?  s  ?   quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio qua iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae ssed voluptatem veritatis at?</p>\r\n\r\n     </section>\r\n\r\n\r\n </div>\r\n    </>\r\n  ) \r\n  \r\n}\r\nexport default About;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Components/Pages/About.js	(revision 26649601c6921d5f0e6b166e95fdd7d7ed918fa6)
++++ src/Components/Pages/About.js	(date 1604863877162)
+@@ -1,7 +1,8 @@
+ import React from 'react';
+- 
+- 
+- 
++
++import AbsoluteWrapper from "../AbsoluteWrapper";
++
++
+ import './About.css'
+  
+ 
+@@ -9,7 +10,7 @@
+  
+   return(
+ <>
+-
++    <AbsoluteWrapper>
+ 
+  <div className="aboutus-container">
+ 
+@@ -22,6 +23,7 @@
+ 
+ 
+  </div>
++    </AbsoluteWrapper>
+     </>
+   ) 
+   
+Index: src/Components/AbsoluteWrapper.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Components/AbsoluteWrapper.js	(date 1604863876995)
++++ src/Components/AbsoluteWrapper.js	(date 1604863876995)
+@@ -0,0 +1,7 @@
++import React from "react";
++
++const AbsoluteWrapper = ({ children }) => {
++    return <div>{children}</div>;
++};
++
++export default AbsoluteWrapper;
+\ No newline at end of file

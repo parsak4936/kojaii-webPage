@@ -1,6 +1,6 @@
 import React from 'react';
- 
- 
+
+import AbsoluteWrapper from "../AbsoluteWrapper";
  
 import './About.css'
  
@@ -10,7 +10,7 @@ import './About.css'
   return(
 <>
 
-
+    <AbsoluteWrapper>
  <div className="aboutus-container">
 
      <h1 className='header-for-images'>Nigma</h1>
@@ -22,6 +22,7 @@ import './About.css'
 
 
  </div>
+    </AbsoluteWrapper>
     </>
   ) 
   
