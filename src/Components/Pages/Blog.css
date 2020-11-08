@@ -2,32 +2,37 @@
     background-color:  #E9F9FE;
     display: flex;
     flex-direction: column;
-   align-items: center;
+    align-items: center;
     justify-content: center;
     height: 600px;
+}
+
+.timer {
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-wrapper {
+    display: flex;
+    justify-content: center;
 }
 .blog-icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 90px;
+
 }
 .blog-Header{
     display: flex;
 
-    margin-left: 50px;
-    margin-right: 50px;
+
     margin-top: 15px;
     align-items: center;
     justify-content: center;
 
 }
 @media   (max-width: 500px) {
-  .blog-Header{
-     direction: rtl;
-      padding-left: 20px;
-      padding-right: 20px;
 
-
-  }
 }
