@@ -107,33 +107,24 @@ export default class MainPage extends React.Component {
 
                     {/*-----------------Toturial ---------------*/}
                     <section className='toturial'>
-                        <div>
+                        <div className="T-container">
 
-                            < div align="center" className='joinus-header'>
-
+                            < div align="center" className='toturial-header'>
+header
                             </div>
 
 
-                            <div align="right" className='joinus-text'>
-
+                            <div align="right" className='toturial-txt'>
+text for toturial
                             </div>
+<div className="toturial-form">
+    form
+</div>
+                            <div className="slide-show">
 
-
-                            <center>
-
-                                <div className="join-us-form">
-
-
-
-                                </div>
-                            </center>
-
-                            <div className='intro-gif-container'>
-                                <div className="slide-show">
-                                    {/*-----------------   <SLIDE_V2/> ---------------*/}
                                     <SLIDE_V2/>
                                 </div>
-                            </div>
+
 
                         </div>
 

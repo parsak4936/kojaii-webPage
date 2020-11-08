@@ -6,7 +6,10 @@
     justify-content: center;
     height: 600px;
 }
+.gg{
 
+    margin-top: 90px;
+}
 .timer {
     font-family: "Montserrat";
     display: flex;

@@ -26,32 +26,52 @@
     color: white !important;
     background-color: #3E6078 !important;
 }
-
+/*   toturial section*/
 .toturial {
-    direction: rtl;
+
     grid-area: Toturial;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .4fr .4fr;
-    grid-template-areas: " .  T_Header  ." " .  slide_show   .";
-    height: 550px;
     background-color: #0463B9;
 
 }
+.T-container{
+    margin-top: 50px;
+    width: 100%;
+    height: 480px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr .2fr 1fr;
+    grid-template-rows: 0fr 1fr 1fr 1fr ;
+    grid-template-areas: "toturial_header  toturial_header  slide_show"
+    " toturial_txt toturial_txt  slide_show "
+     " toturial_form toturial_form  slide_show "
+;
 
-.T-Header {
-    padding-top: 15px;
+
+
+}
+.toturial-form{
+    grid-area: toturial_form;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-area: T_Header;
-    color: #DBF1F7;
+}
+.toturial-header {
+grid-area: toturial_header;
 
+}
+.toturial-txt{
+    grid-area: toturial_txt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide-show {
     grid-area: slide_show;
+    width: 100%;
 }
+/* End of toturial section*/
 
 /* intro section */
 .interduce {
@@ -105,6 +125,8 @@
     justify-content: center;
     margin-top: 30px;
 }
+/* End of intro  section*/
+
 
 /* join us section */
 .join-us {
@@ -213,6 +235,8 @@
 #Des{
     text-align: justify;
 }
+/* End of join us section*/
+
 /*  Phone */
 @media only screen and (max-width: 600px) {
     #moreDes{
@@ -249,12 +273,29 @@
 
 @media only screen and (max-width: 740px) {
     .mainpage-container {
-
         grid-template-columns: 1fr;
         grid-template-rows: .8fr .8fr 0.8fr;
         grid-template-areas: "interduce" "Toturial" "join_us";
     }
 
+
+    /* Toturial */
+    .T-container{
+
+        height: 680px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: 0fr 1fr 1fr 1fr ;
+        grid-template-areas: "toturial_header "
+    " toturial_txt  "   "toturial_form "  "  slide_show "
+    ;
+    }
+
+    .slide-show {
+margin-bottom: 70px;
+        width: 80%;
+    }
     /* interduceing section*/
     .interduce-container {
 
@@ -295,19 +336,6 @@
         margin-left: 0px;
     }
 
-    .toturial {
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: .4fr .4fr;
-        grid-template-areas: " T_Header  T_Header " " slide_show  slide_show   ";
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 550px;
-
-
-    }
 
 
 }

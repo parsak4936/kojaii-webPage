@@ -5,12 +5,11 @@ import './nav_bar.css';
 import $ from "jquery";
 import {Button} from "../Button";
 import ScrollAnimation from "react-animate-on-scroll";
-import {Link,useLocation } from "react-router-dom";
-import {TransverseLoading} from "react-loadingg";
+import {BrowserRouter as Router, Link, useLocation} from "react-router-dom";
+
 
 
 //-----------------------------------------------//
-
 
 function Nav_bar() {
     let location = useLocation();
