@@ -32,6 +32,8 @@
     height: 400px;
     grid-area: Toturial;
     background-color: #0463B9;
+    border-radius: 130px;
+    width: 80%;
 
 }
 
