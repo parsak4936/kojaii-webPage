@@ -29,11 +29,8 @@
 
 /*   toturial section*/
 .toturial {
-    height: 400px;
     grid-area: Toturial;
     background-color: #0463B9;
-    border-radius: 130px;
-    width: 80%;
 
 }
 
@@ -283,12 +280,17 @@
         margin-left: 10px;
     }
 
+    .toturial{
+        border-radius: 130px;
+        width: 80%;
+        height: 400px;
+    }
+
 }
 
 @media only screen and (max-width: 400px) {
     .slide-show {
         direction: rtl;
-        margin-left: -15%;
         margin-bottom: 70px;
     }
 }
