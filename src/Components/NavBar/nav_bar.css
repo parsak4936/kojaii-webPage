@@ -188,8 +188,6 @@
 }
 /* ===== NavBar background in scroll down===== */
 .costum-navbar {
-  padding-top: 15px;
-  padding-bottom: 15px;
   background-color: #037AAE !important;
   position: fixed;
 }
@@ -222,13 +220,13 @@
   float: right;
   padding-right: 115px;
   margin-top: 20px;
-  margin-bottom: 170px;
+  margin-bottom: 8%;
 }
 .txt-and-btn{
   float: right;
 }
 .text-hero {
-
+  margin-right: 8%;
   float: right;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 40px;

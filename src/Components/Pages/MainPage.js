@@ -9,6 +9,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Announcement from "react-announcement";
 import Logo from "../Images/LOGO.png";
 import $ from "jquery";
+import {Link} from "react-router-dom";
 
 
 export default class MainPage extends React.Component {
@@ -106,47 +107,59 @@ export default class MainPage extends React.Component {
                     </section>
 
                     {/*-----------------Toturial ---------------*/}
+                    <center>
                     <section className='toturial'>
                         <div className="T-container">
 
                             < div align="center" className='toturial-header'>
-header
+                                <h2>دانلود برنامه کجایی</h2>
                             </div>
 
 
-                            <div align="right" className='toturial-txt'>
-text for toturial
-                            </div>
-<div className="toturial-form">
-    form
-</div>
-                            <div className="slide-show">
+                            <div align="center" className='toturial-txt'>
+                                <div>
+                                    <Link to='/download'>
+                                        <button type="submit" className="btn btn btn-lg btn-desktop-Bazar">
 
-                                    <SLIDE_V2/>
+                                        </button>
+                                    </Link>
                                 </div>
+                                <br/>
+                                <div>
+                                    <Link to='/download'>
+                                        <button type="submit" className="btn btn btn-lg btn-desktop-Bazar">
+
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+
+
+                            <div className="slide-show">
+                                <SLIDE_V2/>
+                            </div>
 
 
                         </div>
 
 
-
                     </section>
-
+                    </center>
                     {/*-----------------join us ---------------*/}
                     <section className='join-us'>
 
                         <div className='joingus-container'>
 
                             < div align="center" className='joinus-header'>
-                                <ScrollAnimation animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
+                                <ScrollAnimation animateIn='animate__fadeIn'>
                                     <h1>به ما بپیوندید</h1>
                                 </ScrollAnimation>
                             </div>
 
 
                             <div className='joinus-text'>
-                                <ScrollAnimation animateIn='animate__flipInY' animateOut='animate__fadeOutTopLeft'>
-                                    <p id="join-us-text">
+                                <ScrollAnimation animateIn='animate__flipInY'>
+                                    <p align="center" id="join-us-text">
                                         کجایی همواره به دنبال جذب افراد مستعد و باانگیزه میباشد. اگر به کاری که می کنید
                                         علاقه و به مهارت های خود اطمینان دارید، جای شما در تیم ما خالی است.
                                     </p>

@@ -1,9 +1,15 @@
 * {
-    font-family: "Iranian Sans";
+    font-family: "B Yekan" !important;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
+ .fab{
+    font-family: "Font Awesome 5 Brands"!important;
+}
+i{
+    font-family: "Font Awesome 5 Free"!important;
+}
 body::-webkit-scrollbar {
     width: 12px;
     border-radius: 15px;  /* width of the entire scrollbar */

@@ -1,18 +1,25 @@
 
 .slideshow-container{
 
-    width: 100%;
+    width: 70%;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 290px;
 
 }
 
 .css-1qzevvg{
     direction: ltr;
+    height: 30px;
 }
 
+.css-1qzevvg img{
+    margin-left: 0px !important;
+}
 
+.css-doq0dk{
+    height: 230px !important;
+}
 
 @media only screen and (max-width: 300px) {
 
