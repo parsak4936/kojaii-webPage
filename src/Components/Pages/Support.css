@@ -1,7 +1,29 @@
 .sup-container{
     height: 550px;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+::placeholder{
+
+}
+.btn-accept{
+
+    align-items: center;
+    justify-content: center;
+
+}
+.tab-wrapper{
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+}
+.sup-img{
 display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -10,6 +32,26 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 30px;
+
+}
+.flex-column{
+margin-top: 120px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+@media (max-width: 800px) {
+    .sup-img{
+        display: none;
+    }
+    .flex-column{
+        margin-top:  40px;
+
+
+    }
+
 
 }
