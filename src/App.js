@@ -1,4 +1,3 @@
-
 import './App.css';
 import Footer from './Components/Footer/Footer'
 import ContactUs from './Components/Pages/About';
@@ -12,9 +11,8 @@ import {BrowserRouter, Switch, Route } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import {useLocation} from "react-use";
 
-
-
 const App = () => {
+
     const  location = useLocation()
     const transitions = useTransition(location, location => location.pathname, {
         from: { opacity: 0, transform: "translate(100%, 0)" },
@@ -25,15 +23,13 @@ const App = () => {
     return (
         <>
             <BrowserRouter>
-
-
             <Navbar />
             <main >
                 {transitions.map(({ item, props, key }) => (
                     <animated.div key={key} style={props}>
                         <Switch location={item}>
-                            <Route path='/home' exact component=  {HomePage} />
-                            <Route path='/' exact component=  {HomePage} />
+                            <Route path='/home' exact component={HomePage} />
+                            <Route path='/' exact component= {HomePage} />
                             <Route path='/ContactUs' component=   {ContactUs} />
                             <Route path='/download' component={Download} />
                             <Route path='/blog' component={blog} />
@@ -47,6 +43,4 @@ const App = () => {
         </>
     );
 };
-
 export default App;
-

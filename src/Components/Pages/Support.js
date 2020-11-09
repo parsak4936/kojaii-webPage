@@ -12,9 +12,11 @@ function Support() {
         <>
         <AbsoluteWrapper>
 <div className="sup-container">
+
     <div className="tab-wrapper">
         <div className='container-fluid' >
             <div className="row">
+
                 <div className="col-sm-12">
 
                     <Tab.Container defaultActiveKey="profile">
@@ -153,6 +155,9 @@ function Support() {
                             </Col>
                         </Row>
                     </Tab.Container>
+
+
+
 
 
                 </div>

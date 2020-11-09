@@ -1,20 +1,32 @@
  .aboutus-container{
-     height: 600px;
+     position: relative;
+     height: 800px;
+     display: grid;
+     grid-template-columns: 1fr  1fr 1fr;
+     grid-template-rows: 0fr 1fr 1fr;
+     grid-template-areas:   " C_Header C_Header C_Header "
+                            " C_txt C_txt C_txt "
+                            ". C_img .";
  }
-.info{
-    position: relative;
-    text-align: center;
-    margin-left: 150px;
-    margin-right: 150px;
+
+ .c-txt{
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-}
- 
+     align-items: center;
+     justify-content: center;
+     padding-right: 20px;
+     padding-left: 20px;
+     grid-area: C_txt;
+ }
+ .c-img{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     grid-area: C_img;
+ }
 .header-for-images{
     display: flex;
+    grid-area: C_Header;
    margin-top: 30px;
     align-items: center;
     justify-content: center;
@@ -22,18 +34,13 @@
 }
  
 
-
- 
 @media only screen and (max-width: 960px){
-
-    .info{
-margin-bottom: 90px;
-        margin-left: 10px;
-        margin-right: 10px;
-
-
-
-
+    .aboutus-container{
+        grid-template-columns: 1fr   ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: " C_Header    "
+                             " C_txt     "
+                             "  C_img  ";
     }
 
 }

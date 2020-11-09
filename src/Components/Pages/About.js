@@ -1,5 +1,5 @@
 import React from 'react';
-
+import contactUs from '../Images/conntact_us.jpg'
 import AbsoluteWrapper from "../AbsoluteWrapper";
  
 import './About.css'
@@ -14,11 +14,10 @@ import './About.css'
  <div className="aboutus-container">
 
      <h1 className='header-for-images'>Nigma</h1>
-     <section className='info'>
 
-         <p className=''>Lorem ipsum dolor lorem sit ame us   qui em?  s  ?   quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio quaLorem ipsum dolor lorem sit ame us iure quidem? Optio quae  iure quidem? Optio quae s iure quidem? Optio qua iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae s iure quidem? Optio quae ssed voluptatem veritatis at?</p>
+         <p className="c-txt">ioquae s iure quidem? Optio quae s iure quidem? Optio quae ssed voluptatem veritatis at?</p>
+        <img src={contactUs} alt=" " className="c-img" />
 
-     </section>
 
 
  </div>

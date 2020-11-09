@@ -6,7 +6,7 @@ import $ from "jquery";
 import {Button} from "../Button";
 import ScrollAnimation from "react-animate-on-scroll";
 import {BrowserRouter as Router, Link, useLocation} from "react-router-dom";
-
+import AbsoluteWrapper from "../AbsoluteWrapper";
 
 //-----------------------------------------------//
 
@@ -64,17 +64,13 @@ function Nav_bar() {
 
 //-----------------------------------------------//
 
-// // ===== HAMBURGER BUTTON ===== //
-//     $(document).ready(function() {
-//         $('#toggle').on('click', function(){
-//             $('#myNavbar').toggleClass('collapse');
-//         })
-//     });
+
+
 //-----------------------------------------------//
 
     return (
         <>
-
+            <AbsoluteWrapper>
             <nav
                 className={location.pathname === "/home" | location.pathname === "/"
                     ? "navbar navbar-default navbar-expand-lg nav-menu show-on-scroll" :
@@ -203,6 +199,7 @@ function Nav_bar() {
                 </div>
 
             </section>
+            </AbsoluteWrapper>
         </>
     );
 }

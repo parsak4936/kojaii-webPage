@@ -39,6 +39,7 @@
     "react-bootstrap-tabs": "^2.0.0",
     "react-confetti": "^6.0.0",
     "react-cool-tabs": "^1.1.6",
+    "react-countdown-circle-timer": "^2.3.7",
     "react-dom": "^16.13.1",
     "react-flickity": "^1.0.8",
     "react-flickity-component": "^3.5.0",

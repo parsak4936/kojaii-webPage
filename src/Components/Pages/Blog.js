@@ -3,19 +3,18 @@ import './Blog.css'
 import AbsoluteWrapper from "../AbsoluteWrapper";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
-import { TransverseLoading } from 'react-loadingg';
 
 
 const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
-        return <div className="timer">Too lale...</div>;
+        return <div className="timer">تایم به پایان رسید</div>;
     }
 
     return (
         <div className="timer">
-            <div className="text">Remaining</div>
+            <div className="text">باقیس مانده </div>
             <div className="value">{remainingTime}</div>
-            <div className="text">seconds</div>
+            <div className="text">به ثانیه</div>
         </div>
     );
 };
