@@ -12,7 +12,10 @@ function Support() {
         <>
         <AbsoluteWrapper>
 <div className="sup-container">
+<div className="sup-img-container">
     <img src={sup_img} alt= " " width="400px" className="sup-img"/>
+</div>
+<div className="form-container">
     <div className="tab-wrapper">
         <div className='container-fluid' >
 
@@ -150,6 +153,8 @@ function Support() {
             </div>
         </div>
     </div>
+</div>
+
 </div>
 
 
