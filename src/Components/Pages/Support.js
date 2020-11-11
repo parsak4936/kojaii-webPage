@@ -48,29 +48,23 @@ function Support() {
                                             <Form.Row>
                                                 <Form.Group as={Col} controlId="formGridEmail">
                                                     <Form.Label>نام</Form.Label>
-                                                    <Form.Control type="email" placeholder="نام خود را وارد کنید" />
+                                                    <Form.Control type="text" placeholder="نام خود را وارد کنید" />
                                                 </Form.Group>
 
                                                 <Form.Group as={Col} controlId="formGridEmail">
                                                     <Form.Label>نام</Form.Label>
-                                                    <Form.Control type="email" placeholder="نام خانوادگی  خود را وارد کنید" />
+                                                    <Form.Control type="email" placeholder="ایمیل  خود را وارد کنید" />
                                                 </Form.Group>
 
                                             </Form.Row>
 
-                                            <Form.Group controlId="formGridAddress1">
-                                                <Form.Label>ایمیل</Form.Label>
-                                                <Form.Control placeholder="*******@gmail.com" />
-                                            </Form.Group>
-
                                             <Form.Group controlId="formGridAddress2">
-                                                <Form.Label>تلفن همراه</Form.Label>
-                                                <Form.Control placeholder="02833669553" />
+                                                <Form.Label>گزارش خطا</Form.Label>
+                                                <Form.Control type="input" placeholder="متن" />
                                             </Form.Group>
 
-                                            <Form.Row>
+                                            <Form.Row className="hidden">
                                                 <Form.Group  as={Col} >
-
                                                     <Form.Control disabled />
                                                 </Form.Group>
 
@@ -99,29 +93,23 @@ function Support() {
                                             <Form.Row>
                                                 <Form.Group as={Col} controlId="formGridEmail">
                                                     <Form.Label>نام</Form.Label>
-                                                    <Form.Control type="email" placeholder="نام خود را وارد کنید" />
+                                                    <Form.Control type="text" placeholder="نام خود را وارد کنید" />
                                                 </Form.Group>
 
                                                 <Form.Group as={Col} controlId="formGridEmail">
                                                     <Form.Label>نام</Form.Label>
-                                                    <Form.Control type="email" placeholder="نام خانوادگی  خود را وارد کنید" />
+                                                    <Form.Control type="email" placeholder="ایمیل  خود را وارد کنید" />
                                                 </Form.Group>
 
                                             </Form.Row>
 
-                                            <Form.Group controlId="formGridAddress1">
-                                                <Form.Label>ایمیل</Form.Label>
-                                                <Form.Control placeholder="*******@gmail.com" />
-                                            </Form.Group>
-
                                             <Form.Group controlId="formGridAddress2">
-                                                <Form.Label>تلفن همراه</Form.Label>
-                                                <Form.Control placeholder="02833669553" />
+                                                <Form.Label>پیشنهاد و انتقاد</Form.Label>
+                                                <Form.Control type="input" placeholder="متن" />
                                             </Form.Group>
 
-                                            <Form.Row>
+                                            <Form.Row className="hidden">
                                                 <Form.Group  as={Col} >
-
                                                     <Form.Control disabled />
                                                 </Form.Group>
 
