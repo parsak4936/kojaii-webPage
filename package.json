@@ -81,6 +81,6 @@
   "description": "برنامه کجایی ، برای راحت تر شدن قرار ملاقات ها ",
   "main": "index.js",
   "devDependencies": {},
-  "author": "",
+  "author": "@parsakazemi / @amirhosseinnajafi / @amirmasoudhajizadeh",
   "license": "ISC"
 }
