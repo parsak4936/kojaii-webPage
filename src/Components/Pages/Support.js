@@ -4,7 +4,7 @@ import {Tabs, Tab, Row, Col, Nav, Form} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
 import AbsoluteWrapper from "../AbsoluteWrapper";
-import  sup_img from '../Images/support.jpg'
+import  sup_img from '../Images/support.png'
 
 function Support() {
 
@@ -18,8 +18,6 @@ function Support() {
 <div className="form-container">
     <div className="tab-wrapper">
         <div className='container-fluid' >
-
-
             <div className="row">
 
                 <div className="col-sm-12">
@@ -54,14 +52,25 @@ function Support() {
                                                     <Form.Control type="text" placeholder="نام خود را وارد کنید" />
                                                 </Form.Group>
 
-                                                <Form.Group as={Col} controlId="formGridEmail">
-                                                    <Form.Label>نام</Form.Label>
+                                                <Form.Group className="familyfield-desktop"   as={Col} controlId="formGridEmail">
+                                                    <Form.Label>نام خانوادگی</Form.Label>
+                                                    <Form.Control type="text" placeholder="نام خانوادگی  خود را وارد کنید" />
+                                                </Form.Group>
+
+                                            </Form.Row>
+                                            <Form.Row className="familyname-mobile">
+                                                <Form.Group  as={Col} controlId="formGridEmail">
+                                                    <Form.Label>نام خانوادگی</Form.Label>
                                                     <Form.Control type="email" placeholder="ایمیل  خود را وارد کنید" />
                                                 </Form.Group>
 
                                             </Form.Row>
+                                            <Form.Group    controlId="formGridEmail">
+                                                <Form.Label>ایمیل</Form.Label>
+                                                <Form.Control type="email" placeholder="ایمیل خود را وارد کنید" />
+                                            </Form.Group>
 
-                                            <Form.Group controlId="formGridAddress2">
+                                            <Form.Group  controlId="formGridAddress2">
                                                 <Form.Label>گزارش خطا</Form.Label>
                                                 <Form.Control type="input" placeholder="متن" />
                                             </Form.Group>
@@ -91,6 +100,8 @@ function Support() {
 
                                     </Tab.Pane>
 
+
+
                                     <Tab.Pane className="parag" eventKey="suggest">
                                         <Form>
                                             <Form.Row>
@@ -99,13 +110,24 @@ function Support() {
                                                     <Form.Control type="text" placeholder="نام خود را وارد کنید" />
                                                 </Form.Group>
 
-                                                <Form.Group as={Col} controlId="formGridEmail">
-                                                    <Form.Label>نام</Form.Label>
+                                                <Form.Group className="familyfield-desktop" as={Col} controlId="formGridEmail">
+                                                    <Form.Label> نام خانوادگی </Form.Label>
+                                                    <Form.Control type="email" placeholder="نام خانوادگی  خود را وارد کنید" />
+                                                </Form.Group>
+
+                                            </Form.Row>
+                                            <Form.Row className="familyname-mobile">
+                                                <Form.Group  as={Col} controlId="formGridEmail">
+                                                    <Form.Label>نام خانوادگی</Form.Label>
                                                     <Form.Control type="email" placeholder="ایمیل  خود را وارد کنید" />
                                                 </Form.Group>
 
                                             </Form.Row>
 
+                                            <Form.Group  controlId="formGridEmail">
+                                                <Form.Label>ایمیل</Form.Label>
+                                                <Form.Control type="email" placeholder="ایمیل خود را وارد کنید" />
+                                            </Form.Group>
                                             <Form.Group controlId="formGridAddress2">
                                                 <Form.Label>پیشنهاد و انتقاد</Form.Label>
                                                 <Form.Control type="input" placeholder="متن" />
@@ -135,6 +157,8 @@ function Support() {
                                         </Form>
 
                                     </Tab.Pane>
+
+
 
                                     <Tab.Pane eventKey="contact">
 
