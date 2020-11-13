@@ -1,12 +1,34 @@
 .sup-container{
-    height: 550px;
+    height:750px;
     position: relative;
-    display: flex;
+    display: grid;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: .4fr 2fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sup_img  sup_form";
+}
+.familyname-mobile{
+    display: none;
+}
+.familyfield-mobile{
+    display: none;
+}
+.sup-img-container{
+    grid-area:sup_img ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+    grid-area: sup_form;
+    display: flex;
     align-items: center;
     justify-content: center;
 
 }
+
 ::placeholder{
 
 }
@@ -23,6 +45,7 @@
 }
 .sup-img{
 display: flex;
+
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -36,29 +59,41 @@ display: flex;
 
 }
 .flex-column{
-margin-top: 120px;
+    margin-top: 120px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
-
-.col-sm-9{
-
-}
 .hidden{
     visibility: hidden;
 }
+
 @media (max-width: 800px) {
     .sup-img{
-        display: none;
+width:100%;
+
     }
     .flex-column{
-        margin-top:  40px;
+        margin-top:  10px;
 
 
     }
-
+.sup-container{
+    height: 1000px;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 2fr;
+    grid-template-areas: "sup_img "
+"sup_form";
+}
+    .familyname-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+.familyfield-desktop{
+    display: none;
+}
 
 }

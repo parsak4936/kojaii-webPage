@@ -2,6 +2,7 @@
      position: relative;
      height: 800px;
      display: grid;
+     background-color: #E9F9FE;
      grid-template-columns: 1fr  1fr 1fr;
      grid-template-rows: 0fr 1fr 1fr;
      grid-template-areas:   " C_Header C_Header C_Header "

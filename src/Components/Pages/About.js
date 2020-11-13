@@ -1,5 +1,5 @@
 import React from 'react';
-import contactUs from '../Images/conntact_us.jpg'
+import contactUs from '../Images/conntact_us.png'
 import AbsoluteWrapper from "../AbsoluteWrapper";
  
 import './About.css'
