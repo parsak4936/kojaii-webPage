@@ -126,7 +126,7 @@
 
 .intro-text {
 
-    padding-right: 20px;
+    padding-right: 60px;
     padding-left: 20px;
     grid-area: info_txt;
     color: #033665;
@@ -298,6 +298,12 @@
         grid-template-columns: 1fr;
         grid-template-rows: .8fr .8fr 0.8fr;
         grid-template-areas: "interduce" "Toturial" "join_us";
+    }
+
+    .intro-text {
+
+        padding-right: 20px;
+
     }
 
 

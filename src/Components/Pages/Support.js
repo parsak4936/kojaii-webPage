@@ -12,12 +12,16 @@ function Support() {
         <>
         <AbsoluteWrapper>
 <div className="sup-container">
-<div className="sup-img-container">
-    <img src={sup_img} alt= " " width="400px" className="sup-img"/>
+    <div className="sup-Header-container"><h3> نظرات و پیشنهادات خود را با ما درمیان بگذارید . . . </h3></div>
+
+    <div className="sup-img-container">
+    <img src={sup_img} alt= " " className="sup-img"/>
 </div>
+
 <div className="form-container">
     <div className="tab-wrapper">
         <div className='container-fluid' >
+
             <div className="row">
 
                 <div className="col-sm-12">

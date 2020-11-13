@@ -1,13 +1,23 @@
 .sup-container{
+    background-color:  #E9F9FE;
     height:750px;
     position: relative;
     display: grid;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    grid-template-columns: .4fr 2fr ;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sup_img  sup_form";
+    grid-template-columns: .4fr 1fr ;
+    grid-template-rows: .2fr 1fr;
+    grid-template-areas: " sup_img sup_header" "sup_img  sup_form";
+}
+.sup-Header-container{
+    grid-area: sup_header;
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 .familyname-mobile{
     display: none;
@@ -17,6 +27,7 @@
 }
 .sup-img-container{
     grid-area:sup_img ;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,11 +40,7 @@
 
 }
 
-::placeholder{
-
-}
 .btn-accept{
-
     align-items: center;
     justify-content: center;
 
@@ -44,8 +51,7 @@
     justify-content: center;
 }
 .sup-img{
-display: flex;
-
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -59,7 +65,6 @@ display: flex;
 
 }
 .flex-column{
-    margin-top: 120px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -71,23 +76,21 @@ display: flex;
 }
 
 @media (max-width: 800px) {
-    .sup-img{
-width:100%;
-
+.sup-img{
+    width:100%;
     }
-    .flex-column{
+.flex-column{
         margin-top:  10px;
-
-
     }
 .sup-container{
     height: 1000px;
     grid-template-columns: 1fr ;
-    grid-template-rows: 2fr;
-    grid-template-areas: "sup_img "
-"sup_form";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"sup_header"
+                        "sup_img "
+                        "sup_form";
 }
-    .familyname-mobile{
+.familyname-mobile{
         display: flex;
         align-items: center;
         justify-content: center;

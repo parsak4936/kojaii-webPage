@@ -13,9 +13,9 @@ import './About.css'
     <AbsoluteWrapper>
  <div className="aboutus-container">
 
-     <h1 className='header-for-images'>Nigma</h1>
+     <h1 className='header-for-images'>با ما در ارتباط باشید</h1>
 
-         <p className="c-txt">ioquae s iure quidem? Optio quae s iure quidem? Optio quae ssed voluptatem veritatis at?</p>
+         <p className="c-txt">شما میتوانید از طری راه هاری ارتباطی زیر با ما در ارتباط باشید</p>
         <img src={contactUs} alt=" " className="c-img" />
 
 
