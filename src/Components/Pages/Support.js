@@ -1,18 +1,18 @@
 import React from 'react';
 import './Support.css'
-import { Tab, Row, Col, Nav, Form} from 'react-bootstrap';
+import {Tab, Row, Col, Nav, Form} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
 import AbsoluteWrapper from "../AbsoluteWrapper";
-import  sup_img from '../Images/support.png'
+import sup_img from '../Images/support.png'
 import $ from "jquery";
 
 
-export default class Support extends React.Component  {
+export default class Support extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            last_name: '', first_name: '' , email :'' , field_text:''
+            last_name: '', first_name: '', email: '', field_text: ''
         };
         this.handleChange_report = this.handleChange_report.bind(this);
         this.handleChange_suggest = this.handleChange_suggest.bind(this);
@@ -36,32 +36,33 @@ export default class Support extends React.Component  {
             }
         );
     }
-    handleSubmit_suggest= (event) => {
+    handleSubmit_suggest = (event) => {
         var first_name_suggest = $("#first_name_suggest").val();
         var last_name_suggest = $("#last_name_suggest").val();
         var email_suggest = $("#email_suggest").val();
         var field_text_suggest = $("#field_text_suggest").val();
         var type_suggest = $("#type_suggest").val();
 
-        $.ajax({
+        var request = $.ajax({
             url: 'https://kojaii.herokuapp.com/api/supports',
             type: 'POST',
             dataType: 'json',
             data: {
                 first_name: first_name_suggest,
                 last_name: last_name_suggest,
-                email : email_suggest,
-                text : field_text_suggest,
-                type :type_suggest
+                email: email_suggest,
+                text: field_text_suggest,
+                type: type_suggest
+            },
+            async: false,
+            complete: function(r){
+                if(r.status === 200){
+                    alert(first_name_suggest + last_name_suggest + ' فرم  شما با موفقیت ارسال  شد');
+                }else{
+                    alert(JSON.parse(r.responseText)['message']);
+                }
             }
         });
-
-        alert(first_name_suggest + last_name_suggest + ' فرم  شما با موفقیت ارسال  شد');
-        console.log(first_name_suggest )
-        console.log(last_name_suggest )
-        console.log(email_suggest )
-        console.log(field_text_suggest )
-        console.log(type_suggest )
         event.preventDefault();
     }
 
@@ -70,7 +71,7 @@ export default class Support extends React.Component  {
         var last_name = $("#last_name").val();
         var email = $("#email").val();
         var field_text = $("#field_text").val();
-      var type = $("#type").val();
+        var type = $("#type").val();
 
         $.ajax({
             url: 'https://kojaii.herokuapp.com/api/supports',
@@ -79,18 +80,19 @@ export default class Support extends React.Component  {
             data: {
                 first_name: first_name,
                 last_name: last_name,
-                email : email,
-                text : field_text,
-                type :type
+                email: email,
+                text: field_text,
+                type: type
+            },
+            async: false,
+            complete: function(r){
+                if(r.status === 200){
+                    alert(first_name + last_name + ' فرم  شما با موفقیت ارسال  شد');
+                }else{
+                    alert(JSON.parse(r.responseText)['message']);
+                }
             }
         });
-
-        alert(first_name + last_name + ' فرم  شما با موفقیت ارسال  شد');
-        console.log(first_name )
-        console.log(last_name )
-        console.log(email )
-        console.log(field_text )
-        console.log(type )
         event.preventDefault();
     }
 
@@ -140,25 +142,28 @@ export default class Support extends React.Component  {
                                                             <Tab.Pane className="parag" eventKey="report">
                                                                 <Form onSubmit={this.handleSubmit_report}>
                                                                     <Form.Row>
-                                                                        <Form.Group as={Col} >
+                                                                        <Form.Group as={Col}>
                                                                             <Form.Label>نام</Form.Label>
                                                                             <Form.Control type="text"
-                                                                                          name="first_name" id="first_name"
+                                                                                          name="first_name"
+                                                                                          id="first_name"
                                                                                           onChange={this.handleChange_report}
                                                                                           placeholder="نام خود را وارد کنید"/>
                                                                         </Form.Group>
 
-                                                                        <Form.Group className="familyfield-desktop"  as={Col}  >
+                                                                        <Form.Group className="familyfield-desktop"
+                                                                                    as={Col}>
                                                                             <Form.Label>نام خانوادگی</Form.Label>
                                                                             <Form.Control type="text"
-                                                                                          name="last_name" id="last_name"
+                                                                                          name="last_name"
+                                                                                          id="last_name"
                                                                                           onChange={this.handleChange_report}
                                                                                           placeholder="نام خانوادگی  خود را وارد کنید"/>
                                                                         </Form.Group>
 
                                                                     </Form.Row>
 
-                                                                    <Form.Group >
+                                                                    <Form.Group>
                                                                         <Form.Label>ایمیل</Form.Label>
                                                                         <Form.Control type="email"
                                                                                       name="email" id="email"
@@ -166,7 +171,7 @@ export default class Support extends React.Component  {
                                                                                       placeholder="ایمیل خود را وارد کنید"/>
                                                                     </Form.Group>
 
-                                                                    <Form.Group  >
+                                                                    <Form.Group>
                                                                         <Form.Label>گزارش خطا</Form.Label>
                                                                         <Form.Control type="input"
                                                                                       name="field_text" id="field_text"
@@ -205,19 +210,21 @@ export default class Support extends React.Component  {
                                                             <Tab.Pane className="parag" eventKey="suggest">
                                                                 <Form onSubmit={this.handleSubmit_suggest}>
                                                                     <Form.Row>
-                                                                        <Form.Group as={Col}  >
+                                                                        <Form.Group as={Col}>
                                                                             <Form.Label>نام</Form.Label>
                                                                             <Form.Control type="text"
-                                                                                          name="first_name_suggest" id="first_name_suggest"
+                                                                                          name="first_name_suggest"
+                                                                                          id="first_name_suggest"
                                                                                           onChange={this.handleChange_suggest}
                                                                                           placeholder="نام خود را وارد کنید"/>
                                                                         </Form.Group>
 
                                                                         <Form.Group className="familyfield-desktop"
-                                                                                    as={Col}  >
+                                                                                    as={Col}>
                                                                             <Form.Label> نام خانوادگی </Form.Label>
                                                                             <Form.Control type="text"
-                                                                                          name="last_name_suggest" id="last_name_suggest"
+                                                                                          name="last_name_suggest"
+                                                                                          id="last_name_suggest"
                                                                                           onChange={this.handleChange_suggest}
                                                                                           placeholder="نام خانوادگی  خود را وارد کنید"/>
                                                                         </Form.Group>
@@ -225,17 +232,19 @@ export default class Support extends React.Component  {
                                                                     </Form.Row>
 
 
-                                                                    <Form.Group  >
+                                                                    <Form.Group>
                                                                         <Form.Label>ایمیل</Form.Label>
                                                                         <Form.Control type="email"
-                                                                                      name="email_suggest" id="email_suggest"
+                                                                                      name="email_suggest"
+                                                                                      id="email_suggest"
                                                                                       onChange={this.handleChange_suggest}
                                                                                       placeholder="ایمیل خود را وارد کنید"/>
                                                                     </Form.Group>
                                                                     <Form.Group>
                                                                         <Form.Label>پیشنهاد و انتقاد</Form.Label>
                                                                         <Form.Control type="input"
-                                                                                      name="field_text_suggest" id="field_text_suggest"
+                                                                                      name="field_text_suggest"
+                                                                                      id="field_text_suggest"
                                                                                       onChange={this.handleChange_suggest}
                                                                                       placeholder="متن"/>
                                                                     </Form.Group>
