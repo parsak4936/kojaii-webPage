@@ -31,14 +31,15 @@
 .toturial {
     grid-area: Toturial;
     background-color: #0463B9;
+    height:480px;
 
 }
 
 .T-container {
     padding-top: 55px;
-    margin-top: 50px;
+
     width: 100%;
-    height: 480px;
+    height:480px;
     align-items: center;
     justify-content: center;
     display: grid;
