@@ -41,7 +41,7 @@ export default class Support extends React.Component  {
         var last_name_suggest = $("#last_name_suggest").val();
         var email_suggest = $("#email_suggest").val();
         var field_text_suggest = $("#field_text_suggest").val();
-
+        var type_suggest = $("#type_suggest").val();
 
         $.ajax({
             url: 'https://kojaii.herokuapp.com/api/supports',
@@ -52,7 +52,8 @@ export default class Support extends React.Component  {
                 last_name: last_name_suggest,
                 email : email_suggest,
                 text : field_text_suggest,
-            },
+                type :type_suggest
+            }
         });
 
         alert(first_name_suggest + last_name_suggest + ' فرم  شما با موفقیت ارسال  شد');
@@ -60,6 +61,7 @@ export default class Support extends React.Component  {
         console.log(last_name_suggest )
         console.log(email_suggest )
         console.log(field_text_suggest )
+        console.log(type_suggest )
         event.preventDefault();
     }
 
@@ -68,7 +70,7 @@ export default class Support extends React.Component  {
         var last_name = $("#last_name").val();
         var email = $("#email").val();
         var field_text = $("#field_text").val();
-     // var typel = $("#typel").val();
+      var type = $("#type").val();
 
         $.ajax({
             url: 'https://kojaii.herokuapp.com/api/supports',
@@ -79,7 +81,8 @@ export default class Support extends React.Component  {
                 last_name: last_name,
                 email : email,
                 text : field_text,
-            },
+                type :type
+            }
         });
 
         alert(first_name + last_name + ' فرم  شما با موفقیت ارسال  شد');
@@ -87,6 +90,7 @@ export default class Support extends React.Component  {
         console.log(last_name )
         console.log(email )
         console.log(field_text )
+        console.log(type )
         event.preventDefault();
     }
 
@@ -172,7 +176,11 @@ export default class Support extends React.Component  {
 
                                                                     <Form.Row className="hidden">
                                                                         <Form.Group as={Col}>
-                                                                            <Form.Control disabled/>
+                                                                            <Form.Control
+                                                                                type="hidden"
+                                                                                id="type"
+                                                                                value="1"
+                                                                            />
                                                                         </Form.Group>
 
                                                                         <Form.Group as={Col}>
@@ -234,7 +242,11 @@ export default class Support extends React.Component  {
 
                                                                     <Form.Row className="hidden">
                                                                         <Form.Group as={Col}>
-                                                                            <Form.Control disabled/>
+                                                                            <Form.Control
+                                                                                type="hidden"
+                                                                                id="type_suggest"
+                                                                                value="2"
+                                                                                disabled/>
                                                                         </Form.Group>
 
                                                                         <Form.Group as={Col}>
