@@ -148,6 +148,10 @@
     grid-area: join_us;
 }
 
+#join-us-text {
+    text-align: right;
+}
+
 .joingus-container {
     margin-top: 50px;
     width: 100%;
@@ -214,11 +218,13 @@
 }
 
 .join-us-param-name {
+    border: 0px;
     grid-area: joinus_name;
     margin-top: 18px;
-    border: 1px solid #68BBD5;
-    border-radius: 5px;
+    border-bottom: 1px solid #68BBD5;
+    /* border-radius: 5px; */
     padding: 10px;
+    background-color: #E9F9FE;
 }
 
 .join-us-param-name:hover {
@@ -227,11 +233,13 @@
 }
 
 .join-us-param-phone {
+    border: 0px;
     grid-area: joinus_phone;
     margin-top: 18px;
-    border: 1px solid #68BBD5;
-    border-radius: 5px;
+    border-bottom: 1px solid #68BBD5;
+    /* border-radius: 5px; */
     padding: 10px;
+    background-color:#E9F9FE;
 }
 
 .join-us-param-phone:hover {
@@ -291,6 +299,13 @@
     .slide-show {
         direction: rtl;
         margin-bottom: 70px;
+    }
+    #join-us-text {
+        text-align: center;
+    }
+    #Des{
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
 
