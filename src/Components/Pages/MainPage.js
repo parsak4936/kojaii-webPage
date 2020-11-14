@@ -47,10 +47,8 @@ export default class MainPage extends React.Component {
         });
 
         alert(name + ' درخواست شما با موفقیت ثبت شد');
-
         event.preventDefault();
     }
-
 
     render() {
 
