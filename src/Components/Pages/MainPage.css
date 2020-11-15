@@ -218,6 +218,7 @@
 }
 
 .join-us-param-name {
+    outline: none;
     border: 0px;
     grid-area: joinus_name;
     margin-top: 18px;
@@ -233,6 +234,7 @@
 }
 
 .join-us-param-phone {
+    outline: none;
     border: 0px;
     grid-area: joinus_phone;
     margin-top: 18px;
