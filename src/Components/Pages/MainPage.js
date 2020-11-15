@@ -36,17 +36,23 @@ export default class MainPage extends React.Component {
         var name = $("#name").val();
         var phone = $("#phone").val();
 
-        $.ajax({
+          $.ajax({
             url: 'https://kojaii.herokuapp.com/api/join-us',
             type: 'POST',
             dataType: 'json',
             data: {
                 phone: phone,
                 name: name
-            },
+            }, async: false,
+            complete: function(r){
+                if(r.status === 200){
+                    alert(name + ' درخواست شما با موفقیت ثبت شد');
+                }else{
+                    alert(JSON.parse(r.responseText)['message']);
+                }
+            }
         });
 
-        alert(name + ' درخواست شما با موفقیت ثبت شد');
         event.preventDefault();
     }
 

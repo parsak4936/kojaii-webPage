@@ -57,7 +57,7 @@ export default class Support extends React.Component {
             async: false,
             complete: function(r){
                 if(r.status === 200){
-                    alert(first_name_suggest + last_name_suggest + ' فرم  شما با موفقیت ارسال  شد');
+                    alert( ' درخواست  شما با موفقیت ارسال  شد');
                 }else{
                     alert(JSON.parse(r.responseText)['message']);
                 }
@@ -123,13 +123,12 @@ export default class Support extends React.Component {
                                                         <Nav variant="pills" className="flex-column">
 
                                                             <Nav.Item>
-                                                                <Nav.Link eventKey="report">گزارش خطا در
+                                                                <Nav.Link  className="report" eventKey="report">گزارش خطا
                                                                     برنامه </Nav.Link>
                                                             </Nav.Item>
 
                                                             <Nav.Item>
-                                                                <Nav.Link eventKey="suggest">پیشنهادات و
-                                                                    انتقادات</Nav.Link>
+                                                                <Nav.Link  className="suggest"  eventKey="suggest">پیشنهادات و انتقادات</Nav.Link>
                                                             </Nav.Item>
 
 
@@ -198,10 +197,13 @@ export default class Support extends React.Component {
                                                                             <Form.Control disabled/>
                                                                         </Form.Group>
                                                                     </Form.Row>
-                                                                    <Button className="btn-accept" variant="primary"
-                                                                            type="submit">
-                                                                        تایید و ارسال
-                                                                    </Button>
+                                                                    <center>
+                                                                        <Button className="btn-accept" variant="primary"
+                                                                                type="submit">
+                                                                            تایید و ارسال
+                                                                        </Button>
+                                                                    </center>
+
                                                                 </Form>
 
                                                             </Tab.Pane>
@@ -253,7 +255,7 @@ export default class Support extends React.Component {
                                                                         <Form.Group as={Col}>
                                                                             <Form.Control
                                                                                 type="hidden"
-                                                                                id="type_suggest"
+                                                                                id="type_suggest "
                                                                                 value="2"
                                                                                 disabled/>
                                                                         </Form.Group>
@@ -268,12 +270,13 @@ export default class Support extends React.Component {
                                                                             <Form.Control disabled/>
                                                                         </Form.Group>
                                                                     </Form.Row>
+                                                                    <center>
+                                                                        <Button className="btn-accept" variant="primary"
+                                                                                type="submit">
+                                                                            تایید و ارسال
+                                                                        </Button>
+                                                                    </center>
 
-
-                                                                    <Button className="btn-accept" variant="primary"
-                                                                            type="submit">
-                                                                        تایید و ارسال
-                                                                    </Button>
                                                                 </Form>
 
                                                             </Tab.Pane>
