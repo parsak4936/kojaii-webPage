@@ -272,7 +272,7 @@
     }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 700px) {
 
     #join-us-text {
     }
@@ -290,7 +290,7 @@
     }
 
     .toturial{
-        height: 430px;
+        height: 380px;
     }
 
 }

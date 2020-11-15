@@ -4,7 +4,8 @@
     width: 70%;
     justify-content: center;
     align-items: center;
-    height: 290px;
+    height: 100%;
+    margin-bottom: 25%;
 
 }
 
@@ -21,12 +22,16 @@
     height: 230px !important;
 }
 
+@media only screen and (max-width: 500px) {
+    .slideshow-container{
+        margin-bottom: 0;
+    }
+}
 @media only screen and (max-width: 300px) {
-
 
     .slideshow-container{
 
-        margin: 40px  20px 0px 28px
+        /*margin: 40px  20px 0px 28px*/
 
 
     }
