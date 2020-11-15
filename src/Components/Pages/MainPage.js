@@ -181,10 +181,10 @@ export default class MainPage extends React.Component {
                                                      animateOut='animate__bounceOutLeft'>
                                         <form onSubmit={this.handleSubmit}>
 
-                                            <input className="join-us-param-name" name="name" id="name"
+                                            <input className="join-us-param-name join-us-input" name="name" id="name"
                                                    onChange={this.handleChange} type="text"
                                                    placeholder="نام خود را وارد کنید"/>
-                                            <input className="join-us-param-phone" name="phone" id="phone"
+                                            <input className="join-us-param-phone join-us-input" name="phone" id="phone"
                                                    onChange={this.handleChange} type="text"
                                                    placeholder="شماره خود را وارد کنید"/>
                                             <br/>
