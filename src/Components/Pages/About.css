@@ -1,25 +1,33 @@
  .aboutus-container{
      position: relative;
-     height: 800px;
+     height: 680px;
      display: grid;
      background-color: #E9F9FE;
-     grid-template-columns: 1fr  1fr 1fr;
-     grid-template-rows: 0fr 1fr 1fr;
-     grid-template-areas:   " C_Header C_Header C_Header "
-                            " C_txt C_txt C_txt "
-                            ". C_img .";
- }
+     grid-template-columns: 1fr  1fr 1fr 1fr 1fr;
+     grid-template-rows: .6fr 1fr 1fr;
+     grid-template-areas:   " .  C_Header C_Header . ."
+                            " . C_txt C_txt  . .  "
+                            "C_socials C_socials C_img C_img C_img";
 
+ }
+.c-socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: C_socials;
+    background-color: #68BBD5;
+}
  .c-txt{
     display: flex;
+     background-color: yellow;
      align-items: center;
      justify-content: center;
-     padding-right: 20px;
-     padding-left: 20px;
+    direction: rtl;
      grid-area: C_txt;
  }
  .c-img{
      width: 100%;
+     height: auto;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -38,9 +46,10 @@
 @media only screen and (max-width: 960px){
     .aboutus-container{
         grid-template-columns: 1fr   ;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: " C_Header    "
                              " C_txt     "
+                                "C_socials"
                              "  C_img  ";
     }
 
