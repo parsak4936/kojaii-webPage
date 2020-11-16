@@ -36,16 +36,17 @@
 }
 
 .T-container {
-    padding-top: 55px;
-
+    padding-top:  15px;
     width: 100%;
     height:680px;
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-columns: 1fr .2fr 1fr;
-    grid-template-rows: 0fr 1fr 1fr 1fr;
-    grid-template-areas: "toturial_header  toturial_header  slide_show" " toturial_txt toturial_txt  slide_show " " toturial_form toturial_form  slide_show ";
+    grid-template-columns: 1fr   1fr 1fr ;
+    grid-template-rows:.5fr 1fr   ;
+    grid-template-areas: "toturial_header       slide_show  slide_show "
+                         " toturial_txt      slide_show slide_show "
+
 
 
 }
@@ -78,9 +79,8 @@
 
 .slide-show {
     grid-area: slide_show;
-    width: 100%;
+    padding-right: 10px;
 }
-
 /* End of toturial section*/
 
 /* intro section */
@@ -291,14 +291,13 @@
         margin-left: 10px;
     }
 
-    .toturial{
-        height: 380px;
-    }
+
 
 }
 
 @media only screen and (max-width: 400px) {
     .slide-show {
+
         direction: rtl;
         margin-bottom: 70px;
     }
@@ -331,8 +330,11 @@
         display: grid;
         justify-content: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 0fr 1fr 1fr 1fr;
-        grid-template-areas: "toturial_header " " toturial_txt  " "toturial_form " "  slide_show ";
+        grid-template-rows: 0fr 1fr  1fr;
+        grid-template-areas:"toturial_header "
+                            " toturial_txt  "
+
+                            "  slide_show ";
     }
 
     /* interduceing section*/

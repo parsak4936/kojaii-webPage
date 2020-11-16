@@ -1,5 +1,5 @@
 import React from 'react';
-import SLIDE_V2 from '../SlideSow/slideshow_v2'
+import SLIDE_V2 from '../SlideSow/SlideShow_bootstrap'
 import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import join_Us_img from '../Images/join-us.png';
