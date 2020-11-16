@@ -7,9 +7,11 @@ import Navbar from './Components/NavBar/nav_bar'
 import sup from './Components/Pages/Support'
 import  blog from './Components/Pages/Blog'
 import React from "react";
-import {BrowserRouter, Switch, Route } from "react-router-dom";
+import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import {useLocation} from "react-use";
+import $ from "jquery";
+import ScrollToTop from 'react-scroll-up'
 
 const App = () => {
 
@@ -37,9 +39,16 @@ const App = () => {
                     </animated.div>
                 ))}
             </main>
+                <ScrollToTop showUnder={160}>
+                    <i className='fas fa-arrow-circle-up  fa-3x' />
+                </ScrollToTop>
+
+
+
             <Footer />
         </BrowserRouter>
         </>
     );
+
 };
 export default App;

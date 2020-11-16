@@ -21,6 +21,7 @@ export default class MainPage extends React.Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.onclick = this.onclick.bind(this);
     }
 
 
@@ -192,6 +193,7 @@ export default class MainPage extends React.Component {
                                             <button className="btn join-us-btn btn-outline-info" type="submit">ارسال
                                                 درخواست
                                             </button>
+
                                             <br/>
                                             <br/>
                                         </form>
@@ -215,10 +217,14 @@ export default class MainPage extends React.Component {
 
 
                 </div>
+
             </AbsoluteWrapper>
             </>
         );
 
+    }
+    onclick() {
+        $("html, body").animate({ scrollTop: 0 }, 1000);
     }
 }
 
