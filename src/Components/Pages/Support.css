@@ -11,7 +11,7 @@
     grid-template-areas: " sup_img sup_header" "sup_img  sup_form";
 }
 .report{
-display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;

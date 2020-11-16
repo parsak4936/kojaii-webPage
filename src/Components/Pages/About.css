@@ -1,28 +1,85 @@
- .aboutus-container{
-     position: relative;
-     height: 680px;
+
+.aboutus-container{
+    width: 100%;
+    height: 660px;
+    position: relative;
      display: grid;
      background-color: #E9F9FE;
      grid-template-columns: 1fr  1fr 1fr 1fr 1fr;
-     grid-template-rows: .6fr 1fr 1fr;
-     grid-template-areas:   " .  C_Header C_Header . ."
-                            " . C_txt C_txt  . .  "
+     grid-template-rows: 1fr 1fr 1fr;
+     grid-template-areas:   " . C_Header C_Header C_Header   ."
+                            " .  C_txt C_txt  C_txt .  "
                             "C_socials C_socials C_img C_img C_img";
 
  }
-.c-socials{
+ .nigma-txt{
+   color: #2095F3;
+ }
+.c-socials-container{
     display: flex;
+    background-color: #E9F9FE;
     align-items: center;
     justify-content: center;
     grid-area: C_socials;
-    background-color: #68BBD5;
 }
- .c-txt{
-    display: flex;
-     background-color: yellow;
-     align-items: center;
-     justify-content: center;
+.c-socials{
+    text-decoration: none;
     direction: rtl;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "sup_email  sup_email"
+    "sup_insta sup_insta"
+    "sup_tweeter sup_insta"
+;
+
+}
+.sup-email{
+    text-decoration: none;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sup_email;
+    font-size: 20px;
+}
+.sup-insta{
+
+    text-decoration: none;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sup_insta;
+    font-size: 20px;
+}
+.sup-tweeter{
+    text-decoration: none;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sup_tweeter;
+    font-size: 20px;
+}
+.sup-icons{
+    text-decoration: none;
+
+    color: #3B6F80;
+    cursor: pointer;
+}
+
+ .c-txt{
+    margin: 20px;
+     display: flex;
+     font-size: 20px;
+     align-items: center;
+     text-align: right;
+     color: #3B6F80 ;
+     justify-content: center;
+     direction: rtl;
      grid-area: C_txt;
  }
  .c-img{
@@ -34,23 +91,29 @@
      grid-area: C_img;
  }
 .header-for-images{
+    margin: 40px;
     display: flex;
+    color: #1C2E3A;
     grid-area: C_Header;
-   margin-top: 30px;
     align-items: center;
     justify-content: center;
-
 }
  
 
 @media only screen and (max-width: 960px){
     .aboutus-container{
+
+height: 1020px;
         grid-template-columns: 1fr   ;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: " C_Header    "
-                             " C_txt     "
-                                "C_socials"
+                             " C_txt  "
+                             "C_socials"
                              "  C_img  ";
+    }
+    .header-for-images{
+        margin: 10px;
+
     }
 
 }
