@@ -6,6 +6,10 @@
 .navbar-btn-download{
   display: none;
 }
+.btn{
+  height: 50px;
+  width:  120px;
+}
 .logo-nav-mobile{
   display: none;
 }
@@ -19,18 +23,18 @@
   padding-top: 0;
   width: 100%;
   position: relative;
-
   transition: all .4s;
 }
 .btn-desktop-Bazar:hover{
-
   background-color: rgba(0,0,0,0.0) !important;
 }
 .btn-desktop-Bazar{
-  width: 120px;
+  width: 160px;
+  border: none;
   align-items: center;
   justify-content: center;
  display: flex;
+  margin-bottom: 15px;
   height: 50px;
   margin-left: 10px;
   background: url('../Images/Bazar.png');
@@ -46,9 +50,13 @@
   background-color: rgba(0,0,0,0.0) !important;
 }
 .btn-desktop-google{
-  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ margin-bottom: 15px;
   height: 50px;
-
+  width: 160px;
+  border: none;
   margin-left: 10px;
   background: url('../Images/Bazar.png');
   background-size: contain;
@@ -75,6 +83,7 @@
   }
 
 
+
 }
 #logo-in-navbar{
   margin-right: 10px;
@@ -91,7 +100,7 @@
 
 .menu-item {
   float: right;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Iranian Sans", sans-serif;
   font-size: 17px;
   letter-spacing: 1px;
   color: white;
@@ -106,10 +115,19 @@
     font-size: 1.9em !important;
   }
 
+  .btn-hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 8%;
+  }
   .download-btns{
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    justify-content: center;
 
   }
 
@@ -121,9 +139,7 @@
     color: #2095F3;
   }
 
-  .nav-menu {
 
-  }
   .navbar-btn-download{
     display: none !important;
   }
@@ -181,7 +197,7 @@
 }
 
 .dropdown-item {
-  font-family: 'Lato', sans-serif;
+  font-family: "Iranian Sans", sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 1px;
@@ -213,10 +229,13 @@
 
 
 .btn--Bazar{
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .btn-hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: right;
   padding-right: 115px;
   margin-top: 20px;
@@ -228,13 +247,11 @@
 .text-hero {
   margin-right: 8%;
   float: right;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Iranian Sans", sans-serif;
   font-size: 40px;
   font-weight: 500;
    letter-spacing: 1px;
 }
-
-
 
 .nav-bottom {
   background: transparent !important;

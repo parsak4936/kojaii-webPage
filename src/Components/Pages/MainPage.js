@@ -21,7 +21,7 @@ export default class MainPage extends React.Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.onclick = this.onclick.bind(this);
+
     }
 
 
@@ -223,9 +223,7 @@ export default class MainPage extends React.Component {
         );
 
     }
-    onclick() {
-        $("html, body").animate({ scrollTop: 0 }, 1000);
-    }
+
 }
 
 

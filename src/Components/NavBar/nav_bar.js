@@ -80,7 +80,10 @@ function Nav_bar() {
 
                 <div className="container-fluid">
                     <div className="navbar-btn-download">
-                        {button && <Button buttonStyle='btn--outline'> <i className='fa fa-download'/> دانلود </Button>}
+                        <button className="btn  btn-outline-info"  >
+                            <i className='fa fa-download'/> دانلود      <span>  </span>
+                        </button>
+
 
                     </div>
 
@@ -88,9 +91,9 @@ function Nav_bar() {
                             data-toggle="collapse"
                             data-target="#myNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                             aria-label="Toggle navigation">
-                        <div className="line1 ham"></div>
-                        <div className="line2 ham"></div>
-                        <div className="line3 ham"></div>
+                        <div className="line1 ham"> </div>
+                        <div className="line2 ham"> </div>
+                        <div className="line3 ham"> </div>
                     </button>
                     <div className="nav-bar-logo" id="logo-in-navbar">
                         <img className="logo-nav-mobile" src={LOGO} width="120px " alt=" "/>
@@ -157,39 +160,41 @@ function Nav_bar() {
                         </div>
 
                         <div className="col-12">
+<center>
+    <div className="  btn-hero lead text-center">
 
-                            <div className="  btn-hero lead text-center">
+        <div className="download-btns">
 
-                                <div className="download-btns">
-
-                                    <ScrollAnimation animateIn='animate__bounceInRight'
-                                                     animateOut='animate__bounceInLeft'>
-                                        <Link
-                                            to='/download'
-                                            onClick={closeMobileMenu}
-                                        >
-                                            <button type="submit"
-                                                    className="btn btn btn-lg btn-desktop-Bazar  btn-primary"></button>
-                                        </Link>
-                                    </ScrollAnimation>
-
-
-                                    <ScrollAnimation animateIn='animate__bounceInLeft'
-                                                     animateOut='animate__bounceInRight'>
-                                        <Link
-                                            to='/download'
-                                            onClick={closeMobileMenu}
-                                        >
-                                            <button type="button"
-                                                    className="btn btn  btn-desktop-google   btn-primary"></button>
-                                        </Link>
-                                    </ScrollAnimation>
+            <ScrollAnimation animateIn='animate__bounceInRight'
+                             animateOut='animate__bounceInLeft'>
+                <Link
+                    to='/download'
+                    onClick={closeMobileMenu}
+                >
+                    <button type="submit"
+                            className="btn btn btn-lg btn-desktop-Bazar  btn-primary"> </button>
+                </Link>
+            </ScrollAnimation>
 
 
-                                </div>
+            <ScrollAnimation animateIn='animate__bounceInLeft'
+                             animateOut='animate__bounceInRight'>
+                <Link
+                    to='/download'
+                    onClick={closeMobileMenu}
+                >
+                    <button type="button"
+                            className="btn btn  btn-desktop-google   btn-primary"> </button>
+                </Link>
+            </ScrollAnimation>
 
 
-                            </div>
+        </div>
+
+
+    </div>
+</center>
+
 
 
                         </div>
