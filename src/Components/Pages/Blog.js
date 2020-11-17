@@ -25,17 +25,23 @@ function Blog() {
         <>
         <AbsoluteWrapper>
             <div className="blog-container">
-                <h3 className='blog-Header'>تیم نیگما در حال اماده سازی این صفحه یباشد ، از شکیبای شما سپاس گذاریم</h3>
-                <section className='blog-icon'>
-                    <CountdownCircleTimer
-                        isPlaying
-                        duration={10}
-                        colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
-                        onComplete={() => [true, 1000]}
-                    >
-                        {renderTime}
-                    </CountdownCircleTimer>
-                </section>
+                <center>
+                    <h3 className='blog-Header'>تیم نیگما در حال اماده سازی این صفحه یباشد ، از شکیبای شما سپاس گذاریم</h3>
+                </center>
+
+                <center>
+                    <section className='blog-icon'>
+                        <CountdownCircleTimer
+                            isPlaying
+                            duration={10}
+                            colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
+                            onComplete={() => [true, 1000]}
+                        >
+                            {renderTime}
+                        </CountdownCircleTimer>
+                    </section>
+                </center>
+
 
 
             </div>

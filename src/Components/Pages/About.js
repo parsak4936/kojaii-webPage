@@ -1,10 +1,8 @@
 import React from 'react';
 import contactUs from '../Images/conntact_us.png'
 import AbsoluteWrapper from "../AbsoluteWrapper";
- 
 import './About.css'
 import ScrollAnimation from "react-animate-on-scroll";
-import {Button} from "../Button";
 import {Link} from "react-router-dom";
  
 
@@ -41,8 +39,8 @@ import {Link} from "react-router-dom";
                             target='_blank'
                             aria-label='email'
                         >
-                            kojaii@gmail.com
-                            <span>      </span>
+
+                            <span className= "txt_sup" >   kojaii@gmail.com   </span>
 
                             <i className='fa  fa-envelope sup-icons fa-2x '/>
 
@@ -54,10 +52,10 @@ import {Link} from "react-router-dom";
                             target='_blank'
                             aria-label='instagram'
                         >
-                            kojaii@gmail.com
-                            <span>      </span>
+                            <span className= "txt_sup-" > @kojaii    </span>
 
-                            <i className='fa  fa-telegram  sup-icons fa-2x '/>
+
+                            <i className='fa  fa-instagram  sup-icons fa-2x '/>
 
                         </Link>
                         <Link
@@ -66,10 +64,11 @@ import {Link} from "react-router-dom";
                             target='_blank'
                             aria-label=' tweeter'
                         >
-                            kojaii@gmail.com
+                            <span className= "txt_sup-" >  @kojaii   </span>
+
                             <span>      </span>
 
-                            <i className='fa  fa-instagram sup-icons fa-2x '/>
+                            <i className='fa  fa-twitter  sup-icons fa-2x '/>
 
                         </Link>
 
