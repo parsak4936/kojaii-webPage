@@ -223,10 +223,10 @@
 .join-us-param-name {
     outline: none;
     border: 0px;
+    border-bottom: 1px solid #68BBD5;
     grid-area: joinus_name;
     margin-top: 18px;
-    border-bottom: 1px solid #68BBD5;
-    /* border-radius: 5px; */
+
     padding: 10px;
     background-color: #E9F9FE;
 }

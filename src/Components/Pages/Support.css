@@ -8,8 +8,10 @@
     justify-content: center;
     grid-template-columns: .4fr 1fr ;
     grid-template-rows: .2fr 1fr;
-    grid-template-areas: " sup_img sup_header" "sup_img  sup_form";
+    grid-template-areas: " sup_header sup_header" "sup_img  sup_form";
 }
+
+
 .report{
     display: flex;
     flex-direction: row;
@@ -25,6 +27,7 @@
     padding: 15px;
 }
 .sup-Header-container{
+    color:  #3B6F80;
     grid-area: sup_header;
     display: flex;
     flex-direction: row;
