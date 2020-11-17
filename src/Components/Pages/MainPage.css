@@ -42,10 +42,10 @@
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-columns: 1fr   1fr 1fr ;
-    grid-template-rows:.5fr 1fr   ;
-    grid-template-areas: "toturial_header       slide_show  slide_show "
-                         " toturial_txt      slide_show slide_show "
+    grid-template-columns: 1fr    1fr ;
+    grid-template-rows:1fr 1fr   ;
+    grid-template-areas: "toturial_header         . "
+                         " toturial_txt       slide_show "
 
 
 
@@ -78,6 +78,9 @@
 }
 
 .slide-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: slide_show;
     padding-right: 10px;
 }
