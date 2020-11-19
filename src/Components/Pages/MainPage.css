@@ -187,7 +187,7 @@
 }
 
 .join-us-img-container {
-    font-family: "Iranian Sans" !important;
+    font-family: "Iranian Sans", serif !important;
     grid-area: joingus_img;
     display: flex;
     align-items: center;
