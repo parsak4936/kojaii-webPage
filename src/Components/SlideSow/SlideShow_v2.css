@@ -9,27 +9,48 @@
 
 }
 .css-1qzevvg    {
- position: relative;
-width: 100% !important;
+    width: 90% !important;
 }
-.css-1qzevvg  img  {
-    /*  content: url("../Images/LOGO.png");*/
+.css-1qzevvg img:nth-of-type(1){
+    content: url("../Images/left.png") !important;
 }
+
+.css-1qzevvg img:hover{
+    cursor: pointer;
+}
+
+.css-1qzevvg img:nth-of-type(2){
+    content: url("../Images/right.png") !important;
+}
+
+
 .css-doq0dk{
     position: absolute;
-    width: 100%;
+    width: 70% !important;
     height: 230px !important;
 }
 
+@media only screen and (min-width: 700px) {
+    .css-1qzevvg {
+        margin-top: -130px !important;
+    }
+    .css-doq0dk{
+        margin-top: -130px !important;
+    }
+}
+
 @media only screen and (max-width: 500px) {
+    .css-1qzevvg{
+        direction: ltr;
+        width: 60% !important;
+
+    }
     .slideshow-container{
         margin-bottom: 10%;
     }
 }
 @media only screen and (max-width: 300px) {
-
     .css-1qzevvg    {
-
         width: 10%  ;
     }
 }

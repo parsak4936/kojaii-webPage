@@ -153,7 +153,7 @@ function Nav_bar() {
 
                         <div className="col-12 download-text">
                             <ScrollAnimation className="text-hero text-center text-white text-uppercase"
-                                             animateIn='animate__fadeIn' animateOut=' '>
+                                             animateIn='animate__fadeIn'>
                                 <h1> جهت دانلود <span className="kojaii">کجایی</span> کلیک کنید </h1>
 
                             </ScrollAnimation>
@@ -165,8 +165,7 @@ function Nav_bar() {
 
         <div className="download-btns">
 
-            <ScrollAnimation animateIn='animate__bounceInRight'
-                             animateOut='animate__bounceInLeft'>
+            <ScrollAnimation animateIn='animate__bounceInRight'>
                 <Link
                     to='/download'
                     onClick={closeMobileMenu}
@@ -177,8 +176,7 @@ function Nav_bar() {
             </ScrollAnimation>
 
 
-            <ScrollAnimation animateIn='animate__bounceInLeft'
-                             animateOut='animate__bounceInRight'>
+            <ScrollAnimation animateIn='animate__bounceInLeft'>
                 <Link
                     to='/download'
                     onClick={closeMobileMenu}

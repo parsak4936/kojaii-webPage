@@ -4,6 +4,7 @@
     --main-padding: 5px;
 }
 
+
 /*  Desktop */
 .mainpage-container {
     display: grid;
@@ -31,14 +32,19 @@
 .toturial {
     grid-area: Toturial;
     background-color: #0463B9;
-    height:680px;
+    height:350px;
 
 }
 
-.T-container {
-    padding-top:  15px;
+.slideshow-container{
+    margin-bottom: 0;
     width: 100%;
-    height:680px;
+}
+
+.T-container {
+    padding-top: 40px;
+    width: 100%;
+    height:0;
     align-items: center;
     justify-content: center;
     display: grid;
@@ -214,6 +220,7 @@
 }
 
 .join-us-btn {
+    width: 180px !important;
     grid-area: joinus_btn;
     background-color: #DBF1F7;
     margin-top: 10px !important;
@@ -253,6 +260,7 @@
 }
 
 #moreDes {
+    display: none;
     text-align: justify;
 }
 
@@ -277,8 +285,11 @@
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
 
+    #moreDes{
+        display: block;
+    }
     #join-us-text {
     }
 
@@ -294,13 +305,13 @@
         margin-left: 10px;
     }
 
-
-
+    .slideshow-container{
+        margin-right: 70px;
+    }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .slide-show {
-
         direction: rtl;
         margin-bottom: 70px;
     }
@@ -310,6 +321,19 @@
     #Des{
         padding-right: 10px;
         padding-left: 10px;
+    }
+    .toturial{
+        height: 640px;
+    }
+    .toturial-header h2{
+        font-size: 30px;
+    }
+    .interduce{
+        height: 660px;
+    }
+    .slideshow-container{
+        margin-left: 10px;
+
     }
 }
 

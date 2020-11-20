@@ -73,13 +73,16 @@
 }
 
 
-@media (max-width:64em) {
+@media (max-width:500px) {
+  .btn-hero{
+    padding-right: 25% !important;
+  }
+  .text-hero{
+    margin-right: 0 !important;
+  }
 
-  .text-hero {
-
-    margin-top: 90px;
-    margin-bottom: 30px;
-
+  .text-hero h1{
+    font-size: 1.5rem !important;
   }
 
 
@@ -110,6 +113,13 @@
 }
 
 @media (max-width: 64em) {
+
+  .text-hero {
+
+    margin-top: 90px;
+    margin-bottom: 30px;
+
+  }
 
   .download-text{
     font-size: 1.9em !important;

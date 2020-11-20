@@ -28,6 +28,7 @@ export default class Support extends React.Component {
                 [event.target.last_name]: event.target.value, [event.target.field_text]: event.target.value,
             }
         );
+        console.log('as')
     }
     handleChange_suggest = (event) => {
         this.setState({
@@ -35,6 +36,7 @@ export default class Support extends React.Component {
                 [event.target.last_name]: event.target.value, [event.target.field_text]: event.target.value,
             }
         );
+        console.log('asd')
     }
     handleSubmit_suggest = (event) => {
         var first_name_suggest = $("#first_name_suggest").val();
@@ -104,9 +106,9 @@ export default class Support extends React.Component {
                         <div className="sup-Header-container"><h3> نظرات و پیشنهادات خود را با ما درمیان بگذارید . .
                             . </h3></div>
 
-                        <div className="sup-img-container">
-                            <img src={sup_img} alt=" " className="sup-img"/>
-                        </div>
+                        {/*<div className="sup-img-container">*/}
+                        {/*    <img src={sup_img} alt=" " className="sup-img"/>*/}
+                        {/*</div>*/}
 
                         <div className="form-container">
                             <div className="tab-wrapper">
@@ -123,12 +125,12 @@ export default class Support extends React.Component {
                                                         <Nav variant="pills" className="flex-column">
 
                                                             <Nav.Item>
-                                                                <Nav.Link  className="report" eventKey="report">گزارش خطا
+                                                                <Nav.Link  className="report key" eventKey="report">گزارش خطا
                                                                     برنامه </Nav.Link>
                                                             </Nav.Item>
 
                                                             <Nav.Item>
-                                                                <Nav.Link  className="suggest"  eventKey="suggest">پیشنهادات و انتقادات</Nav.Link>
+                                                                <Nav.Link  className="suggest key"  eventKey="suggest">پیشنهادات و انتقادات</Nav.Link>
                                                             </Nav.Item>
 
 
@@ -136,7 +138,7 @@ export default class Support extends React.Component {
 
                                                     </Col>
                                                     <Col sm={9}>
-                                                        <Tab.Content>
+                                                        <Tab.Content className="tab">
 
                                                             <Tab.Pane className="parag" eventKey="report">
                                                                 <Form onSubmit={this.handleSubmit_report}>
