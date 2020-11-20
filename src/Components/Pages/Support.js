@@ -112,13 +112,13 @@ export default class Support extends React.Component {
 
                         <div className="form-container">
                             <div className="tab-wrapper">
-                                <div className='container-fluid'>
+                                <div className='container-fluid ' >
 
                                     <div className="row">
 
                                         <div className="col-sm-12">
 
-                                            <Tab.Container defaultActiveKey="report">
+                                            <Tab.Container  defaultActiveKey="report">
                                                 <Row>
                                                     <Col sm={3}>
 
