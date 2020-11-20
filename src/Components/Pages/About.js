@@ -1,5 +1,5 @@
 import React from 'react';
-import contactUs from '../Images/conntact_us.png'
+import contactUs from '../Images/ContactUs.svg'
 import AbsoluteWrapper from "../AbsoluteWrapper";
 import './About.css'
 import ScrollAnimation from "react-animate-on-scroll";

@@ -275,7 +275,9 @@
     #moreDes {
         display: none;
     }
-
+    .toturial{
+        height: 840px ;
+    }
     .intro-image {
         margin-bottom: 0px !important;
     }
@@ -284,7 +286,13 @@
         text-align: center !important;
     }
 }
+@media only screen and (max-width: 650px) {
+    .toturial{
+        height: 740px ;
+    }
 
+
+}
 @media only screen and (min-width: 800px) {
 
     #moreDes{

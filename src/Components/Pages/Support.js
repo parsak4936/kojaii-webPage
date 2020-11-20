@@ -4,7 +4,7 @@ import {Tab, Row, Col, Nav, Form} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
 import AbsoluteWrapper from "../AbsoluteWrapper";
-import sup_img from '../Images/support.png'
+import sup_img from '../Images/Support.svg'
 import $ from "jquery";
 
 
@@ -106,9 +106,9 @@ export default class Support extends React.Component {
                         <div className="sup-Header-container"><h3> نظرات و پیشنهادات خود را با ما درمیان بگذارید . .
                             . </h3></div>
 
-                        {/*<div className="sup-img-container">*/}
-                        {/*    <img src={sup_img} alt=" " className="sup-img"/>*/}
-                        {/*</div>*/}
+                        <div className="sup-img-container">
+                         <img src={sup_img} alt=" " className="sup-img"/>
+                        </div>
 
                         <div className="form-container">
                             <div className="tab-wrapper">

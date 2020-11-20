@@ -39,9 +39,6 @@
 
 }
 
-.nigma-txt {
-    color: #2095F3;
-}
 
 .c-socials-container {
     margin-left: 250px;
@@ -107,6 +104,7 @@
 .c-txt {
     position: absolute !important;
     margin: 20px;
+    padding-right: 80px;
     display: flex;
     font-size: 24px;
     align-items: center;
@@ -121,7 +119,7 @@
 }
 .c-img {
     margin-bottom: 145px;
-    width: 70%;
+    width: 90%;
     height: auto;
     display: flex;
     align-items: center;
@@ -170,7 +168,9 @@
     .header-for-images h1{
         font-size: 1.5rem;
     }
-
+.c-txt{
+    padding-right: 10px;
+}
     .c-socials-container {
         margin-left: 0;
         margin-bottom: 0;
