@@ -16,7 +16,7 @@ import {Link} from "react-router-dom";
             <div className="aboutus-container">
                 <div className='header-for-images'>
 
-                    <center>  <h1 >با <span className="nigma-txt"> نیگما</span> در ارتباط باشید</h1></center>
+                    <center>  <h1 >با <span className="nigma-txt"> کجایی</span> در ارتباط باشید</h1></center>
 
 
 
@@ -24,7 +24,9 @@ import {Link} from "react-router-dom";
                 <div className="c-txt">
                     <ScrollAnimation animateIn='animate__bounceInLeft'>
                         <center>
-                            <p >اگر قصد دارید از تیم <span>نیگما</span> برای  ایده های خود استفاده کنید ،از طریق راه های ارتباطی با ما تماس بگیرید، تا راهکارهای  خود را به شما معرفی کنیم.با تیم نگما ، ایده های خود را <b>واقعی</b> کنید.</p>
+                            <p>
+                                <span>کجایی</span> به منظور تسهیل ارتباط خود با کاربران سایت، اطلاعات تماس خود را ارائه می‌نماید. کاربران عزیز می‌توانند با استفاده از اطلاعات تماس ذیل ما را از نظرات و پیشنهادات خود مطلع سازند و ما را در جهت رسیدن به اهداف سایت یاری دهند
+                            </p>
 
                         </center>
                     </ScrollAnimation>

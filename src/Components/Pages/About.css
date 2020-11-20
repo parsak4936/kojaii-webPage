@@ -1,45 +1,51 @@
-*  {
+* {
     text-decoration: none;
     font-family: "Iranian Sans", sans-serif;
 }
+
 .fa:hover {
     text-decoration: none;
     transition: all 0.3s ease-out;
     color: #7AB1C5;
     transition: 250ms;
 }
+
 .txt_sup-:hover {
     text-decoration: none;
 
 }
-.txt_sup{
+
+.txt_sup {
 
     margin-right: 20px;
 }
-.txt_sup-{
+
+.txt_sup- {
 
     margin-right: 50px;
 
     margin-left: 60px;
 }
-.aboutus-container{
-    margin-bottom: 156px;
+
+.aboutus-container {
     width: 100%;
     height: 660px;
     position: relative;
-     display: grid;
-     background-color: #E9F9FE;
-     grid-template-columns: 1fr  1fr 1fr 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr;
-     grid-template-areas:   " . C_Header C_Header C_Header   ."
-                            " .  C_txt C_txt  C_txt .  "
-                            "C_socials C_socials C_img C_img C_img";
+    display: grid;
+    background-color: #E9F9FE;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: " . C_Header C_Header C_Header   ." " .  C_txt C_txt  C_txt .  " "C_socials C_socials C_img C_img C_img";
 
- }
- .nigma-txt{
-   color: #2095F3;
- }
-.c-socials-container{
+}
+
+.nigma-txt {
+    color: #2095F3;
+}
+
+.c-socials-container {
+    margin-left: 250px;
+    margin-bottom: 55px;
     text-decoration: none;
     display: flex;
     background-color: #E9F9FE;
@@ -47,7 +53,8 @@
     justify-content: center;
     grid-area: C_socials;
 }
-.c-socials{
+
+.c-socials {
     text-decoration: none;
     direction: rtl;
     align-items: center;
@@ -55,13 +62,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "sup_email  sup_email"
-    "sup_insta sup_insta"
-    "sup_tweeter sup_insta"
-;
+    grid-template-areas: "sup_email  sup_email" "sup_insta sup_insta" "sup_tweeter sup_insta";
 
 }
-.sup-email{
+
+.sup-email {
     text-decoration: none;
     margin: 20px;
     display: flex;
@@ -70,7 +75,8 @@
     grid-area: sup_email;
     font-size: 20px;
 }
-.sup-insta{
+
+.sup-insta {
 
     text-decoration: none;
     margin: 20px;
@@ -80,7 +86,8 @@
     grid-area: sup_insta;
     font-size: 20px;
 }
-.sup-tweeter{
+
+.sup-tweeter {
     text-decoration: none;
     margin: 20px;
     display: flex;
@@ -89,34 +96,44 @@
     grid-area: sup_tweeter;
     font-size: 20px;
 }
-.sup-icons{
+
+.sup-icons {
     text-decoration: none;
 
     color: #3B6F80;
     cursor: pointer;
 }
 
- .c-txt{
-
+.c-txt {
+    position: absolute !important;
     margin: 20px;
-     display: flex;
-     font-size: 24px;
-     align-items: center;
-     text-align: right;
-     color: #3B6F80 ;
-     justify-content: center;
-     direction: rtl;
-     grid-area: C_txt;
- }
- .c-img{
-     width: 100%;
-     height: auto;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     grid-area: C_img;
- }
-.header-for-images{
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    text-align: right;
+    color: #3B6F80;
+    justify-content: center;
+    direction: rtl;
+    grid-area: C_txt;
+}
+.c-txt p{
+    font-size: 1rem;
+}
+.c-img {
+    margin-bottom: 145px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: C_img;
+}
+
+.animate__fadeIn a span{
+    font-size: 1rem;
+}
+
+.header-for-images {
     margin: 40px;
     text-decoration: none;
     display: flex;
@@ -125,19 +142,37 @@
     align-items: center;
     justify-content: center;
 }
- 
 
-@media only screen and (max-width: 960px){
-    .aboutus-container{
-    margin-bottom: 10px;
-    height: 1000px;
-    grid-template-columns: 1fr   ;
-    grid-template-rows: .5fr 1fr 1fr 1fr;
-    grid-template-areas: " C_Header    "
-                             " C_txt  "
-                             "C_socials"
-                             "  C_img  ";
+.header-for-images h1{
+    font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .aboutus-container {
+        height: 1000px;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr 1fr 1fr;
+        grid-template-areas: " C_Header    " " C_txt  " "C_socials" "  C_img  ";
     }
 
 
+}
+
+@media only screen and (max-width: 500px) {
+    .c-img{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .aboutus-container{
+        height: 680px
+    }
+    .header-for-images h1{
+        font-size: 1.5rem;
+    }
+
+    .c-socials-container {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
 }
