@@ -7,6 +7,8 @@ import Navbar from './Components/NavBar/nav_bar'
 import sup from './Components/Pages/Support'
 import  blog from './Components/Pages/Blog'
 import React from "react";
+import Login from './Components/AdminPanel/Login';
+import Admin from './Components/AdminPanel/AdminPanel'
 import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import {useLocation} from "react-use";
@@ -29,6 +31,8 @@ const App = () => {
                     <animated.div key={key} style={props}>
                         <Switch location={item}>
                             <Route path='/home' exact component={HomePage} />
+                            <Route path='/Login' exact component={Login} />
+                            <Route path='/Admin' exact component={Admin} />
                             <Route path='/' exact component= {HomePage} />
                             <Route path='/ContactUs' component=   {ContactUs} />
                             <Route path='/download' component={Download} />

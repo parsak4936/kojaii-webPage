@@ -13,6 +13,7 @@
   "dependencies": {
     "3d-react-carousal": "^3.1.0",
     "@bumaga/tabs": "^0.2.0",
+    "@coreui/coreui": "^3.3.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
@@ -25,6 +26,8 @@
     "animate.css": "^4.1.1",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
+    "classnames": "^2.2.6",
     "flickity": "^2.2.1",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
@@ -36,7 +39,11 @@
     "react-avatar": "^3.9.7",
     "react-blob": "^2.1.0",
     "react-bootstrap": "^1.4.0",
+    "react-bootstrap-table-next": "^4.0.3",
+    "react-bootstrap-table2-editor": "^1.4.0",
+    "react-bootstrap-table2-toolkit": "^2.1.3",
     "react-bootstrap-tabs": "^2.0.0",
+    "react-chartjs-2": "^2.11.1",
     "react-confetti": "^6.0.0",
     "react-cool-tabs": "^1.1.6",
     "react-countdown-circle-timer": "^2.3.7",
@@ -54,6 +61,7 @@
     "react-tiger-transition": "^4.1.2",
     "react-transition-group": "^4.4.1",
     "react-use": "^15.3.4",
+    "reactstrap": "^8.7.1",
     "serve": "^11.3.2",
     "tachyons-components": "^1.0.1",
     "uuid": "^8.3.1"
@@ -81,7 +89,9 @@
   },
   "description": "برنامه کجایی ، برای راحت تر شدن قرار ملاقات ها ",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@coreui/react": "^3.3.3"
+  },
   "author": "@parsakazemi / @amirhosseinnajafi / @amirmasoudhajizadeh",
   "license": "ISC"
 }
