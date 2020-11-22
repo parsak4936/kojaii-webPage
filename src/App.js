@@ -38,6 +38,11 @@ const App = () => {
                             <Route path='/download' component={Download} />
                             <Route path='/blog' component={blog} />
                             <Route path='/support' component={sup} />
+
+
+
+
+
                         </Switch>
                     </animated.div>
                 ))}

@@ -21,20 +21,20 @@ import {Link} from "react-router-dom";
 
 
                 </div>
-                <div className="c-txt">
-                    <ScrollAnimation animateIn='animate__bounceInLeft'>
+                <div className="c-txt animation fadeIn slower delay-2s">
+
                         <center>
                             <p>
                                 <span>کجایی</span> به منظور تسهیل ارتباط خود با کاربران سایت، اطلاعات تماس خود را ارائه می‌نماید. کاربران عزیز می‌توانند با استفاده از اطلاعات تماس ذیل ما را از نظرات و پیشنهادات خود مطلع سازند و ما را در جهت رسیدن به اهداف سایت یاری دهند
                             </p>
 
                         </center>
-                    </ScrollAnimation>
+
 
                 </div>
 
                 <div className="c-socials-container">
-                    <ScrollAnimation classname="c-socials" animateIn='animate__fadeIn'>
+                    <ScrollAnimation classname="c-socials " animateIn='animate__fadeIn'>
                         <Link
                             className=' sup-email'
                             to='/'

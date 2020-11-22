@@ -1,3 +1,24 @@
 *{
-    margin: 0;
+   left: 0;
+    right: 0;
+}
+.container-layout{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 1fr;
+        grid-template-areas: "slidebar  layoutheader"
+                                "slidebar content"
+;
+}
+.sidebar-layout{
+    grid-area:slidebar ;
+    background-color: blueviolet;
+}
+.header-layout{
+    grid-area: layoutheader;
+    background-color: #1b9e3e;
+}
+.content-layout{
+    grid-area:content ;
 }
