@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
+import {
+    Badge,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
+    Nav,
+    NavItem,
+    NavLink
+} from "reactstrap";
 import PropTypes from "prop-types";
 
 
@@ -11,17 +20,15 @@ const defaultProps = {};
 
 class DefaultHeader extends Component {
     render() {
+        // eslint-disable-next-line
+        const { children, ...attributes } = this.props;
 
         return (
-            <React.Fragment>
-
-
-            </React.Fragment>
+           <>
+               </>
         );
     }
 }
 
-DefaultHeader.propTypes = propTypes;
-DefaultHeader.defaultProps = defaultProps;
 
 export default DefaultHeader;
