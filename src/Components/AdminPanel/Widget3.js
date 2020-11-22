@@ -41,7 +41,7 @@ class Widget03 extends Component {
         return (
             <div className={classes}>
                 <div className={classCardHeader}>
-                    <i className={icon}></i>
+                    <i className={icon} ></i>
                     {children}
                 </div>
                 <div className={classCardBody}>

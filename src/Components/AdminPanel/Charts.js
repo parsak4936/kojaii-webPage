@@ -171,21 +171,6 @@ class Charts extends Component {
                             </div>
                         </CardBody>
                     </Card>
-                    <Card>
-                        <CardHeader>
-                            Bar Chart
-                            <div className="card-header-actions">
-                                <a href="http://www.chartjs.org" className="card-header-action">
-                                    <small className="text-muted">docs</small>
-                                </a>
-                            </div>
-                        </CardHeader>
-                        <CardBody>
-                            <div className="chart-wrapper">
-                                <Bar data={bar} options={options} />
-                            </div>
-                        </CardBody>
-                    </Card>
 
 
 

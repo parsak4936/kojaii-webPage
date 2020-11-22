@@ -78,63 +78,20 @@ class Cards extends Component {
         return (
             <div className="animated fadeIn">
 
-
-
-
-                <Row>
-
-                    <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-warning text-center">
-                            <CardBody>
-                                <blockquote className="card-bodyquote">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                    <div className="chart-wrapper">
-                                        <Line data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-                                    </div>
-                                </blockquote>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-danger text-center">
-                            <CardBody>
-                                <blockquote className="card-bodyquote">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                    <div className="chart-wrapper">
-                                        <Line data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-                                    </div>
-                                </blockquote>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-primary text-center">
-                            <CardBody>
-                                <blockquote className="card-bodyquote">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                    <div className="chart-wrapper">
-                                        <Line data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-                                    </div>
-                                </blockquote>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
                 <Row>
                     <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-primary">
-                            <CardHeader>
-                                Card title
-                            </CardHeader>
-                            <CardBody>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                <div className="chart-wrapper">
-                                    <Line data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-                                </div>
-                            </CardBody>
-                        </Card>
+                        <div className="animated fadeIn">
+
+                                    <Widget03 dataBox={() => ({ variant: 'facebook', friends: '89k', feeds: '459' })} >
+                                        <div className="chart-wrapper">
+                                            <Line data={makeSocialBoxData(0)} options={socialChartOpts} height={190} />
+                                        </div>
+                                    </Widget03>
+
+
+
+
+                        </div>
                     </Col>
                     <Col xs="12" sm="6" md="4">
                         <Card className="text-white bg-success">

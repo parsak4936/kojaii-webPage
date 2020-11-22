@@ -79,20 +79,8 @@ class Widgets extends Component {
                             </div>
                         </Widget03>
                     </Col>
-                    <Col xs={12} sm={6} md={3}>
-                        <Widget03 dataBox={() => ({ variant: 'linkedin', contacts: '500+', feeds: '292' })} >
-                            <div className="chart-wrapper">
-                                <Line data={makeSocialBoxData(2)} options={socialChartOpts} height={90} />
-                            </div>
-                        </Widget03>
-                    </Col>
-                    <Col xs={12} sm={6} md={3}>
-                        <Widget03 dataBox={() => ({ variant: 'google-plus', followers: '894', circles: '92' })} >
-                            <div className="chart-wrapper">
-                                <Line data={makeSocialBoxData(3)} options={socialChartOpts} height={90} />
-                            </div>
-                        </Widget03>
-                    </Col>
+
+
                 </Row>
 
 
