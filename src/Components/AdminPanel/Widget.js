@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Col, Row } from 'reactstrap';
+import {   Col, Row } from 'reactstrap';
+
 import Widget03 from './Widget3';
+
 import { Line } from 'react-chartjs-2';
 
+
+// Brand Card Chart
 const makeSocialBoxData = (dataSetNo) => {
     const socialBoxData = [
         { data: [65, 59, 84, 84, 51, 55, 40], label: 'facebook' },
@@ -59,6 +63,7 @@ class Widgets extends Component {
         return (
             <div className="animated fadeIn">
 
+
                 <Row>
                     <Col xs={12} sm={6} md={3}>
                         <Widget03 dataBox={() => ({ variant: 'facebook', friends: '89k', feeds: '459' })} >
@@ -89,6 +94,7 @@ class Widgets extends Component {
                         </Widget03>
                     </Col>
                 </Row>
+
 
 
             </div>

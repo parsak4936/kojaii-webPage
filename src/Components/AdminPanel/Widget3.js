@@ -14,7 +14,7 @@ const defaultProps = {
     dataBox: () => ({ variant: 'facebook', friends: '-', feeds: '-' }),
 };
 
-class Widget3 extends Component {
+class Widget03 extends Component {
     render() {
 
         // eslint-disable-next-line
@@ -41,7 +41,7 @@ class Widget3 extends Component {
         return (
             <div className={classes}>
                 <div className={classCardHeader}>
-                    <i className={icon}> </i>
+                    <i className={icon}></i>
                     {children}
                 </div>
                 <div className={classCardBody}>
@@ -59,7 +59,7 @@ class Widget3 extends Component {
     }
 }
 
-Widget3.propTypes = propTypes;
-Widget3.defaultProps = defaultProps;
+Widget03.propTypes = propTypes;
+Widget03.defaultProps = defaultProps;
 
-export default Widget3;
+export default Widget03;
