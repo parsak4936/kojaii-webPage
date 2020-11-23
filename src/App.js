@@ -7,7 +7,7 @@ import Navbar from './Components/NavBar/nav_bar'
 import sup from './Components/Pages/Support'
 import  blog from './Components/Pages/Blog'
 import React from "react";
-import Login from './Components/AdminPanel/Login';
+import Login from './Components/AdminPanel/Login/Login';
 import Admin from './Components/AdminPanel/AdminPanel'
 import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
 import { useTransition, animated } from "react-spring";
