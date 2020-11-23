@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardFooter, CardHeader, Col, Row, Collapse, Fade } from 'reactstrap';
+import {  Card, CardBody, CardHeader, Col, Row} from 'reactstrap';
 import  'react-chartjs-2';
-import {Line} from "react-chartjs-2";
-import Widget03 from "./Widget3";
+import {Line,Bar,} from "react-chartjs-2";
+import './cards.css'
 
 const makeSocialBoxData = (dataSetNo) => {
     const socialBoxData = [
@@ -76,27 +76,30 @@ class Cards extends Component {
 
     render() {
         return (
-            <div className="animated fadeIn">
+            <div className="animated fadeIn card-container">
 
                 <Row>
                     <Col xs="12" sm="6" md="4">
-                        <div className="animated fadeIn">
-
-                                    <Widget03 dataBox={() => ({ variant: 'facebook', friends: '89k', feeds: '459' })} >
-                                        <div className="chart-wrapper">
-                                            <Line data={makeSocialBoxData(0)} options={socialChartOpts} height={190} />
-                                        </div>
-                                    </Widget03>
-
-
-
-
-                        </div>
+                        <Card className="text-white bg-primary cards-self">
+                            <CardHeader className="cards-headers">
+                               نا مشخص
+                            </CardHeader>
+                            <CardBody>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                <div className="chart-wrapper">
+                                    <Bar data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
+                                </div>
+                            </CardBody>
+                        </Card>
                     </Col>
+
+
                     <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-success">
-                            <CardHeader>
-                                Card title
+                        <Card className="text-white bg-success cards-self">
+                            <CardHeader className="cards-headers">
+                               تعداد کاربر
                             </CardHeader>
                             <CardBody>
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
@@ -108,10 +111,12 @@ class Cards extends Component {
                             </CardBody>
                         </Card>
                     </Col>
+
+
                     <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-info">
-                            <CardHeader>
-                                Card title
+                        <Card className="text-white bg-info cards-self">
+                            <CardHeader className="cards-headers">
+                                تعداد ایونت ها
                             </CardHeader>
                             <CardBody>
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut

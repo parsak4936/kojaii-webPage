@@ -1,0 +1,18 @@
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards-headers{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+@media (max-width:54rem) {
+    .cards-self{
+
+        margin-bottom: 20px;
+
+    }
+}

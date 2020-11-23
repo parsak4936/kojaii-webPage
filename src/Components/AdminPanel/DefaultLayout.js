@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import  Tables from './Tables'
-import Widget from './Widget'
-import Charts from './Charts'
-import Card from './cards'
+import  Form_Tables from './Tables/Tables'
+import  Joinus_table from './Tables/joinus_table'
+import Charts from './Charts/Charts'
+import Card from './Cards/cards'
  import './layout.css'
 
-
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 class DefaultLayout extends Component {
     showSettings (event) {
         event.preventDefault();
@@ -15,12 +13,30 @@ class DefaultLayout extends Component {
     render() {
         return (
             <>
+<div className="AdminContainer">
+    <div className="cards">
+        <Card/>
+    </div>
 
 
-                        <Card/>
-                        <Charts/>
+        <div className="charts">
+            <Charts/>
+        </div>
 
-                        <Tables />
+
+
+  <div className="form_table">
+      <Form_Tables />
+  </div>
+
+    <div className="joinus_table">
+        <Joinus_table/>
+    </div>
+
+
+
+</div>
+
 
 
 

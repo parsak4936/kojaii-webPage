@@ -110,9 +110,9 @@ export default class Support extends React.Component {
                          <img src={sup_img} alt=" " className="sup-img"/>
                         </div>
 
-                        <div className="form-container">
+                        <div className="form-container ">
                             <div className="tab-wrapper">
-                                <div className='container-fluid ' >
+                                <div className='container-fluid back' >
 
                                     <div className="row">
 

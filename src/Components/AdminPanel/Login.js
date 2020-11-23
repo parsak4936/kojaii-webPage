@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 class Login extends Component {
+
     render() {
         return (
             <div className="app flex-row align-items-center">
@@ -41,16 +42,7 @@ class Login extends Component {
                                         </Form>
                                     </CardBody>
                                 </Card>
-                                <Card className="text-white bg-primary py-5 d-md-down-none" style={{ width: 44 + '%' }}>
-                                    <CardBody className="text-center">
-                                        <div>
-                                            <h2>Sign up</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                                labore et dolore magna aliqua.</p>
-                                            <Button color="primary" className="mt-3" active>Register Now!</Button>
-                                        </div>
-                                    </CardBody>
-                                </Card>
+
                             </CardGroup>
                         </Col>
                     </Row>
