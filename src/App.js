@@ -14,6 +14,7 @@ import { useTransition, animated } from "react-spring";
 import {useLocation} from "react-use";
 
 
+
 const App = () => {
 
     const  location = useLocation()
@@ -30,6 +31,7 @@ const App = () => {
                 {transitions.map(({ item, props, key }) => (
                     <animated.div key={key} style={props}>
                         <Switch location={item}>
+
                             <Route path='/home' exact component={HomePage} />
                             <Route path='/Login' exact component={Login} />
                             <Route path='/Admin' exact component={Admin} />
