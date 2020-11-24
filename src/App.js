@@ -3,15 +3,16 @@ import Footer from './Components/Footer/Footer'
 import ContactUs from './Components/Pages/About';
 import Download from './Components/Pages/Download';
 import HomePage from './Components/Pages/MainPage';
-import Navbar from './Components/NavBar/nav_bar'
-import sup from './Components/Pages/Support'
-import  blog from './Components/Pages/Blog'
+import Navbar from './Components/NavBar/nav_bar';
+import sup from './Components/Pages/Support';
+import  blog from './Components/Pages/Blog';
 import React from "react";
 import Login from './Components/AdminPanel/Login/Login';
-import Admin from './Components/AdminPanel/AdminPanel'
+import Admin from './Components/AdminPanel/AdminPanel';
 import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import {useLocation} from "react-use";
+import NotFound from './Components/Pages/404'
 
 
 
@@ -25,6 +26,7 @@ const App = () => {
     });
      return (
         <>
+
             <BrowserRouter>
             <Navbar />
             <main >
@@ -33,15 +35,15 @@ const App = () => {
                         <Switch location={item}>
 
                             <Route path='/home' exact component={HomePage} />
-                            <Route path='/Login' exact component={Login} />
-                            <Route path='/Admin' exact component={Admin} />
+                            <Route path='/Login' exact component= {Login} />
+                            <Route path='/Admin'  component={Admin} />
                             <Route path='/' exact component= {HomePage} />
                             <Route path='/ContactUs' component=   {ContactUs} />
                             <Route path='/download' component={Download} />
                             <Route path='/blog' component={blog} />
                             <Route path='/support' component={sup} />
 
-
+                            <Route  component={NotFound} />
 
 
 
@@ -55,8 +57,15 @@ const App = () => {
 
             <Footer />
         </BrowserRouter>
+
         </>
     );
 
-};
+}
+
+
+
+
+
+
 export default App;
