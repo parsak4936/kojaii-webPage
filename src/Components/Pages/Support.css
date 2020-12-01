@@ -10,7 +10,9 @@
     grid-template-rows: .2fr 1fr;
     grid-template-areas: " sup_header sup_header" "sup_img  sup_form";
 }
-
+label{
+    color: blue;
+}
 
 
 .report{
@@ -22,9 +24,7 @@
     padding: 15px;
 }
 .suggest{
-
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 15px;
@@ -104,7 +104,7 @@
     visibility: hidden;
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 44rem) {
 .sup-img{
     width:100%;
     }
@@ -116,13 +116,17 @@
 .sup-container{
     margin-bottom: 50px;
 
-    height: 900px;
+    height: 1100px;
     grid-template-columns: 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:"sup_header"
                         "sup_img "
                         "sup_form";
 }
+    .sup-Header-container{
+margin-top:10px;
+        margin-bottom: 20px;
+    }
  .back{
      margin-top: 50px;
  }

@@ -1,22 +1,23 @@
 import './App.css';
-import Footer from './Components/Footer/Footer'
 import ContactUs from './Components/Pages/About';
 import Download from './Components/Pages/Download';
 import HomePage from './Components/Pages/MainPage';
+import Footer from './Components/Footer/Footer'
+
 import Navbar from './Components/NavBar/nav_bar';
 import sup from './Components/Pages/Support';
 import  blog from './Components/Pages/Blog';
-import React from "react";
+import React, {useState} from "react";
 import Login from './Components/AdminPanel/Login/Login';
 import Admin from './Components/AdminPanel/AdminPanel';
-import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter, Switch, Route, Link,Redirect} from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import {useLocation} from "react-use";
 import NotFound from './Components/Pages/404'
+import ProtectedRoutes from './ProtectedRoute'
 
+function App ()  {
 
-
-const App = () => {
 
     const  location = useLocation()
     const transitions = useTransition(location, location => location.pathname, {
@@ -24,7 +25,9 @@ const App = () => {
         enter: { opacity: 1, transform: "translate(0%, 0)" },
         leave: { opacity: 0, transform: "translate(-50%, 0)" }
     });
-     return (
+
+
+    return (
         <>
 
             <BrowserRouter>
@@ -34,16 +37,16 @@ const App = () => {
                     <animated.div key={key} style={props}>
                         <Switch location={item}>
 
+
                             <Route path='/home' exact component={HomePage} />
                             <Route path='/Login' exact component= {Login} />
-                            <Route path='/Admin'  component={Admin} />
                             <Route path='/' exact component= {HomePage} />
                             <Route path='/ContactUs' component=   {ContactUs} />
                             <Route path='/download' component={Download} />
                             <Route path='/blog' component={blog} />
                             <Route path='/support' component={sup} />
-
-                            <Route  component={NotFound} />
+                            <Route path='/Admin' component={Admin} />
+                             <Route  component={NotFound} />
 
 
 
@@ -62,7 +65,6 @@ const App = () => {
     );
 
 }
-
 
 
 

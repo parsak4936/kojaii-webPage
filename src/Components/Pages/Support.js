@@ -103,8 +103,16 @@ export default class Support extends React.Component {
             <>
                 <AbsoluteWrapper>
                     <div className="sup-container">
-                        <div className="sup-Header-container"><h3> نظرات و پیشنهادات خود را با ما درمیان بگذارید . .
-                            . </h3></div>
+
+                            <div className="sup-Header-container">
+                                <center>
+                                    <h3> نظرات و پیشنهادات خود را با ما درمیان بگذارید
+                                    </h3>
+                                </center>
+
+                            </div>
+
+
 
                         <div className="sup-img-container">
                          <img src={sup_img} alt=" " className="sup-img"/>
@@ -152,18 +160,17 @@ export default class Support extends React.Component {
                                                                                           placeholder="نام خود را وارد کنید"/>
                                                                         </Form.Group>
 
-                                                                        <Form.Group className="familyfield-desktop"
-                                                                                    as={Col}>
-                                                                            <Form.Label>نام خانوادگی</Form.Label>
-                                                                            <Form.Control type="text"
-                                                                                          name="last_name"
-                                                                                          id="last_name"
-                                                                                          onChange={this.handleChange_report}
-                                                                                          placeholder="نام خانوادگی  خود را وارد کنید"/>
-                                                                        </Form.Group>
+
 
                                                                     </Form.Row>
-
+                                                                    <Form.Group>
+                                                                        <Form.Label>نام خانوادگی</Form.Label>
+                                                                        <Form.Control type="text"
+                                                                                      name="last_name"
+                                                                                      id="last_name"
+                                                                                      onChange={this.handleChange_report}
+                                                                                      placeholder="نام خانوادگی  خود را وارد کنید"/>
+                                                                    </Form.Group>
                                                                     <Form.Group>
                                                                         <Form.Label>ایمیل</Form.Label>
                                                                         <Form.Control type="email"
@@ -223,18 +230,17 @@ export default class Support extends React.Component {
                                                                                           placeholder="نام خود را وارد کنید"/>
                                                                         </Form.Group>
 
-                                                                        <Form.Group className="familyfield-desktop"
-                                                                                    as={Col}>
-                                                                            <Form.Label> نام خانوادگی </Form.Label>
-                                                                            <Form.Control type="text"
-                                                                                          name="last_name_suggest"
-                                                                                          id="last_name_suggest"
-                                                                                          onChange={this.handleChange_suggest}
-                                                                                          placeholder="نام خانوادگی  خود را وارد کنید"/>
-                                                                        </Form.Group>
+
 
                                                                     </Form.Row>
-
+                                                                    <Form.Group  >
+                                                                        <Form.Label> نام خانوادگی </Form.Label>
+                                                                        <Form.Control type="text"
+                                                                                      name="last_name_suggest"
+                                                                                      id="last_name_suggest"
+                                                                                      onChange={this.handleChange_suggest}
+                                                                                      placeholder="نام خانوادگی  خود را وارد کنید"/>
+                                                                    </Form.Group>
 
                                                                     <Form.Group>
                                                                         <Form.Label>ایمیل</Form.Label>

@@ -11,11 +11,11 @@ export default class Support extends React.Component {
         return (
             <>
                 <body>
-                <section id="not-found">
-                    <div id="title">Simple Pure CSS3 &bull; 404 Error Page</div>
+                <section id="not-found" className="errorpage_container">
+                    <div id="title">Simple Pure CSS3 &bull; 404 خطای </div>
                     <div className="circles">
                         <p>404<br></br>
-                            <small>PAGE NOT FOUND</small>
+                            <small>این صفحه وجود ندارد</small>
                         </p>
                         <span className="circle big"> </span>
                         <span className="circle med"> </span>
