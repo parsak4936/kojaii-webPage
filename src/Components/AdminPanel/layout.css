@@ -9,6 +9,9 @@ display: grid;
 "form_table"
 "joinus_table";
 }
+.adminpanel-header{
+    padding: 10px;
+}
 .cards{
     padding: 90px;
 display: grid;

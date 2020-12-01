@@ -4,6 +4,7 @@ import  Joinus_table from './Tables/joinus_table'
 import Charts from './Charts/Charts'
 import Card from './Cards/cards'
  import './layout.css'
+import {Button, Col} from "reactstrap";
 
 class DefaultLayout extends Component {
     showSettings (event) {
@@ -14,6 +15,13 @@ class DefaultLayout extends Component {
         return (
             <>
 <div className="AdminContainer">
+    <center>
+        <div className="adminpanel-header">
+            <Button color="primary"  >    خرروج  </Button>
+
+        </div>
+    </center>
+
     <div className="cards">
         <Card/>
     </div>

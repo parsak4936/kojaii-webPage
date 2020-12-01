@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Bar, Doughnut, Line, Pie, Polar, Radar } from 'react-chartjs-2';
-import { Card, CardBody, CardColumns, CardHeader } from 'reactstrap';
+import {   Line  } from 'react-chartjs-2';
+import { Card, CardBody, CardHeader } from 'reactstrap';
 import  './charts.css'
 
 const line = {

@@ -9,3 +9,12 @@
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 54rem) {
+    .J-table-container{
+width: 100%;
+        height: auto;
+
+
+
+    }
+}
