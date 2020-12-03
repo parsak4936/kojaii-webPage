@@ -5,9 +5,6 @@ import Admin from '../AdminPanel'
 import {Redirect} from "react-router-dom";
 import Cookies from 'js-cookie';
 
-
-
-
 class Login extends Component {
 
     constructor(props) {
