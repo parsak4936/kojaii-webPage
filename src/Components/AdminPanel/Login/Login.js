@@ -18,7 +18,7 @@ class Login extends Component {
 
         let username = Cookies.get('username');
         if (typeof username !== 'undefined'){
-            this.props.history.push("/Admin");
+            // this.props.history.push("/Admin");
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -40,8 +40,10 @@ class Login extends Component {
         if(Username==='a' && Password==='a'){
             Cookies.set('username','amirhosein');
             this.props.history.push("Admin");
-        }else if(Username==='' && Password===''){
-            alert("Fields are required");
+        }else if(Username===''){
+            $("#UserName").css("border", "1px solid red");
+        }else if(Password===''){
+            $("#PassWord").css("border", "1px solid red");
         }else {
             alert("password or username is false!")
         }
@@ -51,58 +53,52 @@ class Login extends Component {
 
     render() {
         return (
+            <center>
+                <div style={{marginTop: "40px"}} className="app flex-row align-items-center">
+                    <Container>
+                        <CardGroup style={{width: "500px"}}>
+                            <Card className="p-4" style={{borderRadius: "10px"}}>
+                                <CardBody >
+                                    <Form onSubmit={this.handlesubmit}>
+                                        <center>
+                                            <h2  >ورود به پنل</h2>
+                                        </center>
+                                        <br/>
 
-            <div className="app flex-row align-items-center ">
-                <Container>
-                    <Row className="justify-content-center">
-                        <Col md="8">
-                            <CardGroup>
-                                <Card className="p-4">
-                                    <CardBody>
-                                        <Form  onSubmit={this.handlesubmit}>
-                                            <center>
-                                                <h1  >Login</h1>
-                                            </center>
-                                            <center>
-                                                <p className="   text-muted">Sign In to your account</p>
+                                        <InputGroup className="mb-3">
+                                            <InputGroupAddon addonType="prepend">
+                                                <InputGroupText>
+                                                    <i className=" icon-user"></i>
+                                                </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input type="text" id="UserName" placeholder="نام کاربری"   onChange={this.handleChange} />
+                                        </InputGroup>
+                                        <InputGroup className="mb-4">
+                                            <InputGroupAddon addonType="prepend">
+                                                <InputGroupText>
+                                                    <i className="icon-lock"></i>
+                                                </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input type="password"  id="PassWord" placeholder="رمز عبور"     onChange={this.handleChange}/>
+                                        </InputGroup>
 
-                                            </center>
+                                        <Row >
 
-                                            <InputGroup className="mb-3">
-                                                <InputGroupAddon addonType="prepend">
-                                                    <InputGroupText>
-                                                        <i className=" icon-user"></i>
-                                                    </InputGroupText>
-                                                </InputGroupAddon>
-                                                <Input type="text" id="UserName" placeholder="Username"   onChange={this.handleChange} />
-                                            </InputGroup>
-                                            <InputGroup className="mb-4">
-                                                <InputGroupAddon addonType="prepend">
-                                                    <InputGroupText>
-                                                        <i className="icon-lock"></i>
-                                                    </InputGroupText>
-                                                </InputGroupAddon>
-                                                <Input type="password"  id="PassWord" placeholder="Password"     onChange={this.handleChange}/>
-                                            </InputGroup>
-
-                                            <Row >
-
-                                                <Col xs="6" >
-                                                    <Button color="primary" className="px-4">Login</Button>
-                                                </Col>
+                                            <Col xs="6" >
+                                                <Button color="primary" className="px-4">ورود</Button>
+                                            </Col>
 
 
 
-                                            </Row>
-                                        </Form>
-                                    </CardBody>
-                                </Card>
+                                        </Row>
+                                    </Form>
+                                </CardBody>
+                            </Card>
 
-                            </CardGroup>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                        </CardGroup>
+                    </Container>
+                </div>
+            </center>
         );
     }
 }

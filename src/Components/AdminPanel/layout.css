@@ -1,3 +1,6 @@
+body{
+    background-color: #7CBFF6;
+}
 .AdminContainer{
 display: grid;
     align-items: center;
@@ -46,3 +49,13 @@ display: grid;
 
      }
  }
+
+#nav-menu{
+    display: none !important;
+}
+.navbar{
+    display: none !important;
+}
+.footer-container{
+    display: none !important;
+}
