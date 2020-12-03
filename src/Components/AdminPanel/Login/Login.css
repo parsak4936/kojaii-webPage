@@ -3,12 +3,11 @@
     align-items: center;
     justify-content: center;
 }
-#nav-menu{
-    display: none !important;
-}
-.navbar{
-    display: none !important;
-}
 .card-group{
-   width: 500px;
+   /*width: 500px;*/
+}
+@media (max-width: 500px) {
+    .carding{
+        /*width: 90%;*/
+    }
 }

@@ -18,7 +18,7 @@ class Login extends Component {
 
         let username = Cookies.get('username');
         if (typeof username !== 'undefined'){
-            // this.props.history.push("/Admin");
+            this.props.history.push("/Admin");
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -65,7 +65,7 @@ class Login extends Component {
         }else if(Password===''){
             $("#PassWord").css("border", "1px solid red");
         }else {
-            alert("password or username is false!")
+            $(".span").css("display", "block");
         }
         event.preventDefault();
     }
@@ -76,7 +76,7 @@ class Login extends Component {
             <center>
                 <div style={{marginTop: "40px"}} className="app flex-row align-items-center">
                     <Container>
-                        <CardGroup style={{width: "500px"}}>
+                        <CardGroup className="carding" style={{width: "90%"}}>
                             <Card className="p-4" style={{borderRadius: "10px"}}>
                                 <CardBody >
                                     <Form onSubmit={this.handlesubmit}>
@@ -102,8 +102,11 @@ class Login extends Component {
                                             <Input type="password"  id="PassWord" placeholder="رمز عبور"     onChange={this.handleChange}/>
                                         </InputGroup>
 
+                                        <center>
+                                            <span className="span" style={{color:"red",display:"none"}}>رمز عبور یا نام کاربری اشتباه است</span>
+                                        </center>
+                                        <br/>
                                         <Row >
-
                                             <Col xs="6" >
                                                 <Button color="primary" className="px-4">ورود</Button>
                                             </Col>

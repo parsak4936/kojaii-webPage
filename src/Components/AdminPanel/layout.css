@@ -46,13 +46,3 @@ display: grid;
 
      }
  }
-
-#nav-menu{
-    display: none !important;
-}
-.navbar{
-    display: none !important;
-}
-.footer-container{
-    display: none !important;
-}
