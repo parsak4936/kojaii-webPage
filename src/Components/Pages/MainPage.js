@@ -134,7 +134,7 @@ export default class MainPage extends React.Component {
                                 <br/>
                                 <div>
                                     <Link to='/download'>
-                                        <button type="submit" className="btn btn btn-lg btn-desktop-Bazar">
+                                        <button type="submit" className="btn btn  btn-desktop-google">
 
                                         </button>
                                     </Link>

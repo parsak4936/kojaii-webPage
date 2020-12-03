@@ -3,6 +3,7 @@ import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGr
 import $ from "jquery";
 import Admin from '../AdminPanel'
 import {Redirect} from "react-router-dom";
+import Cookies from 'js-cookie';
 
 
 
@@ -14,9 +15,14 @@ class Login extends Component {
         this.state = {
             username: '', password: ''
         };
+
+        let username = Cookies.get('username');
+        if (typeof username !== 'undefined'){
+            this.props.history.push("/Admin");
+        }
+
         this.handleChange = this.handleChange.bind(this);
         this.handlesubmit = this.handlesubmit.bind(this);
-
     }
 
     handleChange = (event) => {
@@ -31,10 +37,10 @@ class Login extends Component {
     handlesubmit = (event) => {
         var Username = $("#UserName").val();
         var Password = $("#PassWord").val();
-        if(Username==='op' && Password==='9@'){
-            alert('gg')
-           return <Redirect to="/Admin" />;
-        }if(Username==='' && Password===''){
+        if(Username==='a' && Password==='a'){
+            Cookies.set('username','amirhosein');
+            this.props.history.push("Admin");
+        }else if(Username==='' && Password===''){
             alert("Fields are required");
         }else {
             alert("password or username is false!")
@@ -81,9 +87,9 @@ class Login extends Component {
 
                                             <Row >
 
-                                                    <Col xs="6" >
-                                                        <Button color="primary" className="px-4">Login</Button>
-                                                    </Col>
+                                                <Col xs="6" >
+                                                    <Button color="primary" className="px-4">Login</Button>
+                                                </Col>
 
 
 
@@ -101,4 +107,4 @@ class Login extends Component {
     }
 }
 
-export default   Login;
+export default Login;

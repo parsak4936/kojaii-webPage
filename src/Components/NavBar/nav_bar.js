@@ -65,143 +65,141 @@ function Nav_bar() {
 //-----------------------------------------------//
 
 
-
 //-----------------------------------------------//
 
     return (
         <>
             <AbsoluteWrapper>
-            <nav
-                className={location.pathname === "/home" | location.pathname === "/"
-                    ? "navbar navbar-default navbar-expand-lg nav-menu show-on-scroll" :
-                    "navbar   navbar-expand-lg nav-menu-black show-on-scroll"}
+                <nav
+                    className={location.pathname === "/home" | location.pathname === "/"
+                        ? "navbar navbar-default navbar-expand-lg nav-menu show-on-scroll" :
+                        "navbar   navbar-expand-lg nav-menu-black show-on-scroll"}
 
-                id="nav-menu">
+                    id="nav-menu">
 
-                <div className="container-fluid">
-                    <div className="navbar-btn-download">
-                        <button className="btn  btn-outline-info"  >
-                            <i className='fa fa-download'/> دانلود      <span>  </span>
+                    <div className="container-fluid">
+                        <div className="navbar-btn-download">
+                            <button className="btn  btn-outline-info">
+                                <i className='fa fa-download'/> دانلود <span>  </span>
+                            </button>
+
+
+                        </div>
+
+                        <button onClick={classChange} id="toggle" className="navbar-toggler" type="button"
+                                data-toggle="collapse"
+                                data-target="#myNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                            <div className="line1 ham"></div>
+                            <div className="line2 ham"></div>
+                            <div className="line3 ham"></div>
                         </button>
-
-
-                    </div>
-
-                    <button onClick={classChange} id="toggle" className="navbar-toggler" type="button"
-                            data-toggle="collapse"
-                            data-target="#myNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <div className="line1 ham"> </div>
-                        <div className="line2 ham"> </div>
-                        <div className="line3 ham"> </div>
-                    </button>
-                    <div className="nav-bar-logo" id="logo-in-navbar">
-                        <img className="logo-nav-mobile" src={LOGO} width="120px " alt=" "/>
-                    </div>
-
-                    <div className='collapse navbar-collapse justify-content-end' id="myNavbar">
-
-                        <ul className="navbar-nav ml-aulo navba-ul">
-
-                            <li className="nav-item">
-                                <Link className="nav-link m-2 menu-item" to="/blog">
-                                    بلاگ
-                                </Link>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link className="nav-link m-2 menu-item" to="/support">
-                                    پشتیبانی
-                                </Link>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link className="nav-link m-2 menu-item" to="/ContactUs">
-                                    ارتباط با ما
-                                </Link>
-
-                            </li>
-
-                            <li className="nav-item">
-                                <Link className="nav-link m-2 menu-item nav-active active" to="/home">
-                                    خانه
-                                </Link>
-
-                            </li>
-
-                            <li className="nav-item">
-                                <img className="logo-nav-desktop" src={LOGO} width="120px "/>
-                            </li>
-
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-            </nav>
-
-
-            <section
-                className={location.pathname === "/home" | location.pathname === "/" ? "hero-section" : "  hero-section-blank"}>
-
-                <div className="container-fluid">
-
-                    <div className="row justify-content-center">
-
-                        <div className="col-12 download-text">
-                            <ScrollAnimation className="text-hero text-center text-white text-uppercase"
-                                             animateIn='animate__fadeIn'>
-                                <h1> جهت دانلود <span className="kojaii">کجایی</span> کلیک کنید </h1>
-
-                            </ScrollAnimation>
+                        <div className="nav-bar-logo" id="logo-in-navbar">
+                            <img className="logo-nav-mobile" src={LOGO} width="120px " alt=" "/>
                         </div>
 
-                        <div className="col-12">
-<center>
-    <div className="  btn-hero lead text-center">
+                        <div className='collapse navbar-collapse justify-content-end' id="myNavbar">
 
-        <div className="download-btns">
+                            <ul className="navbar-nav ml-aulo navba-ul">
 
-            <ScrollAnimation animateIn='animate__bounceInRight'>
-                <Link
-                    to='/download'
-                    onClick={closeMobileMenu}
-                >
-                    <button type="submit"
-                            className="btn btn btn-lg btn-desktop-Bazar  btn-primary"> </button>
-                </Link>
-            </ScrollAnimation>
+                                <li className="nav-item">
+                                    <Link className="nav-link m-2 menu-item" to="/blog">
+                                        بلاگ
+                                    </Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link className="nav-link m-2 menu-item" to="/support">
+                                        پشتیبانی
+                                    </Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link className="nav-link m-2 menu-item" to="/ContactUs">
+                                        ارتباط با ما
+                                    </Link>
+
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link className="nav-link m-2 menu-item nav-active active" to="/home">
+                                        خانه
+                                    </Link>
+
+                                </li>
+
+                                <li className="nav-item">
+                                    <img className="logo-nav-desktop" src={LOGO} width="120px "/>
+                                </li>
 
 
-            <ScrollAnimation animateIn='animate__bounceInLeft'>
-                <Link
-                    to='/download'
-                    onClick={closeMobileMenu}
-                >
-                    <button type="button"
-                            className="btn btn  btn-desktop-google   btn-primary"> </button>
-                </Link>
-            </ScrollAnimation>
-
-
-        </div>
-
-
-    </div>
-</center>
-
-
+                            </ul>
 
                         </div>
 
                     </div>
 
-                </div>
 
-            </section>
+                </nav>
+
+
+                <section
+                    className={location.pathname === "/home" | location.pathname === "/" ? "hero-section" : "  hero-section-blank"}>
+
+                    <div className="container-fluid">
+
+                        <div className="row justify-content-center">
+
+                            <div className="col-12 download-text">
+                                <ScrollAnimation className="text-hero text-center text-white text-uppercase"
+                                                 animateIn='animate__fadeIn'>
+                                    <h1> جهت دانلود <span className="kojaii">کجایی</span> کلیک کنید </h1>
+
+                                </ScrollAnimation>
+                            </div>
+
+                            <div className="col-12">
+                                <center>
+                                    <div className="  btn-hero lead text-center">
+
+                                        <div className="download-btns">
+
+                                            <ScrollAnimation animateIn='animate__bounceInRight'>
+                                                <Link
+                                                    to='/download'
+                                                    onClick={closeMobileMenu}
+                                                >
+                                                    <button type="submit"
+                                                            className="btn btn btn-lg btn-desktop-Bazar  btn-primary"></button>
+                                                </Link>
+                                            </ScrollAnimation>
+
+
+                                            <ScrollAnimation animateIn='animate__bounceInLeft'>
+                                                <Link
+                                                    to='/download'
+                                                    onClick={closeMobileMenu}
+                                                >
+                                                    <button type="button"
+                                                            className="btn btn  btn-desktop-google   btn-primary"></button>
+                                                </Link>
+                                            </ScrollAnimation>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </center>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
             </AbsoluteWrapper>
         </>
     );
