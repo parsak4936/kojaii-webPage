@@ -37,7 +37,27 @@ class Login extends Component {
     handlesubmit = (event) => {
         var Username = $("#UserName").val();
         var Password = $("#PassWord").val();
-        if(Username==='a' && Password==='a'){
+
+        let passing = false;
+
+        $.ajax({
+            url: 'https://kojaii.herokuapp.com/api/web-login',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                username: Username,
+                password: Password
+            },
+            async: false,
+            complete: function(r){
+                if(r.status === 200){
+                    passing = true
+                }
+            }
+        });
+
+
+        if(passing){
             Cookies.set('username','amirhosein');
             this.props.history.push("Admin");
         }else if(Username===''){
