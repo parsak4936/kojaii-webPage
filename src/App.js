@@ -15,6 +15,13 @@ import {useTransition, animated} from "react-spring";
 import {useLocation} from "react-use";
 import NotFound from './Components/Pages/404'
 import ProtectedRoutes from './ProtectedRoute'
+import { create } from 'jss';
+import rtl from 'jss-rtl';
+import { StylesProvider, jssPreset , ThemeProvider } from '@material-ui/core/styles';
+import CustomTheme from "./assets/CustomTheme";
+
+// Configure JSS
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
 function App() {
 
@@ -36,7 +43,8 @@ function App() {
     console.log(location.pathname);
 
     return (
-        <>
+        <ThemeProvider theme={CustomTheme}>
+        <StylesProvider jss={jss}>
             <BrowserRouter>
                 <div id="navbarID" className="navbar-container  ">
                     <Navbar/>
@@ -66,7 +74,8 @@ function App() {
 
             </BrowserRouter>
 
-        </>
+           </StylesProvider>
+        </ThemeProvider>
     );
 
 }

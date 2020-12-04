@@ -3,10 +3,9 @@ import './Support.css'
 // import {Tab, Row, Col, Nav, Form} from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Button from "react-bootstrap/Button";
-import AbsoluteWrapper from "../AbsoluteWrapper";
 import sup_img from '../Images/Support.svg'
 import bug_img from '../Images/bugrepo.png'
-// import $ from "jquery";
+import $ from "jquery";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -58,7 +57,8 @@ const useStyles = makeStyles((theme) => ({
         "& > *": {
             margin: theme.spacing(1)
         }
-    }
+    },
+    direction: 'rtl',
 }));
 
 export default function CenteredTabs() {
@@ -88,14 +88,15 @@ export default function CenteredTabs() {
                             <img className="images" src={bug_img} style={{float :"left"}}/>
                             <form dir="rtl" className={classes.formStyle} noValidate autoComplete="off">
 
-                                <TextField dir="rtl" className="names" id="standard-basic" label="نام" placeholder="" />
-                                <TextField className="names" id="standard-basic" label="نام خانوادگی" />
+                                <TextField dir="rtl" className="names" id="standard-basic" label="نام" placeholder="" required/>
+                                <TextField className="names" id="standard-basic" label="نام خانوادگی" required/>
                                 <br/>
                                 <TextField
                                     className="fields"
                                     type="email"
                                     id="standard-basic"
                                     label="ایمیل"
+                                    required
                                 />
                                 <br/>
                                 <TextField
@@ -104,10 +105,11 @@ export default function CenteredTabs() {
                                     multiline
                                     rows={2}
                                     rowsMax={4}
+                                    required
                                 />
                             </form>
                             <div className="submit-btn">
-                                <Button variant="contained" color="primary">
+                                <Button type="submit" variant="contained" color="primary">
                                     تایید و ارسال
                                 </Button>
                             </div>
@@ -116,15 +118,16 @@ export default function CenteredTabs() {
                             <img className="images" src={sup_img} style={{float :"left"}}/>
                             <form dir="rtl" className={classes.formStyle} noValidate autoComplete="off">
 
-                                <TextField dir="rtl" className="names" id="standard-basic" label="نام" placeholder="" />
+                                <TextField dir="rtl" className="names" id="standard-basic" label="نام" placeholder="" required />
 
-                                <TextField className="names" id="standard-basic" label="نام خانوادگی" />
+                                <TextField className="names" id="standard-basic" label="نام خانوادگی" required />
                                 <br/>
                                 <TextField
                                     className="fields"
                                     type="email"
                                     id="standard-basic"
                                     label="ایمیل"
+                                    required
                                 />
                                 <br/>
                                 <TextField
@@ -133,10 +136,14 @@ export default function CenteredTabs() {
                                     multiline
                                     rows={2}
                                     rowsMax={4}
+                                    required
                                 />
                             </form>
+                            <Button type="submit" variant="contained" color="primary">
+                                تایید و ارسال
+                            </Button>
                             <div className="submit-btn">
-                                <Button variant="contained" color="primary">
+                                <Button type="submit" variant="contained" color="primary">
                                     تایید و ارسال
                                 </Button>
                             </div>
