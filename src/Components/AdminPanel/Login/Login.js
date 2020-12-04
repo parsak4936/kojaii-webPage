@@ -101,16 +101,10 @@ class Login extends Component {
 
                                         <center>
                                             <span className="span" style={{color:"red",display:"none"}}>رمز عبور یا نام کاربری اشتباه است</span>
+                                            <br/>
+                                            <Button color="primary" className="px-4">ورود</Button>
                                         </center>
                                         <br/>
-                                        <Row >
-                                            <Col xs="6" >
-                                                <Button color="primary" className="px-4">ورود</Button>
-                                            </Col>
-
-
-
-                                        </Row>
                                     </Form>
                                 </CardBody>
                             </Card>
