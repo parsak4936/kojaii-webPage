@@ -1,5 +1,5 @@
 * {
-    text-decoration: none;
+    text-decoration: none !important;
     font-family: "Iranian Sans", sans-serif;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .txt_sup-:hover {
-    text-decoration: none;
+    text-decoration: none !important;
 
 }
 

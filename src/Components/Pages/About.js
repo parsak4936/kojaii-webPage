@@ -34,7 +34,7 @@ import {Link} from "react-router-dom";
                 </div>
 
                 <div className="c-socials-container">
-                    <ScrollAnimation classname="c-socials " animateIn='animate__fadeIn'>
+                    <div classname="c-socials "  >
                         <Link
                             className=' sup-email'
                             to='/'
@@ -48,37 +48,43 @@ import {Link} from "react-router-dom";
 
                         </Link>
 
-                        <Link
+
+                        <a
                             className=' sup-insta'
-                            to='/'
-                            target='_blank'
                             aria-label='instagram'
-                        >
+                            target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
                             <span className= "txt_sup-" > @kojaii    </span>
 
 
                             <i className='fa  fa-instagram  sup-icons fa-2x '/>
+                        </a>
 
-                        </Link>
-                        <Link
+
+
+
+
+
+                        <a
                             className=' sup-tweeter'
-                            to='/'
-                            target='_blank'
                             aria-label=' tweeter'
-                        >
+                            target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
                             <span className= "txt_sup-" >  @kojaii   </span>
 
                             <span>      </span>
 
                             <i className='fa  fa-twitter  sup-icons fa-2x '/>
-
-                        </Link>
-
+                        </a>
 
 
 
 
-                    </ScrollAnimation>
+
+
+
+
+
+
+                    </div>
 
                 </div>
 
