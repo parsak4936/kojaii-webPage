@@ -22,15 +22,16 @@ function Footer() {
                 </div>
 
                     <div className='social-icons'>
-                        <Link
+                        <a
                             className='social-icon-link twitter'
-                            to='/'
-                            target='_blank'
                             aria-label='twitter'
-                        >
+                            target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
                             <i className='fab fa-twitter'/>
+                        </a>
 
-                        </Link>
+
+
+
                         <Link
                             className='social-icon-link facebook'
                             to='/'
@@ -40,15 +41,14 @@ function Footer() {
                             <i className='fab fa-facebook'/>
 
                         </Link>
-                        <Link
+                        <a
                             className='social-icon-link telegram'
-                            to='/'
-                            target='_blank'
                             aria-label='telegram'
-                        >
+                            target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
                             <i className='fab fa-telegram'/>
+                        </a>
 
-                        </Link>
+
 
                         <Link
                             className='social-icon-link instagram'

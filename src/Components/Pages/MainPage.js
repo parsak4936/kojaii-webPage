@@ -25,7 +25,7 @@ export default class MainPage extends React.Component {
     }
 
 
-//TODO 4) slideshow ? (should check later)
+
 
     handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value, [event.target.phone]: event.target.value}

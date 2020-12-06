@@ -122,7 +122,7 @@ function Nav_bar() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link m-2 menu-item nav-active active" to="/home">
+                                    <Link className="nav-link m-2 menu-item nav-active active" to="/">
                                         خانه
                                     </Link>
 
@@ -144,7 +144,7 @@ function Nav_bar() {
 
 
                 <section
-                    className={location.pathname === "/home" | location.pathname === "/" ? "hero-section" : "  hero-section-blank"}>
+                    className={location.pathname === "/" ? "hero-section" : "  hero-section-blank"}>
 
                     <div className="container-fluid">
 
