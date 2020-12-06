@@ -57,22 +57,6 @@ const useStyles = makeStyles((theme) => ({
     direction: 'rtl',
 }));
 
-let first_name;
-
-function handleSubmit_report() {
-    // var first_name = $(".first_name");
-    // var last_name = $(".last_name").val();
-    // var email = $(".email").val();
-    // var field_text = $(".field_text").val();
-    // var type = $("#type").val();
-
-    console.log(first_name);
-    // console.log(last_name);
-    // console.log(email);
-
-
-}
-
 export default function CenteredTabs() {
 
     const classes = useStyles();
@@ -98,6 +82,8 @@ export default function CenteredTabs() {
             $('#error').css('display', 'block');
             $("#error").html('لطفا تمام فیلد ستاره دار را تکمیل فرمایید');
         }else if(!email.match(re)){
+            $('#error').css('display', 'block');
+            $("#error").html('لطفا ایمیل را صحیح وارد بفرمایید');
         }else {
             $.ajax({
                 url: 'https://kojaii.herokuapp.com/api/supports',
@@ -246,147 +232,4 @@ export default function CenteredTabs() {
         </>
     );
 }
-
-
-// export default class Support extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             last_name: '', first_name: '', email: '', field_text: ''
-//         };
-//         this.handleChange_report = this.handleChange_report.bind(this);
-//         this.handleChange_suggest = this.handleChange_suggest.bind(this);
-//         this.handleSubmit_report = this.handleSubmit_report.bind(this);
-//         this.handleSubmit_suggest = this.handleSubmit_suggest.bind(this);
-//     }
-//
-//     handleChange_report = (event) => {
-//         this.setState({
-//                 [event.target.first_name]: event.target.value, [event.target.email]: event.target.value,
-//                 [event.target.last_name]: event.target.value, [event.target.field_text]: event.target.value,
-//             }
-//         );
-//         console.log('as')
-//     }
-//     handleChange_suggest = (event) => {
-//         this.setState({
-//                 [event.target.first_name]: event.target.value, [event.target.email]: event.target.value,
-//                 [event.target.last_name]: event.target.value, [event.target.field_text]: event.target.value,
-//             }
-//         );
-//         console.log('asd')
-//     }
-//     handleSubmit_suggest = (event) => {
-//         var first_name_suggest = $("#first_name_suggest").val();
-//         var last_name_suggest = $("#last_name_suggest").val();
-//         var email_suggest = $("#email_suggest").val();
-//         var field_text_suggest = $("#field_text_suggest").val();
-//         var type_suggest = $("#type_suggest").val();
-//
-//         var request = $.ajax({
-//             url: 'https://kojaii.herokuapp.com/api/supports',
-//             type: 'POST',
-//             dataType: 'json',
-//             data: {
-//                 first_name: first_name_suggest,
-//                 last_name: last_name_suggest,
-//                 email: email_suggest,
-//                 text: field_text_suggest,
-//                 type: type_suggest
-//             },
-//             async: false,
-//             complete: function(r){
-//                 if(r.status === 200){
-//                     alert( ' درخواست  شما با موفقیت ارسال  شد');
-//                 }else{
-//                     alert(JSON.parse(r.responseText)['message']);
-//                 }
-//             }
-//         });
-//         event.preventDefault();
-//     }
-//
-//     handleSubmit_report = (event) => {
-//         var first_name = $("#first_name").val();
-//         var last_name = $("#last_name").val();
-//         var email = $("#email").val();
-//         var field_text = $("#field_text").val();
-//         var type = $("#type").val();
-//
-//         $.ajax({
-//             url: 'https://kojaii.herokuapp.com/api/supports',
-//             type: 'POST',
-//             dataType: 'json',
-//             data: {
-//                 first_name: first_name,
-//                 last_name: last_name,
-//                 email: email,
-//                 text: field_text,
-//                 type: type
-//             },
-//             async: false,
-//             complete: function(r){
-//                 if(r.status === 200){
-//                     alert(first_name + last_name + ' فرم  شما با موفقیت ارسال  شد');
-//                 }else{
-//                     alert(JSON.parse(r.responseText)['message']);
-//                 }
-//             }
-//         });
-//         event.preventDefault();
-//     }
-//
-//     render() {
-//         return (
-//             <>
-//                 <AbsoluteWrapper>
-//                     <div >
-//                         <Paper className="card" elevation={3}>
-//                             <Paper className={classes.root}>
-//                                 <Tabs
-//                                     value={value}
-//                                     onChange={handleChange}
-//                                     indicatorColor="primary"
-//                                     textColor="primary"
-//                                     centered
-//                                 >
-//                                     <Tab label="گزارش خطا برنامه" {...a11yProps(0)} />
-//                                     <Tab label="انتقادات و پیشنهادات" {...a11yProps(1)} />
-//                                 </Tabs>
-//                             </Paper>
-//                             <TabPanel value={value} index={0}>
-//                                 <form className={classes.formStyle} noValidate autoComplete="off">
-//                                     <TextField id="standard-basic" label="نام" placeholder="" />
-//                                     <TextField id="standard-basic" label="نام خانوادگی" />
-//                                     <TextField
-//                                         style={{ width: "100%" }}
-//                                         type="email"
-//                                         id="standard-basic"
-//                                         label="ایمیل"
-//                                     />
-//                                     <TextField
-//                                         label="گزارش خطا"
-//                                         style={{ width: "100%" }}
-//                                         multiline
-//                                         rows={2}
-//                                         rowsMax={4}
-//                                     />
-//                                 </form>
-//                                 <div className="submit-btn">
-//                                     <Button variant="contained" color="primary">
-//                                         تایید و ارسال
-//                                     </Button>
-//                                 </div>
-//                             </TabPanel>
-//                             <TabPanel value={value} index={1}>
-//                                 Item Two
-//                             </TabPanel>
-//                         </Paper>
-//                     </div>
-//                 </AbsoluteWrapper>
-//
-//             </>
-//         )
-//     }
-// }
 
