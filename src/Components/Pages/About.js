@@ -44,7 +44,7 @@ import {Link} from "react-router-dom";
 
                             <span className= "txt_sup" >   kojaii@gmail.com   </span>
 
-                            <i className='fa  fa-envelope sup-icons fa-2x '/>
+                            <i className='fa  fa-envelope-o  sup-icons fa-2x '/>
 
                         </Link>
 
@@ -53,9 +53,9 @@ import {Link} from "react-router-dom";
                             className=' sup-insta'
                             aria-label='instagram'
                             target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
-                            <span className= "txt_sup-" > @kojaii    </span>
+                            <span className= "txt_sup-" > @kojaii        </span>
 
-
+                            <span   >        </span>
                             <i className='fa  fa-instagram  sup-icons fa-2x '/>
                         </a>
 
@@ -70,7 +70,7 @@ import {Link} from "react-router-dom";
                             target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
                             <span className= "txt_sup-" >  @kojaii   </span>
 
-                            <span>      </span>
+                            <span>          </span>
 
                             <i className='fa  fa-twitter  sup-icons fa-2x '/>
                         </a>

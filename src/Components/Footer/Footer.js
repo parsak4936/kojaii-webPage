@@ -29,36 +29,18 @@ function Footer() {
                             <i className='fab fa-twitter'/>
                         </a>
 
-
-
-
-                        <Link
-                            className='social-icon-link facebook'
-                            to='/'
-                            target='_blank'
-                            aria-label='facebook'
-                        >
-                            <i className='fab fa-facebook'/>
-
-                        </Link>
                         <a
                             className='social-icon-link telegram'
                             aria-label='telegram'
                             target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
                             <i className='fab fa-telegram'/>
                         </a>
-
-
-
-                        <Link
+                        <a
                             className='social-icon-link instagram'
-                            to='/'
-                            target='_blank'
                             aria-label='Instagram'
-                        >
+                            target="_blank" href="    https://www.instagram.com/kojaii_ir/">
                             <i className='fab fa-instagram'/>
-                        </Link>
-
+                        </a>
 
                     </div>
 
