@@ -154,7 +154,7 @@
     width: 40%
 }
 .names{
-    direction: ltr;
+    direction: rtl;
     width: 19% !important;
 }
 @media (max-width: 850px) {
