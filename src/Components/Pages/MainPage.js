@@ -11,7 +11,7 @@ import Logo from "../Images/LOGO.png";
 import $ from "jquery";
 import {Link} from "react-router-dom";
 import AbsoluteWrapper from "../AbsoluteWrapper";
-
+import notif_logo from '../Images/notifiction-Logoo.png'
 
 export default class MainPage extends React.Component {
     constructor(props) {
@@ -68,7 +68,7 @@ export default class MainPage extends React.Component {
                         title="به کجایی خوش آمدید"
                         subtitle="نظرات و پیشنهادات خود را با ما در میان بگذارید"
                         link=""
-                        imageSource={Logo}
+                        imageSource={notif_logo}
                         daysToLive={3}
                         secondsBeforeBannerShows={5}
                         closeIconSize={30}

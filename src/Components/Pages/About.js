@@ -35,27 +35,26 @@ import {Link} from "react-router-dom";
 
                 <div className="c-socials-container">
                     <div classname="c-socials "  >
-                        <Link
+                        <a
                             className=' sup-email'
-                            to='/'
-                            target='_blank'
+                            target="_blank"
+                            href=" mailto:kojaii.info@gmail.com"
                             aria-label='email'
                         >
 
-                            <span className= "txt_sup" >   kojaii@gmail.com   </span>
+                            <span className= "txt_sup" > kojaii.info@gmail.com  </span>
 
                             <i className='fa  fa-envelope-o  sup-icons fa-2x '/>
+                        </a>
 
-                        </Link>
 
 
                         <a
                             className=' sup-insta'
                             aria-label='instagram'
-                            target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
-                            <span className= "txt_sup-" > @kojaii        </span>
+                            target="_blank" href="   https://www.instagram.com/kojaii_ir/">
+                            <span className= "txt_sup-" > @kojaii_ir   </span>
 
-                            <span   >        </span>
                             <i className='fa  fa-instagram  sup-icons fa-2x '/>
                         </a>
 
@@ -68,7 +67,7 @@ import {Link} from "react-router-dom";
                             className=' sup-tweeter'
                             aria-label=' tweeter'
                             target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
-                            <span className= "txt_sup-" >  @kojaii   </span>
+                            <span className= "txt_sup-" >  @kojaii_ir   </span>
 
                             <span>          </span>
 
