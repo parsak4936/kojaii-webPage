@@ -2,8 +2,7 @@ import React from 'react';
 import contactUs from '../Images/ContactUs.svg'
 import AbsoluteWrapper from "../AbsoluteWrapper";
 import './About.css'
-import ScrollAnimation from "react-animate-on-scroll";
-import {Link} from "react-router-dom";
+
  
 
  function About() {
@@ -34,7 +33,7 @@ import {Link} from "react-router-dom";
                 </div>
 
                 <div className="c-socials-container">
-                    <div classname="c-socials "  >
+                    <div className="c-socials "  >
                         <a
                             className=' sup-email'
                             target="_blank"

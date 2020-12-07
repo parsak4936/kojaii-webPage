@@ -3,14 +3,13 @@ import ContactUs from './Components/Pages/About';
 import Download from './Components/Pages/Download';
 import HomePage from './Components/Pages/MainPage';
 import Footer from './Components/Footer/Footer'
-import $ from "jquery";
 import Navbar from './Components/NavBar/nav_bar';
 import sup from './Components/Pages/Support';
 import blog from './Components/Pages/Blog';
-import React, {useState} from "react";
+import React  from "react";
 import Login from './Components/AdminPanel/Login/Login';
 import Admin from './Components/AdminPanel/AdminPanel';
-import {BrowserRouter, Switch, Route, Link, Redirect,withRouter} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {useTransition, animated} from "react-spring";
 import {useLocation} from "react-use";
 import NotFound from './Components/Pages/404'

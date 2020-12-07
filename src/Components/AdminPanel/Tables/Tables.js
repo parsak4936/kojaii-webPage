@@ -31,8 +31,6 @@ const usersData = [
     {id: 42, نام_و_نام_خانوادگی: 'Ford Prefect', تاریخ: '2001/05/25', ایمیل: 'Lubo. .pk@gmail.com', status: 'پیشنهادات',text:'lorem'}
 ]
 
-// const [items, setItems] = useState(usersData)
-
 
 
 const fields = [

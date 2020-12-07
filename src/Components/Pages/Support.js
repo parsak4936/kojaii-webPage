@@ -62,7 +62,7 @@ export default function CenteredTabs() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
-    let kind;
+
 
     const [firstname, setfirstName] = React.useState("");
     const [lastname, setlastName] = React.useState("");

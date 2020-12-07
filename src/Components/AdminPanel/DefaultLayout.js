@@ -1,38 +1,44 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import Form_Tables from './Tables/Tables'
 import Joinus_table from './Tables/joinus_table'
 import Charts from './Charts/Charts'
 import Card from './Cards/cards'
 import './layout.css'
-import Cookies from "js-cookie";
+import axios from "axios";
 
-class DefaultLayout extends Component {
-    constructor(props) {
-        super(props);
 
-        let username = Cookies.get('username');
-        if (typeof username === 'undefined'){
-            this.props.history.push("/Login");
-        }
+const DefaultLayout = () => {
+    const url = 'https://kojaii.herokuapp.com/api/get-admin-data'
+    const [data, setData] = useState([])
 
-        this.handleLogout = this.handleLogout.bind(this);
-    }
+    useEffect(() => {
+        axios.get(url).then(json => setData(json.data))
+    }, [])
 
-    handleLogout() {
 
-    }
 
-    showSettings(event) {
-        event.preventDefault();
+     //   let username = Cookies.get('username');
+     //   if (typeof username === 'undefined'){
+    //        this.props.history.push("/Login");
+    //    }
+//
+    //    this.handleLogout = this.handleLogout.bind(this);
+  //  }
 
-    }
 
-    render() {
+  //  showSettings(event) {
+   //     event.preventDefault();
+
+   // }
+
+
         return (
             <>
+
                 <div className="AdminContainer">
                     <div className="cards">
                         <Card/>
+
                     </div>
 
 
@@ -46,7 +52,8 @@ class DefaultLayout extends Component {
                     </div>
 
                     <div className="joinus_table">
-                        <Joinus_table/>
+                        <Joinus_table   data ={data} />
+
                     </div>
 
 
@@ -55,7 +62,7 @@ class DefaultLayout extends Component {
 
             </>
         );
-    }
+
 }
 
 export default DefaultLayout;

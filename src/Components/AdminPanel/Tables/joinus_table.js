@@ -1,6 +1,5 @@
 import React  from "react";
-
-import {CBadge, CButton, CCardBody, CCollapse, CDataTable} from "@coreui/react/es";
+import {CButton, CCardBody, CCollapse, CDataTable} from "@coreui/react/es";
 import './joinus_table.css'
 
 const usersData = [
@@ -45,10 +44,10 @@ const fields = [
 
 
 
-export default class Table1 extends React.Component {
+export default function Table1 ({data})  {
+console.log(data)
 
 
-    render() {
         return (
             <>
                 <div className="J-table-container">
@@ -108,7 +107,7 @@ export default class Table1 extends React.Component {
             </>
         );
 
-    }
+
 
 
 }
