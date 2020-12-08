@@ -3,7 +3,7 @@ import SLIDE_V2 from '../SlideSow/slideshow_v2'
 import './MainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import join_Us_img from '../Images/Joinus.svg';
-import intro_img from '../Images/intro.gif';
+import intro_img from '../Images/intro2.gif';
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Announcement from "react-announcement";
