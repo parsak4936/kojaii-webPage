@@ -3,6 +3,7 @@ import {  Card, CardBody, CardHeader, Col, Row} from 'reactstrap';
 import  'react-chartjs-2';
 import {Line,Bar,} from "react-chartjs-2";
 import './cards.css'
+import numbers from '../../Images/Bazar.png'
 
 const makeSocialBoxData = (dataSetNo) => {
     const socialBoxData = [
@@ -81,6 +82,7 @@ function  Cards ({groupnumber  ,  usernumber}){
                                تعداد کاربر
                             </CardHeader>
                             <CardBody>
+                                <img src={numbers} style={{width:"100%"}}/>
                                 <div className="container">
                                     <div className="grid-container">
                                         <div className="grid-item">کاربر</div>

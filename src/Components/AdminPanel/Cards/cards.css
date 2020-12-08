@@ -27,7 +27,7 @@
     padding: 10px;
 }
 .grid-item {
-    border-right: 1px solid rgba(0, 0, 0, 0.8);
+    border-right: 2px solid white;
     padding: 20px;
     font-size: 30px;
     text-align: center;
