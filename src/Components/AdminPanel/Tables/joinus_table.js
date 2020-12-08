@@ -30,14 +30,9 @@ const usersData = [
     {id: 42, نام_و_نام_خانوادگی: 'Ford Prefect', تاریخ: '2001/05/25', شماره: '09196948565' }
 ]
 
-// const [items, setItems] = useState(usersData)
-
-
-
-const fields = [
-    { key: 'نام_و_نام_خانوادگی', _style: { width: '30%'} },
-    'تاریخ',
-    { key: 'شماره', _style: { width: '40%'} },
+const fields = ['id',
+    { key: 'name', _style: { width: '30%'} },
+    { key: 'phone', _style: { width: '40%'} },
 
 ]
 
@@ -53,7 +48,7 @@ console.log(data)
                 <div className="J-table-container">
                     <div className="J-Header"> <h1>Joius</h1></div>
                     <CDataTable
-                        items={usersData}
+                        items={data}
                         fields={fields}
                         columnFilter
                         tableFilter

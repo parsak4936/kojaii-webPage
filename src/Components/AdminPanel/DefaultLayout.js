@@ -14,9 +14,12 @@ const DefaultLayout = () => {
     useEffect(() => {
         axios.get(url).then(json => setData(json.data))
     }, [])
-
-
-
+const json_to_string = JSON.stringify(data);
+console.log(json_to_string)
+    const Joinus_data = JSON.parse(json_to_string)
+    //joinus object
+console.log(Joinus_data.join_us)
+    console.log(Joinus_data.supports)
      //   let username = Cookies.get('username');
      //   if (typeof username === 'undefined'){
     //        this.props.history.push("/Login");
@@ -48,11 +51,11 @@ const DefaultLayout = () => {
 
 
                     <div className="form_table">
-                        <Form_Tables/>
+                        <Form_Tables  data ={Joinus_data.supports}/>
                     </div>
 
                     <div className="joinus_table">
-                        <Joinus_table   data ={data} />
+                        <Joinus_table   data ={Joinus_data.join_us} />
 
                     </div>
 
