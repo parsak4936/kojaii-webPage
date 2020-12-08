@@ -30,9 +30,6 @@ const line = {
     ],
 };
 
-
-
-
 const options = {
     tooltips: {
         enabled: false,
@@ -41,8 +38,8 @@ const options = {
     maintainAspectRatio: false
 }
 
-class Charts extends Component {
-    render() {
+function Charts ({data}){
+
         return (
             <div className="animated fadeIn chart_container">
         <div  >
@@ -65,7 +62,7 @@ class Charts extends Component {
 
             </div>
         );
-    }
+
 }
 
 export default Charts;

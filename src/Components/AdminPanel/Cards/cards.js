@@ -53,28 +53,9 @@ const socialChartOpts = {
         },
     },
 };
-class Cards extends Component {
-    constructor(props) {
-        super(props);
-
-        this.toggle = this.toggle.bind(this);
-        this.toggleFade = this.toggleFade.bind(this);
-        this.state = {
-            collapse: true,
-            fadeIn: true,
-            timeout: 300
-        };
-    }
-
-    toggle() {
-        this.setState({ collapse: !this.state.collapse });
-    }
-
-    toggleFade() {
-        this.setState((prevState) => { return { fadeIn: !prevState }});
-    }
-
-    render() {
+function  Cards ({groupnumber  ,  usernumber}){
+    console.log(groupnumber)
+    console.log(usernumber)
         return (
             <div className="animated fadeIn card-container">
 
@@ -133,7 +114,7 @@ class Cards extends Component {
                 </Row>
             </div>
         );
-    }
+
 }
 
 export default Cards;

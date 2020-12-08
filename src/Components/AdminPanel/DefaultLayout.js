@@ -16,10 +16,10 @@ const DefaultLayout = () => {
     }, [])
 const json_to_string = JSON.stringify(data);
 console.log(json_to_string)
-    const Joinus_data = JSON.parse(json_to_string)
+    const API_data = JSON.parse(json_to_string)
     //joinus object
-console.log(Joinus_data.join_us)
-    console.log(Joinus_data.supports)
+console.log(API_data.join_us)
+    console.log(API_data.supports)
      //   let username = Cookies.get('username');
      //   if (typeof username === 'undefined'){
     //        this.props.history.push("/Login");
@@ -40,22 +40,22 @@ console.log(Joinus_data.join_us)
 
                 <div className="AdminContainer">
                     <div className="cards">
-                        <Card/>
+                        <Card  groupnumber ={ API_data.group_number } usernumber = {API_data.users_number}/>
 
                     </div>
 
 
                     <div className="charts">
-                        <Charts/>
+                        <Charts />
                     </div>
 
 
                     <div className="form_table">
-                        <Form_Tables  data ={Joinus_data.supports}/>
+                        <Form_Tables  data ={API_data.supports}/>
                     </div>
 
                     <div className="joinus_table">
-                        <Joinus_table   data ={Joinus_data.join_us} />
+                        <Joinus_table   data ={API_data.join_us} />
 
                     </div>
 
