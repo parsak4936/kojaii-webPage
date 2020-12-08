@@ -25,8 +25,8 @@ function Footer() {
                         <a
                             className='social-icon-link twitter'
                             aria-label='twitter'
-                            target="_blank" href=" https://web.telegram.org/#/im?p=@kojaii_ir">
-                            <i className='fab fa-twitter'/>
+                            target="_blank"  href="mailto:kojaii.info@gmail.com">
+                            <i className='fa fa-envelope'/>
                         </a>
 
                         <a
