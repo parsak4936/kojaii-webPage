@@ -69,9 +69,7 @@ function  Cards ({groupnumber  ,  usernumber}){
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                                 laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
                                 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                <div className="chart-wrapper">
-                                    <Bar data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-                                </div>
+
                             </CardBody>
                         </Card>
                     </Col>
@@ -83,12 +81,8 @@ function  Cards ({groupnumber  ,  usernumber}){
                                تعداد کاربر
                             </CardHeader>
                             <CardBody>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                <div className="chart-wrapper">
-                                    <Line data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-                                </div>
+                                {usernumber}
+
                             </CardBody>
                         </Card>
                     </Col>
@@ -100,12 +94,8 @@ function  Cards ({groupnumber  ,  usernumber}){
                                 تعداد ایونت ها
                             </CardHeader>
                             <CardBody>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                <div className="chart-wrapper">
-                                    <Line data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-                                </div>
+                                {groupnumber}
+
                             </CardBody>
                         </Card>
                     </Col>

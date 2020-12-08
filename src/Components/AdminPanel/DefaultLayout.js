@@ -45,9 +45,6 @@ console.log(API_data.join_us)
                     </div>
 
 
-                    <div className="charts">
-                        <Charts />
-                    </div>
 
 
                     <div className="form_table">

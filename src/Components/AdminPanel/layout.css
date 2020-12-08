@@ -3,9 +3,9 @@ display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr;
-    grid-template-rows: .3fr .4fr 1fr 1fr;
+    grid-template-rows: .3fr   1fr 1fr;
     grid-template-areas: "card"
-"chart"
+
 "form_table"
 "joinus_table";
 }
@@ -19,12 +19,7 @@ display: grid;
     justify-content: center;
     grid-area: card;
 }
-.charts{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-area: chart;
- }
+
 
  .form_table{
      display: grid;
