@@ -81,8 +81,14 @@ function  Cards ({groupnumber  ,  usernumber}){
                                تعداد کاربر
                             </CardHeader>
                             <CardBody>
-                                {usernumber}
-
+                                <div className="container">
+                                    <div className="grid-container">
+                                        <div className="grid-item">کاربر</div>
+                                        <div className="grid-item2">قرار</div>
+                                        <div className="grid-item">{usernumber}</div>
+                                        <div className="grid-item2">{groupnumber}</div>
+                                    </div>
+                                </div>
                             </CardBody>
                         </Card>
                     </Col>

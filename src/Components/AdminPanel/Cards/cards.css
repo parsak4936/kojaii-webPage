@@ -18,3 +18,22 @@
 
     }
 }
+.container {
+    padding: 2px 16px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+.grid-item {
+    border-right: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.grid-item2 {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}

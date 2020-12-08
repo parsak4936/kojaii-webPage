@@ -14,54 +14,52 @@ const DefaultLayout = () => {
     useEffect(() => {
         axios.get(url).then(json => setData(json.data))
     }, [])
-const json_to_string = JSON.stringify(data);
-console.log(json_to_string)
+    const json_to_string = JSON.stringify(data);
+    console.log(json_to_string)
     const API_data = JSON.parse(json_to_string)
     //joinus object
-console.log(API_data.join_us)
+    console.log(API_data.join_us)
     console.log(API_data.supports)
-     //   let username = Cookies.get('username');
-     //   if (typeof username === 'undefined'){
+    //   let username = Cookies.get('username');
+    //   if (typeof username === 'undefined'){
     //        this.props.history.push("/Login");
     //    }
 //
     //    this.handleLogout = this.handleLogout.bind(this);
-  //  }
+    //  }
 
 
-  //  showSettings(event) {
-   //     event.preventDefault();
+    //  showSettings(event) {
+    //     event.preventDefault();
 
-   // }
-
-
-        return (
-            <>
-
-                <div className="AdminContainer">
-                    <div className="cards">
-                        <Card  groupnumber ={ API_data.group_number } usernumber = {API_data.users_number}/>
-
-                    </div>
+    // }
 
 
+    return (
+        <>
 
-
-                    <div className="form_table">
-                        <Form_Tables  data ={API_data.supports}/>
-                    </div>
-
-                    <div className="joinus_table">
-                        <Joinus_table   data ={API_data.join_us} />
-
-                    </div>
-
+            <div className="AdminContainer">
+                <div className="cards">
+                    <Card groupnumber={API_data.group_number} usernumber={API_data.users_number}/>
 
                 </div>
 
 
-            </>
-        );
+                <div className="form_table">
+                    <Form_Tables data={API_data.supports}/>
+                </div>
+
+                <div className="joinus_table">
+                    <Joinus_table data={API_data.join_us}/>
+
+                </div>
+
+
+            </div>
+
+
+        </>
+    );
 
 }
 

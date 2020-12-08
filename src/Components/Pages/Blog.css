@@ -7,8 +7,6 @@
     height: 600px;
 }
 .gg{
-
-    margin-top: 90px;
 }
 .timer {
      display: flex;
@@ -27,12 +25,21 @@
 
 }
 .blog-Header{
+    padding: 20px;
     display: flex;
-    margin-top: 15px;
     align-items: center;
     justify-content: center;
 
 }
-@media   (max-width: 500px) {
+@media (max-width: 500px) {
+    #developing{
+        width: 90% !important;
+    }
+    .blog-container{
+        height: 450px;
+    }
+}
 
+#developing{
+    width: 50%;
 }

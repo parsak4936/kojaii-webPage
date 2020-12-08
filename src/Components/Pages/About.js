@@ -42,7 +42,7 @@ function About() {
                                 aria-label='email'
                             >
 
-                                <span className= "txt_sup" >   kojaii@gmail.com   </span>
+                                <span className= "txt_sup" >kojaii@gmail.com</span>
 
                                 <i className='fa  fa-envelope sup-icons fa-2x '/>
 
