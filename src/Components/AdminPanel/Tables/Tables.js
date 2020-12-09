@@ -25,9 +25,9 @@ const fields =
 
 const getBadge = (type)=>{
     switch (type) {
-        case "0": return 'success'
-        case "1": return 'danger'
-        default: return 'primary'
+        case "0": return 'success';
+        case "1": return 'danger';
+        default: return 'primary';
     }
 }
 

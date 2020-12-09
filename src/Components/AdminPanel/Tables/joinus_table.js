@@ -40,13 +40,13 @@ const fields = ['id',
 
 
 export default function Table1 ({data})  {
-console.log(data)
+        console.log(data)
 
 
         return (
             <>
                 <div className="J-table-container">
-                    <div className="J-Header"> <h1>Joius</h1></div>
+                    <div className="J-Header"> <h1>لیست پیوستن به ما</h1></div>
                     <CDataTable
                         items={data}
                         fields={fields}
