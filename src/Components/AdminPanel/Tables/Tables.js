@@ -3,10 +3,6 @@ import React  from "react";
 import {CBadge, CButton, CCardBody, CCollapse, CDataTable} from "@coreui/react/es";
 import './tables.css'
 
-
-
-
-
 const fields =
     ['id',
     { key: 'first_name', _style: { width: '20%'} ,label:'نام' },
@@ -23,10 +19,24 @@ const fields =
     }
 ]
 
+const swicher =(type) =>{
+
+
+    if(type=== 0){
+       return (
+           type =  'پیشنهاد',
+
+        getBadge(type)
+       )
+    }else if (type === 1){
+        return type= "گزارش خطا",
+        getBadge(type)
+    }
+}
 const getBadge = (type)=>{
     switch (type) {
-        case "0": return 'success';
-        case "1": return 'danger';
+        case "پیشنهاد": return 'success';
+        case "گزارش خطا": return 'danger';
         default: return 'primary';
     }
 }
@@ -55,7 +65,7 @@ export default function Table1 ({data})  {
                            'type':
                                (item)=>(
                                    <td>
-                                       <CBadge color={getBadge(item.type)}>
+                                       <CBadge color={swicher(item.type)}>
                                            {item.type}
                                        </CBadge>
                                    </td>

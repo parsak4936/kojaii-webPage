@@ -13,6 +13,8 @@ const DefaultLayout = () => {
 
     useEffect(() => {
         axios.get(url).then(json => setData(json.data))
+
+
     }, [])
     const json_to_string = JSON.stringify(data);
     // console.log(json_to_string)
