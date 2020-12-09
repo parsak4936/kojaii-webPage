@@ -18,10 +18,18 @@ const fields =
         filter: false
     }
 ]
+const valuechanger  =(type) =>{
+    if(type=== 0){
+        return type =  'پیشنهاد'
+    }else if (type === 1){
+        return type= "گزارش خطا"
 
-const swicher =(type) =>{
+    }
 
+    return {type}
+}
 
+const colorswicher =(type) =>{
     if(type=== 0){
        return (
            type =  'پیشنهاد',
@@ -42,6 +50,7 @@ const getBadge = (type)=>{
 }
 
 export default function Table1 ({data})  {
+
 
        return (
            <>
@@ -65,8 +74,8 @@ export default function Table1 ({data})  {
                            'type':
                                (item)=>(
                                    <td>
-                                       <CBadge color={swicher(item.type)}>
-                                           {item.type}
+                                       <CBadge color={colorswicher(item.type)}>
+                                           {valuechanger(item.type)}
                                        </CBadge>
                                    </td>
                                ),
