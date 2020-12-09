@@ -6,29 +6,28 @@ import './cards.css'
 import numbers from '../../Images/Bazar.png'
 
 const makeSocialBoxData = (Permonth) => {
-    console.log("this is permonth data")
-    console.log(Permonth)
-    console.log(Permonth['1'])
-    const socialBoxData = [
-        { data: [Permonth['1'],Permonth['2'] ,Permonth['3'],Permonth['4'],Permonth['5'],Permonth['6'],Permonth['7'],
-                Permonth['8'], Permonth['9'], Permonth['10'], Permonth['11'], Permonth['12']], label: 'کاربر' },
-    ];
+    if (typeof Permonth !== 'undefined'){
+        const socialBoxData = [
+            { data: [Permonth['1'],Permonth['2'] ,Permonth['3'],Permonth['4'],Permonth['5'],Permonth['6'],Permonth['7'],
+                    Permonth['8'], Permonth['9'], Permonth['10'], Permonth['11'], Permonth['12']], label: 'کاربر' },
+        ];
 
-    const dataset = socialBoxData[0];
-    const data = {
-        labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان','آذر','دی','بهمن','اسفند' ],
-        datasets: [
-            {
-                backgroundColor: 'rgba(255,255,255,.1)',
-                borderColor: 'rgba(255,255,255,.55)',
-                pointHoverBackgroundColor: '#fff',
-                borderWidth: 2,
-                data: dataset.data,
-                label: dataset.label,
-            },
-        ],
-    };
-    return () => data;
+        const dataset = socialBoxData[0];
+        const data = {
+            labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان','آذر','دی','بهمن','اسفند' ],
+            datasets: [
+                {
+                    backgroundColor: 'rgba(255,255,255,.1)',
+                    borderColor: 'rgba(255,255,255,.55)',
+                    pointHoverBackgroundColor: '#fff',
+                    borderWidth: 2,
+                    data: dataset.data,
+                    label: dataset.label,
+                },
+            ],
+        };
+        return () => data;
+    }
 };
 
 const socialChartOpts = {
@@ -56,10 +55,8 @@ const socialChartOpts = {
         },
     },
 };
-function  Cards ({groupnumber  ,  usernumber , userPermonth}){
-    console.log(groupnumber)
-    console.log(usernumber)
-    console.log(userPermonth)
+function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
+    // console.log(userPermonth)
         return (
             <div className="animated fadeIn card-container">
 
@@ -119,4 +116,4 @@ function  Cards ({groupnumber  ,  usernumber , userPermonth}){
 
 }
 
-export default Cards;
+export default Cards_plot;

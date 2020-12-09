@@ -43,17 +43,17 @@ function Charts ({data}){
         return (
             <div className="animated fadeIn chart_container">
         <div  >
-            <Card  className="chart-fullbody">
-                <CardHeader>
-                    تعداد نمی دونم چی  چی فعلا
+            {/*<Card  className="chart-fullbody">*/}
+            {/*    <CardHeader>*/}
+            {/*        تعداد نمی دونم چی  چی فعلا*/}
 
-                </CardHeader>
-                <CardBody>
-                    <div className="chart-wrapper chart_self ">
-                        <Line data={line} options={options}   />
-                    </div>
-                </CardBody>
-            </Card>
+            {/*    </CardHeader>*/}
+            {/*    <CardBody>*/}
+            {/*        <div className="chart-wrapper chart_self ">*/}
+            {/*            <Line data={line} options={options}   />*/}
+            {/*        </div>*/}
+            {/*    </CardBody>*/}
+            {/*</Card>*/}
         </div>
 
 

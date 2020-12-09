@@ -2,7 +2,7 @@ import React, {Component, useEffect, useState} from 'react';
 import Form_Tables from './Tables/Tables'
 import Joinus_table from './Tables/joinus_table'
 import Charts from './Charts/Charts'
-import Card from './Cards/cards'
+import Cards_plot from './Cards/cards'
 import './layout.css'
 import axios from "axios";
 
@@ -15,7 +15,7 @@ const DefaultLayout = () => {
         axios.get(url).then(json => setData(json.data))
     }, [])
     const json_to_string = JSON.stringify(data);
-    console.log(json_to_string)
+    // console.log(json_to_string)
     const API_data = JSON.parse(json_to_string)
 
 
@@ -39,8 +39,7 @@ const DefaultLayout = () => {
 
             <div className="AdminContainer">
                 <div className="cards">
-                    <Card groupnumber={API_data.group_number} usernumber={API_data.users_number} userPermonth={API_data.join_user_perMonth}/>
-
+                    <Cards_plot groupnumber={API_data.group_number} usernumber={API_data.users_number} userPermonth={API_data.join_user_perMonth}/>
                 </div>
 
 
