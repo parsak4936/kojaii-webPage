@@ -45,7 +45,7 @@ const DefaultLayout = () => {
                 </div>
 
 
-                <div className="form_table">
+                <div className="form_table" style={{padding:"50px"}}>
                     <Form_Tables data={API_data.supports}/>
                 </div>
 
