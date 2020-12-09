@@ -40,7 +40,7 @@ const fields = ['id',
 
 
 export default function Table1 ({data})  {
-console.log(data)
+        console.log(data)
 
 
         return (
