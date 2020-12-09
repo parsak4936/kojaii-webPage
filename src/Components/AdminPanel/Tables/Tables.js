@@ -9,11 +9,11 @@ import './tables.css'
 
 const fields =
     ['id',
-    { key: 'first_name', _style: { width: '20%'} },
-    { key: 'last_name', _style: { width: '20%'} },
-    { key: 'email', _style: { width: '30%'} },
-    { key: 'type', _style: { width: '10%'} },
-    { key: 'text', _style: { width: '30%'} },
+    { key: 'first_name', _style: { width: '20%'} ,label:'نام' },
+    { key: 'last_name', _style: { width: '20%'} , label:'نام خانوادگی' },
+    { key: 'email', _style: { width: '30%'}, label:'ایمیل' },
+    { key: 'type', _style: { width: '10%'} , label:'نوع گزارش'},
+    { key: 'text', _style: { width: '30%'}, label:'متن گزارش' },
     {
         key: 'show_details',
         label: '',
@@ -35,6 +35,9 @@ export default function Table1 ({data})  {
 
        return (
            <>
+               <div className='suptable-container'>
+
+
                <div className="tables-header"> <h1>لیست پیشنهادات و انتقادات</h1></div>
                <center>
                    <CDataTable classname="we"
@@ -95,7 +98,7 @@ export default function Table1 ({data})  {
                        }}
                    />
                </center>
-
+               </div>
            </>
        );
 

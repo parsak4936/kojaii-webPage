@@ -17,9 +17,8 @@ const DefaultLayout = () => {
     const json_to_string = JSON.stringify(data);
     console.log(json_to_string)
     const API_data = JSON.parse(json_to_string)
-    //joinus object
-    console.log(API_data.join_us)
-    console.log(API_data.supports)
+
+
     //   let username = Cookies.get('username');
     //   if (typeof username === 'undefined'){
     //        this.props.history.push("/Login");
@@ -40,7 +39,7 @@ const DefaultLayout = () => {
 
             <div className="AdminContainer">
                 <div className="cards">
-                    <Card groupnumber={API_data.group_number} usernumber={API_data.users_number}/>
+                    <Card groupnumber={API_data.group_number} usernumber={API_data.users_number} userPermonth={API_data.join_user_perMonth}/>
 
                 </div>
 

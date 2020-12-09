@@ -4,17 +4,18 @@ import  'react-chartjs-2';
 import {Line,Bar,} from "react-chartjs-2";
 import './cards.css'
 
-const makeSocialBoxData = (dataSetNo) => {
+const makeSocialBoxData = (Permonth) => {
+    console.log("this is permonth data")
+    console.log(Permonth)
+    console.log(Permonth['1'])
     const socialBoxData = [
-        { data: [65, 59, 84, 84, 51, 55, 40], label: 'facebook' },
-        { data: [1, 13, 9, 17, 34, 41, 38], label: 'twitter' },
-        { data: [78, 81, 80, 45, 34, 12, 40], label: 'linkedin' },
-        { data: [35, 23, 56, 22, 97, 23, 64], label: 'google' },
+        { data: [Permonth['1'],Permonth['2'] ,Permonth['3'],Permonth['4'],Permonth['5'],Permonth['6'],Permonth['7'],
+                Permonth['8'], Permonth['9'], Permonth['10'], Permonth['11'], Permonth['12']], label: 'کاربر' },
     ];
 
-    const dataset = socialBoxData[dataSetNo];
+    const dataset = socialBoxData[0];
     const data = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان','آذر','دی','بهمن','اسفند' ],
         datasets: [
             {
                 backgroundColor: 'rgba(255,255,255,.1)',
@@ -28,6 +29,7 @@ const makeSocialBoxData = (dataSetNo) => {
     };
     return () => data;
 };
+
 const socialChartOpts = {
     responsive: true,
     maintainAspectRatio: false,
@@ -53,15 +55,16 @@ const socialChartOpts = {
         },
     },
 };
-function  Cards ({groupnumber  ,  usernumber}){
+function  Cards ({groupnumber  ,  usernumber , userPermonth}){
     console.log(groupnumber)
     console.log(usernumber)
+    console.log(userPermonth)
         return (
             <div className="animated fadeIn card-container">
 
                 <Row>
                     <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-primary cards-self">
+                        <Card className="text-white bg-primary cards-self card1">
                             <CardHeader className="cards-headers">
                                نا مشخص
                             </CardHeader>
@@ -76,7 +79,7 @@ function  Cards ({groupnumber  ,  usernumber}){
 
 
                     <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-success cards-self">
+                        <Card className="text-white bg-success cards-self card2">
                             <CardHeader className="cards-headers">
                                تعداد کاربر
                             </CardHeader>
@@ -95,12 +98,13 @@ function  Cards ({groupnumber  ,  usernumber}){
 
 
                     <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-info cards-self">
+                        <Card className="text-white bg-info cards-self card3">
                             <CardHeader className="cards-headers">
-                                تعداد ایونت ها
-                            </CardHeader>
+تعداد کاربر های جدید                            </CardHeader>
                             <CardBody>
-                                {groupnumber}
+                                <div className="chart-wrapper">
+                                    <Line data={makeSocialBoxData(userPermonth)} options={socialChartOpts} height={90}  />
+                                </div>
 
                             </CardBody>
                         </Card>

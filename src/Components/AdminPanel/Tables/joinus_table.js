@@ -31,8 +31,8 @@ const usersData = [
 ]
 
 const fields = ['id',
-    { key: 'name', _style: { width: '30%'} },
-    { key: 'phone', _style: { width: '40%'} },
+    { key: 'name', _style: { width: '30%'} ,label :'نام' },
+    { key: 'phone', _style: { width: '40%'} , label :'شماره تماس' },
 
 ]
 
