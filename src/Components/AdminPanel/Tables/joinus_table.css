@@ -1,3 +1,6 @@
+*{
+
+}
 .J-table-container{
 
 padding: 15px;
@@ -11,11 +14,10 @@ padding: 15px;
     align-items: center;
     justify-content: center;
 }
-@media (max-width: 54rem) {
+@media (max-width: 300px) {
     .J-table-container{
-width: 100%;
-        height: auto;
 
+    width: 250px;
 
 
     }
