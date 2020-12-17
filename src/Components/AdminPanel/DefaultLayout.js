@@ -7,7 +7,7 @@ import './layout.css'
 import axios from "axios";
 
 
-const DefaultLayout = probs => {
+const DefaultLayout = props => {
     const url = 'https://kojaii.herokuapp.com/api/get-admin-data'
     const [data, setData] = useState([])
 

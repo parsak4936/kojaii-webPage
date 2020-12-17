@@ -41,13 +41,8 @@ function App() {
     });
 
 
-//    if (location.pathname === "/Admin") {
-    //    console.log("gg");
-//        $('#nav-menu').attr('style', 'display: none !important');
-//        $('.footer-container').attr('style', 'display: none !important');
- //   }
-  //  console.log(location.pathname);
-   
+
+
     return (
 
 
@@ -70,7 +65,6 @@ function App() {
                                     <ProtectedRoute exact path='/admin' user={user} handleLogout={handleLogout} component={Admin} />
                                     <Route exact path='/Login' handleLogin={handleLogin} render={
                                         props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
-
                                      <Route component={NotFound}/>
 
                                 </Switch>
