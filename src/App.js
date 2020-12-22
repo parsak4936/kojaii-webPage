@@ -28,6 +28,7 @@ function App() {
 
     const handleLogin = e => {
         e.preventDefault();
+
         setUser(true);
     }
     const handleLogout = e => {
@@ -41,7 +42,7 @@ function App() {
     });
 
 
-
+console.log("this is app user : " + user)
 
     return (
 
@@ -62,9 +63,9 @@ function App() {
                                     <Route path='/download' component={Download}/>
                                     <Route path='/blog' component={blog}/>
                                     <Route path='/support' component={sup}/>
-                                    <ProtectedRoute exact path='/admin' user={user} handleLogout={handleLogout} component={Admin} />
-                                    <Route exact path='/Login' handleLogin={handleLogin} render={
+                                    <Route exact path='/Login' handleLogin={handleLogin}  render={
                                         props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
+                                    <ProtectedRoute exact path='/admin' user={user} handleLogout={handleLogout} component={Admin} />
                                      <Route component={NotFound}/>
 
                                 </Switch>

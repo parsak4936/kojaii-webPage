@@ -1,19 +1,58 @@
 import React, {useState} from 'react';
 import { Button, Card, CardBody, CardGroup, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
-
+import {Redirect} from "react-router-dom";
+import $ from "jquery";
 
 const Login   = props => {
+
     const [username, setName] = useState("");
     const [password, setPass] = useState("");
+
+
     const handleSubmit = (evt) => {
-       // props.handleLogin()
-        evt.preventDefault();
-        alert(`Submitting Name ${username}`)
+        $.ajax({
+            url: 'https://kojaii.herokuapp.com/api/web-login',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                "username": username,
+                "password": password
+            }, async: false,
+            complete: function(r){
+                if(r.status === 200){
+                    alert(username + ' درخواست شما با موفقیت ثبت شد');
+                    props.handleLogin(evt);
+                } else(
+                    alert("STFU")
+                )
+            }
+        });
+
+
+
+
 
     }
 
+    if (props.user === "true"){
+     return (
+         <Redirect from='/login' to={
+             {
+                 pathname: '/admin',
+                 state: {
+                     from: props.location
+                 }
+             }
+         }
+         />
+     )
+    }
+
+
+
         return (
             <center>
+                <h2>{props.user}</h2>
                 <div style={{marginTop: "40px"}} className="app flex-row align-items-center">
                     <Container>
                         <CardGroup className="carding" style={{width: "90%"}}>

@@ -5,7 +5,9 @@ const ProtectedRoute = ({ component: Component, user, ...rest }) => {
     return (
         <Route {...rest} render={
             props => {
+                console.log("this is protected route user bool :" +user)
                 if (user) {
+
                     return <Component {...rest} {...props} />
                 } else {
                     window.location.reload()

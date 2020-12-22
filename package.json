@@ -60,6 +60,7 @@
     "react-dom": "^16.13.1",
     "react-flickity": "^1.0.8",
     "react-flickity-component": "^3.6.0",
+    "react-hook-form": "^6.13.1",
     "react-loading": "^2.0.3",
     "react-loadingg": "^1.7.2",
     "react-redux": "^7.2.2",
