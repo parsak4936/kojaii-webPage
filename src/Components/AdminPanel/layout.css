@@ -1,5 +1,6 @@
 .AdminContainer{
-display: grid;
+    background-color: #E9F9FE;
+    display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr;
@@ -8,6 +9,9 @@ display: grid;
 
 "form_table"
 "joinus_table";
+}
+.alert-in-mobile-verion{
+    display: none;
 }
 .adminpanel-header{
     padding: 10px;
@@ -34,10 +38,18 @@ display: grid;
      grid-area: joinus_table;
  }
 
- @media (max-width: 64rem) {
+ @media (max-width: 54rem) {
      .AdminContainer{
+display: none;
 
 
-
+     }
+     .alert-in-mobile-verion{
+         display: flex;
+         align-items: center;
+         height: 500px;
+         padding: 15px;
+         direction: rtl;
+         justify-content: center;
      }
  }

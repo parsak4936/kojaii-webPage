@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import { Button, Card, CardBody, CardGroup, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
 import {Redirect} from "react-router-dom";
 import $ from "jquery";
+import { useCookies } from 'react-cookie';
 
 const Login   = props => {
 
     const [username, setName] = useState("");
     const [password, setPass] = useState("");
-
-
+    const [cookies, setCookie] = useCookies(['username','password']);
     const handleSubmit = (evt) => {
         $.ajax({
             url: 'https://kojaii.herokuapp.com/api/web-login',
@@ -20,18 +20,14 @@ const Login   = props => {
             }, async: false,
             complete: function(r){
                 if(r.status === 200){
-                    alert(username + ' درخواست شما با موفقیت ثبت شد');
+                    setCookie('usernameCookie', {username}, { path: '/' });
+                    setCookie('PassWordCookie', {password}, { path: '/' });
                     props.handleLogin(evt);
                 } else(
-                    alert("STFU")
+                    alert("نام کاربری یا نام اشتباه است")
                 )
             }
         });
-
-
-
-
-
     }
 
     if (props.user === "true"){
@@ -52,7 +48,6 @@ const Login   = props => {
 
         return (
             <center>
-                <h2>{props.user}</h2>
                 <div style={{marginTop: "40px"}} className="app flex-row align-items-center">
                     <Container>
                         <CardGroup className="carding" style={{width: "90%"}}>
@@ -72,6 +67,7 @@ const Login   = props => {
                                             </InputGroupAddon>
                                             <Input type="text" id="UserName" placeholder="نام کاربری"     onChange={e => setName(e.target.value)} />
                                         </InputGroup>
+
                                         <InputGroup className="mb-4">
                                             <InputGroupAddon addonType="prepend">
                                                 <InputGroupText>

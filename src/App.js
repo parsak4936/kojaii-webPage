@@ -1,6 +1,7 @@
 import './App.css';
 import ContactUs from './Components/Pages/About';
 import Download from './Components/Pages/Download';
+import { CookiesProvider } from 'react-cookie';
 import HomePage from './Components/Pages/MainPage';
 import Footer from './Components/Footer/Footer'
 import Navbar from './Components/NavBar/nav_bar';

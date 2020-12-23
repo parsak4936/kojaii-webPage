@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import {  Card, CardBody, CardHeader, Col, Row} from 'reactstrap';
+import React from 'react';
+import {Card, CardBody, CardHeader, Col, Row} from 'reactstrap';
 import  'react-chartjs-2';
-import {Line,Bar,} from "react-chartjs-2";
+import {Line} from "react-chartjs-2";
 import './cards.css'
 import numbers from '../../Images/Bazar.png'
 
@@ -11,7 +11,6 @@ const makeSocialBoxData = (Permonth) => {
             { data: [Permonth['1'],Permonth['2'] ,Permonth['3'],Permonth['4'],Permonth['5'],Permonth['6'],Permonth['7'],
                     Permonth['8'], Permonth['9'], Permonth['10'], Permonth['11'], Permonth['12']], label: 'کاربر' },
         ];
-
         const dataset = socialBoxData[0];
         const data = {
             labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان','آذر','دی','بهمن','اسفند' ],
@@ -55,11 +54,12 @@ const socialChartOpts = {
         },
     },
 };
-function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
-    // console.log(userPermonth)
-        return (
-            <div className="animated fadeIn card-container">
 
+function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
+
+        return (
+
+            <div className="animated fadeIn card-container">
                 <Row>
                     <Col xs="12" sm="6" md="4">
                         <Card className="text-white bg-primary cards-self card1">
@@ -101,8 +101,8 @@ function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
                             <CardHeader className="cards-headers">
 تعداد کاربر های جدید                            </CardHeader>
                             <CardBody>
-                                <div className="chart-wrapper">
-                                    <Line data={makeSocialBoxData(userPermonth)} options={socialChartOpts} height={90}  />
+                                <div className="chart-wrapper chartincard">
+                                    <Line   data={makeSocialBoxData(userPermonth)} options={socialChartOpts} height={90}  />
                                 </div>
 
                             </CardBody>
