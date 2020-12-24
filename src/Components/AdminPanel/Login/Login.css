@@ -1,13 +1,76 @@
-.login-container{
+.login-wrap{
+    height: 650px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas: "form img";
+
+}
+.login_image{
+    grid-area: img;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+.loginForm{
+width: 850px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.login-container{
+    grid-area: form;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
 }
 .card-group{
    /*width: 500px;*/
 }
-@media (max-width: 500px) {
-    .carding{
-        /*width: 90%;*/
+@media (max-width: 64rem) {
+    .login-wrap{
+        height: 1050px;
+     margin-bottom: 250px;
+        grid-template-columns: 1fr   ;
+        grid-template-rows: .4fr 1fr;
+        grid-template-areas:  "img" "form" ;
+
+    }
+    .loginForm{
+width:500px;
+
+    }
+}
+@media (max-width: 54rem) {
+    .login-wrap{
+        height: 850px;
+        margin-bottom: 250px;
+        grid-template-columns: 1fr   ;
+        grid-template-rows: .4fr 1fr;
+        grid-template-areas:  "img" "form" ;
+
+    }
+    .loginForm{
+        width:650px;
+
+    }
+}
+@media (max-width: 34rem) {
+    .login-wrap{
+      margin-bottom: 100px;
+        grid-template-columns: 1fr   ;
+        grid-template-rows: .4fr 1fr;
+        grid-template-areas:  "img" "form" ;
+
+    }
+    .loginForm{
+        width: 270px;
+
     }
 }

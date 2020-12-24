@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr;
-    grid-template-rows: .3fr   1fr 1fr;
+    grid-template-rows: 1fr   1fr 1fr;
     grid-template-areas: "card"
 
 "form_table"
@@ -18,7 +18,7 @@
 }
 .cards{
     padding: 90px;
-display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
     grid-area: card;

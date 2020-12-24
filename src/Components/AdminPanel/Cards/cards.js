@@ -3,8 +3,8 @@ import {Card, CardBody, CardHeader, Col, Row} from 'reactstrap';
 import  'react-chartjs-2';
 import {Line} from "react-chartjs-2";
 import './cards.css'
-import numbers from '../../Images/Bazar.png'
-
+import numbers from '../../Images/uservector.png'
+import Unknown from '../../Images/unknownimg.png'
 const makeSocialBoxData = (Permonth) => {
     if (typeof Permonth !== 'undefined'){
         const socialBoxData = [
@@ -67,6 +67,7 @@ function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
                                نا مشخص
                             </CardHeader>
                             <CardBody>
+                                <img src={Unknown} style={{width:"100%"}}/>
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                                 laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
                                 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
@@ -77,7 +78,7 @@ function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
 
 
                     <Col xs="12" sm="6" md="4">
-                        <Card className="text-white bg-success cards-self card2">
+                        <Card className="text-white   cards-self card2">
                             <CardHeader className="cards-headers">
                                تعداد کاربر
                             </CardHeader>
