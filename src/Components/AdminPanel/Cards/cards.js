@@ -5,6 +5,7 @@ import {Line} from "react-chartjs-2";
 import './cards.css'
 import numbers from '../../Images/uservector.png'
 import Unknown from '../../Images/unknownimg.png'
+import newuserimage from '../../Images/newuservector.png'
 const makeSocialBoxData = (Permonth) => {
     if (typeof Permonth !== 'undefined'){
         const socialBoxData = [
@@ -102,6 +103,7 @@ function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
                             <CardHeader className="cards-headers">
 تعداد کاربر های جدید                            </CardHeader>
                             <CardBody>
+                                <img src={newuserimage} style={{width:"100%"}}/>
                                 <div className="chart-wrapper chartincard">
                                     <Line   data={makeSocialBoxData(userPermonth)} options={socialChartOpts} height={90}  />
                                 </div>

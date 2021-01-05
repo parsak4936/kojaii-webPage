@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Button, Card, CardBody, CardGroup, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
 import {Redirect} from "react-router-dom";
 import $ from "jquery";
-import { useCookies } from 'react-cookie';
+import { useCookies  } from 'react-cookie';
 import './Login.css'
 import login_img from '../../Images/login.png'
 const Login   = props => {
@@ -21,11 +21,12 @@ const Login   = props => {
             }, async: false,
             complete: function(r){
                 if(r.status === 200){
-                   const usernamecook = setCookie('usernameCookie', {username}, { path: '/' });
-                  const passwordcook =  setCookie('PassWordCookie', {password}, { path: '/' });
-                    props.handleLogin(evt);
+                   const usernamecook = setCookie('usernameCookie', {username}, { path: '/login' });
+                  const passwordcook =  setCookie('PassWordCookie', {password}, { path: '/login' });
+
+                     props.handleLogin(evt);
                 } else(
-                    alert("نام کاربری یا نام اشتباه است")
+                    alert("نام کاربری یا رمز عبور اشتباه است")
                 )
             }
         });
@@ -33,6 +34,7 @@ const Login   = props => {
 
     if (props.user === "true"){
      return (
+
          <Redirect from='/login' to={
              {
                  pathname: '/admin',
