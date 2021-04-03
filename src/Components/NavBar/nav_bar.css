@@ -3,7 +3,9 @@
   padding-top: 10px;
   padding-bottom: 5px;
 }
-
+.container-fluid{
+  position: relative;
+}
 .navbar-btn-download{
   display: none;
 }
@@ -38,7 +40,7 @@
   margin-bottom: 15px;
   height: 50px;
   margin-left: 10px;
-  background: url('../Images/Bazar.png');
+  background: url('../../assets/Logoes/Bazar.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -59,7 +61,7 @@
   width: 160px;
   border: none;
   margin-left: 10px;
-  background: url('../Images/Googleplay.png');
+  background: url('../../assets/Logoes/Googleplay.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -228,7 +230,7 @@
 
 }
 .hero-section {
-  background-image: url("../Images/MP_Backgound.png");
+  background-image: url("../../assets/Images/MP_Backgound.png");
   height: 100vh;
   background-size: cover;
   background-position: center;

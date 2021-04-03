@@ -1,0 +1,35 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+
+}
+/*  Desktop */
+.mainpage-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 0fr 0fr;
+    grid-template-areas: "interduce" "Toturial" "join_us";
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-info {
+    color: white !important;
+    background-color: #7AB1C5 !important;
+}
+
+.btn-outline-info:hover {
+    color: white !important;
+    background-color: #3E6078 !important;
+}
+
+/*  Phone */
+
+@media only screen and (max-width: 740px) {
+    .mainpage-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: .8fr .8fr 0.8fr;
+        grid-template-areas: "interduce" "Toturial" "join_us";
+    }
+
+}

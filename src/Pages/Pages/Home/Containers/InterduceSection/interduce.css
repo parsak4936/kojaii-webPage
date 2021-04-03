@@ -1,0 +1,115 @@
+
+/* intro section */
+.interduce {
+    background-color: #E9F9FE;
+
+
+    grid-area: interduce;
+}
+
+.interduce-container {
+    direction: rtl;
+    width: 100%;
+    height: 550px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "intro_header . " "info_txt intro-image " "info_txt  intro-image  ";
+}
+
+
+.intro-header {
+    margin-top: 80px;
+    color: #3B6F80;
+    grid-area: intro_header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-gif-container {
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    grid-area: intro-image;
+
+
+}
+
+.intro-image {
+    width: 70%;
+    margin-bottom: 200px;
+}
+
+.intro-text {
+
+    padding-right: 60px;
+    padding-left: 20px;
+    grid-area: info_txt;
+    color: #033665;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* End of intro  section*/
+/*  Phone */
+@media only screen and (max-width: 600px) {
+    #moreDes {
+        display: none;
+    }
+    .intro-image {
+        margin-bottom: 0px !important;
+    }
+
+    .intro-text {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .interduce{
+        height: 660px;
+    }
+}
+
+
+
+@media only screen and (max-width: 740px) {
+    .intro-text {
+        padding-right: 20px;
+    }
+
+    /* Toturial */
+    .T-container {
+        height: 680px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 1fr  1fr;
+        grid-template-areas:"toturial_header"
+                            " toturial_txt"
+                            "  slide_show ";
+    }
+
+    /* interduceing section*/
+    .interduce-container {
+
+        width: 100%;
+        height: 600px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "intro_header  " "  intro-image " "info_txt ";
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    #moreDes {
+        display: block;
+    }
+}

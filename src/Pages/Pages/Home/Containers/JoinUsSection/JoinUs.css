@@ -1,0 +1,184 @@
+
+/* join us section */
+.join-us {
+
+    background-color: #E9F9FE;
+    align-items: center;
+    justify-content: center;
+    grid-area: join_us;
+}
+
+#join-us-text {
+    text-align: right;
+}
+
+.joingus-container {
+    margin-top: 50px;
+    width: 100%;
+    height: 480px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr .2fr 1fr;
+    grid-template-rows: 0fr 1fr 1fr 1fr;
+    grid-template-areas: "joinus_header  joinus_header  joingus_img" "joinus_txt joinus_txt  joingus_img " "joinus_phone  joinus_name  joingus_img " "joinus_btn  joinus_btn  joingus_img ";
+}
+
+.joinus-header {
+
+    grid-area: joinus_header;
+    display: flex;
+    color: #3B6F80;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.joinus-text {
+    margin-top: 18px;
+    color: #1C2E3A;
+    padding-right: 20px;
+    padding-left: 20px;
+    grid-area: joinus_txt;
+    display: flex;
+}
+
+.join-us-img-container {
+    font-family: "Iranian Sans", serif !important;
+    grid-area: joingus_img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.join-us-form {
+
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+}
+
+::placeholder {
+    font-family: "IRAN Sans" !important;
+
+
+    text-align: center;
+    opacity: 1; /* Firefox */
+}
+
+:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.35s ease-in-out;
+    opacity: 0.5;
+}
+
+.join-us-btn {
+    width: 180px !important;
+    grid-area: joinus_btn;
+    background-color: #DBF1F7;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+.join-us-param-name {
+    outline: none;
+    border: 0px;
+    border-bottom: 1px solid #68BBD5;
+    grid-area: joinus_name;
+    margin-top: 18px;
+
+    padding: 10px;
+    background-color: #E9F9FE;
+}
+
+.join-us-param-name:hover {
+    transition: all 0.3s ease-out;
+    transition: 250ms;
+}
+
+.join-us-param-phone {
+    outline: none;
+    border: 0px;
+    grid-area: joinus_phone;
+    margin-top: 18px;
+    border-bottom: 1px solid #68BBD5;
+    /* border-radius: 5px; */
+    padding: 10px;
+    background-color:#E9F9FE;
+}
+
+.join-us-param-phone:hover {
+    transition: all 0.3s ease-out;
+    transition: 250ms;
+}
+
+#moreDes {
+    display: none;
+    text-align: justify;
+}
+
+#Des {
+    text-align: justify;
+}
+
+/* End of join us section*/
+
+/*  Phone */
+@media only screen and (min-width: 800px) {
+
+    .join-us-image {
+        margin-bottom: 100px;
+    }
+
+    .join-us-form {
+        margin-left: 110px;
+    }
+
+    .join-us-form input {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #join-us-text {
+        text-align: center;
+    }
+    #Des{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 740px) {
+    /* joing us section*/
+    .joingus-container {
+        width: 100%;
+        height: 630px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr .4fr 1fr 1fr 1fr;
+        grid-template-areas: " joingus_img " "joinus_header" "joinus_txt" "joinus_phone" " joinus_name" "joinus_btn ";
+    }
+
+    .joinus-text {
+        margin-left: 50px;
+        margin-right: 50px;
+        text-align: center !important;
+    }
+
+    .join-us-image {
+        width: 220px;
+    }
+
+    .join-us-param {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+
+}

@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import LOGO from '../Images/LOGO.png'
+import LOGO from '../../assets/Logoes/LOGO.png'
 import './nav_bar.css';
 import $ from "jquery";
-import {Button} from "../Button";
-import ScrollAnimation from "react-animate-on-scroll";
-import {BrowserRouter as Router, Link, useLocation} from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import AbsoluteWrapper from "../AbsoluteWrapper";
+import Bounce from "react-reveal";
+import Fade from "react-reveal";
 
 //-----------------------------------------------//
 
@@ -39,11 +39,14 @@ function Nav_bar() {
         }
     }
 
+const changeColor=()=>{
 
+
+}
     useEffect(() => {
         showButton();
     }, []);
-    //<i class='fab fa-typo3' />
+
     window.addEventListener('resize', showButton);
 
     $(window).scroll(function () {
@@ -62,7 +65,6 @@ function Nav_bar() {
 
     });
 
-//-----------------------------------------------//
 
 
 //-----------------------------------------------//
@@ -150,40 +152,41 @@ function Nav_bar() {
 
                         <div className="row justify-content-center">
 
+
+                            <Fade top>
                             <div className="col-12 download-text">
-                                <ScrollAnimation className="text-hero text-center text-white text-uppercase"
+                                <div className="text-hero text-center text-white text-uppercase"
                                                  animateIn='animate__fadeIn'>
                                     <h1> جهت دانلود <span className="kojaii">کجایی</span> کلیک کنید </h1>
 
-                                </ScrollAnimation>
+                                </div>
                             </div>
-
+</Fade>
                             <div className="col-12">
                                 <center>
                                     <div className="  btn-hero lead text-center">
 
                                         <div className="download-btns">
 
-                                            <ScrollAnimation animateIn='animate__bounceInRight'>
-                                                <Link
-                                                    to='/download'
+                                        <Bounce right>                                                <a
+                                                    href='https://cafebazaar.ir/install?l=en'
                                                     onClick={closeMobileMenu}
                                                 >
                                                     <button type="submit"
                                                             className="btn btn btn-lg btn-desktop-Bazar  btn-primary"></button>
-                                                </Link>
-                                            </ScrollAnimation>
+                                                </a>
+                                        </Bounce>
 
 
-                                            <ScrollAnimation animateIn='animate__bounceInLeft'>
-                                                <Link
-                                                    to='/download'
+                                            <Bounce left>
+                                                <a
+                                                    href='https://cafebazaar.ir/install?l=en'
                                                     onClick={closeMobileMenu}
                                                 >
                                                     <button type="button"
                                                             className="btn btn  btn-desktop-google   btn-primary"></button>
-                                                </Link>
-                                            </ScrollAnimation>
+                                                </a>
+                                            </Bounce>
 
 
                                         </div>

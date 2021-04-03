@@ -12,7 +12,7 @@
     width: 90% !important;
 }
 .css-1qzevvg img:nth-of-type(1){
-    content: url("../Images/left.png") !important;
+    content: url("../../assets/Images/left.png") !important;
 }
 
 .css-1qzevvg img:hover{
@@ -20,7 +20,7 @@
 }
 
 .css-1qzevvg img:nth-of-type(2){
-    content: url("../Images/right.png") !important;
+    content: url("../../assets/Images/right.png") !important;
 }
 
 

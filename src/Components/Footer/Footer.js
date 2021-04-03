@@ -1,23 +1,14 @@
 import React from 'react';
 import './Footer.css';
 
-import {Link} from 'react-router-dom';
-
 function Footer() {
   
     return (
         <div className='footer-container'>
-
-
-
-
             <div className='social-media-wrap'>
-
-
                 <div className='footer-logo'>
                     <p className='social-logo'>
                         تمام حقوق مالی و معنوی این سایت متعلق به کجایی است ©
-
                     </p>
                 </div>
 
@@ -49,5 +40,4 @@ function Footer() {
         </div>
     );
 }
-
 export default Footer;

@@ -1,0 +1,53 @@
+card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.cards-headers{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+@media (max-width:54rem) {
+
+}
+.container {
+    padding: 2px 16px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+.grid-item {
+    border-right: 2px solid white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.card1{
+    height: 550px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card2{
+   background-color:  darkslateblue;
+    height: 550px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card3{
+    height: 550px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.grid-item2 {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.chartincard{
+    margin-top: 20px;
+}

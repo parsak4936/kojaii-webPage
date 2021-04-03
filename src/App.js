@@ -1,24 +1,22 @@
 import './App.css';
-import ContactUs from './Components/Pages/About';
-import Download from './Components/Pages/Download';
-import { CookiesProvider } from 'react-cookie';
-import HomePage from './Components/Pages/MainPage';
+import ContactUs from './Pages/Pages/ContatUs/ContactUs';
+import HomePage from './Pages/Pages/Home/MainPage';
 import Footer from './Components/Footer/Footer'
 import Navbar from './Components/NavBar/nav_bar';
-import sup from './Components/Pages/Support';
-import blog from './Components/Pages/Blog';
+import sup from './Pages/Pages/Support/Support';
+import blog from './Pages/Pages/Blog/Blog';
 import React, {useState} from "react";
-import Login from './Components/AdminPanel/Login/Login';
-import Admin from './Components/AdminPanel/AdminPanel';
+import Login from './CMS/AdminPanel/Login/Login';
+import Admin from './CMS/AdminPanel/AdminPanel';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {useTransition, animated} from "react-spring";
 import {useLocation} from "react-use";
-import NotFound from './Components/Pages/404'
+import NotFound from './Pages/Pages/Errors/404'
 import { create } from 'jss';
 import rtl from 'jss-rtl';
 import { StylesProvider, jssPreset , ThemeProvider } from '@material-ui/core/styles';
 import CustomTheme from "./assets/CustomTheme";
-import ProtectedRoute from './ProtectedRoute'
+import ProtectedRoute from './Routes/ProtectedRoute'
 // Configure JSS
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
@@ -29,7 +27,6 @@ function App() {
 
     const handleLogin = e => {
         e.preventDefault();
-
         setUser(true);
     }
     const handleLogout = e => {
@@ -43,7 +40,6 @@ function App() {
     });
 
 
-console.log("this is app user : " + user)
 
     return (
 
@@ -61,7 +57,6 @@ console.log("this is app user : " + user)
                                 <Switch location={item}>
                                     <Route path='/' exact component={HomePage}/>
                                     <Route path='/ContactUs' component={ContactUs}/>
-                                    <Route path='/download' component={Download}/>
                                     <Route path='/blog' component={blog}/>
                                     <Route path='/support' component={sup}/>
                                     <Route exact path='/Login' handleLogin={handleLogin}  render={

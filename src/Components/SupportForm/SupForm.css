@@ -1,0 +1,40 @@
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.card {
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+.images{
+    width: 45%;
+
+}
+.fields{
+
+    direction: rtl !important;
+    width: 40%
+}
+.names{
+    direction: rtl;
+    width: 19% !important;
+}
+@media (max-width: 850px) {
+    .images{
+        width: 100%;
+    }
+    .fields{
+        width: 100%
+    }
+    .names{
+        width: 100% !important;
+    }
+}
+
+

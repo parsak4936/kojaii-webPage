@@ -1,9 +1,18 @@
-* {
-    font-family: "B Yekan";
-    box-sizing: border-box;
+p,span{
+    font-family: "IRAN Sans" !important;
 
-    margin: 0;
-    padding: 0;
+}
+button,label {
+    font-family: "IRAN Sans" !important;
+
+}
+.menu-item{
+    font-family: "IRAN Sans" !important;
+
+}
+h1,h2{
+    font-family: "IRAN Sans" !important;
+
 }
 .deactivenavbar{
     display: none;
