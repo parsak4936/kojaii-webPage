@@ -5,16 +5,18 @@
 ## نکات مهم
 
 برای اجرای برنامه در محیط لوکال در فایل package.json 
-قسمت scripts قرار دهید :
+قسمت scripts قرار دهید :<br />
  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
+  <br />
   ------------------------------------
+  <br />
   برای اجرا در محیط هیروکو هم قرار دهید :
+  <br />
    "scripts": {
     "dev": "react-scripts start",
     "start": "serve -s build",
