@@ -37,6 +37,7 @@ function ContactUs() {
                     </Slide>
 
                     <div className="c-socials-container ">
+                        <Fade bottom>
                         <div classname="c-socials">
                             <a
                                 className='sup-email'
@@ -76,7 +77,7 @@ function ContactUs() {
 
                             </a>
                         </div>
-
+                        </Fade>
                     </div>
 
                     <Fade right>

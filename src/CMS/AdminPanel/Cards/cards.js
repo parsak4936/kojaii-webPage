@@ -68,7 +68,7 @@ function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
                                نا مشخص
                             </CardHeader>
                             <CardBody>
-                                <img src={Unknown} style={{width:"100%"}}/>
+                                <img src={Unknown} style={{width:"100%"}} alt="هنوز متنی در نظر گرفته نشده است!"/>
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                                 laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
                                 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
@@ -84,7 +84,7 @@ function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
                                تعداد کاربر
                             </CardHeader>
                             <CardBody>
-                                <img src={numbers} style={{width:"100%" , height:"250px"}}/>
+                                <img src={numbers} style={{width:"100%" , height:"250px"}} alt="تعداد کاربر و قرار های گذاششته شده"/>
                                 <div className="container">
                                     <div className="grid-container">
                                         <div className="grid-item">کاربر</div>
@@ -103,7 +103,7 @@ function  Cards_plot ({groupnumber  ,  usernumber , userPermonth}){
                             <CardHeader className="cards-headers">
 تعداد کاربر های جدید                            </CardHeader>
                             <CardBody>
-                                <img src={newuserimage} style={{width:"100%" , height:"250px"}}/>
+                                <img src={newuserimage} style={{width:"100%" , height:"250px"}} alt="کاربر های اضافه شده"/>
                                 <div className="chart-wrapper chartincard">
                                     <Line   data={makeSocialBoxData(userPermonth)} options={socialChartOpts} height={90}  />
                                 </div>

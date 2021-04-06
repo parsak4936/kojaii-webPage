@@ -12,14 +12,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import {useTransition, animated} from "react-spring";
 import {useLocation} from "react-use";
 import NotFound from './Pages/Pages/Errors/404'
-import { create } from 'jss';
-import rtl from 'jss-rtl';
-import { StylesProvider, jssPreset , ThemeProvider } from '@material-ui/core/styles';
-import CustomTheme from "./assets/CustomTheme";
 import ProtectedRoute from './Routes/ProtectedRoute'
-// Configure JSS
-const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
-
 
 function App() {
     const location = useLocation()
@@ -42,11 +35,7 @@ function App() {
 
 
     return (
-
-
-        <ThemeProvider theme={CustomTheme}>
-        <StylesProvider jss={jss}>
-            <BrowserRouter>
+             <BrowserRouter>
                 <div id="navbarID" className="navbar-container  ">
                     <Navbar/>
                 </div>
@@ -63,7 +52,6 @@ function App() {
                                         props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
                                     <ProtectedRoute exact path='/admin' user={user} handleLogout={handleLogout} component={Admin} />
                                      <Route component={NotFound}/>
-
                                 </Switch>
                             </animated.div>
                         ))}
@@ -75,9 +63,7 @@ function App() {
 
             </BrowserRouter>
 
-           </StylesProvider>
-        </ThemeProvider>
-    );
+      );
 
 }
 export default App;

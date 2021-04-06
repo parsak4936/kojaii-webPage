@@ -39,10 +39,7 @@ function Nav_bar() {
         }
     }
 
-const changeColor=()=>{
 
-
-}
     useEffect(() => {
         showButton();
     }, []);
@@ -92,9 +89,9 @@ const changeColor=()=>{
                                 data-toggle="collapse"
                                 data-target="#myNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                                 aria-label="Toggle navigation">
-                            <div className="line1 ham"></div>
-                            <div className="line2 ham"></div>
-                            <div className="line3 ham"></div>
+                            <div className="line1 ham"> </div>
+                            <div className="line2 ham"> </div>
+                            <div className="line3 ham">  </div>
                         </button>
                         <div className="nav-bar-logo" id="logo-in-navbar">
                             <img className="logo-nav-mobile" src={LOGO} width="120px " alt=" "/>
@@ -131,7 +128,7 @@ const changeColor=()=>{
                                 </li>
 
                                 <li className="nav-item">
-                                    <img className="logo-nav-desktop" src={LOGO} width="120px "/>
+                                    <img className="logo-nav-desktop" src={LOGO} width="120px " alt=""/>
                                 </li>
 
 
@@ -156,7 +153,7 @@ const changeColor=()=>{
                             <Fade top>
                             <div className="col-12 download-text">
                                 <div className="text-hero text-center text-white text-uppercase"
-                                                 animateIn='animate__fadeIn'>
+                                             >
                                     <h1> جهت دانلود <span className="kojaii">کجایی</span> کلیک کنید </h1>
 
                                 </div>
@@ -173,7 +170,7 @@ const changeColor=()=>{
                                                     onClick={closeMobileMenu}
                                                 >
                                                     <button type="submit"
-                                                            className="btn btn btn-lg btn-desktop-Bazar  btn-primary"></button>
+                                                            className="btn btn btn-lg btn-desktop-Bazar  btn-primary"> </button>
                                                 </a>
                                         </Bounce>
 
@@ -184,7 +181,7 @@ const changeColor=()=>{
                                                     onClick={closeMobileMenu}
                                                 >
                                                     <button type="button"
-                                                            className="btn btn  btn-desktop-google   btn-primary"></button>
+                                                            className="btn btn  btn-desktop-google   btn-primary"> </button>
                                                 </a>
                                             </Bounce>
 

@@ -1,40 +1,42 @@
 import React, {useState} from 'react';
 import { Button, Card, CardBody, CardGroup, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
 import {Redirect} from "react-router-dom";
-import $ from "jquery";
 import { useCookies  } from 'react-cookie';
 import './Login.css'
 import login_img from '../../../assets/Logoes/login.png'
+import axios from "axios";
 const Login   = props => {
 
     const [username, setName] = useState("");
     const [password, setPass] = useState("");
-    const [cookies, setCookie] = useCookies(['username','password']);
-    const handleSubmit = (evt) => {
-        $.ajax({
-            url: 'https://kojaii.herokuapp.com/api/web-login',
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                "username": username,
-                "password": password
-            }, async: false,
-            complete: function(r){
-                if(r.status === 200){
-                   const usernamecook = setCookie('usernameCookie', {username}, { path: '/login' });
-                  const passwordcook =  setCookie('PassWordCookie', {password}, { path: '/login' });
+    const [cookies, setCookie] = useCookies([props.user]);
 
-                     props.handleLogin(evt);
+
+    const handleSubmit = (evt) => {
+        axios.post('/https://kojaii.herokuapp.com/api/web-login', {
+            "username": username,
+            "password": password
+        })
+            .then(function (response,r) {
+
+                if(r.status === 200){
+                    const Validation = setCookie('User-Validation', true, { path: '/login' });
+
+                    props.handleLogin(evt);
                 } else(
                     alert("نام کاربری یا رمز عبور اشتباه است")
                 )
-            }
-        });
-    }
+
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+     }
 
     if (props.user === "true"){
      return (
-
          <Redirect from='/login' to={
              {
                  pathname: '/admin',
@@ -52,8 +54,8 @@ const Login   = props => {
         return (
             <center>
                 <div className="login-wrap">
-                    <div classname="login_image">
-                        <img src={login_img} style={{width:"100%"}}/>
+                    <div className="login_image">
+                        <img src={login_img} style={{width:"100%"}} alt=" "/>
                     </div>
                     <div className="login-container">
                         <div style={{marginTop: "40px"}} className="loginForm" >

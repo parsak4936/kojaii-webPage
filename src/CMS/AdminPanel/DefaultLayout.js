@@ -1,12 +1,12 @@
 import React, { useEffect, useState} from 'react';
-import Form_Tables from './Tables/Tables'
-import Joinus_table from './Tables/joinus_table'
-import Cards_plot from './Cards/cards'
+import FormTables from './Tables/Tables'
+import Joinustable from './Tables/joinus_table'
+import Cardsplot from './Cards/cards'
 import './layout.css'
 import axios from "axios";
 
 
-const DefaultLayout = props => {
+const DefaultLayout = () => {
     const url = 'https://kojaii.herokuapp.com/api/get-admin-data'
     const [data, setData] = useState([])
 
@@ -28,16 +28,16 @@ const DefaultLayout = props => {
             </center>
             <div className="AdminContainer">
                 <div className="cards">
-                    <Cards_plot groupnumber={API_data.group_number} usernumber={API_data.users_number} userPermonth={API_data.join_user_perMonth}/>
+                    <Cardsplot groupnumber={API_data.group_number} usernumber={API_data.users_number} userPermonth={API_data.join_user_perMonth}/>
                 </div>
 
 
                 <div className="form_table" style={{padding:"50px"}}>
-                    <Form_Tables data={API_data.supports}/>
+                    <FormTables data={API_data.supports}/>
                 </div>
 
                 <div className="joinus_table">
-                    <Joinus_table data={API_data.join_us}/>
+                    <Joinustable data={API_data.join_us}/>
                 </div>
             </div>
 

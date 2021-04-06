@@ -74,8 +74,8 @@ export default function CenteredTabs() {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (firstname == "" || lastname == "" || email == "" || text == ""){
+        const re = /^(([^<>() [\]\\.,;:\s@"]+(\.[^<>() [\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3} ])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (firstname === "" || lastname === "" || email === "" || text === ""){
             $('#error').css('display', 'block');
             $("#error").html('لطفا تمام فیلد ستاره دار را تکمیل فرمایید');
         }else if(!email.match(re)){
@@ -96,7 +96,7 @@ export default function CenteredTabs() {
                 async: false,
                 complete: function (r) {
                     if (r.status === 200) {
-                        $('#error').css('display', 'block');
+
                         $('#error').css('color', 'green');
                         $("#error").html('پیام شما با موفقیت ثبت شد با تشکر از شما');
                     } else {
@@ -125,7 +125,7 @@ export default function CenteredTabs() {
                             <Tab style={{outline: "none"}} label="انتقادات و پیشنهادات" {...a11yProps(1)} />
                         </Tabs>
                         <TabPanel value={value} index={0} className="w3-animate-right">
-                            <img className="images w3-animate-opacity" src={bug_img} style={{float: "left"}}/>
+                            <img className="images w3-animate-opacity" src={bug_img} style={{float: "left"}} alt=""/>
                             <form dir="rtl" className={classes.formStyle} noValidate autoComplete="off">
 
                                 <TextField
@@ -167,7 +167,7 @@ export default function CenteredTabs() {
                                 <input id="kind_value" type="hidden" value="1"/>
                             </form>
                             <br/>
-                            <span style={{color:"red",display:"none"}} id="error"></span>
+                            <span style={{color:"red",display:"none"}} id="error"> </span>
                             <br/>
                             <Button onClick={handleSubmit} type="submit" variant="contained" color="primary">
                                 تایید و ارسال
@@ -175,7 +175,7 @@ export default function CenteredTabs() {
 
                         </TabPanel>
                         <TabPanel value={value} index={1} className="w3-animate-left">
-                            <img className="images w3-animate-opacity" src={sup_img} style={{float: "left"}}/>
+                            <img className="images w3-animate-opacity" src={sup_img} style={{float: "left"}} alt=""/>
                             <form dir="rtl" className={classes.formStyle} noValidate autoComplete="off">
 
                                 <TextField
@@ -217,7 +217,7 @@ export default function CenteredTabs() {
                                 <input id="kind_value" type="hidden" value="1"/>
                             </form>
                             <br/>
-                            <span style={{color:"red",display:"none"}} id="error"></span>
+                            <span style={{color:"red",display:"none"}} id="error"> </span>
                             <br/>
                             <Button onClick={handleSubmit} type="submit" variant="contained" color="primary">
                                 تایید و ارسال
