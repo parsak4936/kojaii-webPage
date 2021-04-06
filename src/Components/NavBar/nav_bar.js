@@ -72,7 +72,8 @@ function Nav_bar() {
                 <nav
                     className={location.pathname === "/home" | location.pathname === "/"
                         ? "navbar navbar-default navbar-expand-lg nav-menu show-on-scroll" :
-                        "navbar   navbar-expand-lg nav-menu-black show-on-scroll"}
+                        "navbar   navbar-expand-lg nav-menu-black show-on-scroll"
+                    }
 
                     id="nav-menu">
 
@@ -102,26 +103,31 @@ function Nav_bar() {
                             <ul className="navbar-nav ml-aulo navba-ul">
 
                                 <li className="nav-item">
-                                    <Link className="nav-link m-2 menu-item" to="/blog">
+                                    <Link className={location.pathname === "/blog" ?"nav-link m-2 menu-item item-selected" :
+                                    "nav-link m-2 menu-item "} to="/blog">
                                         بلاگ
                                     </Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link m-2 menu-item" to="/support">
+                                    <Link className= { location.pathname === "/support" ? "nav-link m-2 menu-item item-selected"  :
+                                        "nav-link m-2 menu-item" } to="/support">
                                         پشتیبانی
                                     </Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link m-2 menu-item" to="/ContactUs">
+                                    <Link className= {location.pathname === "/ContactUs" ?  "nav-link m-2 menu-item item-selected":
+                                        "nav-link m-2 menu-item"
+                                    } to="/ContactUs">
                                         ارتباط با ما
                                     </Link>
 
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link m-2 menu-item nav-active active" to="/">
+                                    <Link className={location.pathname=== "/" ? "nav-link m-2 menu-item   item-selected" :
+                                    "nav-link m-2 menu-item nav-active active"} to="/">
                                         خانه
                                     </Link>
 
